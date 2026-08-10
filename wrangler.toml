@@ -1,0 +1,42 @@
+# Cloudflare Worker configuration.
+#
+# `nodejs_compat_v2` together with a compatibility date of 2025-03-20 or later is what makes
+# the native `mongodb` driver work on Workers (it needs `node:net` and `node:tls`/`TLSSocket`).
+# Do not lower either setting — see the workspace CLAUDE.md, "Backend conventions".
+#
+# This file holds NO secrets. Secrets live in `.dev.vars` locally (gitignored) and in
+# Cloudflare per-environment secrets via `wrangler secret put --env <staging|production>`.
+
+name = "hisaabwise-backend"
+main = "src/index.ts"
+compatibility_date = "2025-03-20"
+compatibility_flags = ["nodejs_compat_v2"]
+
+[observability]
+enabled = true
+
+# Non-secret configuration only.
+[vars]
+ENVIRONMENT = "development"
+
+# Staging — deployed from the `release` branch by GitHub Actions. Shares the dev/staging
+# Atlas database with local development (workspace Rule 4).
+[env.staging]
+name = "hisaabwise-backend-staging"
+
+[env.staging.observability]
+enabled = true
+
+[env.staging.vars]
+ENVIRONMENT = "staging"
+
+# Production — deployed from `main` by GitHub Actions. Its own Atlas database, never touched
+# from a local machine or a test run.
+[env.production]
+name = "hisaabwise-backend-production"
+
+[env.production.observability]
+enabled = true
+
+[env.production.vars]
+ENVIRONMENT = "production"

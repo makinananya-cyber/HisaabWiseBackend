@@ -1,0 +1,51 @@
+# Local development secrets for `wrangler dev`. Copy to `.dev.vars` and fill in.
+#
+# `.dev.vars` is gitignored and must stay that way. In staging and production these same
+# variables are set with `wrangler secret put --env <staging|production>`, never in
+# wrangler.toml. Every variable from Technical Spec §7 is listed here at an empty value so a
+# new developer does not have to reverse-engineer them from the code; where the spec states a
+# default, it is named in the comment rather than filled in.
+#
+# Only the variables a given ticket needs are read today; the rest are placeholders.
+
+# Database — the dev/staging Atlas database. Never a production URI on a local machine.
+MONGODB_URI=
+
+# Auth. Refresh tokens are opaque CSPRNG values stored as SHA-256 hashes, so there is no
+# refresh-signing secret (Technical Spec §7 [AMENDED]).
+JWT_ACCESS_SECRET=
+# Defaults: 15m / 60d
+ACCESS_TOKEN_TTL=
+REFRESH_TOKEN_TTL=
+
+# argon2id parameters, tunable against measured isolate CPU without a code change.
+# Defaults: 19456 KiB / time cost 2
+ARGON2_MEMORY_KIB=
+ARGON2_TIME_COST=
+
+# FX rate feed. Base is the USD pivot — default USD.
+FX_PROVIDER_API_KEY=
+FX_BASE_CURRENCY=
+
+# Transactional email
+EMAIL_PROVIDER_API_KEY=
+EMAIL_FROM=
+
+# Apple push
+APNS_KEY_P8=
+APNS_KEY_ID=
+APNS_TEAM_ID=
+APNS_BUNDLE_ID=
+
+# Error reporting
+SENTRY_DSN=
+
+# CORS — marketing site only; the iOS client needs none.
+CORS_ORIGINS=
+
+# Application-level rate limiting
+RATE_LIMIT_WINDOW_MS=
+RATE_LIMIT_MAX=
+
+# Structured JSON logging to Workers Logs. Default: info
+LOG_LEVEL=
