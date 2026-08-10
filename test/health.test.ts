@@ -6,12 +6,10 @@ import { describe, expect, it } from 'vitest';
 // and the serialised response body are all covered.
 const worker = exports.default;
 
-// On "no database access": these tests cover the response contract, not the absence of a
-// database call. That absence is currently structural — nothing in this path's import graph
-// reaches a database, because no database module exists yet. The mechanism that *enforces* it
-// once one does is the `no-restricted-imports` rule confining database imports to the
-// repository layer (invariant 1, ADR-0002), which lands with the repository ticket. A runtime
-// assertion here would be theatre: a module-scope client would satisfy it either way.
+// These tests cover the response contract. The *absence* of database access on this path is
+// asserted in `health-db.test.ts`, which can observe how many clients the isolate has
+// constructed; the enforcement mechanism is the `no-restricted-imports` rule in
+// `eslint.config.mjs` confining database imports (invariant 1, ADR-0002).
 describe('GET /health', () => {
   it('returns 200 with {status:"ok"}', async () => {
     const response = await worker.fetch('https://hisaabwise.test/health');
