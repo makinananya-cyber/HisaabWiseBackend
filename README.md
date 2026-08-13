@@ -105,13 +105,17 @@ test can see.
 
 ### Observed platform facts
 
-Recorded because they are the evidence rather than the claim:
+Recorded because they are the evidence rather than the claim.
 
 | Fact | Measured |
 | --- | --- |
-| `argon2id` at m=19456 KiB / t=2 / p=1 | **23 ms hash, 21 ms verify** on Node. The CPU risk that existed against a Workers isolate does not exist here |
-| `mongodb+srv://` SRV resolution | works — the Atlas connection string is usable as handed over, no seed-list form needed |
+| **The full round trip against Atlas** | **Proven.** `GET /health/db` → `{"status":"ok","db":true}` from a locally running server: native driver, TLS, SCRAM auth, `ping`. No HTTP shim, no Data API |
+| Cluster topology | 3-member replica set `atlas-o7toea-shard-0`, MongoDB 8.0 (`maxWireVersion` 25) |
+| `argon2id` at m=19456 KiB / t=2 / p=1 | **23 ms hash, 21 ms verify**. The CPU risk that existed against a Workers isolate does not exist here |
+| `mongodb+srv://` resolution | works, including the TXT record carrying `authSource` and `replicaSet` — the Atlas string is usable as handed over |
+| **Cold connect latency** | **~3 s** from the UAE: SRV lookup, TXT lookup, then a TLS handshake to each of three members at ~1 s apiece. This is why `serverSelectionTimeoutMS` is 10 s and not 5 s — a 5 s bound left 2 s of headroom and failed intermittently |
 | Unreachable cluster | the process exits before binding a port, so nothing serves a request it cannot answer |
+| Secret handling | the connection-string password does not appear in the logs at `LOG_LEVEL=debug` |
 
 ## Building and running in production
 

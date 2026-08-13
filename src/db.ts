@@ -25,10 +25,16 @@ function clientOptions(config: Config): MongoClientOptions {
     minPoolSize: 0,
     // A connection idle this long is one Atlas should get back.
     maxIdleTimeMS: 60_000,
-    // Bounded so an unreachable cluster surfaces as a fast, honest failure. The default 30s would
-    // leave `/health/db` — an endpoint whose entire purpose is to answer *now* — hanging.
-    serverSelectionTimeoutMS: 5_000,
-    connectTimeoutMS: 5_000,
+    // Bounded so an unreachable cluster fails honestly rather than hanging, but not as tight as
+    // it looks. Measured: a cold `mongodb+srv://` connect to this Atlas cluster from the UAE takes
+    // **~3 s** — SRV lookup, TXT lookup, then a TLS handshake to each of three replica-set members
+    // at ~1s apiece. An earlier 5 s bound left only 2 s of headroom and failed intermittently, so
+    // this is set from that measurement rather than from taste.
+    //
+    // It costs `/health/db` nothing: this budget is spent on the *cold* connect at boot, and by
+    // the time requests arrive the pool is warm and server selection is immediate.
+    serverSelectionTimeoutMS: 10_000,
+    connectTimeoutMS: 10_000,
     // Named so the Atlas connection view attributes connections to this service.
     appName: 'hisaabwise-backend',
   };
