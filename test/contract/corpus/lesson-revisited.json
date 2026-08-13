@@ -1,0 +1,205 @@
+{
+  "isFirstCompletion": false,
+  "xpEarned": {
+    "value": 0,
+    "display": "0",
+    "accessibilityLabel": "No experience points earned"
+  },
+  "accuracy": {
+    "value": 100,
+    "display": "100%",
+    "accessibilityLabel": "100 percent accuracy"
+  },
+  "streakLine": "You have already learned something today — that is how this compounds.",
+  "week": [
+    {
+      "label": "Su",
+      "isComplete": false,
+      "isToday": false,
+      "accessibilityLabel": "Sunday, nothing finished"
+    },
+    {
+      "label": "Mo",
+      "isComplete": true,
+      "isToday": false,
+      "accessibilityLabel": "Monday, lesson finished"
+    },
+    {
+      "label": "Tu",
+      "isComplete": true,
+      "isToday": false,
+      "accessibilityLabel": "Tuesday, lesson finished"
+    },
+    {
+      "label": "We",
+      "isComplete": true,
+      "isToday": false,
+      "accessibilityLabel": "Wednesday, lesson finished"
+    },
+    {
+      "label": "Th",
+      "isComplete": true,
+      "isToday": true,
+      "accessibilityLabel": "Today, lesson finished"
+    },
+    {
+      "label": "Fr",
+      "isComplete": false,
+      "isToday": false,
+      "accessibilityLabel": "Friday, nothing finished"
+    },
+    {
+      "label": "Sa",
+      "isComplete": false,
+      "isToday": false,
+      "accessibilityLabel": "Saturday, nothing finished"
+    }
+  ],
+  "screen": {
+    "streak": {
+      "value": 4,
+      "display": "4",
+      "accessibilityLabel": "4-day streak"
+    },
+    "xp": {
+      "value": 120,
+      "display": "120",
+      "accessibilityLabel": "120 experience points"
+    },
+    "currencyToken": "₹",
+    "nextLesson": {
+      "unitId": "u1",
+      "lessonId": "u1l3",
+      "title": "Needs vs. Wants"
+    },
+    "units": [
+      {
+        "id": "u1",
+        "isUnlocked": true
+      },
+      {
+        "id": "u2",
+        "isUnlocked": false
+      },
+      {
+        "id": "u3",
+        "isUnlocked": false
+      },
+      {
+        "id": "u4",
+        "isUnlocked": false
+      },
+      {
+        "id": "u5",
+        "isUnlocked": false
+      }
+    ],
+    "lessons": [
+      {
+        "id": "u1l1",
+        "state": "completed",
+        "segments": 4,
+        "filledSegments": 4,
+        "progressLabel": "Completed, all 4 questions right"
+      },
+      {
+        "id": "u1l2",
+        "state": "completed",
+        "segments": 4,
+        "filledSegments": 4,
+        "progressLabel": "Completed, all 4 questions right"
+      },
+      {
+        "id": "u1l3",
+        "state": "available",
+        "segments": 4,
+        "filledSegments": 2,
+        "progressLabel": "2 of 4 questions answered"
+      },
+      {
+        "id": "u2l1",
+        "state": "locked",
+        "segments": 4,
+        "filledSegments": 0,
+        "progressLabel": "Locked until you finish the lesson before it"
+      },
+      {
+        "id": "u2l2",
+        "state": "locked",
+        "segments": 5,
+        "filledSegments": 0,
+        "progressLabel": "Locked until you finish the lesson before it"
+      },
+      {
+        "id": "u2l3",
+        "state": "locked",
+        "segments": 4,
+        "filledSegments": 0,
+        "progressLabel": "Locked until you finish the lesson before it"
+      },
+      {
+        "id": "u2l4",
+        "state": "locked",
+        "segments": 4,
+        "filledSegments": 0,
+        "progressLabel": "Locked until you finish the lesson before it"
+      },
+      {
+        "id": "u3l1",
+        "state": "locked",
+        "segments": 5,
+        "filledSegments": 0,
+        "progressLabel": "Locked until you finish the lesson before it"
+      },
+      {
+        "id": "u3l2",
+        "state": "locked",
+        "segments": 5,
+        "filledSegments": 0,
+        "progressLabel": "Locked until you finish the lesson before it"
+      },
+      {
+        "id": "u3l3",
+        "state": "locked",
+        "segments": 5,
+        "filledSegments": 0,
+        "progressLabel": "Locked until you finish the lesson before it"
+      },
+      {
+        "id": "u4l1",
+        "state": "locked",
+        "segments": 4,
+        "filledSegments": 0,
+        "progressLabel": "Locked until you finish the lesson before it"
+      },
+      {
+        "id": "u4l2",
+        "state": "locked",
+        "segments": 5,
+        "filledSegments": 0,
+        "progressLabel": "Locked until you finish the lesson before it"
+      },
+      {
+        "id": "u5l1",
+        "state": "locked",
+        "segments": 4,
+        "filledSegments": 0,
+        "progressLabel": "Locked until you finish the lesson before it"
+      },
+      {
+        "id": "u5l2",
+        "state": "locked",
+        "segments": 4,
+        "filledSegments": 0,
+        "progressLabel": "Locked until you finish the lesson before it"
+      },
+      {
+        "id": "u5l3",
+        "state": "locked",
+        "segments": 5,
+        "filledSegments": 0,
+        "progressLabel": "Locked until you finish the lesson before it"
+      }
+    ]
+  }
+}

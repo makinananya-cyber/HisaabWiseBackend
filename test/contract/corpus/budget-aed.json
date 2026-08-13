@@ -1,0 +1,15 @@
+{
+  "month": "2026-08",
+  "currency": "AED",
+  "income": { "minor": 800000, "currency": "AED", "exponent": 2, "display": "AED 8,000" },
+  "needs": { "minor": 400000, "currency": "AED", "exponent": 2, "display": "AED 4,000" },
+  "wantsSpent": { "minor": 150000, "currency": "AED", "exponent": 2, "display": "AED 1,500" },
+  "wantsAllowance": { "minor": 240000, "currency": "AED", "exponent": 2, "display": "AED 2,400" },
+  "savingsAllowance": { "minor": 160000, "currency": "AED", "exponent": 2, "display": "AED 1,600" },
+  "adapted": false,
+  "saved": { "minor": 250000, "currency": "AED", "exponent": 2, "display": "AED 2,500" },
+  "net": { "minor": 250000, "currency": "AED", "exponent": 2, "display": "AED 2,500" },
+  "overspent": false,
+  "surplus": { "minor": 90000, "currency": "AED", "exponent": 2, "display": "AED 900" },
+  "verdict": "hit"
+}

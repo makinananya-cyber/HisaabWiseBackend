@@ -1,0 +1,142 @@
+{
+  "streak": {
+    "value": 21,
+    "display": "21",
+    "accessibilityLabel": "21-day streak"
+  },
+  "xp": {
+    "value": 1500,
+    "display": "1,500",
+    "accessibilityLabel": "1,500 experience points"
+  },
+  "currencyToken": "₹",
+  "units": [
+    {
+      "id": "u1",
+      "isUnlocked": true
+    },
+    {
+      "id": "u2",
+      "isUnlocked": true
+    },
+    {
+      "id": "u3",
+      "isUnlocked": true
+    },
+    {
+      "id": "u4",
+      "isUnlocked": true
+    },
+    {
+      "id": "u5",
+      "isUnlocked": true
+    }
+  ],
+  "lessons": [
+    {
+      "id": "u1l1",
+      "state": "completed",
+      "segments": 4,
+      "filledSegments": 4,
+      "progressLabel": "Completed, all 4 questions right"
+    },
+    {
+      "id": "u1l2",
+      "state": "completed",
+      "segments": 4,
+      "filledSegments": 4,
+      "progressLabel": "Completed, all 4 questions right"
+    },
+    {
+      "id": "u1l3",
+      "state": "completed",
+      "segments": 4,
+      "filledSegments": 4,
+      "progressLabel": "Completed, all 4 questions right"
+    },
+    {
+      "id": "u2l1",
+      "state": "completed",
+      "segments": 4,
+      "filledSegments": 4,
+      "progressLabel": "Completed, all 4 questions right"
+    },
+    {
+      "id": "u2l2",
+      "state": "completed",
+      "segments": 5,
+      "filledSegments": 5,
+      "progressLabel": "Completed, all 5 questions right"
+    },
+    {
+      "id": "u2l3",
+      "state": "completed",
+      "segments": 4,
+      "filledSegments": 4,
+      "progressLabel": "Completed, all 4 questions right"
+    },
+    {
+      "id": "u2l4",
+      "state": "completed",
+      "segments": 4,
+      "filledSegments": 4,
+      "progressLabel": "Completed, all 4 questions right"
+    },
+    {
+      "id": "u3l1",
+      "state": "completed",
+      "segments": 5,
+      "filledSegments": 5,
+      "progressLabel": "Completed, all 5 questions right"
+    },
+    {
+      "id": "u3l2",
+      "state": "completed",
+      "segments": 5,
+      "filledSegments": 5,
+      "progressLabel": "Completed, all 5 questions right"
+    },
+    {
+      "id": "u3l3",
+      "state": "completed",
+      "segments": 5,
+      "filledSegments": 5,
+      "progressLabel": "Completed, all 5 questions right"
+    },
+    {
+      "id": "u4l1",
+      "state": "completed",
+      "segments": 4,
+      "filledSegments": 4,
+      "progressLabel": "Completed, all 4 questions right"
+    },
+    {
+      "id": "u4l2",
+      "state": "completed",
+      "segments": 5,
+      "filledSegments": 5,
+      "progressLabel": "Completed, all 5 questions right"
+    },
+    {
+      "id": "u5l1",
+      "state": "completed",
+      "segments": 4,
+      "filledSegments": 4,
+      "progressLabel": "Completed, all 4 questions right"
+    },
+    {
+      "id": "u5l2",
+      "state": "completed",
+      "segments": 4,
+      "filledSegments": 4,
+      "progressLabel": "Completed, all 4 questions right"
+    },
+    {
+      "id": "u5l3",
+      "state": "completed",
+      "segments": 5,
+      "filledSegments": 5,
+      "progressLabel": "Completed, all 5 questions right"
+    }
+  ]
+}

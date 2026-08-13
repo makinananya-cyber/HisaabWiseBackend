@@ -1,0 +1,63 @@
+{
+  "profile": {
+    "initials": "N",
+    "displayName": "Neeraj",
+    "email": "neeraj@example.ae",
+    "summaryLabel": "INR · English"
+  },
+  "rows": [
+    {
+      "section": "personal",
+      "name": "Personal Information",
+      "hint": "Username, salary, phone"
+    },
+    {
+      "section": "language",
+      "name": "Language",
+      "hint": "How the app is written",
+      "value": "English"
+    },
+    {
+      "section": "currency",
+      "name": "Currency",
+      "hint": "How your money is shown",
+      "value": "INR"
+    },
+    {
+      "section": "password",
+      "name": "Password",
+      "hint": "Changed 3 months ago"
+    }
+  ],
+  "personal": {
+    "displayName": "Neeraj",
+    "email": "neeraj@example.ae",
+    "isEmailVerified": false,
+    "salary": {
+      "minor": 6500000,
+      "currency": "INR",
+      "exponent": 2,
+      "display": "₹65,000"
+    },
+    "salaryCurrency": {
+      "code": "INR",
+      "symbol": "₹",
+      "displayCode": "INR",
+      "exponent": 2
+    }
+  },
+  "language": "en",
+  "currency": "INR",
+  "password": {
+    "questions": [
+      {
+        "id": "sq01",
+        "text": "What was the name of your first pet?"
+      },
+      {
+        "id": "sq02",
+        "text": "What city were you born in?"
+      }
+    ]
+  }
+}

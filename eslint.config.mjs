@@ -28,9 +28,12 @@ export default tseslint.config(
       // The `/health/db` deep check needs the *connection*, not a collection: it runs an admin
       // `ping` and reads no document, so there is nothing for a repository to own and nothing
       // for the read-side zod boundary to parse. Recorded here rather than smuggled in, and it
-      // stays the only exception — anything that reads or writes a document belongs in
-      // `src/repositories/`. See ADR-0002 and ADR-0013.
+      // stays the only route-level exception — anything that reads or writes a document belongs
+      // in `src/repositories/`. See ADR-0002 and ADR-0013.
       'src/routes/health.ts',
+      // The entrypoint opens and closes the pool. It owns the connection lifecycle and touches no
+      // collection.
+      'src/server.ts',
       'src/db.ts',
     ],
     rules: {

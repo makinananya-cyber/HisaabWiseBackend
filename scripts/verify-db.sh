@@ -13,7 +13,7 @@
 # The body is compared exactly rather than grepped, so a partially-true answer fails.
 set -euo pipefail
 
-url="${1:-http://localhost:8787/health/db}"
+url="${1:-http://localhost:8080/health/db}"
 expected='{"status":"ok","db":true}'
 
 if ! body="$(curl -fsS --max-time 30 "$url")"; then

@@ -1,10 +1,15 @@
 # HisaabWiseBackend
 
-TypeScript backend for HisaabWise, on Cloudflare Workers with Hono and MongoDB Atlas.
+TypeScript backend for HisaabWise — **Node 22, Hono, MongoDB Atlas**.
 
-Project rules, stack decisions, and the non-negotiable invariants live in the workspace
-`CLAUDE.md` one directory up. Vocabulary is in [CONTEXT.md](CONTEXT.md); settled decisions are
-in [docs/adr/](docs/adr/).
+Project rules, stack decisions, and the non-negotiable invariants live in the workspace `CLAUDE.md`
+one directory up. Vocabulary is in [CONTEXT.md](CONTEXT.md); settled decisions are in
+[docs/adr/](docs/adr/). The build plan is [docs/BACKEND_PLAN.md](docs/BACKEND_PLAN.md) and the schema
+is [docs/DATA_MODEL.md](docs/DATA_MODEL.md).
+
+> **Runtime note.** This ran on Cloudflare Workers until 13 August 2026. It is now a long-lived Node
+> process, for the reasons in [BACKEND_PLAN.md §3](docs/BACKEND_PLAN.md). Hono survived the move —
+> the routes are unchanged — so the same code could return to Workers if that ever made sense.
 
 ## Getting started
 
@@ -13,25 +18,26 @@ npm install
 ```
 
 ```bash
+cp .env.example .env
+```
+
+Fill in `MONGODB_URI`. It is the only variable required to boot, and it **must name a database in
+its path** — a URI ending at `mongodb.net/` silently resolves to a database called `test`, so the
+server refuses to start without one. Never point a local URI at production (Rule 4).
+
+```bash
 npm run dev
 ```
 
-Then:
-
 ```bash
-curl http://localhost:8787/health
+curl http://localhost:8080/health
 ```
 
 → `{"status":"ok"}`
 
-`npm install` also runs `wrangler types`, which generates `worker-configuration.d.ts` — the
-Workers runtime types and the global `Env` derived from `wrangler.toml`. It is gitignored and
-regenerated rather than committed, so it can never be stale relative to the config it
-describes. Re-run `npm run cf-typegen` after editing `wrangler.toml`.
-
-For anything needing secrets, copy [.dev.vars.example](.dev.vars.example) to `.dev.vars` and
-fill it in. `.dev.vars` is gitignored and must stay that way — and a local `MONGODB_URI` never
-points at the production database.
+**The startup order is the design, not an accident.** Configuration is validated, then the database
+pool is connected, and only then is a port bound. A bad environment or an unreachable cluster is a
+failure to boot rather than a process that accepts traffic it cannot serve.
 
 ## Checks
 
@@ -39,24 +45,42 @@ points at the production database.
 npm run lint && npm run typecheck && npm test
 ```
 
-Tests run inside `workerd` via `@cloudflare/vitest-pool-workers`, against the real Worker built
-from `wrangler.toml`.
+`feature/mvp` has no CI by design, so running these before a PR is the substitute.
+
+The HTTP seam is `app.request()` against an app built by `createApp` — real routing, real
+middleware, real serialised responses, no socket. Tests supply their own configuration rather than
+reading `.env`, so the suite behaves identically with or without local secrets.
+
+## The contract corpus
+
+The iOS app is already built, and its 37-fixture corpus is the definition of done for this backend:
+each fixture is an exact payload a working client already decodes.
+
+```bash
+npm run contract:sync
+```
+
+Copies the corpus from a sibling `HisaabWiseIOS/` checkout into `test/contract/corpus/`, recording
+the iOS commit it came from. Pass `-- --check` to fail instead of writing, which is how drift becomes
+a build failure rather than a silent divergence.
+
+`test/contract/endpoints.ts` lists every `/v1` endpoint with the slice that owns it. `npm test`
+enforces three things about it: every `/v1` path the client calls is covered, every fixture is
+claimed by an endpoint, and every endpoint marked `live` has a test behind it. Unimplemented
+endpoints appear as `todo`, so the suite doubles as the progress report.
+
+Shape checking asserts what the client actually depends on — key presence, JSON types, and the
+`Money` invariants (integer `minor`, non-empty `display`, since iOS ADR-0003 deleted the client's
+formatter). Figures are not asserted; a fixture's `553900` is one seeded user's data.
 
 ## Endpoints
 
 | Route | Purpose |
 | --- | --- |
-| `GET /health` | Shallow liveness. **No database access** — this is what the uptime monitor hits. |
+| `GET /health` | Shallow liveness. **No database access** — this is what the uptime monitor and the container health check hit. |
 | `GET /health/db` | Deep check. Pings the database and returns `{"status":"ok","db":true}`. Never cached. |
 
-`GET /health` is deliberately shallow: on Workers each ping can land in a fresh isolate, so a
-database round trip here would spend an Atlas connection per check. `GET /health/db` is the one
-that answers for the database, and exists to be truthful *now* — it is never cached and its
-result is never memoised, so it is for the deploy gate and a low-frequency deep check, not for a
-minute-granularity monitor. See [ADR-0013](docs/adr/0013-operational-endpoints.md).
-
-Full shapes, including the `503` codes on `/health/db`, are in [docs/api.md](docs/api.md). The
-versioned `/v1` contract arrives with its own ticket.
+Full shapes are in [docs/api.md](docs/api.md). The versioned `/v1` surface arrives slice by slice.
 
 Errors use one envelope throughout:
 
@@ -66,10 +90,8 @@ Errors use one envelope throughout:
 
 ## Verifying the database connection
 
-The MongoDB driver used here is the native one, speaking the wire protocol to Atlas directly —
-no HTTP shim and no Data API. That is the platform bet the whole runtime choice rests on, so it
-is verified by running it rather than by assertion. With `.dev.vars` pointing at the dev
-database and `npm run dev` running:
+The driver is the native one, speaking the wire protocol to Atlas directly — no HTTP shim, no Data
+API. With the server running:
 
 ```bash
 npm run verify:db
@@ -77,41 +99,42 @@ npm run verify:db
 
 → `verify:db ok — {"status":"ok","db":true}`
 
-### What has been observed so far
+The body is compared exactly, so a partially-true answer fails. Confirm the Atlas connection count
+stays bounded while it runs — that is the external evidence for the pool ceiling, which no local
+test can see.
 
-Recorded because it is the evidence, not the claim, and re-deriving it costs a working
-connection string. Under `wrangler dev` on `workerd@1.20260801.1`, `nodejs_compat_v2`,
-compatibility date `2025-03-20`, `mongodb@6.21.0`:
+### Observed platform facts
 
-| Given `MONGODB_URI` | Result | What it proves |
-| --- | --- | --- |
-| absent | `503 DB_NOT_CONFIGURED` | the fail-fast path, in the real runtime |
-| `mongodb://127.0.0.1:27017/…` (nothing listening) | `503 DB_UNAVAILABLE`, logged as `MongoServerSelectionError: proxy request failed, cannot connect to the specified address` | the driver loads on workerd and opens a real TCP connection through `node:net` — no shim, no Data API |
-| `mongodb+srv://…@cluster0.doesnotexist.mongodb.net/…` | logged as `Error: querySrv ENOTFOUND _mongodb._tcp.cluster0.doesnotexist.mongodb.net` | DNS SRV resolution genuinely runs, so the `mongodb+srv://` URI Atlas hands you works as-is rather than needing the seed-list form |
+Recorded because they are the evidence rather than the claim:
 
-**Still unproven:** a successful round trip — TLS handshake, SCRAM authentication, and the `ping`
-itself — which needs the dev cluster's connection string. `npm run verify:db` is that check.
-Confirm the connection count in the Atlas metrics view stays at one while it runs; that is the
-external evidence for the pool cap, which no local test can see.
+| Fact | Measured |
+| --- | --- |
+| `argon2id` at m=19456 KiB / t=2 / p=1 | **23 ms hash, 21 ms verify** on Node. The CPU risk that existed against a Workers isolate does not exist here |
+| `mongodb+srv://` SRV resolution | works — the Atlas connection string is usable as handed over, no seed-list form needed |
+| Unreachable cluster | the process exits before binding a port, so nothing serves a request it cannot answer |
 
-The test suite cannot make the live assertion itself. `@cloudflare/vitest-pool-workers` serves
-dependencies to workerd file by file instead of bundling them, and on that path the driver's
-`lib/bson.js` ends up importing itself — the reason is written out in
-[vitest.config.ts](vitest.config.ts). `wrangler dev` and `wrangler deploy` bundle with esbuild
-and are unaffected. The suite therefore pins `MONGODB_URI` empty and covers the misconfiguration
-path and the absence of database work on `GET /health`; the live round trip is the command above.
+## Building and running in production
 
-This blocks the per-run integration databases in
-[ADR-0014](docs/adr/0014-test-database-strategy.md), so it has to be resolved before the
-repository layer lands.
+```bash
+npm run build && npm start
+```
+
+esbuild bundles `src/server.ts` to `dist/server.js` with dependencies left external, so the native
+`argon2` addon keeps working. `tsc` is the typecheck gate only and never emits, which means the gate
+and the bundle cannot disagree about module resolution.
+
+A [Dockerfile](Dockerfile) is provided and takes all configuration from the environment, so the
+hosting target stays a late, reversible decision. **It has not been built yet** — there is no
+container runtime on the machine it was written on; CI builds it on every push to `release` and
+`main`.
 
 ## Deployment
 
-Deploys run only through GitHub Actions — `release` → staging, `main` → production. Never from
-a dashboard, never from a local machine. `wrangler.toml` carries `env.staging` and
-`env.production` sections and **no secrets**; secrets are set per environment with
-`wrangler secret put --env <staging|production>`.
+Deploys run only through GitHub Actions — `release` → staging, `main` → production. Never from a
+dashboard, never from a local machine. Secrets live in GitHub Environments and the host's own secret
+store; nothing secret is committed.
 
-The workflows themselves are not in the repo yet — they arrive with their own ticket, and will
-sit red until the Cloudflare credentials exist. That is deliberate: a red workflow is a visible
-task where an absent one is a silent gap ([ADR-0015](docs/adr/0015-phase-zero-gate-split.md)).
+[.github/workflows/ci.yml](.github/workflows/ci.yml) runs lint, typecheck, tests, the contract-drift
+check and the image build. **The deploy job is deliberately absent** until the hosting target is
+chosen ([BACKEND_PLAN.md §6](docs/BACKEND_PLAN.md)) — the gates are host-independent and land now;
+the deploy step lands with the decision.

@@ -1,0 +1,290 @@
+{
+  "monthKey": "2025-11",
+  "title": "November 2025",
+  "verdict": "hit",
+  "percentageLabel": "500% of goal",
+  "totals": {
+    "spent": {
+      "minor": 0,
+      "currency": "INR",
+      "exponent": 2,
+      "display": "₹0"
+    },
+    "fixed": {
+      "minor": 0,
+      "currency": "INR",
+      "exponent": 2,
+      "display": "₹0"
+    },
+    "variable": {
+      "minor": 0,
+      "currency": "INR",
+      "exponent": 2,
+      "display": "₹0"
+    },
+    "additionalIncome": {
+      "minor": 0,
+      "currency": "INR",
+      "exponent": 2,
+      "display": "₹0"
+    },
+    "isAdapted": false
+  },
+  "spending": {
+    "shareOfIncomeLabel": "0% of income",
+    "categoryCountLabel": "No categories",
+    "categories": []
+  },
+  "savings": {
+    "saved": {
+      "minor": 6500000,
+      "currency": "INR",
+      "exponent": 2,
+      "display": "₹65,000"
+    },
+    "goal": {
+      "minor": 1300000,
+      "currency": "INR",
+      "exponent": 2,
+      "display": "₹13,000"
+    },
+    "zeroLabel": "₹0",
+    "position": 1.0,
+    "shareOfIncomeLabel": "100% of income saved",
+    "surplus": {
+      "minor": 5200000,
+      "currency": "INR",
+      "exponent": 2,
+      "display": "₹52,000"
+    }
+  },
+  "wants": {
+    "used": {
+      "minor": 0,
+      "currency": "INR",
+      "exponent": 2,
+      "display": "₹0"
+    },
+    "allowance": {
+      "minor": 1950000,
+      "currency": "INR",
+      "exponent": 2,
+      "display": "₹19,500"
+    },
+    "percentageLabel": "0%",
+    "fill": 0.0,
+    "isOver": false,
+    "remaining": {
+      "minor": 1950000,
+      "currency": "INR",
+      "exponent": 2,
+      "display": "₹19,500"
+    }
+  },
+  "split": {
+    "income": {
+      "minor": 6500000,
+      "currency": "INR",
+      "exponent": 2,
+      "display": "₹65,000"
+    },
+    "segments": [
+      {
+        "portion": "needs",
+        "amount": {
+          "minor": 0,
+          "currency": "INR",
+          "exponent": 2,
+          "display": "₹0"
+        },
+        "share": 0.0,
+        "target": {
+          "minor": 3250000,
+          "currency": "INR",
+          "exponent": 2,
+          "display": "₹32,500"
+        }
+      },
+      {
+        "portion": "wants",
+        "amount": {
+          "minor": 0,
+          "currency": "INR",
+          "exponent": 2,
+          "display": "₹0"
+        },
+        "share": 0.0,
+        "target": {
+          "minor": 1950000,
+          "currency": "INR",
+          "exponent": 2,
+          "display": "₹19,500"
+        }
+      },
+      {
+        "portion": "saved",
+        "amount": {
+          "minor": 1300000,
+          "currency": "INR",
+          "exponent": 2,
+          "display": "₹13,000"
+        },
+        "share": 0.2,
+        "target": {
+          "minor": 1300000,
+          "currency": "INR",
+          "exponent": 2,
+          "display": "₹13,000"
+        }
+      },
+      {
+        "portion": "surplus",
+        "amount": {
+          "minor": 5200000,
+          "currency": "INR",
+          "exponent": 2,
+          "display": "₹52,000"
+        },
+        "share": 0.8
+      }
+    ]
+  },
+  "groups": [
+    {
+      "id": "rent",
+      "name": "Rent",
+      "slot": 1,
+      "icon": "rent",
+      "flow": "out",
+      "total": {
+        "minor": 0,
+        "currency": "INR",
+        "exponent": 2,
+        "display": "₹0"
+      },
+      "summaryLabel": "No entries",
+      "entries": []
+    },
+    {
+      "id": "groceries",
+      "name": "Groceries",
+      "slot": 2,
+      "icon": "groceries",
+      "flow": "out",
+      "total": {
+        "minor": 0,
+        "currency": "INR",
+        "exponent": 2,
+        "display": "₹0"
+      },
+      "summaryLabel": "No entries",
+      "entries": []
+    },
+    {
+      "id": "transport",
+      "name": "Transport",
+      "slot": 3,
+      "icon": "transport",
+      "flow": "out",
+      "total": {
+        "minor": 0,
+        "currency": "INR",
+        "exponent": 2,
+        "display": "₹0"
+      },
+      "summaryLabel": "No entries",
+      "entries": []
+    },
+    {
+      "id": "utilities",
+      "name": "Utilities",
+      "slot": 4,
+      "icon": "utilities",
+      "flow": "out",
+      "total": {
+        "minor": 0,
+        "currency": "INR",
+        "exponent": 2,
+        "display": "₹0"
+      },
+      "summaryLabel": "No entries",
+      "entries": []
+    },
+    {
+      "id": "entertainment",
+      "name": "Entertainment",
+      "slot": 5,
+      "icon": "entertainment",
+      "flow": "out",
+      "total": {
+        "minor": 0,
+        "currency": "INR",
+        "exponent": 2,
+        "display": "₹0"
+      },
+      "summaryLabel": "No entries",
+      "entries": []
+    },
+    {
+      "id": "other",
+      "name": "Other",
+      "slot": 6,
+      "icon": "other",
+      "flow": "out",
+      "total": {
+        "minor": 0,
+        "currency": "INR",
+        "exponent": 2,
+        "display": "₹0"
+      },
+      "summaryLabel": "No entries",
+      "entries": []
+    },
+    {
+      "id": "income",
+      "name": "Additional income",
+      "slot": 1,
+      "icon": "income",
+      "flow": "in",
+      "total": {
+        "minor": 0,
+        "currency": "INR",
+        "exponent": 2,
+        "display": "₹0"
+      },
+      "summaryLabel": "No entries · on top of salary",
+      "entries": []
+    }
+  ],
+  "facts": [
+    {
+      "kind": "salary",
+      "value": "₹65,000",
+      "note": "No extra income"
+    },
+    {
+      "kind": "goal",
+      "value": "₹13,000",
+      "note": "Set at the start of the month"
+    },
+    {
+      "kind": "saved",
+      "value": "₹65,000",
+      "note": "100% of everything that came in"
+    },
+    {
+      "kind": "biggestCost",
+      "value": "—"
+    },
+    {
+      "kind": "needs",
+      "value": "₹0",
+      "note": "Rent, bills and food"
+    },
+    {
+      "kind": "leftOver",
+      "value": "₹65,000",
+      "note": "Income minus everything spent"
+    }
+  ]
+}

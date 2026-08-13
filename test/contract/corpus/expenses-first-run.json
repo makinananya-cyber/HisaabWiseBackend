@@ -1,0 +1,167 @@
+{
+  "monthLabel": "August",
+  "summary": {
+    "total": {
+      "minor": 0,
+      "currency": "INR",
+      "exponent": 2,
+      "display": "₹0"
+    },
+    "fixed": {
+      "minor": 0,
+      "currency": "INR",
+      "exponent": 2,
+      "display": "₹0"
+    },
+    "variable": {
+      "minor": 0,
+      "currency": "INR",
+      "exponent": 2,
+      "display": "₹0"
+    },
+    "income": {
+      "minor": 0,
+      "currency": "INR",
+      "exponent": 2,
+      "display": "₹0"
+    }
+  },
+  "wants": {
+    "used": {
+      "minor": 0,
+      "currency": "INR",
+      "exponent": 2,
+      "display": "₹0"
+    },
+    "allowance": {
+      "minor": 1950000,
+      "currency": "INR",
+      "exponent": 2,
+      "display": "₹19,500"
+    },
+    "percentageLabel": "0%",
+    "fill": 0.0,
+    "isOver": false
+  },
+  "entry": {
+    "code": "INR",
+    "symbol": "₹",
+    "displayCode": "INR",
+    "exponent": 2
+  },
+  "categories": [
+    {
+      "id": "groceries",
+      "name": "Groceries",
+      "hint": "Add each shop as you go",
+      "total": {
+        "minor": 0,
+        "currency": "INR",
+        "exponent": 2,
+        "display": "₹0"
+      },
+      "entryCountLabel": "0 entries",
+      "kind": "log",
+      "flow": "out",
+      "icon": "groceries",
+      "entries": []
+    },
+    {
+      "id": "transport",
+      "name": "Transport",
+      "hint": "Pick how you travelled",
+      "total": {
+        "minor": 0,
+        "currency": "INR",
+        "exponent": 2,
+        "display": "₹0"
+      },
+      "entryCountLabel": "0 entries",
+      "kind": "log",
+      "flow": "out",
+      "icon": "transport",
+      "field": "transportMode",
+      "entries": []
+    },
+    {
+      "id": "entertainment",
+      "name": "Entertainment",
+      "hint": "Nights out, films, events",
+      "total": {
+        "minor": 0,
+        "currency": "INR",
+        "exponent": 2,
+        "display": "₹0"
+      },
+      "entryCountLabel": "0 entries",
+      "kind": "log",
+      "flow": "out",
+      "icon": "entertainment",
+      "field": "place",
+      "entries": []
+    },
+    {
+      "id": "other",
+      "name": "Other",
+      "hint": "Everything else",
+      "total": {
+        "minor": 0,
+        "currency": "INR",
+        "exponent": 2,
+        "display": "₹0"
+      },
+      "entryCountLabel": "0 entries",
+      "kind": "log",
+      "flow": "out",
+      "icon": "other",
+      "field": "otherType",
+      "entries": []
+    },
+    {
+      "id": "income",
+      "name": "Additional Income",
+      "hint": "Money coming in",
+      "total": {
+        "minor": 0,
+        "currency": "INR",
+        "exponent": 2,
+        "display": "₹0"
+      },
+      "entryCountLabel": "0 entries",
+      "kind": "log",
+      "flow": "in",
+      "icon": "income",
+      "field": "source",
+      "entries": []
+    },
+    {
+      "id": "utilities",
+      "name": "Utilities",
+      "hint": "Fixed each month",
+      "total": {
+        "minor": 0,
+        "currency": "INR",
+        "exponent": 2,
+        "display": "₹0"
+      },
+      "kind": "lines",
+      "flow": "out",
+      "icon": "utilities",
+      "lines": []
+    },
+    {
+      "id": "rent",
+      "name": "Rent",
+      "hint": "Fixed each month",
+      "total": {
+        "minor": 0,
+        "currency": "INR",
+        "exponent": 2,
+        "display": "₹0"
+      },
+      "kind": "fixed",
+      "flow": "out",
+      "icon": "rent"
+    }
+  ]
+}

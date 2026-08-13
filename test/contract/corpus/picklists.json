@@ -1,0 +1,175 @@
+{
+  "transport": [
+    {
+      "id": "bus",
+      "name": "Bus"
+    },
+    {
+      "id": "metro",
+      "name": "Metro / subway"
+    },
+    {
+      "id": "train",
+      "name": "Train"
+    },
+    {
+      "id": "tram",
+      "name": "Tram"
+    },
+    {
+      "id": "taxi",
+      "name": "Taxi"
+    },
+    {
+      "id": "ride-hailing",
+      "name": "Ride-hailing app"
+    },
+    {
+      "id": "auto-rickshaw",
+      "name": "Auto-rickshaw / tuk-tuk"
+    },
+    {
+      "id": "fuel",
+      "name": "Fuel / petrol"
+    },
+    {
+      "id": "parking",
+      "name": "Parking"
+    },
+    {
+      "id": "tolls",
+      "name": "Tolls"
+    },
+    {
+      "id": "car-rental",
+      "name": "Car rental"
+    },
+    {
+      "id": "motorbike-rental",
+      "name": "Motorbike rental"
+    },
+    {
+      "id": "scooter-rental",
+      "name": "Scooter rental"
+    },
+    {
+      "id": "e-scooter",
+      "name": "E-scooter (Lime, Bird)"
+    },
+    {
+      "id": "bicycle-rental",
+      "name": "Bicycle rental"
+    },
+    {
+      "id": "ferry",
+      "name": "Ferry / boat"
+    },
+    {
+      "id": "flight",
+      "name": "Flight"
+    },
+    {
+      "id": "airport-transfer",
+      "name": "Airport transfer"
+    },
+    {
+      "id": "car-maintenance",
+      "name": "Car maintenance"
+    },
+    {
+      "id": "car-insurance",
+      "name": "Car insurance"
+    },
+    {
+      "id": "travel-pass",
+      "name": "Travel pass / season ticket"
+    },
+    {
+      "id": "other-transport",
+      "name": "Other transport"
+    }
+  ],
+  "other": [
+    {
+      "id": "medical",
+      "name": "Medical & pharmacy"
+    },
+    {
+      "id": "shopping",
+      "name": "Shopping & clothing"
+    },
+    {
+      "id": "restaurants",
+      "name": "Restaurants & eating out"
+    },
+    {
+      "id": "cafes",
+      "name": "Cafés & coffee"
+    },
+    {
+      "id": "technology",
+      "name": "Technology & gadgets"
+    },
+    {
+      "id": "home",
+      "name": "Home & furniture"
+    },
+    {
+      "id": "personal-care",
+      "name": "Personal care & beauty"
+    },
+    {
+      "id": "fitness",
+      "name": "Fitness & sport"
+    },
+    {
+      "id": "education",
+      "name": "Education & courses"
+    },
+    {
+      "id": "books",
+      "name": "Books & stationery"
+    },
+    {
+      "id": "gifts",
+      "name": "Gifts & celebrations"
+    },
+    {
+      "id": "subscriptions",
+      "name": "Subscriptions"
+    },
+    {
+      "id": "travel",
+      "name": "Travel & holidays"
+    },
+    {
+      "id": "pets",
+      "name": "Pets"
+    },
+    {
+      "id": "charity",
+      "name": "Charity & donations"
+    },
+    {
+      "id": "bank-fees",
+      "name": "Bank fees & charges"
+    },
+    {
+      "id": "repairs",
+      "name": "Repairs & maintenance"
+    },
+    {
+      "id": "insurance",
+      "name": "Insurance"
+    },
+    {
+      "id": "childcare",
+      "name": "Childcare"
+    },
+    {
+      "id": "something-else",
+      "name": "Something else…",
+      "opensFreeText": true
+    }
+  ]
+}

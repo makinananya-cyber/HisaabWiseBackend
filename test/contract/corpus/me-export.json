@@ -1,0 +1,36 @@
+{
+  "generatedAt": "2026-08-12T09:14:00Z",
+  "account": {
+    "email": "neeraj@example.ae",
+    "displayName": "Neeraj",
+    "displayCurrency": "INR",
+    "language": "en",
+    "timeZone": "Asia/Dubai",
+    "salary": { "minor": 6500000, "currency": "INR" },
+    "savingsGoal": { "minor": 1300000, "currency": "INR" }
+  },
+  "expenses": [
+    {
+      "id": "e-1",
+      "monthKey": "2026-08",
+      "categoryId": "groceries",
+      "amount": { "minor": 24000, "currency": "INR" },
+      "loggedAt": "2026-08-11T17:40:00Z"
+    }
+  ],
+  "archives": [
+    {
+      "monthKey": "2026-02",
+      "salary": { "minor": 6500000, "currency": "INR" },
+      "saved": { "minor": 1183000, "currency": "INR" }
+    }
+  ],
+  "learn": {
+    "xp": 120,
+    "streakDays": 4,
+    "completedLessons": ["u1l1", "u1l2"]
+  },
+  "events": [
+    { "name": "expense_logged", "at": "2026-08-11T17:40:00Z" }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "id": "scams",
+  "title": "Spotting scams in the UAE",
+  "lede": "The tricks change often. The warning signs do not. Learn the signs once and you are covered for most of them.",
+  "sections": [
+    {
+      "heading": "The five signs of a scam",
+      "paragraphs": [
+        "Fake messages used to be easy to spot because of bad spelling. That is no longer true. Look at the **shape** of the message instead of the writing."
+      ],
+      "entries": [
+        {
+          "term": "It is urgent",
+          "detail": "Your account closes today. Your visa has a problem. Panic stops you from checking, and that is the whole point."
+        },
+        {
+          "term": "There is a link you did not expect",
+          "detail": "Never sign in through a link in a message. Open your bank app yourself, or type the address in."
+        },
+        {
+          "term": "They ask for a code, PIN or password",
+          "detail": "No bank, telecom company or government office will ever ask for these. Not once, no matter how much they seem to know about you."
+        },
+        {
+          "term": "They ask you to keep it secret",
+          "detail": "Real organisations do not ask you to hide anything from your family."
+        },
+        {
+          "term": "The payment method is unusual",
+          "detail": "Gift cards, crypto, or a transfer to a personal account. Almost always fraud."
+        }
+      ]
+    },
+    {
+      "heading": "The tricks used most here",
+      "entries": [
+        {
+          "term": "The fake bank call",
+          "detail": "Someone says they are from your bank's fraud team. They ask for the code just sent to your phone, to \"stop\" a payment. That code is what *approves* the payment."
+        },
+        {
+          "term": "The visa or Emirates ID problem",
+          "detail": "A caller says there is an issue with your documents and asks you to pay a fine immediately. Government fines are never collected this way."
+        },
+        {
+          "term": "The delivery fee",
+          "detail": "A text says your parcel is held and asks for a small customs fee. The tiny amount is bait — they want your card details, not the fee."
+        },
+        {
+          "term": "The prize you did not enter for",
+          "detail": "A call saying you have won a raffle from a telecom company or mall, then asking for your bank details to send the money."
+        },
+        {
+          "term": "The investment with guaranteed returns",
+          "detail": "Slick dashboards showing your balance rising. When you try to withdraw, there is a fee to pay first. Guaranteed returns do not exist."
+        },
+        {
+          "term": "The job that charges you",
+          "detail": "Easy work from home, but first you must pay a registration or visa fee. Real employers do not charge you to hire you."
+        }
+      ]
+    },
+    {
+      "heading": "If it happens to you",
+      "paragraphs": [
+        "Speed matters more than anything else. Money can sometimes be stopped within hours, but rarely after a few days."
+      ],
+      "steps": [
+        "**Call your bank now**, using the number printed on your card — not one from the message. Ask them to freeze the account and try to recall the payment.",
+        "**Change your passwords**, starting with your email. Your email can reset everything else, so it is the most important one.",
+        "**Report it officially.** Dubai Police run the eCrime platform and the 901 line. Abu Dhabi Police run the Aman service on 800 2626 or by text to 2828. The Ministry of Interior has an eCrimes section in the MoI UAE app, and the Public Prosecution has the My Safe Society app. In an emergency, call 999.",
+        "**Check your credit report** with the Al Etihad Credit Bureau for any account opened in your name."
+      ],
+      "callout": "Being tricked does not mean you were careless. These are professional, well-funded teams who rehearse their scripts. Reporting quickly is what helps — embarrassment only buys them time."
+    },
+    {
+      "heading": "One habit that stops most of it",
+      "paragraphs": [
+        "Whenever a message or call about money makes you feel rushed, **hang up and call back** on a number you looked up yourself. Fraudsters depend on you staying inside the conversation they started. Leaving it removes their power completely."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "UAE Government — Report cybercrimes online",
+      "url": "https://u.ae/en/information-and-services/justice-safety-and-the-law/cyber-safety-and-digital-security/report-cybercrimes-online"
+    },
+    {
+      "title": "How to report phone scams in the UAE",
+      "url": "https://www.bayut.com/mybayut/report-phone-scams-uae/"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "profile": {
+    "initials": "N",
+    "displayName": "Neeraj",
+    "email": "neeraj@example.ae",
+    "summaryLabel": "AED · English"
+  },
+  "rows": [
+    {
+      "section": "personal",
+      "name": "Personal Information",
+      "hint": "Username, salary, phone"
+    },
+    {
+      "section": "language",
+      "name": "Language",
+      "hint": "How the app is written",
+      "value": "English"
+    },
+    {
+      "section": "currency",
+      "name": "Currency",
+      "hint": "How your money is shown",
+      "value": "AED"
+    },
+    {
+      "section": "password",
+      "name": "Password",
+      "hint": "Changed 3 months ago"
+    }
+  ],
+  "personal": {
+    "displayName": "Neeraj",
+    "email": "neeraj@example.ae",
+    "isEmailVerified": true,
+    "salary": {
+      "minor": 285714,
+      "currency": "AED",
+      "exponent": 2,
+      "display": "AED 2,857"
+    },
+    "salaryCurrency": {
+      "code": "AED",
+      "symbol": "AED",
+      "displayCode": "AED",
+      "exponent": 2
+    },
+    "phone": {
+      "country": "IN",
+      "dialCode": "+91",
+      "national": "9876543210",
+      "display": "+91 98765 43210"
+    }
+  },
+  "language": "en",
+  "currency": "AED",
+  "password": {
+    "questions": [
+      {
+        "id": "sq01",
+        "text": "What was the name of your first pet?"
+      },
+      {
+        "id": "sq02",
+        "text": "What city were you born in?"
+      }
+    ]
+  }
+}

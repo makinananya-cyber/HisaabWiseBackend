@@ -44,12 +44,17 @@ minute-granularity monitor.
 { "status": "ok", "db": true }
 ```
 
-`503` — two codes, so an operator can tell a misconfiguration from an outage:
+`503`
 
 | Code | Meaning |
 | --- | --- |
-| `DB_NOT_CONFIGURED` | `MONGODB_URI` is absent or empty |
 | `DB_UNAVAILABLE` | the database could not be reached |
 
-The underlying driver error goes to the logs, not the response: the endpoint is unauthenticated
-and a driver error names cluster hosts.
+There is no `DB_NOT_CONFIGURED` code, and its absence is deliberate. `MONGODB_URI` is validated in
+`src/config.ts` and the pool is connected **before the server binds a port**, so a process that is
+answering requests at all has a configured, reachable database. Misconfiguration is a failure to
+boot, which is strictly better than a failure to serve — the platform health check never goes green
+on a process that cannot work.
+
+The underlying driver error goes to the logs, not the response: the endpoint is unauthenticated and
+a driver error names cluster hosts.

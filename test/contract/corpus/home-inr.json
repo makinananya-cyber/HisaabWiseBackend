@@ -1,0 +1,146 @@
+{
+  "greeting": "Good morning",
+  "name": "Ananya",
+  "dateLabel": "Tuesday, 11 August",
+  "monthLabel": "August",
+  "spending": {
+    "total": {
+      "minor": 553900,
+      "currency": "INR",
+      "exponent": 2,
+      "display": "₹5,539"
+    },
+    "shareOfPayLabel": "9% of pay",
+    "isFirstRun": false,
+    "categories": [
+      {
+        "id": "rent",
+        "name": "Rent",
+        "amount": {
+          "minor": 300000,
+          "currency": "INR",
+          "exponent": 2,
+          "display": "₹3,000"
+        },
+        "share": 0.5416,
+        "shareLabel": "54%",
+        "slot": 1
+      },
+      {
+        "id": "groceries",
+        "name": "Groceries",
+        "amount": {
+          "minor": 86000,
+          "currency": "INR",
+          "exponent": 2,
+          "display": "₹860"
+        },
+        "share": 0.1552,
+        "shareLabel": "16%",
+        "slot": 2
+      },
+      {
+        "id": "transport",
+        "name": "Transport",
+        "amount": {
+          "minor": 44000,
+          "currency": "INR",
+          "exponent": 2,
+          "display": "₹440"
+        },
+        "share": 0.0794,
+        "shareLabel": "8%",
+        "slot": 3
+      },
+      {
+        "id": "utilities",
+        "name": "Utilities",
+        "amount": {
+          "minor": 52900,
+          "currency": "INR",
+          "exponent": 2,
+          "display": "₹529"
+        },
+        "share": 0.0955,
+        "shareLabel": "10%",
+        "slot": 4
+      },
+      {
+        "id": "entertainment",
+        "name": "Entertainment",
+        "amount": {
+          "minor": 30000,
+          "currency": "INR",
+          "exponent": 2,
+          "display": "₹300"
+        },
+        "share": 0.0542,
+        "shareLabel": "5%",
+        "slot": 5
+      },
+      {
+        "id": "other",
+        "name": "Other",
+        "amount": {
+          "minor": 41000,
+          "currency": "INR",
+          "exponent": 2,
+          "display": "₹410"
+        },
+        "share": 0.074,
+        "shareLabel": "7%",
+        "slot": 6
+      }
+    ]
+  },
+  "savings": {
+    "saved": {
+      "minor": 2300000,
+      "currency": "INR",
+      "exponent": 2,
+      "display": "₹23,000"
+    },
+    "goal": {
+      "minor": 1300000,
+      "currency": "INR",
+      "exponent": 2,
+      "display": "₹13,000"
+    },
+    "zeroLabel": "₹0",
+    "percentageLabel": "177% of goal",
+    "position": 1.0,
+    "verdict": "met",
+    "remaining": null
+  },
+  "tip": {
+    "id": "tip-07",
+    "dayKey": "2026-08-11",
+    "text": "To find 10% of a number, move the dot one step left. {c}6,400 becomes {c}640. Double it and there is your 20% savings target.",
+    "currencyToken": "₹"
+  },
+  "learning": {
+    "streak": 4,
+    "summary": "120 XP · next up, Needs vs. Wants",
+    "nextLesson": "Needs vs. Wants"
+  },
+  "articles": [
+    {
+      "id": "scams",
+      "short": "Scam awareness",
+      "icon": "shield",
+      "accent": 3
+    },
+    {
+      "id": "remittance",
+      "short": "Sending money home",
+      "icon": "globe",
+      "accent": 4
+    },
+    {
+      "id": "credit",
+      "short": "Borrowing and credit",
+      "icon": "steps",
+      "accent": 1
+    }
+  ]
+}
