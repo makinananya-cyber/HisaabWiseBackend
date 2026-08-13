@@ -320,6 +320,47 @@ export async function activeUserIds(): Promise<ObjectId[]> {
   return documents.map((document) => document._id);
 }
 
+/**
+ * Mark an account deleted — the **soft** delete.
+ *
+ * Sign-in is blocked, the email stays reserved through the grace period, and the account is recoverable:
+ * "I deleted my finance app by accident" is a real thing, and an irreversible tap is a cruel one. The epoch
+ * bump ends every outstanding access token immediately, so the deletion takes effect on the next request
+ * rather than in fifteen minutes.
+ */
+export async function softDelete(id: ObjectId, now: Date): Promise<void> {
+  await users().updateOne({ _id: id }, { $set: { deletedAt: now }, $inc: { securityEpoch: 1 } });
+}
+
+/** Undo a soft delete, for the restore offer sign-in makes. */
+export async function restore(id: ObjectId): Promise<void> {
+  await users().updateOne({ _id: id }, { $set: { deletedAt: null } });
+}
+
+/**
+ * Erase the user document — the **hard** delete, and what releases the email.
+ *
+ * Called last by `purge:deleted`, after every dependent collection, so a crash mid-purge leaves an account
+ * still findable by `deletedAt` and finishable on the next run.
+ */
+export async function hardDelete(id: ObjectId): Promise<number> {
+  const { deletedCount } = await users().deleteOne({ _id: id });
+  return deletedCount;
+}
+
+/**
+ * Accounts soft-deleted before a cutoff — the purge job's selection.
+ *
+ * Driven by the sparse `{deletedAt: 1}` index, so the query touches the handful of deleted accounts rather
+ * than scanning the table.
+ */
+export async function deletedBefore(cutoff: Date): Promise<ObjectId[]> {
+  const documents = await users()
+    .find({ deletedAt: { $ne: null, $lte: cutoff } }, { projection: { _id: 1 } })
+    .toArray();
+  return documents.map((document) => document._id);
+}
+
 export const setSavingsGoal = async (
   id: ObjectId,
   savingsGoal: Money,

@@ -96,5 +96,20 @@ export async function ensureIndexes(logger: Logger): Promise<void> {
     ])),
   );
 
+  // ── Slice 7 — account and compliance ────────────────────────────────────────────────────────
+  built.push(
+    ...(await collection(COLLECTIONS.events).createIndexes([
+      { key: { userId: 1, receivedAt: -1 }, name: 'userId_receivedAt' },
+      // Stitching a pre-account install to the account it becomes; the only other way events are read.
+      { key: { installId: 1 }, sparse: true, name: 'installId_sparse' },
+    ])),
+  );
+
+  built.push(
+    ...(await collection(COLLECTIONS.deletionTombstones).createIndexes([
+      { key: { userIdHash: 1 }, unique: true, name: 'userIdHash_unique' },
+    ])),
+  );
+
   logger.info({ indexes: built.length }, 'indexes ensured');
 }

@@ -120,6 +120,19 @@ export async function findEntry(userId: ObjectId, id: string): Promise<ExpenseEn
   return document === null ? null : parse(document);
 }
 
+/**
+ * Every entry a user has, across every month, oldest first.
+ *
+ * **For the data export, and it exists because the export was wrong without it.** The first version composed
+ * "the live month" plus "each archived month", which silently missed the live month whenever the caller had no
+ * month key to hand — so a reader exercising their PDPL access right got their history and not their present.
+ * One query over the `{userId, monthKey}` index is both correct and cheaper.
+ */
+export async function allForUser(userId: ObjectId): Promise<ExpenseEntry[]> {
+  const documents = await entries().find({ userId }).sort({ entryDate: 1 }).toArray();
+  return documents.map(parse);
+}
+
 /** Erase every entry for a user. For the hard purge, and for the rollover's clear-the-live-month step. */
 export async function deleteAllForUser(userId: ObjectId): Promise<number> {
   const { deletedCount } = await entries().deleteMany({ userId });

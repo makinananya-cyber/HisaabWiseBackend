@@ -1,6 +1,7 @@
 import type { Logger } from 'pino';
 
 import { runMonthRollover } from './jobs/monthRollover';
+import { runPurgeDeleted } from './jobs/purgeDeleted';
 
 /**
  * The in-process scheduler, replacing ADR-0007's Cron Triggers → Queues.
@@ -32,6 +33,14 @@ import { runMonthRollover } from './jobs/monthRollover';
 /** Fifteen minutes. Not hourly: Asia/Kolkata is +05:30 and Asia/Kathmandu +05:45 (Product Spec §4.5). */
 export const ROLLOVER_INTERVAL_MS = 15 * 60 * 1_000;
 
+/**
+ * Daily, for the purge.
+ *
+ * A thirty-day grace period does not need finer granularity than a day: an account erased twelve hours later
+ * than its cutoff is thirty days and twelve hours old, which is not a promise anybody made differently.
+ */
+export const PURGE_INTERVAL_MS = 24 * 60 * 60 * 1_000;
+
 interface ScheduledJob {
   readonly name: string;
   readonly intervalMs: number;
@@ -43,6 +52,11 @@ const JOBS: ScheduledJob[] = [
     name: 'month:rollover',
     intervalMs: ROLLOVER_INTERVAL_MS,
     run: async (logger) => runMonthRollover(logger),
+  },
+  {
+    name: 'purge:deleted',
+    intervalMs: PURGE_INTERVAL_MS,
+    run: async (logger) => runPurgeDeleted(logger),
   },
 ];
 

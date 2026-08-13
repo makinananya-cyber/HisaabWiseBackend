@@ -322,14 +322,16 @@ describeIntegration('Home and the budget engine', () => {
       expect(tips.size).toBeGreaterThan(1);
     });
 
-    it('carries the first-run learning summary', async () => {
+    it('carries the first-run learning summary, naming the lesson to start with', async () => {
       const token = await register();
 
       const body = await home(token);
 
       expect(body.learning.streak).toBe(0);
-      expect(body.learning.summary).toContain('No XP yet');
-      expect(body.learning.nextLesson).toBe('');
+      // Slice 5 replaced the stubbed standing with the real one, so a new reader is now pointed at the first
+      // lesson by name rather than at nothing.
+      expect(body.learning.summary).toBe('No XP yet · start with Gross vs. Net Income');
+      expect(body.learning.nextLesson).toBe('Gross vs. Net Income');
     });
 
     /**

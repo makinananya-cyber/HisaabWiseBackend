@@ -7,6 +7,7 @@ import type { Logger } from 'pino';
 
 import type { Config } from './config';
 import { ApiError, errorBody } from './errors';
+import { accountRoutes } from './routes/account';
 import { authRoutes } from './routes/auth';
 import { contentRoutes } from './routes/content';
 import { expenseRoutes } from './routes/expenses';
@@ -69,6 +70,7 @@ export function createApp(config: Config, logger: Logger): Hono<AppEnv> {
   app.route('/', expenseRoutes);
   app.route('/', learnRoutes);
   app.route('/', reportRoutes);
+  app.route('/', accountRoutes);
 
   // Every error response in this service uses one envelope: `{error: {code, message}}`.
   app.notFound((c) => c.json(errorBody('NOT_FOUND'), 404));

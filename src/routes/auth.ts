@@ -9,6 +9,7 @@ import { normaliseAnswer } from '../domain/securityAnswers';
 import { ageInYears, calendarDate, isValidTimezone } from '../domain/time';
 import { ApiError } from '../errors';
 import { requireSession } from '../middleware/auth';
+import { stitchInstall } from '../repositories/events';
 import * as refreshTokens from '../repositories/refreshTokens';
 import * as passwordResets from '../repositories/passwordResets';
 import * as users from '../repositories/users';
@@ -168,6 +169,11 @@ const registerSchema = z.object({
   acceptedTerms: z.boolean(),
   timeZone: timezoneSchema,
   language: z.enum(['en', 'ar']),
+  /**
+   * The install this registration came from, so the events it recorded before there was an account can be
+   * stitched to it — which is what makes activation measurable across the registration boundary.
+   */
+  installId: z.string().min(1).max(100).nullish(),
 });
 
 /**
@@ -223,6 +229,14 @@ authRoutes.post('/v1/auth/register', async (c) => {
     timezone: input.timeZone,
     securityQuestions,
   });
+
+  if (input.installId !== null && input.installId !== undefined) {
+    // Best-effort: a metrics stitch must never fail a registration.
+    await stitchInstall(input.installId, user._id).catch((err: unknown) => {
+      c.var.log.warn({ err }, 'could not stitch install events to the new account');
+      return 0;
+    });
+  }
 
   c.var.log.info({ userId: user._id.toHexString() }, 'account registered');
   return c.json(await beginSession(c.var.config, user, deviceLabel(c), now), 201);
