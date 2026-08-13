@@ -291,16 +291,25 @@ export const endpoints: readonly EndpointContract[] = [
     path: '/v1/screens/reports',
     slice: 6,
     fixtures: ['reports-inr.json', 'reports-two-years.json', 'reports-empty.json'],
-    status: 'pending',
+    status: 'live',
+    note: 'The list scales its trend bars against the newest rate set so the months are comparable; the verdicts still come from the stored documents, so no FX movement can change whether a goal was met.',
   },
   {
     method: 'GET',
     path: '/v1/screens/reports/:monthKey',
     slice: 6,
     fixtures: ['reports-month-inr.json', 'reports-month-aed.json', 'reports-month-quiet.json'],
-    status: 'pending',
+    status: 'live',
+    note: 'Converted through the month\'s **pinned** rate set (invariant 7), so changing display currency converts every figure and changes no verdict.',
   },
-  { method: 'GET', path: '/v1/fx/rates/:monthKey', slice: 6, fixtures: [], status: 'pending' },
+  {
+    method: 'GET',
+    path: '/v1/fx/rates/:monthKey',
+    slice: 6,
+    fixtures: [],
+    status: 'live',
+    note: 'The set an archived month was closed with. Immutable, so cacheable for a long time — it is what makes a report\'s figures explicable after a currency change.',
+  },
 
   // ── Slice 7 — account and compliance ────────────────────────────────────────────────────────
   {

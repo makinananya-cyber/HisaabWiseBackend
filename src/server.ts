@@ -6,6 +6,7 @@ import { closeDatabase, connectDatabase } from './db';
 import { createApp } from './index';
 import { createLogger } from './logger';
 import { ensureIndexes } from './repositories/indexes';
+import { startScheduler } from './scheduler';
 
 /**
  * The entrypoint. Ordering here is the whole point:
@@ -49,10 +50,14 @@ async function main(): Promise<void> {
     logger.info({ port: info.port }, 'listening');
   });
 
+  // After the port is bound: the scheduled jobs are background work and must not delay readiness.
+  const scheduler = startScheduler(logger);
+
   // Drain in-flight requests, then release the pool, so a rolling deploy does not cut a request
   // in half or leave connections held on the Atlas side.
   const shutdown = (signal: string): void => {
     logger.info({ signal }, 'shutting down');
+    scheduler.stop();
     server.close(() => {
       void closeDatabase().then(
         () => process.exit(0),

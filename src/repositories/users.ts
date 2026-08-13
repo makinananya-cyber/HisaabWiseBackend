@@ -306,6 +306,20 @@ export async function setPersonalDetails(
   await users().updateOne({ _id: id }, { $set: details });
 }
 
+/**
+ * Every user the rollover job should consider.
+ *
+ * Ids only, and deleted accounts excluded. The job walks these one at a time, so materialising a full user
+ * document per candidate up front would hold the whole table in memory for a job that needs one row at a
+ * time — and the ids are what give it a per-user retry boundary.
+ */
+export async function activeUserIds(): Promise<ObjectId[]> {
+  const documents = await users()
+    .find({ deletedAt: null }, { projection: { _id: 1 } })
+    .toArray();
+  return documents.map((document) => document._id);
+}
+
 export const setSavingsGoal = async (
   id: ObjectId,
   savingsGoal: Money,

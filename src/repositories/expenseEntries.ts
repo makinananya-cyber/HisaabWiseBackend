@@ -126,8 +126,30 @@ export async function deleteAllForUser(userId: ObjectId): Promise<number> {
   return deletedCount;
 }
 
-/** Erase one month's entries for a user — what rollover does after the archive is written. */
+/** Erase one month's entries for a user. */
 export async function deleteMonth(userId: ObjectId, monthKey: string): Promise<number> {
   const { deletedCount } = await entries().deleteMany({ userId, monthKey });
+  return deletedCount;
+}
+
+/**
+ * Erase entries belonging to any of the given months — what rollover calls once the archive exists.
+ *
+ * **Driven by which months are archived, not by which month was just closed.** An archive is the proof that
+ * a month's entries are safe to remove, so sweeping every archived month makes the clear idempotent *and*
+ * self-healing: a pass that wrote an archive and then died leaves entries in a month that is no longer
+ * "due", and nothing else would ever remove them — they would sit in a month too closed to delete from.
+ *
+ * A no-op for an empty list, which is the common case.
+ */
+export async function deleteArchivedMonths(
+  userId: ObjectId,
+  archivedMonthKeys: readonly string[],
+): Promise<number> {
+  if (archivedMonthKeys.length === 0) return 0;
+  const { deletedCount } = await entries().deleteMany({
+    userId,
+    monthKey: { $in: [...archivedMonthKeys] },
+  });
   return deletedCount;
 }
