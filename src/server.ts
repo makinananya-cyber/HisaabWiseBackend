@@ -5,6 +5,7 @@ import { loadContent } from './content';
 import { closeDatabase, connectDatabase } from './db';
 import { createApp } from './index';
 import { createLogger } from './logger';
+import { ensureIndexes } from './repositories/indexes';
 
 /**
  * The entrypoint. Ordering here is the whole point:
@@ -37,6 +38,12 @@ async function main(): Promise<void> {
     },
   });
   logger.info({ maxPoolSize: config.MONGODB_MAX_POOL_SIZE }, 'database connected');
+
+  // Before the port is bound, because two of these indexes are not optimisations: the unique
+  // `(userId, monthKey)` on `month_archives` is what makes the rollover job safe to retry, and the
+  // unique `email` is what refuses a duplicate registration. Serving without them would mean those
+  // guarantees silently do not hold.
+  await ensureIndexes(logger);
 
   const server = serve({ fetch: createApp(config, logger).fetch, port: config.PORT }, (info) => {
     logger.info({ port: info.port }, 'listening');

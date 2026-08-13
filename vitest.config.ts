@@ -11,6 +11,13 @@ export default defineConfig({
   test: {
     environment: 'node',
     include: ['test/**/*.test.ts'],
+    // Loads `.env` so the integration suites find `MONGODB_URI` on a developer's machine. Without it
+    // they would skip exactly where the credentials are, and a skipped test reads as a passing one.
+    setupFiles: ['test/support/env.ts'],
+    // Integration suites connect to Atlas: a cold `mongodb+srv://` connect from the UAE measures ~3 s
+    // across three TLS handshakes, and argon2 hashing adds to the per-test cost.
+    testTimeout: 30_000,
+    hookTimeout: 30_000,
     // Domain tests are pure and fast; database tests must not interleave against one another's
     // collections. Files run in parallel, tests within a file in sequence.
     sequence: { concurrent: false },

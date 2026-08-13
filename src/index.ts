@@ -6,8 +6,11 @@ import { secureHeaders } from 'hono/secure-headers';
 import type { Logger } from 'pino';
 
 import type { Config } from './config';
+import { ApiError, errorBody } from './errors';
+import { authRoutes } from './routes/auth';
 import { contentRoutes } from './routes/content';
 import { healthRoutes } from './routes/health';
+import { meRoutes } from './routes/me';
 import type { AppEnv } from './types/hono';
 
 /**
@@ -56,13 +59,32 @@ export function createApp(config: Config, logger: Logger): Hono<AppEnv> {
   // contract. The versioned routes are mounted by the slices that implement them.
   app.route('/', healthRoutes);
   app.route('/', contentRoutes);
+  app.route('/', authRoutes);
+  app.route('/', meRoutes);
 
   // Every error response in this service uses one envelope: `{error: {code, message}}`.
-  app.notFound((c) => c.json({ error: { code: 'NOT_FOUND', message: 'Route not found' } }, 404));
+  app.notFound((c) => c.json(errorBody('NOT_FOUND'), 404));
 
+  /**
+   * Two kinds of failure, and the distinction is the point.
+   *
+   * An `ApiError` is a **decision** a route made — a wrong password, a closed month, a taken email — so
+   * it carries its own code and status and is logged at `info`. Anything else reaching here is a **bug**,
+   * so it is logged at `error` with the stack and answered `500` with nothing about it in the body.
+   *
+   * `ApiError.detail` never reaches the response. It is where the zod paths and the offending field names
+   * go, and those describe internal structure.
+   */
   app.onError((err, c) => {
-    c.var.log.error({ err, path: new URL(c.req.url).pathname }, 'unhandled error');
-    return c.json({ error: { code: 'INTERNAL', message: 'Internal server error' } }, 500);
+    const path = new URL(c.req.url).pathname;
+
+    if (err instanceof ApiError) {
+      c.var.log.info({ code: err.code, detail: err.detail, path }, 'request refused');
+      return c.json(err.body, err.status);
+    }
+
+    c.var.log.error({ err, path }, 'unhandled error');
+    return c.json(errorBody('INTERNAL'), 500);
   });
 
   return app;

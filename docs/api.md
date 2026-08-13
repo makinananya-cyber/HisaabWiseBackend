@@ -55,6 +55,67 @@ headline feature. Invariant 8 names both as cacheable families, so this is not a
 `{c}` in any content string is a **currency token**, resolved per user against their display
 currency. It is never resolved at extraction time.
 
+## Identity — slice 2
+
+Nothing under this heading is cacheable. Every response carries `Cache-Control: no-store`; a cache HIT
+here is one user's data served to another (invariant 8).
+
+| Route | Body | Answers |
+| --- | --- | --- |
+| `POST /v1/auth/register` | everything the three client steps collected | `201` `{accessToken, refreshToken}` |
+| `POST /v1/auth/login` | `{email, password, timeZone}` | `{accessToken, refreshToken}` |
+| `POST /v1/auth/refresh` | `{refreshToken, timeZone}` | `{accessToken, refreshToken}` — **both rotated** |
+| `POST /v1/auth/logout` | `{refreshToken}`, **authenticated** | `{}` |
+| `POST /v1/auth/logout-all` | —, authenticated | `{}` |
+| `POST /v1/auth/forgot-password/questions` | `{email}` | `{questions: [{id, text}, {id, text}]}` |
+| `POST /v1/auth/forgot-password/verify` | `{email, dateOfBirth, answers}` | `{ticket, expiresInSeconds}` |
+| `POST /v1/auth/reset-password` | `{ticket, newPassword}` | `{}` |
+| `GET /v1/me` | authenticated | `{email, displayName, emailVerified}` |
+| `PUT /v1/me/language` | `{language}` | `{language}` |
+| `PUT /v1/me/timezone` | `{timeZone}` | `{timeZone}` |
+
+`PUT /v1/me`, `PUT /v1/me/currency` and `POST /v1/me/password` answer with the **Account screen
+payload** (ADR-0020) and therefore land with slice 7. Their security mechanisms are slice 2's.
+
+### The access token
+
+A JWT signed HS256, carrying `sub` (user id), `exp`, and **`sec`** — the user's `securityEpoch` when the
+token was minted. The client reads `exp` and `sec` off the token itself rather than from sibling fields,
+so the response describes nothing about it. Auth middleware compares `sec` against the stored epoch: a
+password change, a `logout-all`, or a reset **invalidates every outstanding access token immediately**
+rather than within fifteen minutes ([ADR-0005](adr/0005-session-lifecycle.md)).
+
+### Rotation
+
+Each refresh revokes the presented token and issues its successor in the same family. **Presenting an
+already-revoked token revokes the entire family.** That is the alarm rather than the error: rotation
+alone gives a thief a dead token and nobody a signal, whereas family revocation signs the legitimate
+user out — recoverable, where a silently shared session is not.
+
+### Errors
+
+| Code | Status | Meaning |
+| --- | --- | --- |
+| `VALIDATION_FAILED` | 422 | the body failed validation. The offending paths go to the log, never the response |
+| `EMAIL_TAKEN` | 409 | registration only, and the **only** way a caller learns an address is taken — there is deliberately no availability endpoint |
+| `INVALID_CREDENTIALS` | 422 | wrong password, wrong `currentPassword`, **or an unknown email** — one code, matching body, matching timing |
+| `ACCOUNT_LOCKED` | 429 | per-account lockout, five failures, fifteen minutes. Login and recovery have **separate** counters |
+| `ACCOUNT_PENDING_DELETION` | 403 | inside the 30-day grace; the client offers to restore |
+| `UNDER_AGE` | 422 | under 13, computed in the reported zone |
+| `TERMS_NOT_ACCEPTED` | 422 | |
+| `SECURITY_ANSWERS_INVALID` | 422 | recovery failed. **Never says which answer**, and covers a wrong date of birth too |
+| `RESET_TICKET_INVALID` | 422 | unknown, expired, or already spent — one code for all three |
+| `UNAUTHENTICATED` | 401 | anything wrong with the access token, and nothing else. See below |
+
+**`INVALID_CREDENTIALS` is 422 and not 401, and that is a hard constraint.** On this client a `401` means
+"your token is no good", so it refreshes and retries; against a rotating token family, answering a
+mistyped `currentPassword` with a `401` would refresh, find the family revoked, and sign the user out for
+a typo. `401` is reserved for the token.
+
+**Recovery is by security question and date of birth — there is no email reset.** See
+[ADR-0018](adr/0018-recovery-by-security-question.md), including the two risks that were accepted and the
+one open item it leaves.
+
 ## Operational endpoints
 
 These sit outside `/v1`: they are infrastructure, not part of the client API contract. Both
