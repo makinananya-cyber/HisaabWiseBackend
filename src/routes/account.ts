@@ -182,15 +182,12 @@ accountRoutes.post('/v1/me/password', requireSession(), async (c) => {
   /**
    * Every **other** session is revoked; the requesting one survives (Product Spec §3.7).
    *
-   * The family to keep is identified by the refresh token the caller holds — the client already sends it on
-   * logout, so it has one to send. Without it, the safe reading is to revoke everything: signing the reader
-   * out of the device they just used is worse than leaving a stolen session alive.
+   * The family comes from the access token's `fam` claim, so no client change was needed — the client's
+   * `PasswordChange` body carries only the three fields the user typed. Without the claim the safe reading is
+   * to revoke everything: leaving a possibly-stolen session alive is worse than an extra sign-in.
    */
-  const presentedRefresh = c.req.header('x-refresh-token');
-  const keepFamily =
-    presentedRefresh === undefined ? null : await refreshTokens.familyOf(presentedRefresh);
-
-  if (keepFamily === null) {
+  const keepFamily: string | undefined = c.var.familyId;
+  if (keepFamily === undefined) {
     await refreshTokens.revokeAllForUser(user._id, now);
   } else {
     await refreshTokens.revokeOtherFamilies(user._id, keepFamily, now);

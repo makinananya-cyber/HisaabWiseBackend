@@ -20,5 +20,14 @@ export interface AppEnv {
     config: Config;
     log: Logger;
     user: User;
+    /**
+     * The refresh-token family this session descends from, read off the access token's `fam` claim.
+     *
+     * Typed `| undefined` rather than as an optional key, because Hono's `Variables` cannot express "set on
+     * some routes" and the honest type is the one that makes the caller check. Absent for a token minted
+     * before the claim existed; the one route that reads it treats absence as "revoke everything", which is
+     * the safe reading.
+     */
+    familyId: string | undefined;
   };
 }

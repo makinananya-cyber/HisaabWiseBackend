@@ -427,7 +427,7 @@ describeIntegration('Account and compliance', () => {
 
     /** Product Spec §3.7: a password change kills every *other* session, immediately. */
     it('kills another device\'s session at once', async () => {
-      const { token, refreshToken, email } = await account();
+      const { token, email } = await account();
       const second = await send('POST', '/v1/auth/login', undefined, {
         email,
         password: PASSWORD,
@@ -435,14 +435,12 @@ describeIntegration('Account and compliance', () => {
       });
       const tablet = (await second.json()) as { accessToken: string; refreshToken: string };
 
-      await send(
-        'POST',
-        '/v1/me/password',
-        token,
-        { currentPassword: PASSWORD, securityAnswers: answers, newPassword: 'a-brand-new-password' },
-        // The family to keep, identified by the refresh token this device holds.
-        { 'x-refresh-token': refreshToken },
-      );
+      // No header: the family comes off the access token's `fam` claim, so the client needs no change.
+      await send('POST', '/v1/me/password', token, {
+        currentPassword: PASSWORD,
+        securityAnswers: answers,
+        newPassword: 'a-brand-new-password',
+      });
 
       // The tablet's access token dies now, via the `securityEpoch` bump — not in fifteen minutes.
       expect((await send('GET', '/v1/me', tablet.accessToken)).status).toBe(401);
@@ -457,16 +455,14 @@ describeIntegration('Account and compliance', () => {
     it('keeps the requesting device signed in', async () => {
       const { token, refreshToken } = await account();
 
-      await send(
-        'POST',
-        '/v1/me/password',
-        token,
-        { currentPassword: PASSWORD, securityAnswers: answers, newPassword: 'a-brand-new-password' },
-        { 'x-refresh-token': refreshToken },
-      );
+      await send('POST', '/v1/me/password', token, {
+        currentPassword: PASSWORD,
+        securityAnswers: answers,
+        newPassword: 'a-brand-new-password',
+      });
 
       // Signing the reader out of the device they just used to change their password would be a confusing
-      // way to confirm success.
+      // way to confirm success. The family survives because the access token named it.
       const refreshed = await send('POST', '/v1/auth/refresh', undefined, {
         refreshToken,
         timeZone: 'Asia/Kolkata',

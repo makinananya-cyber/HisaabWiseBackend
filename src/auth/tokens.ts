@@ -23,6 +23,20 @@ import { ApiError } from '../errors';
 export interface AccessClaims {
   readonly userId: string;
   readonly securityEpoch: number;
+  /**
+   * The refresh-token **family** this session descends from (`fam`).
+   *
+   * Here so that "revoke every *other* session" is answerable from the access token alone. Product Spec §3.7
+   * revokes every other session on a password change, and the requesting device must survive — otherwise
+   * changing your password signs you out, which reads as a failure. The client sends no family identifier
+   * (its `PasswordChange` body carries only the three fields the user typed), so the alternative was a header
+   * it does not send and a fallback that revoked everything including the caller.
+   *
+   * Optional, because a token minted before this claim existed must keep working until it expires — and
+   * because it is a *convenience* for one route rather than a security boundary: revocation is still bounded
+   * by `familyId` in the database, and `securityEpoch` is still what invalidates a token.
+   */
+  readonly familyId?: string;
 }
 
 const ISSUER = 'hisaabwise';
@@ -39,7 +53,10 @@ const secretKey = (config: Config): Uint8Array =>
  * to verify these, that is the moment to move to RS256 — not before.
  */
 export async function mintAccessToken(config: Config, claims: AccessClaims): Promise<string> {
-  return new SignJWT({ sec: claims.securityEpoch })
+  return new SignJWT({
+    sec: claims.securityEpoch,
+    ...(claims.familyId === undefined ? {} : { fam: claims.familyId }),
+  })
     .setProtectedHeader({ alg: 'HS256', typ: 'JWT' })
     .setSubject(claims.userId)
     .setIssuer(ISSUER)
@@ -70,12 +87,16 @@ export async function verifyAccessToken(config: Config, token: string): Promise<
     throw new ApiError('UNAUTHENTICATED');
   }
 
-  const { sub, sec } = payload;
+  const { sub, sec, fam } = payload;
   if (typeof sub !== 'string' || sub === '' || typeof sec !== 'number') {
     throw new ApiError('UNAUTHENTICATED');
   }
 
-  return { userId: sub, securityEpoch: sec };
+  return {
+    userId: sub,
+    securityEpoch: sec,
+    ...(typeof fam === 'string' ? { familyId: fam } : {}),
+  };
 }
 
 /**

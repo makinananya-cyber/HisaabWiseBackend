@@ -48,6 +48,9 @@ export function requireSession(): MiddlewareHandler<AppEnv> {
     if (user.deletedAt !== null) throw new ApiError('ACCOUNT_PENDING_DELETION');
 
     c.set('user', user);
+    // The family this session descends from, where the token carries it. `revokeOtherFamilies` reads it so a
+    // password change does not sign the reader out of the device they changed it on.
+    if (claims.familyId !== undefined) c.set('familyId', claims.familyId);
     await next();
   };
 }

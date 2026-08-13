@@ -141,6 +141,7 @@ async function beginSession(
     accessToken: await mintAccessToken(config, {
       userId: user._id.toHexString(),
       securityEpoch: user.securityEpoch,
+      familyId: issued.familyId,
     }),
     refreshToken: issued.token,
   };
@@ -343,6 +344,8 @@ authRoutes.post('/v1/auth/refresh', async (c) => {
     accessToken: await mintAccessToken(c.var.config, {
       userId: user._id.toHexString(),
       securityEpoch: user.securityEpoch,
+      // The rotated token stays in the same family, so a session keeps its identity across refreshes.
+      familyId: outcome.issued.familyId,
     }),
     refreshToken: outcome.issued.token,
   });
