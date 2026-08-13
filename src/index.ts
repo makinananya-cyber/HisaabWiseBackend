@@ -6,6 +6,7 @@ import { secureHeaders } from 'hono/secure-headers';
 import type { Logger } from 'pino';
 
 import type { Config } from './config';
+import { contentRoutes } from './routes/content';
 import { healthRoutes } from './routes/health';
 import type { AppEnv } from './types/hono';
 
@@ -54,6 +55,7 @@ export function createApp(config: Config, logger: Logger): Hono<AppEnv> {
   // Operational endpoints sit outside `/v1` — they are infrastructure, not part of the client API
   // contract. The versioned routes are mounted by the slices that implement them.
   app.route('/', healthRoutes);
+  app.route('/', contentRoutes);
 
   // Every error response in this service uses one envelope: `{error: {code, message}}`.
   app.notFound((c) => c.json({ error: { code: 'NOT_FOUND', message: 'Route not found' } }, 404));

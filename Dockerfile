@@ -38,9 +38,12 @@ WORKDIR /app
 COPY --from=deps  /app/node_modules ./node_modules
 COPY --from=build /app/dist         ./dist
 COPY package.json ./
-# Editorial content is read from disk at startup and versioned with the deploy (ADR-0008). The
-# directory arrives with slice 1; copying it now would fail the build.
-# COPY content ./content
+# Editorial content is read from disk at startup and versioned with the deploy (ADR-0008, as amended
+# by ADR-0016). It sits beside `dist/` because `src/content.ts` resolves it relative to the
+# entrypoint — `import.meta.dirname/../content` — which is the same path under `tsx` in development
+# and under the bundle here. An image missing it fails to boot with the file named, rather than
+# serving a Learn tab with nothing in it.
+COPY content ./content
 
 # Never root.
 USER node

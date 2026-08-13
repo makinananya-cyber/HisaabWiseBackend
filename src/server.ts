@@ -1,6 +1,7 @@
 import { serve } from '@hono/node-server';
 
 import { loadConfig } from './config';
+import { loadContent } from './content';
 import { closeDatabase, connectDatabase } from './db';
 import { createApp } from './index';
 import { createLogger } from './logger';
@@ -9,13 +10,18 @@ import { createLogger } from './logger';
  * The entrypoint. Ordering here is the whole point:
  *
  *  1. Validate configuration — a bad environment fails before anything else happens.
- *  2. Connect the database — an unreachable cluster fails before a port is bound, so the platform
+ *  2. Load and validate the editorial content — a container image missing `content/`, or carrying a
+ *     lossy extraction, fails at boot rather than serving a Learn tab with four units in it.
+ *  3. Connect the database — an unreachable cluster fails before a port is bound, so the platform
  *     health check never goes green on a process that cannot serve.
- *  3. Only then accept traffic.
+ *  4. Only then accept traffic.
  */
 async function main(): Promise<void> {
   const config = loadConfig();
   const logger = createLogger(config);
+
+  const content = loadContent();
+  logger.info({ languages: [...content.keys()] }, 'content loaded');
 
   await connectDatabase(config, {
     onRetry: ({ attempt, attempts, delayMs, err }) => {

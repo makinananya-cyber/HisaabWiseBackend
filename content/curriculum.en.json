@@ -1,0 +1,2004 @@
+{
+  "units": [
+    {
+      "id": "u1",
+      "number": 1,
+      "accent": "sun",
+      "title": "Build the Foundation",
+      "subtitle": "Income & Mindset",
+      "blurb": "Before you can plan your money, you need to know how much of it is really yours.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "number": 1,
+          "icon": "wallet",
+          "title": "Gross vs. Net Income",
+          "blurb": "Know what really lands in your bank account.",
+          "steps": [
+            {
+              "kind": "teach",
+              "heading": "Two numbers, not one",
+              "paragraphs": [
+                "When you get a job, you hear one number. But there are really two.",
+                "**Gross income** is the full amount your job promises to pay you. It is the number in your contract.",
+                "**Net income** is the money that actually arrives in your bank account. People also call it **take-home pay**.",
+                "Your budget can only use the second number."
+              ],
+              "tip": "Gross = the promise. Net = the money. Plan with the money."
+            },
+            {
+              "kind": "teach",
+              "heading": "Good news if you work in the UAE",
+              "paragraphs": [
+                "In many countries, the government takes a part of your pay. This is called **income tax**. Your employer takes it out before you are paid.",
+                "**The UAE does not do this.** There is no income tax on salaries here. You keep 100% of your pay.",
+                "So for most people in the UAE, gross and net are the same number.",
+                "It is still good to know the word. You may work for a company in another country one day, or move abroad."
+              ],
+              "list": [
+                {
+                  "term": "UAE and GCC nationals",
+                  "detail": "A small part of your pay goes to a government pension fund. Expat workers do not pay this."
+                },
+                {
+                  "term": "Health insurance",
+                  "detail": "It is required in Dubai and Abu Dhabi. Most companies pay for it. Some ask you to pay a small share."
+                },
+                {
+                  "term": "Loan payments",
+                  "detail": "If you took a bank loan, the bank may take the payment from your salary each month."
+                }
+              ],
+              "tip": "No income tax on salary in the UAE. But there is 5% **VAT** — a tax added to the price of most things you buy in shops."
+            },
+            {
+              "kind": "teach",
+              "heading": "The part of your salary that is split up",
+              "paragraphs": [
+                "In the UAE, your salary is usually written in parts on your contract:",
+                "**Basic salary** is the main part. **Allowances** are extra amounts for housing and transport.",
+                "Add them together and you get your total pay. This split matters a lot for one reason: your **end-of-service gratuity** is only calculated on the basic salary, not the total."
+              ],
+              "example": {
+                "heading": "Same total, different basic",
+                "body": "Two people both earn **{c}8,000** a month.\n\n**Sara:** basic {c}5,000 + allowances {c}3,000\n**Omar:** basic {c}3,000 + allowances {c}5,000\n\nSame money each month. But Sara's gratuity when she leaves will be much bigger, because it is based on her basic pay."
+              },
+              "tip": "When you read a job offer, look at the basic salary — not only the total."
+            },
+            {
+              "kind": "teach",
+              "heading": "A simple example, step by step",
+              "paragraphs": [
+                "Let's take an example from a country that *does* have income tax, so you can see how gross and net work."
+              ],
+              "example": {
+                "heading": "Working it out",
+                "body": "Step 1. Gross pay: **{c}5,000**\n\nStep 2. Income tax taken off: **{c}500**\n\nStep 3. Pension taken off: **{c}300**\n\nStep 4. Add the deductions: 500 + 300 = **{c}800**\n\nStep 5. Take them off the gross: 5,000 − 800 = **{c}4,200**\n\nGross is {c}5,000. Net is **{c}4,200**. She can only spend {c}4,200."
+              },
+              "tip": "The steps never change: start with gross, take off everything, and what is left is net."
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "You are making a monthly budget. Which number should you use?",
+              "explanation": "Only use net income. That is the money that really arrives. If you plan with gross, you plan to spend money you never receive.",
+              "options": [
+                "Gross income",
+                "Net income",
+                "Both added together",
+                "Neither"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "You work in the UAE and earn {c}6,000 a month. How much income tax comes off your salary?",
+              "explanation": "The UAE does not take income tax from salaries. You keep the full {c}6,000. This is one of the biggest money advantages of working here.",
+              "options": [
+                "{c}600",
+                "{c}300",
+                "Nothing — the UAE has no income tax on salaries",
+                "{c}1,200"
+              ],
+              "answers": [
+                2
+              ]
+            },
+            {
+              "kind": "numeric",
+              "prompt": "Ali's gross pay is {c}4,000. His deductions are {c}400 in total. What is his net pay?",
+              "explanation": "4,000 − 400 = 3,600. Take the deductions off the gross pay. What is left is the net pay.",
+              "answer": 3600,
+              "showsCurrencySymbol": true
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Your UAE gratuity when you leave a job is based on which part of your salary?",
+              "explanation": "Gratuity uses the basic salary only. Allowances for housing and transport are not counted. So two people with the same total pay can get very different gratuity.",
+              "options": [
+                "Your total pay",
+                "Your basic salary only",
+                "Your housing allowance",
+                "Your transport allowance"
+              ],
+              "answers": [
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "number": 2,
+          "icon": "clock",
+          "title": "The Time-Value of Money",
+          "blurb": "Why money loses power while it sits still.",
+          "steps": [
+            {
+              "kind": "teach",
+              "heading": "Money today is worth more than money later",
+              "paragraphs": [
+                "Imagine someone offers you {c}100 today, or {c}100 in three years. Which do you take?",
+                "Take it today. This idea has a name: the **time value of money**.",
+                "There are two reasons. First, money you have now can grow. Second, prices go up while you wait, so the same {c}100 buys less later."
+              ]
+            },
+            {
+              "kind": "teach",
+              "heading": "What inflation means",
+              "paragraphs": [
+                "**Inflation** means prices go up over time. It is shown as a percentage each year.",
+                "Inflation does not take money out of your account. It does something quieter. It reduces your **purchasing power** — how much you can actually buy with your money."
+              ],
+              "example": {
+                "heading": "The same bag of food",
+                "body": "A bag of food costs **{c}100** today.\n\nInflation this year is **4%**.\n\n4% of 100 = **{c}4**\n\nNext year the same bag costs **{c}104**.\n\nYour {c}100 is still {c}100. But it can no longer buy that bag. You did not lose money. You lost buying power."
+              },
+              "tip": "Inflation is slow and quiet. That is why it is easy to forget about."
+            },
+            {
+              "kind": "teach",
+              "heading": "Real return: the number that matters",
+              "paragraphs": [
+                "When a bank tells you an interest rate, there are two ways to look at it.",
+                "**Nominal return** is the rate the bank shows you.",
+                "**Real return** is that rate minus inflation. It tells you if your buying power really grew.",
+                "The formula is easy: **real return = interest rate − inflation**."
+              ],
+              "example": {
+                "heading": "When saving still loses",
+                "body": "Your savings account pays **2%** a year.\n\nInflation is **4%** a year.\n\n2% − 4% = **−2%**\n\nYour balance went up. But you can buy 2% less than before. The account did not really help you."
+              },
+              "tip": "When someone shows you a return, ask: is that before or after inflation?"
+            },
+            {
+              "kind": "teach",
+              "heading": "A quick trick: the Rule of 70",
+              "paragraphs": [
+                "Here is an easy trick you can do in your head.",
+                "Take the number **70**. Divide it by the inflation rate. The answer is roughly how many years until prices double.",
+                "Inflation 7% → 70 ÷ 7 = **10 years**\nInflation 5% → 70 ÷ 5 = **14 years**\nInflation 2% → 70 ÷ 2 = **35 years**",
+                "When prices double, your money buys half as much."
+              ],
+              "tip": "Just remember: **70 divided by the rate**. No calculator needed."
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Your savings account pays 3% a year. Inflation is 5%. What is your real return?",
+              "explanation": "Real return = 3% − 5% = −2%. Your balance grows, but prices grow faster. So you can buy less than before.",
+              "options": [
+                "8%",
+                "3%",
+                "−2%",
+                "−5%"
+              ],
+              "answers": [
+                2
+              ]
+            },
+            {
+              "kind": "numeric",
+              "prompt": "Inflation is 5% a year. Using the Rule of 70, how many YEARS until prices double? Type the number only.",
+              "explanation": "70 ÷ 5 = 14 years. In 14 years the same shopping costs twice as much. That is why money kept in cash for a long time is not really safe.",
+              "answer": 14,
+              "showsCurrencySymbol": false
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "What does 'purchasing power' mean?",
+              "explanation": "Purchasing power is about what your money can buy, not the number in your account. Inflation makes that number buy less each year.",
+              "options": [
+                "How much money is in your account",
+                "How much you can actually buy with your money",
+                "The interest your bank pays",
+                "Your credit card limit"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Someone offers you {c}500 now or {c}500 in two years. Which is worth more?",
+              "explanation": "Money now is worth more. You can use it, save it or grow it. And in two years, prices will be higher, so {c}500 will buy less.",
+              "options": [
+                "{c}500 in two years",
+                "{c}500 now",
+                "They are exactly equal",
+                "It depends on your bank"
+              ],
+              "answers": [
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u1l3",
+          "number": 3,
+          "icon": "split",
+          "title": "Needs vs. Wants",
+          "blurb": "Sort your spending into two simple groups.",
+          "steps": [
+            {
+              "kind": "teach",
+              "heading": "Two kinds of spending",
+              "paragraphs": [
+                "Every time money leaves your account, it is doing one of two jobs.",
+                "A **need** keeps you safe, fed, healthy and able to work. If you stop paying it, something in your life breaks.",
+                "A **want** makes life nicer. If you stop paying it, you feel sad — but nothing breaks.",
+                "Wants are not bad. They are the reason we work. But you must know which is which."
+              ]
+            },
+            {
+              "kind": "teach",
+              "heading": "Three questions to help you decide",
+              "paragraphs": [
+                "When you are not sure, ask yourself these:"
+              ],
+              "list": [
+                {
+                  "term": "Can I live one month without it?",
+                  "detail": "If yes, it is probably a want."
+                },
+                {
+                  "term": "Does it keep me healthy, housed or able to work?",
+                  "detail": "If yes, it is a need. Rent, food, medicine, and getting to work are all needs."
+                },
+                {
+                  "term": "Am I paying for the basic thing, or the nicer version?",
+                  "detail": "The basic thing is the need. The nicer version on top is a want."
+                }
+              ],
+              "tip": "Most spending is a need with a want on top. Learning to see the line between them is the whole skill."
+            },
+            {
+              "kind": "teach",
+              "heading": "Real examples",
+              "paragraphs": [
+                "Here is how it works with everyday things in the UAE."
+              ],
+              "example": {
+                "heading": "Same category, two answers",
+                "body": "**Food.** Groceries are a need. Ordering food on an app is a want.\n\n**Phone.** A basic plan so you can call and work is a need. The newest phone every year is a want.\n\n**Transport.** Getting to work by Metro or bus is a need. A taxi because you are late is a want.\n\n**Clothes.** Clothes for work are a need. The fifth pair of shoes is a want."
+              },
+              "tip": "You are allowed to buy wants. Just name them honestly, so you know what you can cut if money gets tight."
+            },
+            {
+              "kind": "teach",
+              "heading": "Why this matters for your budget",
+              "paragraphs": [
+                "This is not just a game. It is the first step for every budget.",
+                "The most popular budget rule is the **50/30/20 rule**. It splits your take-home pay like this: 50% for needs, 30% for wants, 20% for savings.",
+                "You cannot use that rule until you can sort your spending into needs and wants.",
+                "It also gives you a warning sign. If your needs go over half your pay, your fixed costs — like rent — are too high for your income."
+              ],
+              "tip": "Do the sorting once a month, when you look at your bank statement. It is easier than deciding in the shop."
+            },
+            {
+              "kind": "multiSelect",
+              "prompt": "Which of these are NEEDS? Pick all the correct ones.",
+              "explanation": "Rent, food, electricity and medicine keep you safe and healthy. Netflix and holidays are nice, but nothing breaks if you stop them. That makes them wants.",
+              "options": [
+                "Rent",
+                "Netflix subscription",
+                "Groceries",
+                "Electricity bill",
+                "A holiday trip",
+                "Medicine"
+              ],
+              "answers": [
+                0,
+                2,
+                3,
+                5
+              ]
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "You pay {c}200 a month for a phone plan with a new phone. A basic plan with the same calls and data costs {c}80. How do you sort this?",
+              "explanation": "You need a phone to work and stay in touch — that part costs {c}80. The extra {c}120 buys a nicer phone. That part is a want.",
+              "options": [
+                "All {c}200 is a need",
+                "All {c}200 is a want",
+                "{c}80 is the need, {c}120 is a want",
+                "It cannot be sorted"
+              ],
+              "answers": [
+                2
+              ]
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Your needs now take 65% of your take-home pay. What does this tell you?",
+              "explanation": "It is information, not blame. When needs go over half your pay, the cause is usually one big cost like rent or car payments — not small daily spending.",
+              "options": [
+                "You are bad with money",
+                "Your fixed costs, like rent, are high for your income",
+                "You should stop saving",
+                "Nothing at all"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Under the 50/30/20 rule, how much of your take-home pay goes to wants?",
+              "explanation": "30% goes to wants. 50% goes to needs and 20% goes to savings. You will use this rule a lot in the next unit.",
+              "options": [
+                "50%",
+                "30%",
+                "20%",
+                "10%"
+              ],
+              "answers": [
+                1
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "number": 2,
+      "accent": "mint",
+      "title": "Control Cash Flow",
+      "subtitle": "Budgeting & Saving",
+      "blurb": "See where your money goes, give every dirham a job, and build a safety cushion.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "number": 1,
+          "icon": "flow",
+          "title": "Cash Flow Tracking",
+          "blurb": "Write down what comes in and what goes out.",
+          "steps": [
+            {
+              "kind": "teach",
+              "heading": "Money in, money out",
+              "paragraphs": [
+                "**Cash flow** just means money moving in and out of your account.",
+                "**Money in** is your salary, freelance work, gifts, refunds.",
+                "**Money out** is rent, food, transport, shopping, savings.",
+                "**Net cash flow** = money in − money out. If it is positive, you kept some. If it is negative, you spent more than you earned."
+              ],
+              "tip": "Positive is good. Negative every month is a problem, even if your account is not empty yet."
+            },
+            {
+              "kind": "teach",
+              "heading": "Writing it down changes what you spend",
+              "paragraphs": [
+                "Something strange happens when people start writing down what they spend. They spend less — without even trying.",
+                "Why? Because most extra spending is not a decision. It just happens. A coffee here. A delivery fee there. A subscription you forgot about.",
+                "Small amounts feel like nothing. Together they are big. This is called **expense leakage** — money leaving through small holes you did not notice."
+              ],
+              "example": {
+                "heading": "The coffee example",
+                "body": "One coffee costs **{c}15**.\n\nYou buy one 4 days a week:\n15 × 4 = **{c}60 a week**\n\nIn a month (4 weeks):\n60 × 4 = **{c}240 a month**\n\nIn a year:\n240 × 12 = **{c}2,880 a year**\n\nNobody decides to spend {c}2,880 on coffee. They decide {c}15, again and again."
+              },
+              "tip": "You are not writing things down to feel bad. You are doing it to find the small holes."
+            },
+            {
+              "kind": "teach",
+              "heading": "Three easy ways to track",
+              "paragraphs": [
+                "The best method is the one you will still use next month. Pick one:"
+              ],
+              "list": [
+                {
+                  "term": "Log it right away",
+                  "detail": "Add it in the app when you pay. It takes 10 seconds and you do not have to remember later."
+                },
+                {
+                  "term": "Check once a week",
+                  "detail": "Sit down once a week with your bank app and sort everything. Slower, but it catches what you forgot."
+                },
+                {
+                  "term": "Set fixed costs once",
+                  "detail": "Rent and subscriptions are the same every month. Add them one time. Then only track your daily spending."
+                }
+              ],
+              "tip": "Give it 30 days before you judge it. One month shows you a picture. Three months show you a habit."
+            },
+            {
+              "kind": "numeric",
+              "prompt": "This month Layla earned {c}5,000 from her job and {c}500 from freelance work. She spent {c}4,200. What is her net cash flow?",
+              "explanation": "Money in = 5,000 + 500 = 5,500. Money out = 4,200. Net cash flow = 5,500 − 4,200 = 1,300. That extra 1,300 is what she can save.",
+              "answer": 1300,
+              "showsCurrencySymbol": true
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Someone spends more than they earn every month, but their account is not empty. What is happening?",
+              "explanation": "The extra money has to come from somewhere. It is coming out of savings, or from a credit card. That cannot go on forever.",
+              "options": [
+                "Nothing — they are fine",
+                "They are using savings or borrowing to fill the gap",
+                "Their salary is going up",
+                "It is impossible"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "What is 'expense leakage'?",
+              "explanation": "Leakage is many tiny spends, not one big mistake. It is also the easiest kind to fix, because you barely miss the things you cut.",
+              "options": [
+                "A mistake by your bank",
+                "Small purchases you barely notice that add up to a big total",
+                "Money spent on rent",
+                "A type of savings account"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "numeric",
+              "prompt": "You spend {c}20 on lunch, 5 days a week. How much is that in ONE WEEK?",
+              "explanation": "20 × 5 = 100 a week. Over a month that is about {c}400, and over a year about {c}4,800. Small numbers get big when they repeat.",
+              "answer": 100,
+              "showsCurrencySymbol": true
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "number": 2,
+          "icon": "pie",
+          "title": "Budgeting Frameworks",
+          "blurb": "Give every dirham a job before you spend it.",
+          "steps": [
+            {
+              "kind": "teach",
+              "heading": "A budget is a plan, not a punishment",
+              "paragraphs": [
+                "A **budget** is simply deciding where your money will go — *before* you spend it.",
+                "That is the important part. You decide when you are calm, not when you are standing in a shop.",
+                "A budget rule gives your plan a shape, so you do not start from nothing every month."
+              ]
+            },
+            {
+              "kind": "teach",
+              "heading": "The 50/30/20 rule",
+              "paragraphs": [
+                "Take your take-home pay. Split it into three parts."
+              ],
+              "list": [
+                {
+                  "term": "50% for needs",
+                  "detail": "Rent, bills, groceries, transport to work, insurance."
+                },
+                {
+                  "term": "30% for wants",
+                  "detail": "Eating out, shopping, trips, fun. Planned, so no guilt."
+                },
+                {
+                  "term": "20% for savings",
+                  "detail": "Emergency fund, investing, and paying extra on any debt."
+                }
+              ],
+              "example": {
+                "heading": "On {c}5,000 take-home pay",
+                "body": "Needs: 50% of 5,000\n5,000 × 0.50 = **{c}2,500**\n\nWants: 30% of 5,000\n5,000 × 0.30 = **{c}1,500**\n\nSavings: 20% of 5,000\n5,000 × 0.20 = **{c}1,000**\n\nCheck: 2,500 + 1,500 + 1,000 = 5,000 ✓"
+              },
+              "tip": "To find 10% of any number, just move the dot one place left. 5,000 → 500. Then 20% is double that = 1,000."
+            },
+            {
+              "kind": "teach",
+              "heading": "Two other ways to budget",
+              "paragraphs": [
+                "Different people need different systems. Two more that work well:"
+              ],
+              "list": [
+                {
+                  "term": "Zero-based budgeting",
+                  "detail": "You give every dirham a job until nothing is left unnamed. Very exact. More work. Good if you like being in control."
+                },
+                {
+                  "term": "Pay yourself first",
+                  "detail": "The day you get paid, your savings move out automatically. You live on what is left. Almost no effort, and it works very well."
+                }
+              ],
+              "tip": "'Pay yourself first' works because you do not need willpower. A bank transfer never gets tired or tempted."
+            },
+            {
+              "kind": "teach",
+              "heading": "When your needs do not fit in 50%",
+              "paragraphs": [
+                "In cities like Dubai and Abu Dhabi, rent is high. Many people cannot fit their needs into 50%. That is normal.",
+                "Do not throw the rule away. Change it:",
+                "Step 1. Pay your needs from your income.\nStep 2. Take what is left.\nStep 3. Split that in half — one half for wants, one half for savings."
+              ],
+              "example": {
+                "heading": "When needs are high",
+                "body": "Take-home pay: **{c}5,000**\nNeeds: **{c}3,200**\n\nWhat is left:\n5,000 − 3,200 = **{c}1,800**\n\nSplit it in half:\n1,800 ÷ 2 = **{c}900**\n\n{c}900 for wants, {c}900 for savings. You are still saving every month."
+              },
+              "tip": "Change the numbers, keep the habit. Saving something beats saving nothing."
+            },
+            {
+              "kind": "numeric",
+              "prompt": "Your take-home pay is {c}4,000. Under the 50/30/20 rule, how much goes to SAVINGS?",
+              "explanation": "20% of 4,000. Find 10% first: 400. Double it: 800. So {c}800 goes to savings, {c}2,000 to needs and {c}1,200 to wants.",
+              "answer": 800,
+              "showsCurrencySymbol": true
+            },
+            {
+              "kind": "numeric",
+              "prompt": "Your take-home pay is {c}3,000. Under the 50/30/20 rule, how much goes to NEEDS?",
+              "explanation": "50% means half. 3,000 ÷ 2 = 1,500. Needs get {c}1,500, wants get {c}900, savings get {c}600.",
+              "answer": 1500,
+              "showsCurrencySymbol": true
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Which budget method gives every single dirham a job until nothing is left over?",
+              "explanation": "Zero-based budgeting means income minus all your plans equals zero. Every dirham has a name before the month starts.",
+              "options": [
+                "The 50/30/20 rule",
+                "Zero-based budgeting",
+                "Pay yourself first",
+                "Cash flow tracking"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Why does 'pay yourself first' work better than saving what is left at the end?",
+              "explanation": "At the end of the month, there is usually nothing left. Moving savings on payday makes saving automatic and spending the leftover.",
+              "options": [
+                "It pays more interest",
+                "The money moves automatically before you can spend it",
+                "Banks require it",
+                "It is faster"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Your needs take 64% of your pay. What should you do?",
+              "explanation": "Bend the rule, keep the habit. Splitting the rest in half means you still save every month, even when rent is high.",
+              "options": [
+                "Stop budgeting until you earn more",
+                "Pay needs first, then split what is left evenly between wants and savings",
+                "Put everything left into wants",
+                "Borrow money to make it fit"
+              ],
+              "answers": [
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u2l3",
+          "number": 3,
+          "icon": "shield",
+          "title": "Emergency Fund",
+          "blurb": "Money set aside for bad surprises.",
+          "steps": [
+            {
+              "kind": "teach",
+              "heading": "What it is",
+              "paragraphs": [
+                "An **emergency fund** is money you keep for real emergencies. Losing your job. A hospital bill. A car repair.",
+                "Its job is not to grow. Its job is to stop a surprise from turning into debt.",
+                "It also gives you choices. If you have money saved, you can say no to a bad job or a bad flat. If you have nothing saved, you have to say yes."
+              ],
+              "tip": "In the UAE, if you lose your job you may also have to leave the country within a set time. That makes having cash ready even more important."
+            },
+            {
+              "kind": "teach",
+              "heading": "How big should it be?",
+              "paragraphs": [
+                "The normal advice is **3 to 6 months of your essential costs**.",
+                "Read that again: **essential costs**. Not your salary. Not everything you spend.",
+                "Only count what it costs to keep your life running: rent, food, bills, transport, insurance. Not restaurants or holidays — those stop in an emergency anyway."
+              ],
+              "example": {
+                "heading": "Working out the target",
+                "body": "Nadia's essential costs each month:\n\nRent: {c}2,000\nFood: {c}700\nBills (DEWA, phone): {c}300\nTransport: {c}200\n\nAdd them up:\n2,000 + 700 + 300 + 200 = **{c}3,200 a month**\n\n3 months: 3,200 × 3 = **{c}9,600**\n6 months: 3,200 × 6 = **{c}19,200**"
+              },
+              "tip": "Choose 3 months if your job is stable. Choose 6 months if your income changes, or if you are the only earner."
+            },
+            {
+              "kind": "teach",
+              "heading": "Where to keep it",
+              "paragraphs": [
+                "Two things matter, in this order.",
+                "**1. You can reach it fast.** This is called **liquidity** — how quickly you can turn something into cash without losing value.",
+                "**2. It cannot fall in value.** So a savings account, not shares.",
+                "Keep it in a **separate savings account**. Separate enough that you do not treat it as spending money. Easy enough to reach in one day."
+              ],
+              "list": [
+                {
+                  "term": "Good place",
+                  "detail": "A separate savings account, ideally at a different bank from your daily one."
+                },
+                {
+                  "term": "Bad place",
+                  "detail": "The stock market. Share prices often fall at the same time people lose jobs."
+                },
+                {
+                  "term": "Bad place",
+                  "detail": "A long fixed deposit you cannot touch for years."
+                },
+                {
+                  "term": "Bad place",
+                  "detail": "Your everyday account. You will spend it without noticing."
+                }
+              ]
+            },
+            {
+              "kind": "teach",
+              "heading": "Starting small",
+              "paragraphs": [
+                "{c}19,200 sounds impossible when you have nothing saved. So do not start there.",
+                "Start with a **first goal** of {c}2,000. That already covers most small emergencies — a phone screen, a car repair, a flight home.",
+                "Then build to one month. Then three. Then six.",
+                "And when you use it, that is not failure. That is the fund doing its job. Fill it again and keep going."
+              ],
+              "tip": "Half an emergency fund is not a failed emergency fund. Every month you add is one more month of safety."
+            },
+            {
+              "kind": "numeric",
+              "prompt": "Hassan's essential costs are {c}2,500 a month. How much does he need for a 3-MONTH emergency fund?",
+              "explanation": "2,500 × 3 = 7,500. Multiply your monthly essential costs by the number of months you want to cover.",
+              "answer": 7500,
+              "showsCurrencySymbol": true
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Where should you keep your emergency fund?",
+              "explanation": "You need it fast and you need it safe. Shares can fall. A fixed deposit is locked. Your everyday account gets spent. A separate savings account solves all three.",
+              "options": [
+                "In shares, so it grows",
+                "In a separate savings account you can reach quickly",
+                "In your everyday spending account",
+                "In a 5-year fixed deposit"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Which of these is a real emergency?",
+              "explanation": "An emergency is unexpected, urgent and necessary. A sale is a planned purchase in disguise. Losing your job is exactly what the fund is for.",
+              "options": [
+                "A big sale on a laptop",
+                "Losing your job",
+                "A holiday you want to book",
+                "A new phone model"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "You should measure your emergency fund against which number?",
+              "explanation": "In a real emergency you stop spending on fun anyway. Using essential costs makes the target smaller and much easier to reach.",
+              "options": [
+                "Your yearly salary",
+                "Everything you spend, including fun",
+                "Your essential monthly costs only",
+                "Your credit card limit"
+              ],
+              "answers": [
+                2
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u2l4",
+          "number": 4,
+          "icon": "bank",
+          "title": "Banking Setup",
+          "blurb": "Set up your accounts so good habits happen automatically.",
+          "steps": [
+            {
+              "kind": "teach",
+              "heading": "Two types of account",
+              "paragraphs": [
+                "**A current account** is for money moving through. Your salary arrives here. Your rent and bills leave from here. It usually pays no interest, and that is fine.",
+                "**A savings account** is for money sitting still. It pays you interest. It sometimes has small limits on taking money out — which actually helps you save."
+              ],
+              "tip": "In the UAE your salary is usually paid through the **WPS** (Wage Protection System). It goes straight into your current account each month."
+            },
+            {
+              "kind": "teach",
+              "heading": "How to compare interest rates",
+              "paragraphs": [
+                "Banks show a rate on savings accounts. Two rates can look the same but pay different amounts.",
+                "**Nominal rate** is the simple yearly percentage.",
+                "**APY or AER** is the rate *after* counting interest earned on your interest during the year. This is the honest number. Always compare using this one.",
+                "**Compounding** means your interest starts earning interest too. Monthly is better than yearly."
+              ],
+              "example": {
+                "heading": "Two accounts, same money",
+                "body": "You have **{c}10,000** saved for one year.\n\nAccount A pays **1%**:\n10,000 × 0.01 = **{c}100**\n\nAccount B pays **4%**:\n10,000 × 0.04 = **{c}400**\n\nDifference: **{c}300 a year**\n\nSame money. Same risk. You only had to fill in a form."
+              },
+              "tip": "Compare accounts using APY or AER, not the big number in the advert."
+            },
+            {
+              "kind": "teach",
+              "heading": "A simple three-account setup",
+              "paragraphs": [
+                "The most useful thing you can do is not picking the perfect bank. It is arranging your accounts so the right thing happens by itself."
+              ],
+              "list": [
+                {
+                  "term": "1. The main account",
+                  "detail": "Your salary lands here. All your bills leave from here."
+                },
+                {
+                  "term": "2. The savings account",
+                  "detail": "A separate account for your emergency fund and goals. Money goes in. It only comes out for its purpose."
+                },
+                {
+                  "term": "3. The spending money",
+                  "detail": "What is left after bills and savings. This is what you can spend freely this month."
+                }
+              ],
+              "tip": "Set up an automatic transfer to savings on payday — not at the end of the month. This is 'pay yourself first' done by your bank."
+            },
+            {
+              "kind": "teach",
+              "heading": "Watch out for fees",
+              "paragraphs": [
+                "Interest is easy to see. Fees are easy to miss. Both come from the same pocket.",
+                "Common ones in the UAE:"
+              ],
+              "list": [
+                {
+                  "term": "Minimum balance fee",
+                  "detail": "Many UAE accounts charge you if your balance drops below a set amount — often {c}3,000 or {c}5,000."
+                },
+                {
+                  "term": "ATM fee from another bank",
+                  "detail": "A small charge each time you use a different bank's machine."
+                },
+                {
+                  "term": "Card annual fee",
+                  "detail": "A yearly charge on some credit cards."
+                },
+                {
+                  "term": "Foreign currency fee",
+                  "detail": "Usually 2% to 3% when you buy something in another currency or shop online abroad."
+                }
+              ],
+              "example": {
+                "heading": "A small fee, one year",
+                "body": "A minimum balance fee of **{c}25 a month**:\n\n25 × 12 = **{c}300 a year**\n\nIf your account only pays {c}100 in interest, the fee costs you more than the interest gives you."
+              },
+              "tip": "Once a year, look through your statements for the words 'fee' or 'charge'. Most people find something they can stop."
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Which number should you use to compare two savings accounts?",
+              "explanation": "APY and AER include the effect of compounding. Two accounts with the same simple rate can pay different amounts, so this is the fair way to compare.",
+              "options": [
+                "The big number in the advert",
+                "The APY or AER",
+                "The bank's size",
+                "The minimum balance"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "numeric",
+              "prompt": "You keep {c}5,000 in a savings account that pays 4% a year. How much interest do you earn in one year?",
+              "explanation": "5,000 × 0.04 = 200. Tip: find 1% first by moving the dot two places left (5,000 → 50), then multiply by 4 to get 200.",
+              "answer": 200,
+              "showsCurrencySymbol": true
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "When should money move into your savings account?",
+              "explanation": "If you wait until the end of the month, there is usually nothing left. An automatic transfer on payday makes saving happen first.",
+              "options": [
+                "At the end of the month, if any is left",
+                "Automatically on payday",
+                "Only when you remember",
+                "Once a year"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "What does 'liquidity' mean?",
+              "explanation": "Liquidity is about speed and safety of access. A savings account is very liquid. A property is not. That is why your emergency fund goes in a savings account.",
+              "options": [
+                "How much interest something pays",
+                "How fast you can turn it into cash without losing value",
+                "How big your balance is",
+                "How old the account is"
+              ],
+              "answers": [
+                1
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "number": 3,
+      "accent": "coral",
+      "title": "Master Borrowing",
+      "subtitle": "Debt & Credit",
+      "blurb": "Borrowing can help you or hurt you. Learn to tell the difference.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "number": 1,
+          "icon": "gauge",
+          "title": "Credit Mechanics",
+          "blurb": "How your credit score really works.",
+          "steps": [
+            {
+              "kind": "teach",
+              "heading": "What a credit score is",
+              "paragraphs": [
+                "A **credit score** is a number that shows how well you pay back money you borrow.",
+                "Banks look at it before they give you a loan or a credit card. They are asking one question: will this person pay us back on time?",
+                "In the UAE, the score comes from the **Al Etihad Credit Bureau (AECB)**. The score goes from **300 to 900**. Higher is better.",
+                "Your score does more than decide yes or no. It also decides your interest rate — how much the loan costs you."
+              ],
+              "list": [
+                {
+                  "term": "300 – 619",
+                  "detail": "Poor. Loans will be hard to get."
+                },
+                {
+                  "term": "620 – 679",
+                  "detail": "Fair. Some options, but not the best rates."
+                },
+                {
+                  "term": "680 – 730",
+                  "detail": "Good. Most banks will say yes."
+                },
+                {
+                  "term": "731 – 900",
+                  "detail": "Excellent. You get the best offers."
+                }
+              ]
+            },
+            {
+              "kind": "teach",
+              "heading": "The five things that build your score",
+              "paragraphs": [
+                "Different countries use slightly different systems, but they all look at these five things:"
+              ],
+              "list": [
+                {
+                  "term": "1. Payment history — the biggest one",
+                  "detail": "Do you pay on time, every time? This matters more than everything else."
+                },
+                {
+                  "term": "2. How much credit you use",
+                  "detail": "If your card limit is {c}10,000 and you owe {c}3,000, you are using 30%. Lower is better."
+                },
+                {
+                  "term": "3. How long you have had credit",
+                  "detail": "Older accounts help. This is why closing your oldest card can hurt you."
+                },
+                {
+                  "term": "4. The types of credit you have",
+                  "detail": "Having both a card and a loan shows you can handle both."
+                },
+                {
+                  "term": "5. New applications",
+                  "detail": "Applying for many cards or loans quickly looks like you are in trouble."
+                }
+              ],
+              "tip": "Remember only two things and you cover most of it: **pay on time** and **keep your card balance low**."
+            },
+            {
+              "kind": "teach",
+              "heading": "Credit utilisation: the fastest way to improve",
+              "paragraphs": [
+                "**Credit utilisation** means how much of your card limit you are using.",
+                "The formula: **utilisation = balance ÷ limit × 100**",
+                "Payment history takes years to build. But utilisation can change in one month. That makes it the fastest thing you can fix.",
+                "Try to keep it **under 30%**."
+              ],
+              "example": {
+                "heading": "Working it out",
+                "body": "Your card limit: **{c}10,000**\nYour balance: **{c}2,000**\n\nStep 1. Divide:\n2,000 ÷ 10,000 = **0.2**\n\nStep 2. Multiply by 100:\n0.2 × 100 = **20%**\n\n20% is under 30%. This is healthy."
+              },
+              "tip": "Your bank reports your balance on the statement date, not the due date. Paying some off *before* the statement gives a lower number."
+            },
+            {
+              "kind": "teach",
+              "heading": "Report, score, and checking it",
+              "paragraphs": [
+                "Your **credit report** is the full file: every account, limit, balance and payment. Your **score** is a single number made from that file.",
+                "There are two types of check:",
+                "A **soft check** is when you look at your own score. It has **no effect at all**.",
+                "A **hard check** is when a bank checks you for a real application. It can lower your score a little for a few months.",
+                "Mistakes happen more than people think. An account that is not yours. A loan you already paid. You can ask the bureau to fix them."
+              ],
+              "tip": "Checking your own score never hurts it. You can get your AECB report yourself in the UAE — do it once a year."
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Which one matters most for your credit score?",
+              "explanation": "Payment history is the biggest part of every scoring system. The best way to guess if someone will pay on time is to look at whether they have paid on time before.",
+              "options": [
+                "The types of credit you have",
+                "Paying on time",
+                "How many cards you own",
+                "How old you are"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "numeric",
+              "prompt": "Your credit card limit is {c}5,000 and you owe {c}1,000. What is your credit utilisation, as a PERCENTAGE? Type the number only.",
+              "explanation": "1,000 ÷ 5,000 = 0.2. Then 0.2 × 100 = 20%. That is comfortably under the 30% guideline.",
+              "answer": 20,
+              "showsCurrencySymbol": false
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Does checking your own credit score lower it?",
+              "explanation": "Looking at your own score is a soft check. It is invisible to the score. Only real applications for credit leave a mark.",
+              "options": [
+                "Yes, every time",
+                "No — that is a soft check and has no effect",
+                "Only if you check twice",
+                "Only if the score is low"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "What is the credit score range in the UAE?",
+              "explanation": "The Al Etihad Credit Bureau uses 300 to 900. Higher is better. Around 680 and above is usually seen as good.",
+              "options": [
+                "0 to 100",
+                "300 to 900",
+                "1 to 10",
+                "500 to 1000"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "You have an old credit card you rarely use. What happens if you close it?",
+              "explanation": "Closing it removes that limit, so your utilisation percentage goes up. It also shortens your credit history. If the card has no fee, it is usually better to keep it open.",
+              "options": [
+                "Your score goes up",
+                "Your score may go down, because you lose credit history and available limit",
+                "Nothing changes",
+                "Your old payments are deleted"
+              ],
+              "answers": [
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "number": 2,
+          "icon": "scales",
+          "title": "Good vs. Bad Debt",
+          "blurb": "Some borrowing helps you. Some traps you.",
+          "steps": [
+            {
+              "kind": "teach",
+              "heading": "One question sorts all debt",
+              "paragraphs": [
+                "Debt is not good or bad by itself. What matters is what you do with the money.",
+                "**Good debt** buys something that grows in value, earns you money, or helps you earn more. And the interest rate is low.",
+                "**Bad debt** buys something that loses value or is already finished. And the interest rate is high."
+              ],
+              "tip": "Ask yourself: when I make the last payment, will I still have something worth money? A home, yes. Last year's holiday, no."
+            },
+            {
+              "kind": "teach",
+              "heading": "Examples you will meet",
+              "paragraphs": [
+                "Here are common types, and why they land where they do:"
+              ],
+              "list": [
+                {
+                  "term": "Home loan — usually good",
+                  "detail": "Property often grows in value. The interest rate is one of the lowest you can get."
+                },
+                {
+                  "term": "Study loan — usually good",
+                  "detail": "It helps you earn more later. Just be careful not to borrow far more than the course will add to your salary."
+                },
+                {
+                  "term": "Business loan — can be good",
+                  "detail": "It buys something meant to earn money. There is real risk."
+                },
+                {
+                  "term": "Credit card balance you carry — bad",
+                  "detail": "UAE cards often charge around 3% a month. That is about 36% a year, on things you already used."
+                },
+                {
+                  "term": "Car loan — usually in the middle",
+                  "detail": "A car loses value fast — often 15% to 20% in the first year. Sometimes you truly need one. Just know what you are buying."
+                },
+                {
+                  "term": "Buy now, pay later — be careful",
+                  "detail": "It feels free. But missing a payment brings fees, and it is easy to have five running at once."
+                }
+              ]
+            },
+            {
+              "kind": "teach",
+              "heading": "The interest rate decides",
+              "paragraphs": [
+                "Even a normally good loan turns bad if the rate is high enough.",
+                "The number to look at is the **APR — annual percentage rate**. It puts the interest and the required fees together into one yearly number, so you can compare offers fairly.",
+                "Careful: UAE banks often show a **flat rate** on car and personal loans. A flat rate looks small but costs more than it looks, because it is charged on the full original amount the whole time. Always ask for the **reducing balance rate** or the APR."
+              ],
+              "example": {
+                "heading": "Why paying only the minimum is expensive",
+                "body": "You owe **{c}5,000** on a card at **3% a month**.\n\nInterest in month 1:\n5,000 × 0.03 = **{c}150**\n\nIf you only pay the small minimum, most of it goes to that {c}150 of interest. The {c}5,000 barely moves.\n\nPay {c}500 a month instead, and it is gone in about 11 months."
+              },
+              "tip": "The minimum payment is designed to keep you paying for years. It is not a plan to get out."
+            },
+            {
+              "kind": "teach",
+              "heading": "One more comparison to remember",
+              "paragraphs": [
+                "If you have spare money, should you invest it or pay off debt?",
+                "Investing in the stock market has historically returned around 7% to 10% a year over long periods. Nobody can promise that.",
+                "Paying off a debt that costs 30% a year saves you exactly 30%. Guaranteed. No risk.",
+                "So expensive debt comes first, almost always."
+              ],
+              "tip": "Paying off a 30% debt is like earning 30% with zero risk. No investment can promise that."
+            },
+            {
+              "kind": "multiSelect",
+              "prompt": "Which of these are usually GOOD debt? Pick all the correct ones.",
+              "explanation": "Good debt buys something that grows in value or helps you earn more, at a low rate. The card balance and the trip are already spent, and cost a lot to carry.",
+              "options": [
+                "A home loan at 4%",
+                "A credit card balance at 36% a year",
+                "A study loan for a course that raises your salary",
+                "Borrowing for a weekend trip",
+                "A business loan for equipment that earns money"
+              ],
+              "answers": [
+                0,
+                2,
+                4
+              ]
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "What does APR stand for?",
+              "explanation": "Annual Percentage Rate. It puts interest and required fees into one yearly number, so you can compare two loans fairly.",
+              "options": [
+                "Approved Payment Rate",
+                "Annual Percentage Rate",
+                "Average Payment Ratio",
+                "Annual Principal Return"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "numeric",
+              "prompt": "You owe {c}2,000 on a credit card. The card charges 3% a month. How much interest do you pay in ONE month?",
+              "explanation": "2,000 × 0.03 = 60. So {c}60 a month just for carrying the balance. If you pay only {c}80, just {c}20 goes to the actual debt.",
+              "answer": 60,
+              "showsCurrencySymbol": true
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "You have {c}3,000 spare. You also have a credit card debt at 30% a year. What usually makes most sense?",
+              "explanation": "Paying off a 30% debt is the same as earning 30% with no risk. No normal investment can beat that reliably. Clear expensive debt first.",
+              "options": [
+                "Invest it and hope for more than 30%",
+                "Pay off the card debt — that saves you 30% for certain",
+                "Split it in half",
+                "Leave it in a savings account at 3%"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Why is a car loan usually not counted as good debt?",
+              "explanation": "The rate is often fine. The problem is the car itself — it loses value quickly. Sometimes you genuinely need one, but it is useful to know what you are financing.",
+              "options": [
+                "Car loans always have the highest rates",
+                "A car loses value, so you are borrowing for something that shrinks",
+                "Cars are never needed",
+                "It damages your credit score"
+              ],
+              "answers": [
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u3l3",
+          "number": 3,
+          "icon": "steps",
+          "title": "Paying Off Debt",
+          "blurb": "Two methods. Pick the one you will finish.",
+          "steps": [
+            {
+              "kind": "teach",
+              "heading": "The rule that comes first",
+              "paragraphs": [
+                "Whichever method you choose, the setup is the same.",
+                "**Step 1.** Pay the minimum on every debt, every month. Never miss one. Missing a payment brings fees and hurts your credit score.",
+                "**Step 2.** Take any extra money you have and put it all on **one** debt.",
+                "The method just decides which debt gets the extra money first.",
+                "Do not spread extra money across all your debts. Nothing gets finished, so nothing frees up."
+              ]
+            },
+            {
+              "kind": "teach",
+              "heading": "Method 1: highest rate first (avalanche)",
+              "paragraphs": [
+                "Put your debts in order by **interest rate**, highest first.",
+                "Put all extra money on the highest-rate debt. When it is gone, move to the next one.",
+                "This method costs you the least money in total. It is the maths answer.",
+                "The problem: your highest-rate debt might also be the biggest. You could pay for months and see nothing disappear. Some people give up."
+              ],
+              "tip": "Avalanche = highest rate first. An avalanche starts at the highest point of the mountain."
+            },
+            {
+              "kind": "teach",
+              "heading": "Method 2: smallest debt first (snowball)",
+              "paragraphs": [
+                "Put your debts in order by **size**, smallest first. Ignore the interest rates.",
+                "Kill the smallest one. Then the next smallest.",
+                "This costs a little more in interest. But you clear a whole debt quickly, and that feels good. People who use this method are more likely to finish."
+              ],
+              "example": {
+                "heading": "Same debts, two orders",
+                "body": "Card A: **{c}1,000** at 36%\nCard B: **{c}4,000** at 24%\nLoan C: **{c}500** at 12%\n\n**Highest rate first:** A → B → C\nCheapest overall.\n\n**Smallest first:** C → A → B\nFirst win in a few weeks."
+              },
+              "tip": "Snowball = smallest first. A snowball starts small and grows as it rolls."
+            },
+            {
+              "kind": "teach",
+              "heading": "Putting all your debts in one place",
+              "paragraphs": [
+                "**Debt consolidation** means putting several debts into one new loan. Ideally the new loan has a lower rate and one payment to remember.",
+                "It can really help. But watch for three things:"
+              ],
+              "list": [
+                {
+                  "term": "The fee",
+                  "detail": "There is often a fee to set it up, usually 1% to 5% of the amount. Check it is less than what you save."
+                },
+                {
+                  "term": "The low rate ends",
+                  "detail": "Some offers have a low rate for 6 or 12 months, then jump up. Know the date."
+                },
+                {
+                  "term": "The cards fill up again",
+                  "detail": "This is the most common problem. You clear your cards, then use them again. Now you have the loan *and* the cards."
+                }
+              ],
+              "tip": "If you consolidate, freeze or close the cards the same day. Consolidation fixes the interest rate. It cannot fix a spending habit."
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Which method puts debts in order by interest rate, highest first?",
+              "explanation": "Avalanche targets the highest rate first. It costs the least money in total, because you kill the most expensive debt first.",
+              "options": [
+                "The snowball method",
+                "The avalanche method",
+                "Consolidation",
+                "Minimum payments"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "You have three debts: {c}800 at 12%, {c}3,000 at 36%, and {c}1,500 at 20%. Using AVALANCHE, which gets your extra money first?",
+              "explanation": "Avalanche ignores the size and looks only at the rate. 36% is the highest, so that one gets the extra money first.",
+              "options": [
+                "The {c}800 debt",
+                "The {c}3,000 debt at 36%",
+                "The {c}1,500 debt at 20%",
+                "All three equally"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "You have the same three debts. Using SNOWBALL, which gets your extra money first?",
+              "explanation": "Snowball ignores the rate and looks only at the size. {c}800 is the smallest, so it goes first — and you get a win quickly.",
+              "options": [
+                "The {c}800 debt",
+                "The {c}3,000 debt",
+                "The {c}1,500 debt",
+                "All three equally"
+              ],
+              "answers": [
+                0
+              ]
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Why does the snowball method work for many people, even though it costs a bit more?",
+              "explanation": "A plan you finish beats a perfect plan you quit. Money is about half maths and half habit, and snowball helps with the habit part.",
+              "options": [
+                "The payments are smaller",
+                "Finishing a debt quickly keeps you motivated to continue",
+                "Banks prefer it",
+                "It is faster in total"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "What is the most common problem after consolidating debt?",
+              "explanation": "Consolidation moves the debt, it does not change the habit. If the spending continues, you end up paying the new loan and new card debt at the same time.",
+              "options": [
+                "The loan is refused",
+                "The old cards get used again, so you now have both",
+                "Rates always go up",
+                "It is not allowed"
+              ],
+              "answers": [
+                1
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "number": 4,
+      "accent": "sky",
+      "title": "Protect Wealth",
+      "subtitle": "Risk Management",
+      "blurb": "Growing money matters. Not losing it to one accident or one clever message matters just as much.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "number": 1,
+          "icon": "umbrella",
+          "title": "Insurance Basics",
+          "blurb": "Buy the cover you need. Skip the rest.",
+          "steps": [
+            {
+              "kind": "teach",
+              "heading": "What you are really buying",
+              "paragraphs": [
+                "Insurance is not saving and it is not investing.",
+                "You are paying a small, known amount so that a company takes on a big, unknown risk for you.",
+                "If nothing bad happens, you did not waste money. You bought a year with no disaster. That is the thing you were paying for."
+              ]
+            },
+            {
+              "kind": "teach",
+              "heading": "Five words on every policy",
+              "paragraphs": [
+                "Every insurance policy in the world uses these words. Learn them once and you can read any policy."
+              ],
+              "list": [
+                {
+                  "term": "Premium",
+                  "detail": "What you pay to have the insurance. Monthly or yearly."
+                },
+                {
+                  "term": "Deductible (or excess)",
+                  "detail": "The part you pay yourself before the company pays. If your excess is {c}500 and the repair costs {c}3,000, you pay {c}500 and they pay {c}2,500."
+                },
+                {
+                  "term": "Coverage limit",
+                  "detail": "The most the company will ever pay. Above that, you pay."
+                },
+                {
+                  "term": "Exclusion",
+                  "detail": "Something the policy does not cover. Always read this part."
+                },
+                {
+                  "term": "Claim",
+                  "detail": "Asking the company to pay after something happens."
+                }
+              ],
+              "tip": "A bigger excess means a smaller premium. Only choose that if you could actually pay the excess tomorrow."
+            },
+            {
+              "kind": "teach",
+              "heading": "What you need in the UAE",
+              "paragraphs": [
+                "Four types cover almost everything. Two of them are required by law here."
+              ],
+              "list": [
+                {
+                  "term": "Health insurance — required",
+                  "detail": "It is the law in Dubai and Abu Dhabi. Most employers provide it. Check what your plan covers, and whether your family is included."
+                },
+                {
+                  "term": "Car insurance — required",
+                  "detail": "You cannot drive without it. **Third party** covers damage you cause to others. **Comprehensive** also covers your own car."
+                },
+                {
+                  "term": "Home contents insurance",
+                  "detail": "Very cheap and often forgotten. It covers your things — laptop, phone, furniture — against fire, water damage and theft."
+                },
+                {
+                  "term": "Life insurance",
+                  "detail": "Pays money to your family if you die. You only need it if someone depends on your income."
+                }
+              ],
+              "tip": "Insure things you could not afford to replace by yourself. Do not insure small things you could just pay for."
+            },
+            {
+              "kind": "teach",
+              "heading": "Two types of life insurance",
+              "paragraphs": [
+                "**Term life** covers you for a set number of years. If you die in that time, your family gets the money. If not, it ends. It is simple and cheap.",
+                "**Whole life** covers you forever and mixes in a savings part. It costs several times more for the same payout, and the savings part usually grows slowly.",
+                "For most people, term life plus separate saving is the better choice.",
+                "How much? A common starting point is **10 times your yearly income**."
+              ],
+              "example": {
+                "heading": "Do you need it?",
+                "body": "**Maryam** is 25, single, no children, nobody depends on her money.\n→ She probably does not need life insurance yet.\n\n**Yousef** is 35, married, two children, and he is the only earner.\n→ He needs it. If his income stops, his family has nothing.\n\nInsurance protects the people who depend on you."
+              },
+              "tip": "If nobody would suffer financially without your income, you probably do not need life insurance yet. Check again when that changes."
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "What is the deductible (or excess)?",
+              "explanation": "The deductible is your share of each claim. Choosing a higher one lowers your monthly cost — but only do that if you could pay it at short notice.",
+              "options": [
+                "The monthly cost of the policy",
+                "The part you pay yourself before the company pays",
+                "The most the company will pay",
+                "The agent's commission"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "numeric",
+              "prompt": "Your car repair costs {c}4,000. Your policy has a {c}500 excess. How much does the insurance company pay?",
+              "explanation": "4,000 − 500 = 3,500. You pay the first {c}500 and the company pays the rest.",
+              "answer": 3500,
+              "showsCurrencySymbol": true
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Which two types of insurance are required by law in Dubai?",
+              "explanation": "Health insurance is required in Dubai and Abu Dhabi, and car insurance is required anywhere you drive. The others are useful but optional.",
+              "options": [
+                "Travel and pet insurance",
+                "Health and car insurance",
+                "Phone and laptop insurance",
+                "Life and home insurance"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "A 24-year-old with no children and nobody depending on their income asks if they need life insurance. The best answer is:",
+              "explanation": "Life insurance replaces your income for people who rely on it. With nobody relying on it, the money is better used on health cover and savings. Check again if you marry or have children.",
+              "options": [
+                "Yes, everyone needs it right away",
+                "Probably not yet — it protects people who depend on your income",
+                "Only if they travel",
+                "Only if they own a phone"
+              ],
+              "answers": [
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "number": 2,
+          "icon": "lock",
+          "title": "Staying Safe from Fraud",
+          "blurb": "Lock your accounts and spot the common tricks.",
+          "steps": [
+            {
+              "kind": "teach",
+              "heading": "Two locks are better than one",
+              "paragraphs": [
+                "**Two-factor authentication** means proving who you are in two different ways. People also write it as 2FA or MFA.",
+                "There are only three kinds of proof:"
+              ],
+              "list": [
+                {
+                  "term": "Something you know",
+                  "detail": "A password or PIN. The weakest kind on its own — it can be guessed or stolen."
+                },
+                {
+                  "term": "Something you have",
+                  "detail": "Your phone, or an authenticator app. A thief needs the actual device."
+                },
+                {
+                  "term": "Something you are",
+                  "detail": "Your fingerprint or face. Hard to copy."
+                }
+              ],
+              "afterList": [
+                "A password plus a code from an app is two factors. A password plus a security question is **not** — both are things you know."
+              ],
+              "tip": "An authenticator app is safer than an SMS code. Criminals can sometimes take over your phone number and receive your SMS."
+            },
+            {
+              "kind": "teach",
+              "heading": "How to spot a fake message",
+              "paragraphs": [
+                "**Phishing** means a fake message pretending to be someone you trust. By SMS it is called **smishing**. By phone call it is called **vishing**.",
+                "Fake messages used to have bad spelling. Not any more. So look for these signs instead:"
+              ],
+              "list": [
+                {
+                  "term": "It is urgent",
+                  "detail": "\"Your account will close in 24 hours.\" They want you to panic and not think."
+                },
+                {
+                  "term": "There is a link you did not expect",
+                  "detail": "Never log in through a link in a message. Open your bank app yourself."
+                },
+                {
+                  "term": "They ask for your OTP, PIN or password",
+                  "detail": "No real bank or company will ever ask for these. Never. Not once."
+                },
+                {
+                  "term": "They tell you to keep it secret",
+                  "detail": "Real banks do not ask you to hide things from your family."
+                },
+                {
+                  "term": "They want an unusual payment",
+                  "detail": "Gift cards, crypto, or a personal account number. Almost always a scam."
+                }
+              ]
+            },
+            {
+              "kind": "teach",
+              "heading": "The tricks used most in the UAE",
+              "paragraphs": [
+                "These are the ones people lose money to most often:"
+              ],
+              "list": [
+                {
+                  "term": "Fake bank calls",
+                  "detail": "Someone says they are from your bank's fraud team. They ask for an OTP to \"stop a payment\". Giving it approves the payment."
+                },
+                {
+                  "term": "Fake police or visa calls",
+                  "detail": "Someone says there is a problem with your visa or Emirates ID and asks you to pay a fine now."
+                },
+                {
+                  "term": "Fake delivery messages",
+                  "detail": "\"Your parcel is waiting, pay {c}5 customs.\" The small amount is bait to get your card details."
+                },
+                {
+                  "term": "Investment promises",
+                  "detail": "Guaranteed high returns on crypto or forex. When you try to take money out, they ask for a fee first. Guaranteed returns do not exist."
+                },
+                {
+                  "term": "Fake job offers",
+                  "detail": "Easy work-from-home money, but you must pay a registration fee first. Real jobs do not charge you."
+                },
+                {
+                  "term": "Fake QR codes",
+                  "detail": "A sticker placed over the real code in a car park or shop. Check where it takes you before paying."
+                }
+              ],
+              "tip": "One rule handles most of these: **hang up and call your bank on the number printed on your card.**"
+            },
+            {
+              "kind": "teach",
+              "heading": "What to do if it happens",
+              "paragraphs": [
+                "Speed matters a lot. Money can sometimes be stopped within hours, but rarely after a few days. Do these in order:"
+              ],
+              "list": [
+                {
+                  "term": "1. Call your bank now",
+                  "detail": "Use the number on your card, not one from the message. Ask them to freeze the account and try to stop the payment."
+                },
+                {
+                  "term": "2. Change your passwords",
+                  "detail": "Start with your email. Your email can reset everything else, so it is the most important one."
+                },
+                {
+                  "term": "3. Report it",
+                  "detail": "In the UAE you can report online fraud to the police through the eCrime platform, or call your local police number."
+                },
+                {
+                  "term": "4. Check your credit report",
+                  "detail": "Look for loans or cards opened in your name."
+                }
+              ],
+              "tip": "Being tricked does not mean you are stupid. These are professional teams. Report it fast — being embarrassed only helps them."
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Which of these is real two-factor authentication?",
+              "explanation": "The two factors must be different kinds. A password and a security question are both things you know. A password plus an app code is something you know plus something you have.",
+              "options": [
+                "A password plus a security question",
+                "A password plus a code from an authenticator app",
+                "A password plus a longer password",
+                "A PIN plus your birthday"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Someone calls saying they are from your bank. They ask you to read out the OTP just sent to your phone. What is happening?",
+              "explanation": "The OTP is what approves the payment. Reading it out approves it. No bank will ever ask for it, no matter how much they seem to know about you.",
+              "options": [
+                "Normal bank procedure",
+                "A scam — no real bank asks for your OTP",
+                "It is fine because they knew your name",
+                "It is fine because they called you"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "You get an SMS saying your account will be blocked today. There is a link to fix it. What should you do?",
+              "explanation": "Urgent plus a link you did not expect is the classic pattern. Going to your own app removes the scammer completely. If the message was real, it will be waiting there.",
+              "options": [
+                "Tap the link quickly because it is urgent",
+                "Ignore the link and open your bank app yourself, or call the number on your card",
+                "Reply to the message",
+                "Send it to a friend"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "You just sent money to a scammer. What is the FIRST thing to do?",
+              "explanation": "Money can sometimes be stopped within hours, almost never after days. Call your bank first. Everything else, including feeling embarrassed, can wait.",
+              "options": [
+                "Wait a few days",
+                "Call your bank immediately on the number on your card",
+                "Post about it online",
+                "Message the scammer for a refund"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "An investment app promises a guaranteed 20% return every month. What does this tell you?",
+              "explanation": "No real investment can guarantee returns. The word 'guaranteed' with a high number is the clearest scam sign there is. Real investments always carry risk.",
+              "options": [
+                "It is a great opportunity",
+                "It is a scam — guaranteed high returns do not exist",
+                "It is fine if they have a website",
+                "It is fine if a friend uses it"
+              ],
+              "answers": [
+                1
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "number": 5,
+      "accent": "violet",
+      "title": "Grow Wealth",
+      "subtitle": "Investing & Retirement",
+      "blurb": "Saving keeps your money safe. Investing helps it grow faster than prices rise.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "number": 1,
+          "icon": "spark",
+          "title": "Compound Interest",
+          "blurb": "Why starting early beats starting big.",
+          "steps": [
+            {
+              "kind": "teach",
+              "heading": "Two ways interest can work",
+              "paragraphs": [
+                "**Simple interest** is paid only on the money you put in. Every year you earn the same amount.",
+                "**Compound interest** is paid on your money *plus* the interest you already earned. So your interest starts earning interest too.",
+                "In year one they look the same. After ten years they look very different."
+              ],
+              "example": {
+                "heading": "{c}1,000 at 10% a year",
+                "body": "**Simple interest:**\nYear 1: {c}100\nYear 2: {c}100\nYear 3: {c}100\nTotal after 3 years: **{c}1,300**\n\n**Compound interest:**\nYear 1: 10% of 1,000 = {c}100 → total {c}1,100\nYear 2: 10% of 1,100 = {c}110 → total {c}1,210\nYear 3: 10% of 1,210 = {c}121 → total **{c}1,331**\n\nSmall difference now. Huge difference in 20 years."
+              }
+            },
+            {
+              "kind": "teach",
+              "heading": "Time is the strongest part",
+              "paragraphs": [
+                "Most people think the amount of money matters most. It does not. **Time** matters most.",
+                "Here is why. Every year, your interest earns interest. The longer it runs, the faster it grows.",
+                "This is the single most useful idea in this whole course."
+              ],
+              "example": {
+                "heading": "Two savers, step by step",
+                "body": "Both earn **10% a year** and stop at age 60.\n\n**Amina** saves {c}500 a month from age 25 to 35. Then she stops completely.\nShe puts in: 500 × 12 × 10 = **{c}60,000**\n\n**Khalid** starts at 35 and saves {c}500 a month until 60.\nHe puts in: 500 × 12 × 25 = **{c}150,000**\n\nAt age 60:\nAmina has more money than Khalid.\n\nShe put in far less. But her money had 10 extra years to grow."
+              },
+              "tip": "The best time to start was years ago. The second best time is this month. Small and early beats big and late."
+            },
+            {
+              "kind": "teach",
+              "heading": "The Rule of 72",
+              "paragraphs": [
+                "Here is a trick to keep for life.",
+                "Take the number **72**. Divide it by your yearly return. The answer is roughly how many years until your money doubles.",
+                "Return 8% → 72 ÷ 8 = **9 years**\nReturn 6% → 72 ÷ 6 = **12 years**\nReturn 12% → 72 ÷ 12 = **6 years**"
+              ],
+              "tip": "Rule of **70** for inflation. Rule of **72** for returns. Same trick, two uses."
+            },
+            {
+              "kind": "teach",
+              "heading": "How to actually start",
+              "paragraphs": [
+                "You do not need a lot of money to begin. You need to begin.",
+                "In the UAE there is **no tax on investment gains for individuals**. What you earn is yours.",
+                "The simplest way to start is a small automatic amount each month, into a low-cost fund. You will learn what those are in the next two lessons.",
+                "Setting up {c}200 a month and forgetting about it beats waiting five years for the perfect plan."
+              ],
+              "tip": "Do not wait until you have a big amount. The habit is worth more than the size."
+            },
+            {
+              "kind": "numeric",
+              "prompt": "Your investment returns 6% a year. Using the Rule of 72, how many YEARS until it doubles? Type the number only.",
+              "explanation": "72 ÷ 6 = 12 years. So money at 6% doubles every 12 years. Over 36 years that is three doublings.",
+              "answer": 12,
+              "showsCurrencySymbol": false
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "What is the difference between simple and compound interest?",
+              "explanation": "With simple interest, your earned interest just sits there. With compound interest, it starts earning too. That is why the gap grows bigger every year.",
+              "options": [
+                "Simple interest is only for banks",
+                "Compound interest also pays you interest on the interest you already earned",
+                "Compound interest always has a higher rate",
+                "There is no difference"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "numeric",
+              "prompt": "You put in {c}1,000 at 10% a year, with compound interest. How much do you have after ONE year?",
+              "explanation": "10% of 1,000 = 100. So 1,000 + 100 = 1,100. In year two you would earn 10% of 1,100, which is 110 — more than year one.",
+              "answer": 1100,
+              "showsCurrencySymbol": true
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Amina put in {c}60,000 and Khalid put in {c}150,000. Amina ends up with more. Why?",
+              "explanation": "Same return, less money, better result. Time is the strongest part of compounding. That is the best reason to start now with whatever you can.",
+              "options": [
+                "She got a higher return",
+                "Her money had 10 more years to grow",
+                "Khalid paid more tax",
+                "It is a mistake"
+              ],
+              "answers": [
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "number": 2,
+          "icon": "layers",
+          "title": "Types of Investment",
+          "blurb": "Know what you are actually buying.",
+          "steps": [
+            {
+              "kind": "teach",
+              "heading": "The four main types",
+              "paragraphs": [
+                "An **asset class** is just a group of investments that behave in a similar way. Almost everything fits into four groups."
+              ],
+              "list": [
+                {
+                  "term": "Shares (also called stocks or equity)",
+                  "detail": "You own a small piece of a company. If it grows, your piece is worth more. Highest growth over long periods, but the price moves up and down a lot."
+                },
+                {
+                  "term": "Bonds (also called fixed income)",
+                  "detail": "You lend money to a government or company. They pay you interest and give your money back at the end. Steadier, but lower growth."
+                },
+                {
+                  "term": "Property (real estate)",
+                  "detail": "Buildings and land. Can earn rent and grow in value. But selling takes weeks or months, and there are big fees."
+                },
+                {
+                  "term": "Cash",
+                  "detail": "Savings accounts and fixed deposits. Safest and fastest to use, but the lowest growth. After inflation, often a small loss."
+                }
+              ],
+              "tip": "Shares mean you **own** part of something. Bonds mean you **lend** money to someone."
+            },
+            {
+              "kind": "teach",
+              "heading": "More risk, more possible reward",
+              "paragraphs": [
+                "There is one rule under all investing: **higher possible returns come with bigger ups and downs**.",
+                "The word for those ups and downs is **volatility**.",
+                "Shares can drop 30% in a bad year. Cash never drops — but it loses to inflation slowly every year.",
+                "So neither one is simply 'safe'. They are risky in different ways. What matters is **when you need the money**."
+              ],
+              "example": {
+                "heading": "Match the money to the time",
+                "body": "**Need it in 6 months** (rent deposit, wedding):\n→ Keep it in cash. You cannot risk a drop.\n\n**Need it in 3 to 5 years** (a car, a course):\n→ Mostly cash and bonds.\n\n**Need it in 20+ years** (retirement):\n→ Mostly shares. You have time to wait out the drops, and inflation is now the bigger enemy."
+              },
+              "tip": "Do not ask 'is this risky?'. Ask 'is this the right risk for when I need the money?'"
+            },
+            {
+              "kind": "teach",
+              "heading": "Two more you will hear about",
+              "paragraphs": [
+                "**Gold and commodities.** Gold is popular in the UAE. It can protect against inflation. But remember: gold pays you nothing while you hold it. No rent, no interest. You only make money if you sell it for more.",
+                "**Crypto.** Very new, very volatile, and full of scams. If you ever put money in, only use money you could lose completely.",
+                "Neither one is needed to build a good portfolio."
+              ],
+              "tip": "Some investments pay you while you hold them (rent, interest, dividends). Others only have a price. Know which kind you own."
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "When you buy a bond, what are you doing?",
+              "explanation": "A bond means you are the lender. A share means you are an owner. Lenders get paid before owners if things go wrong, which is why bonds are steadier.",
+              "options": [
+                "Buying part of a company",
+                "Lending money and getting interest",
+                "Buying property",
+                "Opening a savings account"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Which of these takes the LONGEST to turn into cash?",
+              "explanation": "Selling property takes weeks or months and has big fees. Shares and bonds usually sell in a day. Cash is instant. This is why property should never hold your emergency fund.",
+              "options": [
+                "A savings account",
+                "Shares",
+                "Property",
+                "A government bond"
+              ],
+              "answers": [
+                2
+              ]
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "You need money for a rent deposit in 8 months. Where should it be?",
+              "explanation": "Eight months is not long enough to recover if prices fall. Money with a short deadline belongs in cash. The return is small, but you know it will be there.",
+              "options": [
+                "All in shares",
+                "In cash or a savings account",
+                "In crypto",
+                "In property"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Why is keeping ALL your retirement money in cash actually risky?",
+              "explanation": "Cash feels safe because the number never drops. But over 20 or 30 years, inflation quietly takes a big part of what it can buy.",
+              "options": [
+                "The bank might close",
+                "Inflation makes it buy less every year, for many years",
+                "Cash is not allowed",
+                "Cash has high fees"
+              ],
+              "answers": [
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u5l3",
+          "number": 3,
+          "icon": "grid",
+          "title": "Spreading Your Risk",
+          "blurb": "Do not put all your eggs in one basket.",
+          "steps": [
+            {
+              "kind": "teach",
+              "heading": "Two kinds of risk",
+              "paragraphs": [
+                "**Company risk** is a problem with one company or one industry. A factory fire. A bad product. A fraud.",
+                "You can remove this risk. Own many different things, and one problem cannot hurt you much.",
+                "**Market risk** affects nearly everything at once — a recession, a global event. You cannot remove it. This is the risk you are actually paid to take.",
+                "**Diversification** means spreading your money across many things. Its whole job is to remove the first kind of risk for free."
+              ],
+              "example": {
+                "heading": "One basket vs many",
+                "body": "You put all your savings into your own employer's shares.\n\nThe company has a bad year. You lose your job **and** your savings in the same week.\n\nNow imagine the same money spread across 500 companies.\n\nOne company fails. You barely notice."
+              }
+            },
+            {
+              "kind": "teach",
+              "heading": "Index funds and why fees matter",
+              "paragraphs": [
+                "An **index fund** buys a small piece of every company in a list — for example the 500 biggest companies in a market.",
+                "Nobody is trying to pick winners, so it is very cheap to run. This is called **passive** investing.",
+                "The **expense ratio** is the yearly fee, shown as a percentage of your money. An index fund might charge 0.1%. A managed fund might charge 1.5%.",
+                "That gap looks tiny. It is not, because you pay it every year on everything you have."
+              ],
+              "example": {
+                "heading": "What 1.5% costs",
+                "body": "You have **{c}10,000** invested.\n\nFee of 0.1%:\n10,000 × 0.001 = **{c}10 a year**\n\nFee of 1.6%:\n10,000 × 0.016 = **{c}160 a year**\n\nThat is {c}150 more, every single year — and it grows as your money grows. Over 30 years it can take away a third of your final amount."
+              },
+              "tip": "You cannot control your returns. You can always control your fees. Start there."
+            },
+            {
+              "kind": "teach",
+              "heading": "Choosing your mix and keeping it",
+              "paragraphs": [
+                "**Asset allocation** means how you split your money between shares, bonds and cash. This choice matters more than which exact fund you pick.",
+                "A simple starting idea: the longer until you need the money, the more shares you can hold.",
+                "**Rebalancing** means going back to your chosen mix once a year.",
+                "If shares grow a lot, they become a bigger share of your money than you planned. So you sell a little and buy more bonds. This forces you to sell high and buy low — the opposite of what fear tells you to do."
+              ],
+              "example": {
+                "heading": "Rebalancing in numbers",
+                "body": "Your plan: 70% shares, 30% bonds.\n\nAfter a good year: 80% shares, 20% bonds.\n\nYour money is now riskier than you planned.\n\nFix: sell some shares, buy some bonds, back to 70/30.\n\nOnce a year is enough."
+              },
+              "tip": "Spread across *different kinds* of investment. Twenty technology shares is not spreading out — it is one bet, twenty times."
+            },
+            {
+              "kind": "teach",
+              "heading": "The part that decides your result",
+              "paragraphs": [
+                "The biggest thing that hurts real people's returns is not fees, and not fund choice. It is behaviour.",
+                "People sell when prices fall and buy after prices rise. That is buying high and selling low.",
+                "Market drops are normal. They happen again and again, and they have always recovered for people who waited.",
+                "Three simple defences: set up automatic monthly investing, keep enough cash so you are never forced to sell, and check your account rarely."
+              ],
+              "tip": "Time *in* the market beats timing the market. Boring is the strategy."
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Which kind of risk can diversification remove?",
+              "explanation": "Owning many things means one company's problem barely matters. Nothing removes market-wide risk — and that is the risk you get paid for taking.",
+              "options": [
+                "Market risk — recessions and global events",
+                "Company risk — a problem with one company",
+                "Inflation",
+                "All risk"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "What is an expense ratio?",
+              "explanation": "It is the fund's yearly charge, taken from your money whether the fund goes up or down. Over many years a high one can cost you a large part of your total.",
+              "options": [
+                "The share of your money in shares",
+                "The yearly fee a fund charges, as a percentage",
+                "Your spending compared to your income",
+                "Last year's return"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "numeric",
+              "prompt": "You have {c}10,000 invested in a fund with a 2% yearly fee. How much do you pay in fees in one year?",
+              "explanation": "10,000 × 0.02 = 200. A cheaper fund at 0.2% would cost only {c}20. Same investment, {c}180 difference every year.",
+              "answer": 200,
+              "showsCurrencySymbol": true
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Your plan is 70% shares and 30% bonds. After a good year you have 80% shares. What should you do?",
+              "explanation": "This is rebalancing. Your money drifted to being riskier than you planned. Selling a little of what grew and buying what did not brings you back to your plan.",
+              "options": [
+                "Buy more shares",
+                "Sell some shares and buy bonds to get back to 70/30",
+                "Sell everything",
+                "Nothing"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Which of these is really spreading your risk?",
+              "explanation": "Twenty tech shares all fall together — that is one bet made twenty times. Spreading means different industries, different countries and different types of investment.",
+              "options": [
+                "Twenty different technology company shares",
+                "A global share fund plus a bond fund",
+                "All your money in your employer's shares",
+                "Five shares in the same bank"
+              ],
+              "answers": [
+                1
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

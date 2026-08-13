@@ -1,5 +1,6 @@
 import { createApp } from '../../src/index';
 import { loadConfig, type Config } from '../../src/config';
+import { loadContent } from '../../src/content';
 import { createLogger } from '../../src/logger';
 
 /**
@@ -17,7 +18,14 @@ export function testConfig(overrides: Partial<NodeJS.ProcessEnv> = {}): Config {
   });
 }
 
-/** An app wired the way production wires it, for driving through the HTTP seam. */
+/**
+ * An app wired the way production wires it, for driving through the HTTP seam.
+ *
+ * Content is loaded here for the same reason `src/server.ts` loads it before binding a port: the
+ * content routes read from memory and reaching them unloaded is a programming error, not a 500 to
+ * be exercised. `loadContent` is idempotent, so every test file paying for it once is free.
+ */
 export function testApp(config: Config = testConfig()) {
+  loadContent();
   return createApp(config, createLogger(config));
 }

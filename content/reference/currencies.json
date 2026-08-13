@@ -1,0 +1,964 @@
+{
+  "currencies": [
+    {
+      "code": "AFN",
+      "name": "Afghan Afghani",
+      "symbol": "؋",
+      "exponent": 2
+    },
+    {
+      "code": "ALL",
+      "name": "Albanian Lek",
+      "symbol": "Lekë",
+      "exponent": 2
+    },
+    {
+      "code": "DZD",
+      "name": "Algerian Dinar",
+      "symbol": "د.ج.",
+      "exponent": 2
+    },
+    {
+      "code": "AOA",
+      "name": "Angolan Kwanza",
+      "symbol": "Kz",
+      "exponent": 2
+    },
+    {
+      "code": "ARS",
+      "name": "Argentine Peso",
+      "symbol": "$",
+      "exponent": 2
+    },
+    {
+      "code": "AMD",
+      "name": "Armenian Dram",
+      "symbol": "֏",
+      "exponent": 2
+    },
+    {
+      "code": "AWG",
+      "name": "Aruban Florin",
+      "symbol": "Afl",
+      "exponent": 2
+    },
+    {
+      "code": "AUD",
+      "name": "Australian Dollar",
+      "symbol": "$",
+      "exponent": 2
+    },
+    {
+      "code": "AZN",
+      "name": "Azerbaijani Manat",
+      "symbol": "₼",
+      "exponent": 2
+    },
+    {
+      "code": "BSD",
+      "name": "Bahamian Dollar",
+      "symbol": "$",
+      "exponent": 2
+    },
+    {
+      "code": "BHD",
+      "name": "Bahraini Dinar",
+      "symbol": "د.ب.",
+      "exponent": 3
+    },
+    {
+      "code": "BDT",
+      "name": "Bangladeshi Taka",
+      "symbol": "৳",
+      "exponent": 2
+    },
+    {
+      "code": "BBD",
+      "name": "Barbadian Dollar",
+      "symbol": "$",
+      "exponent": 2
+    },
+    {
+      "code": "BYN",
+      "name": "Belarusian Ruble",
+      "symbol": "р.",
+      "exponent": 2
+    },
+    {
+      "code": "BZD",
+      "name": "Belize Dollar",
+      "symbol": "$",
+      "exponent": 2
+    },
+    {
+      "code": "BMD",
+      "name": "Bermudan Dollar",
+      "symbol": "$",
+      "exponent": 2
+    },
+    {
+      "code": "BTN",
+      "name": "Bhutanese Ngultrum",
+      "symbol": "BTN",
+      "exponent": 2
+    },
+    {
+      "code": "BOB",
+      "name": "Bolivian Boliviano",
+      "symbol": "Bs",
+      "exponent": 2
+    },
+    {
+      "code": "BAM",
+      "name": "Bosnia-Herzegovina Convertible Mark",
+      "symbol": "KM",
+      "exponent": 2
+    },
+    {
+      "code": "BWP",
+      "name": "Botswanan Pula",
+      "symbol": "P",
+      "exponent": 2
+    },
+    {
+      "code": "BRL",
+      "name": "Brazilian Real",
+      "symbol": "R$",
+      "exponent": 2
+    },
+    {
+      "code": "GBP",
+      "name": "British Pound",
+      "symbol": "£",
+      "exponent": 2
+    },
+    {
+      "code": "BND",
+      "name": "Brunei Dollar",
+      "symbol": "$",
+      "exponent": 2
+    },
+    {
+      "code": "BGN",
+      "name": "Bulgarian Lev",
+      "symbol": "лв.",
+      "exponent": 2
+    },
+    {
+      "code": "BIF",
+      "name": "Burundian Franc",
+      "symbol": "BIF",
+      "exponent": 0
+    },
+    {
+      "code": "KHR",
+      "name": "Cambodian Riel",
+      "symbol": "៛",
+      "exponent": 2
+    },
+    {
+      "code": "CAD",
+      "name": "Canadian Dollar",
+      "symbol": "$",
+      "exponent": 2
+    },
+    {
+      "code": "CVE",
+      "name": "Cape Verdean Escudo",
+      "symbol": "CVE",
+      "exponent": 2
+    },
+    {
+      "code": "XCG",
+      "name": "Caribbean guilder",
+      "symbol": "Cg.",
+      "exponent": 2
+    },
+    {
+      "code": "KYD",
+      "name": "Cayman Islands Dollar",
+      "symbol": "$",
+      "exponent": 2
+    },
+    {
+      "code": "XAF",
+      "name": "Central African CFA Franc",
+      "symbol": "FCFA",
+      "exponent": 0
+    },
+    {
+      "code": "XPF",
+      "name": "CFP Franc",
+      "symbol": "CFPF",
+      "exponent": 0
+    },
+    {
+      "code": "CLP",
+      "name": "Chilean Peso",
+      "symbol": "$",
+      "exponent": 0
+    },
+    {
+      "code": "CNY",
+      "name": "Chinese Yuan",
+      "symbol": "¥",
+      "exponent": 2
+    },
+    {
+      "code": "COP",
+      "name": "Colombian Peso",
+      "symbol": "$",
+      "exponent": 2
+    },
+    {
+      "code": "KMF",
+      "name": "Comorian Franc",
+      "symbol": "CF",
+      "exponent": 0
+    },
+    {
+      "code": "CDF",
+      "name": "Congolese Franc",
+      "symbol": "FC",
+      "exponent": 2
+    },
+    {
+      "code": "CRC",
+      "name": "Costa Rican Colón",
+      "symbol": "₡",
+      "exponent": 2
+    },
+    {
+      "code": "HRK",
+      "name": "Croatian Kuna",
+      "symbol": "kn",
+      "exponent": 2
+    },
+    {
+      "code": "CUC",
+      "name": "Cuban Convertible Peso",
+      "symbol": "$",
+      "exponent": 2
+    },
+    {
+      "code": "CUP",
+      "name": "Cuban Peso",
+      "symbol": "$",
+      "exponent": 2
+    },
+    {
+      "code": "CZK",
+      "name": "Czech Koruna",
+      "symbol": "Kč",
+      "exponent": 2
+    },
+    {
+      "code": "DKK",
+      "name": "Danish Krone",
+      "symbol": "kr",
+      "exponent": 2
+    },
+    {
+      "code": "DJF",
+      "name": "Djiboutian Franc",
+      "symbol": "DJF",
+      "exponent": 0
+    },
+    {
+      "code": "DOP",
+      "name": "Dominican Peso",
+      "symbol": "$",
+      "exponent": 2
+    },
+    {
+      "code": "XCD",
+      "name": "East Caribbean Dollar",
+      "symbol": "$",
+      "exponent": 2
+    },
+    {
+      "code": "EGP",
+      "name": "Egyptian Pound",
+      "symbol": "E£",
+      "exponent": 2
+    },
+    {
+      "code": "ERN",
+      "name": "Eritrean Nakfa",
+      "symbol": "ERN",
+      "exponent": 2
+    },
+    {
+      "code": "ETB",
+      "name": "Ethiopian Birr",
+      "symbol": "ብር",
+      "exponent": 2
+    },
+    {
+      "code": "EUR",
+      "name": "Euro",
+      "symbol": "€",
+      "exponent": 2
+    },
+    {
+      "code": "FKP",
+      "name": "Falkland Islands Pound",
+      "symbol": "£",
+      "exponent": 2
+    },
+    {
+      "code": "FJD",
+      "name": "Fijian Dollar",
+      "symbol": "$",
+      "exponent": 2
+    },
+    {
+      "code": "GMD",
+      "name": "Gambian Dalasi",
+      "symbol": "GMD",
+      "exponent": 2
+    },
+    {
+      "code": "GEL",
+      "name": "Georgian Lari",
+      "symbol": "₾",
+      "exponent": 2
+    },
+    {
+      "code": "GHS",
+      "name": "Ghanaian Cedi",
+      "symbol": "GH₵",
+      "exponent": 2
+    },
+    {
+      "code": "GIP",
+      "name": "Gibraltar Pound",
+      "symbol": "£",
+      "exponent": 2
+    },
+    {
+      "code": "GTQ",
+      "name": "Guatemalan Quetzal",
+      "symbol": "Q",
+      "exponent": 2
+    },
+    {
+      "code": "GNF",
+      "name": "Guinean Franc",
+      "symbol": "FG",
+      "exponent": 0
+    },
+    {
+      "code": "GYD",
+      "name": "Guyanaese Dollar",
+      "symbol": "$",
+      "exponent": 2
+    },
+    {
+      "code": "HTG",
+      "name": "Haitian Gourde",
+      "symbol": "G",
+      "exponent": 2
+    },
+    {
+      "code": "HNL",
+      "name": "Honduran Lempira",
+      "symbol": "L",
+      "exponent": 2
+    },
+    {
+      "code": "HKD",
+      "name": "Hong Kong Dollar",
+      "symbol": "$",
+      "exponent": 2
+    },
+    {
+      "code": "HUF",
+      "name": "Hungarian Forint",
+      "symbol": "Ft",
+      "exponent": 2
+    },
+    {
+      "code": "ISK",
+      "name": "Icelandic Króna",
+      "symbol": "kr",
+      "exponent": 0
+    },
+    {
+      "code": "INR",
+      "name": "Indian Rupee",
+      "symbol": "₹",
+      "exponent": 2
+    },
+    {
+      "code": "IDR",
+      "name": "Indonesian Rupiah",
+      "symbol": "Rp",
+      "exponent": 2
+    },
+    {
+      "code": "IRR",
+      "name": "Iranian Rial",
+      "symbol": "ر.إ.",
+      "exponent": 2
+    },
+    {
+      "code": "IQD",
+      "name": "Iraqi Dinar",
+      "symbol": "د.ع.",
+      "exponent": 3
+    },
+    {
+      "code": "ILS",
+      "name": "Israeli New Shekel",
+      "symbol": "₪",
+      "exponent": 2
+    },
+    {
+      "code": "JMD",
+      "name": "Jamaican Dollar",
+      "symbol": "$",
+      "exponent": 2
+    },
+    {
+      "code": "JPY",
+      "name": "Japanese Yen",
+      "symbol": "¥",
+      "exponent": 0
+    },
+    {
+      "code": "JOD",
+      "name": "Jordanian Dinar",
+      "symbol": "د.أ.",
+      "exponent": 3
+    },
+    {
+      "code": "KZT",
+      "name": "Kazakhstani Tenge",
+      "symbol": "₸",
+      "exponent": 2
+    },
+    {
+      "code": "KES",
+      "name": "Kenyan Shilling",
+      "symbol": "Ksh",
+      "exponent": 2
+    },
+    {
+      "code": "KWD",
+      "name": "Kuwaiti Dinar",
+      "symbol": "د.ك.",
+      "exponent": 3
+    },
+    {
+      "code": "KGS",
+      "name": "Kyrgyz Som",
+      "symbol": "⃀",
+      "exponent": 2
+    },
+    {
+      "code": "LAK",
+      "name": "Laotian Kip",
+      "symbol": "₭",
+      "exponent": 2
+    },
+    {
+      "code": "LBP",
+      "name": "Lebanese Pound",
+      "symbol": "L£",
+      "exponent": 2
+    },
+    {
+      "code": "LSL",
+      "name": "Lesotho Loti",
+      "symbol": "ឡូទី",
+      "exponent": 2
+    },
+    {
+      "code": "LRD",
+      "name": "Liberian Dollar",
+      "symbol": "$",
+      "exponent": 2
+    },
+    {
+      "code": "LYD",
+      "name": "Libyan Dinar",
+      "symbol": "د.ل.",
+      "exponent": 3
+    },
+    {
+      "code": "MOP",
+      "name": "Macanese Pataca",
+      "symbol": "MOP",
+      "exponent": 2
+    },
+    {
+      "code": "MKD",
+      "name": "Macedonian Denar",
+      "symbol": "ден.",
+      "exponent": 2
+    },
+    {
+      "code": "MGA",
+      "name": "Malagasy Ariary",
+      "symbol": "Ar",
+      "exponent": 2
+    },
+    {
+      "code": "MWK",
+      "name": "Malawian Kwacha",
+      "symbol": "MWK",
+      "exponent": 2
+    },
+    {
+      "code": "MYR",
+      "name": "Malaysian Ringgit",
+      "symbol": "RM",
+      "exponent": 2
+    },
+    {
+      "code": "MVR",
+      "name": "Maldivian Rufiyaa",
+      "symbol": "MVR",
+      "exponent": 2
+    },
+    {
+      "code": "MRU",
+      "name": "Mauritanian Ouguiya",
+      "symbol": "أ.م.",
+      "exponent": 2
+    },
+    {
+      "code": "MUR",
+      "name": "Mauritian Rupee",
+      "symbol": "Rs",
+      "exponent": 2
+    },
+    {
+      "code": "MXN",
+      "name": "Mexican Peso",
+      "symbol": "$",
+      "exponent": 2
+    },
+    {
+      "code": "MDL",
+      "name": "Moldovan Leu",
+      "symbol": "MDL",
+      "exponent": 2
+    },
+    {
+      "code": "MNT",
+      "name": "Mongolian Tugrik",
+      "symbol": "₮",
+      "exponent": 2
+    },
+    {
+      "code": "MAD",
+      "name": "Moroccan Dirham",
+      "symbol": "د.م.",
+      "exponent": 2
+    },
+    {
+      "code": "MZN",
+      "name": "Mozambican Metical",
+      "symbol": "MZN",
+      "exponent": 2
+    },
+    {
+      "code": "MMK",
+      "name": "Myanmar Kyat",
+      "symbol": "K",
+      "exponent": 2
+    },
+    {
+      "code": "NAD",
+      "name": "Namibian Dollar",
+      "symbol": "$",
+      "exponent": 2
+    },
+    {
+      "code": "NPR",
+      "name": "Nepalese Rupee",
+      "symbol": "Rs",
+      "exponent": 2
+    },
+    {
+      "code": "ANG",
+      "name": "Netherlands Antillean Guilder",
+      "symbol": "NAf",
+      "exponent": 2
+    },
+    {
+      "code": "TWD",
+      "name": "New Taiwan Dollar",
+      "symbol": "$",
+      "exponent": 2
+    },
+    {
+      "code": "NZD",
+      "name": "New Zealand Dollar",
+      "symbol": "$",
+      "exponent": 2
+    },
+    {
+      "code": "NIO",
+      "name": "Nicaraguan Córdoba",
+      "symbol": "C$",
+      "exponent": 2
+    },
+    {
+      "code": "NGN",
+      "name": "Nigerian Naira",
+      "symbol": "₦",
+      "exponent": 2
+    },
+    {
+      "code": "KPW",
+      "name": "North Korean Won",
+      "symbol": "₩",
+      "exponent": 2
+    },
+    {
+      "code": "NOK",
+      "name": "Norwegian Krone",
+      "symbol": "kr",
+      "exponent": 2
+    },
+    {
+      "code": "OMR",
+      "name": "Omani Rial",
+      "symbol": "ر.ع.",
+      "exponent": 3
+    },
+    {
+      "code": "PKR",
+      "name": "Pakistani Rupee",
+      "symbol": "Rs",
+      "exponent": 2
+    },
+    {
+      "code": "PAB",
+      "name": "Panamanian Balboa",
+      "symbol": "B/.",
+      "exponent": 2
+    },
+    {
+      "code": "PGK",
+      "name": "Papua New Guinean Kina",
+      "symbol": "PGK",
+      "exponent": 2
+    },
+    {
+      "code": "PYG",
+      "name": "Paraguayan Guarani",
+      "symbol": "₲",
+      "exponent": 0
+    },
+    {
+      "code": "PEN",
+      "name": "Peruvian Sol",
+      "symbol": "S/",
+      "exponent": 2
+    },
+    {
+      "code": "PHP",
+      "name": "Philippine Peso",
+      "symbol": "₱",
+      "exponent": 2
+    },
+    {
+      "code": "PLN",
+      "name": "Polish Zloty",
+      "symbol": "zł",
+      "exponent": 2
+    },
+    {
+      "code": "QAR",
+      "name": "Qatari Riyal",
+      "symbol": "ر.ق.",
+      "exponent": 2
+    },
+    {
+      "code": "RON",
+      "name": "Romanian Leu",
+      "symbol": "lei",
+      "exponent": 2
+    },
+    {
+      "code": "RUB",
+      "name": "Russian Ruble",
+      "symbol": "₽",
+      "exponent": 2
+    },
+    {
+      "code": "RWF",
+      "name": "Rwandan Franc",
+      "symbol": "RF",
+      "exponent": 0
+    },
+    {
+      "code": "SVC",
+      "name": "Salvadoran Colón",
+      "symbol": "SVC",
+      "exponent": 2
+    },
+    {
+      "code": "WST",
+      "name": "Samoan Tala",
+      "symbol": "$WS",
+      "exponent": 2
+    },
+    {
+      "code": "STN",
+      "name": "São Tomé & Príncipe Dobra",
+      "symbol": "Db",
+      "exponent": 2
+    },
+    {
+      "code": "SAR",
+      "name": "Saudi Riyal",
+      "symbol": "ر.س.",
+      "exponent": 2
+    },
+    {
+      "code": "RSD",
+      "name": "Serbian Dinar",
+      "symbol": "RSD",
+      "exponent": 2
+    },
+    {
+      "code": "SCR",
+      "name": "Seychellois Rupee",
+      "symbol": "SCR",
+      "exponent": 2
+    },
+    {
+      "code": "SLE",
+      "name": "Sierra Leonean Leone",
+      "symbol": "SLE",
+      "exponent": 2
+    },
+    {
+      "code": "SLL",
+      "name": "Sierra Leonean Leone (1964—2022)",
+      "symbol": "SLL",
+      "exponent": 2
+    },
+    {
+      "code": "SGD",
+      "name": "Singapore Dollar",
+      "symbol": "$",
+      "exponent": 2
+    },
+    {
+      "code": "SBD",
+      "name": "Solomon Islands Dollar",
+      "symbol": "$",
+      "exponent": 2
+    },
+    {
+      "code": "SOS",
+      "name": "Somali Shilling",
+      "symbol": "S",
+      "exponent": 2
+    },
+    {
+      "code": "ZAR",
+      "name": "South African Rand",
+      "symbol": "R",
+      "exponent": 2
+    },
+    {
+      "code": "KRW",
+      "name": "South Korean Won",
+      "symbol": "₩",
+      "exponent": 0
+    },
+    {
+      "code": "SSP",
+      "name": "South Sudanese Pound",
+      "symbol": "£",
+      "exponent": 2
+    },
+    {
+      "code": "LKR",
+      "name": "Sri Lankan Rupee",
+      "symbol": "Rs",
+      "exponent": 2
+    },
+    {
+      "code": "SHP",
+      "name": "St. Helena Pound",
+      "symbol": "£",
+      "exponent": 2
+    },
+    {
+      "code": "SDG",
+      "name": "Sudanese Pound",
+      "symbol": "ج.س.",
+      "exponent": 2
+    },
+    {
+      "code": "SRD",
+      "name": "Surinamese Dollar",
+      "symbol": "$",
+      "exponent": 2
+    },
+    {
+      "code": "SZL",
+      "name": "Swazi Lilangeni",
+      "symbol": "SZL",
+      "exponent": 2
+    },
+    {
+      "code": "SEK",
+      "name": "Swedish Krona",
+      "symbol": "kr",
+      "exponent": 2
+    },
+    {
+      "code": "CHF",
+      "name": "Swiss Franc",
+      "symbol": "CHF",
+      "exponent": 2
+    },
+    {
+      "code": "SYP",
+      "name": "Syrian Pound",
+      "symbol": "£",
+      "exponent": 2
+    },
+    {
+      "code": "TJS",
+      "name": "Tajikistani Somoni",
+      "symbol": "сом.",
+      "exponent": 2
+    },
+    {
+      "code": "TZS",
+      "name": "Tanzanian Shilling",
+      "symbol": "TSh",
+      "exponent": 2
+    },
+    {
+      "code": "THB",
+      "name": "Thai Baht",
+      "symbol": "฿",
+      "exponent": 2
+    },
+    {
+      "code": "TOP",
+      "name": "Tongan Paʻanga",
+      "symbol": "T$",
+      "exponent": 2
+    },
+    {
+      "code": "TTD",
+      "name": "Trinidad & Tobago Dollar",
+      "symbol": "$",
+      "exponent": 2
+    },
+    {
+      "code": "TND",
+      "name": "Tunisian Dinar",
+      "symbol": "د.ت.",
+      "exponent": 3
+    },
+    {
+      "code": "TRY",
+      "name": "Turkish Lira",
+      "symbol": "₺",
+      "exponent": 2
+    },
+    {
+      "code": "TMT",
+      "name": "Turkmenistani Manat",
+      "symbol": "ТМТ",
+      "exponent": 2
+    },
+    {
+      "code": "UGX",
+      "name": "Ugandan Shilling",
+      "symbol": "UGX",
+      "exponent": 0
+    },
+    {
+      "code": "UAH",
+      "name": "Ukrainian Hryvnia",
+      "symbol": "₴",
+      "exponent": 2
+    },
+    {
+      "code": "AED",
+      "name": "United Arab Emirates Dirham",
+      "symbol": "د.إ.",
+      "exponent": 2
+    },
+    {
+      "code": "UYU",
+      "name": "Uruguayan Peso",
+      "symbol": "$",
+      "exponent": 2
+    },
+    {
+      "code": "USD",
+      "name": "US Dollar",
+      "symbol": "$",
+      "exponent": 2
+    },
+    {
+      "code": "UZS",
+      "name": "Uzbekistani Som",
+      "symbol": "soʻm",
+      "exponent": 2
+    },
+    {
+      "code": "VUV",
+      "name": "Vanuatu Vatu",
+      "symbol": "VUV",
+      "exponent": 0
+    },
+    {
+      "code": "VES",
+      "name": "Venezuelan Bolívar",
+      "symbol": "Bs.S",
+      "exponent": 2
+    },
+    {
+      "code": "VND",
+      "name": "Vietnamese Dong",
+      "symbol": "₫",
+      "exponent": 0
+    },
+    {
+      "code": "XOF",
+      "name": "West African CFA Franc",
+      "symbol": "F CFA",
+      "exponent": 0
+    },
+    {
+      "code": "YER",
+      "name": "Yemeni Rial",
+      "symbol": "ر.ي.",
+      "exponent": 2
+    },
+    {
+      "code": "ZMW",
+      "name": "Zambian Kwacha",
+      "symbol": "ZK",
+      "exponent": 2
+    },
+    {
+      "code": "ZWL",
+      "name": "Zimbabwean Dollar (2009–2024)",
+      "symbol": "ZWL",
+      "exponent": 2
+    },
+    {
+      "code": "ZWG",
+      "name": "Zimbabwean Gold",
+      "symbol": "ZiG",
+      "exponent": 2
+    }
+  ]
+}
