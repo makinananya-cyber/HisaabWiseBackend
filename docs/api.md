@@ -116,6 +116,51 @@ a typo. `401` is reserved for the token.
 [ADR-0018](adr/0018-recovery-by-security-question.md), including the two risks that were accepted and the
 one open item it leaves.
 
+## Screens — slices 3, 4, 6, 7
+
+**One request per screen, everything on it computed** ([ADR-0020] on the iOS side). The client sums nothing,
+thresholds nothing, and owns no calendar: every figure arrives with its `display` string, every share with its
+label, every verdict already decided. None of it is cacheable — each response carries
+`Cache-Control: no-store`, and a HIT here would be one person's salary served to another (invariant 8).
+
+| Route | What it carries |
+| --- | --- |
+| `GET /v1/screens/home` | greeting, date and month labels, the donut with slots and shares, "% of pay", the savings meter and verdict, the day's tip, the streak, the article teasers |
+| `GET /v1/screens/expenses` | the three-way summary, the wants bar, seven categories in three kinds, every entry with its "Today / Yesterday / N days ago" label |
+| `GET /v1/screens/learn` | streak, XP, next lesson, every lesson's unlock state and ring counts. The curriculum comes separately and cacheably, joined by lesson id |
+| `GET /v1/screens/reports` | the archive grouped by year, the trend bars with fills and verdicts, the goal line |
+| `GET /v1/screens/reports/:monthKey` | one closed month in full, converted through its **pinned** rate set |
+| `GET /v1/screens/account` | the profile header, four rows with subtitles, the personal card, the two security questions |
+
+### Writes answer with the screen
+
+`POST /v1/expenses`, `DELETE /v1/expenses/:id`, `PUT /v1/expenses/fixed/:categoryId`,
+`PUT /v1/expenses/lines/:categoryId`, `PUT /v1/me`, `PUT /v1/me/currency` and `POST /v1/me/password` all
+answer with the updated screen payload. The client never patches its own copy — that is how a per-category
+total and a monthly summary come to disagree, which is what the prototype did.
+
+`POST /v1/expenses` treats the **`Idempotency-Key` header as the document `_id`**
+([ADR-0011](adr/0011-idempotency.md)), so a replay is a `201` carrying the current screen rather than a
+`409`: a client that merely lost the first response must not be shown an error for a write that worked.
+
+### Money, everywhere
+
+Every monetary value is `{minor, currency, exponent, display}`. `minor` is an integer count of the smallest
+unit, stored in the currency it was authored in; `display` is rendered server-side because the client has no
+formatter (iOS ADR-0003), and a **blank `display` is a decode failure** on the client, so it can never be
+empty here. The rounding ladder, the symbol-versus-code rule, and why `JPY 75,000` is not `¥75,000` are in
+[ADR-0019](adr/0019-currency-token-and-the-first-run-residual.md).
+
+### Jobs
+
+| Job | Interval | What it does |
+| --- | --- | --- |
+| `month:rollover` | 15 minutes | Closes each user's local month into an immutable archive, clears the live month, carries rent and utility lines forward. Catch-up-safe; idempotent via the unique `(userId, monthKey)` index |
+| `purge:deleted` | daily | Hard-erases accounts past their 30-day grace period, leaving only a tombstone |
+
+Fifteen minutes rather than hourly because timezone offsets are not all whole hours — Asia/Kolkata is +05:30
+and Asia/Kathmandu +05:45, both squarely in the target market.
+
 ## Operational endpoints
 
 These sit outside `/v1`: they are infrastructure, not part of the client API contract. Both

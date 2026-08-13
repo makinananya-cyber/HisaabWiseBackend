@@ -142,3 +142,34 @@ store; nothing secret is committed.
 check and the image build. **The deploy job is deliberately absent** until the hosting target is
 chosen ([BACKEND_PLAN.md §6](docs/BACKEND_PLAN.md)) — the gates are host-independent and land now;
 the deploy step lands with the decision.
+
+## Running it locally
+
+```bash
+npm install
+npm run content:extract   # once, or after the design changes
+npm run dev               # http://localhost:8080
+```
+
+Then, in another shell, seed what the screens need:
+
+```bash
+npm run seed:fx                                  # today's rates, from the design's snapshot
+npm run seed:archives -- someone@example.ae      # Feb–Jul 2026, for Reports
+```
+
+The iOS app's Debug configuration points at `http://localhost:8080`, so a simulator build talks to this
+server over the real transport with no fixture in the way.
+
+### Verification
+
+```bash
+npm run lint && npm run typecheck && npm test
+npm run content:check     # content/ still matches the design
+npm run verify:db         # GET /health/db against a running server
+```
+
+`npm test` runs the pure domain suites in milliseconds and the integration suites against a **per-run
+`hisaabwise_test_<runId>` database** in the same Atlas cluster (ADR-0014). Both guards apply: it refuses a URI
+that looks like production, and it refuses any database name without `_test_` in it. Without `MONGODB_URI` the
+integration suites skip with a reason and the domain suites still run.
