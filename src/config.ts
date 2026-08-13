@@ -85,7 +85,10 @@ export class ConfigurationError extends Error {
  */
 export function loadConfig(env: NodeJS.ProcessEnv = process.env): Config {
   const parsed = configSchema.safeParse(env);
-  if (parsed.success) return parsed.data;
+  if (parsed.success) {
+    assertTlsVerificationIntact(parsed.data, env);
+    return parsed.data;
+  }
 
   const problems = parsed.error.issues
     .map((issue) => `  ${issue.path.join('.') || '(root)'}: ${issue.message}`)
@@ -95,6 +98,35 @@ export function loadConfig(env: NodeJS.ProcessEnv = process.env): Config {
     `Invalid environment configuration:\n${problems}\n\n` +
       'Copy .env.example to .env and fill in what you need. Never point a local MONGODB_URI at ' +
       'the production database (workspace Rule 4).',
+  );
+}
+
+/**
+ * `NODE_TLS_REJECT_UNAUTHORIZED=0` turns off certificate verification for **every** outbound TLS
+ * connection this process makes — Atlas, the FX provider, the mail provider, APNs, Sentry. Any of
+ * them becomes forgeable by whatever sits in the network path, on a service holding salary and
+ * spending data under UAE PDPL obligations.
+ *
+ * It is tolerated in development, because a developer may have a reason and it is their machine.
+ * It is refused outright in production, where nobody has a good reason and the blast radius is
+ * every user. A local workaround must not be able to become a deployed one.
+ */
+function assertTlsVerificationIntact(config: Config, env: NodeJS.ProcessEnv): void {
+  if (env.NODE_TLS_REJECT_UNAUTHORIZED !== '0') return;
+
+  if (config.NODE_ENV === 'production') {
+    throw new ConfigurationError(
+      'NODE_TLS_REJECT_UNAUTHORIZED=0 disables TLS certificate verification for every outbound ' +
+        'connection and must never be set in production. Remove it from the environment.',
+    );
+  }
+
+  // Not thrown in development, but not silent either: Node's own warning is easy to miss in a busy
+  // log, and this one says what it costs.
+  console.warn(
+    '[config] WARNING: NODE_TLS_REJECT_UNAUTHORIZED=0 — TLS certificate verification is OFF for ' +
+      'all outbound connections. This does not fix connection resets or timeouts; those happen ' +
+      'below certificate validation. Remove it unless you know exactly why it is there.',
   );
 }
 

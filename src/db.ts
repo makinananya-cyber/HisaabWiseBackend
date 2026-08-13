@@ -35,23 +35,78 @@ function clientOptions(config: Config): MongoClientOptions {
     // the time requests arrive the pool is warm and server selection is immediate.
     serverSelectionTimeoutMS: 10_000,
     connectTimeoutMS: 10_000,
-    // Named so the Atlas connection view attributes connections to this service.
-    appName: 'hisaabwise-backend',
   };
 }
 
 /** Process scope, deliberately: created once at startup, shared by every request. */
 let client: MongoClient | undefined;
 
+export interface ConnectOptions {
+  /** Total attempts, including the first. */
+  readonly attempts?: number;
+  /** First backoff, doubling each attempt, capped at 8s. */
+  readonly baseDelayMs?: number;
+  readonly onRetry?: (detail: { attempt: number; attempts: number; delayMs: number; err: unknown }) => void;
+}
+
+const sleep = (ms: number): Promise<void> => new Promise((resolve) => setTimeout(resolve, ms));
+
 /**
- * Connect the shared client. Called once from the server entrypoint, before the first request is
- * accepted, so a database that cannot be reached is a failure to boot rather than a failure to
- * serve.
+ * The backoff schedule: doubling from `baseDelayMs`, capped at 8s, one entry per *gap* between
+ * attempts — so three attempts produce two waits.
+ *
+ * Pure and exported so the policy can be tested without a network. The alternative, asserting the
+ * schedule by watching real connection attempts, would cost the connect timeout per attempt and
+ * make the suite slow enough that someone eventually deletes it.
  */
-export async function connectDatabase(config: Config): Promise<MongoClient> {
-  client ??= new MongoClient(config.MONGODB_URI, clientOptions(config));
-  await client.connect();
-  return client;
+export function retryDelays(attempts: number, baseDelayMs: number): number[] {
+  return Array.from({ length: Math.max(0, attempts - 1) }, (_unused, index) =>
+    Math.min(baseDelayMs * 2 ** index, 8_000),
+  );
+}
+
+/**
+ * Connect the shared client, retrying a transient failure with backoff.
+ *
+ * Called once from the entrypoint before any request is accepted, so a database that cannot be
+ * reached is a failure to boot rather than a failure to serve.
+ *
+ * **Why retry at all**, when the whole point of connecting first is to fail fast: the two are not
+ * in tension. Reaching this Atlas cluster is measurably flaky — a cold connect costs ~3s across
+ * three TLS handshakes, and one of them intermittently comes back `ECONNRESET`. A single attempt
+ * turns a two-second network hiccup into a failed deploy, which is a worse failure than the one
+ * fail-fast exists to prevent. After the last attempt it still throws, so a genuinely unreachable
+ * cluster still stops the boot.
+ *
+ * A fresh client per attempt, because a `MongoClient` whose first connect failed can be left with
+ * a poisoned topology; reusing it would retry into the same broken state.
+ */
+export async function connectDatabase(
+  config: Config,
+  { attempts = 5, baseDelayMs = 500, onRetry }: ConnectOptions = {},
+): Promise<MongoClient> {
+  const delays = retryDelays(attempts, baseDelayMs);
+  let lastError: unknown;
+
+  for (let attempt = 1; attempt <= attempts; attempt++) {
+    const candidate = new MongoClient(config.MONGODB_URI, clientOptions(config));
+    try {
+      await candidate.connect();
+      client = candidate;
+      return client;
+    } catch (err) {
+      lastError = err;
+      await candidate.close().catch(() => undefined);
+
+      const delayMs = delays[attempt - 1];
+      if (delayMs === undefined) break;
+
+      onRetry?.({ attempt, attempts, delayMs, err });
+      await sleep(delayMs);
+    }
+  }
+
+  throw lastError;
 }
 
 /**

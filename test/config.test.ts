@@ -97,3 +97,21 @@ describe('requireSecret', () => {
     expect(() => requireSecret(config, 'JWT_ACCESS_SECRET')).toThrow(/JWT_ACCESS_SECRET/);
   });
 });
+
+describe('TLS verification', () => {
+  const withTls = (nodeEnv: string, flag: string) =>
+    loadConfig({ ...minimal, NODE_ENV: nodeEnv, NODE_TLS_REJECT_UNAUTHORIZED: flag });
+
+  it('refuses to boot in production with certificate verification disabled', () => {
+    expect(() => withTls('production', '0')).toThrow(/NODE_TLS_REJECT_UNAUTHORIZED/);
+  });
+
+  it('allows it in development, since that is the developer’s own machine', () => {
+    expect(() => withTls('development', '0')).not.toThrow();
+  });
+
+  it('is untroubled when the flag is absent or enabled', () => {
+    expect(() => loadConfig({ ...minimal, NODE_ENV: 'production' })).not.toThrow();
+    expect(() => withTls('production', '1')).not.toThrow();
+  });
+});

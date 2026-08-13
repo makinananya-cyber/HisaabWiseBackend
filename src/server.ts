@@ -17,7 +17,19 @@ async function main(): Promise<void> {
   const config = loadConfig();
   const logger = createLogger(config);
 
-  await connectDatabase(config);
+  await connectDatabase(config, {
+    onRetry: ({ attempt, attempts, delayMs, err }) => {
+      logger.warn(
+        {
+          attempt,
+          attempts,
+          retryInMs: delayMs,
+          err: err instanceof Error ? `${err.name}: ${err.message}` : String(err),
+        },
+        'database connection failed, retrying',
+      );
+    },
+  });
   logger.info({ maxPoolSize: config.MONGODB_MAX_POOL_SIZE }, 'database connected');
 
   const server = serve({ fetch: createApp(config, logger).fetch, port: config.PORT }, (info) => {
