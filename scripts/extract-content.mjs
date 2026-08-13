@@ -102,7 +102,9 @@ function readDesign() {
     'OTHER',
     'LANGUAGES',
   ];
-  const data = {};
+  // `FX` is declared in the shell rather than in a screen: the prototype's `HWMoney` is shared, so
+  // its rate table sits beside `SCREENS`.
+  const data = { FX: new Function(`return (${shell.get('FX')});`)() };
   for (const screen of Object.values(screens)) {
     for (const block of scriptBlocks(screen)) {
       const declared = declarationsIn(block);
@@ -315,12 +317,42 @@ const section = (source) => ({
   ...(source.callout ? { callout: markdown(source.callout) } : {}),
 });
 
+/**
+ * Which of the client's five accent slots an article is drawn in.
+ *
+ * The design gives each article its own colour; the client has five named accents reused from the
+ * Learn units — `[sun, mint, coral, sky, violet]`, so slot 3 is coral and slot 4 is sky. Mapping the
+ * design's colour onto the nearest of those keeps the intent (scams reads red, remittances green,
+ * debt blue) without inventing a sixth colour the palette does not have.
+ *
+ * A table keyed by the design's own hex rather than a nearest-colour computation: there are three
+ * articles and five slots, and a computation would silently reassign one if an editor nudged a hex.
+ * An unmapped colour throws, which is how a fourth article gets noticed.
+ */
+const ARTICLE_ACCENTS = new Map([
+  ['#C24E3B', 3], // red → coral
+  ['#1B9E77', 2], // green → mint
+  ['#334EAC', 4], // planetary blue → sky
+]);
+
+function accentFor(article) {
+  const accent = ARTICLE_ACCENTS.get(article.colour.toUpperCase());
+  if (accent === undefined) {
+    throw new Error(
+      `article "${article.id}" has colour ${article.colour}, which is not in ARTICLE_ACCENTS. ` +
+        'Pick the nearest of the five client accents (1 sun, 2 mint, 3 coral, 4 sky, 5 violet) and add it.',
+    );
+  }
+  return accent;
+}
+
 const articlesFrom = (articles) => ({
   articles: articles.map((article) => ({
     id: article.id,
     // The teaser fields. Kept on the body document rather than in a second file so that one article
     // is one object: `GET /v1/content/articles` projects the teaser, `/articles/:id` serves the lot.
     icon: article.icon,
+    accent: accentFor(article),
     short: article.short,
     title: markdown(article.title),
     lede: markdown(article.lede),
@@ -360,6 +392,26 @@ function build(design) {
       countries: design.COUNTRIES.map(({ c, d, n }) => ({ code: c, dialCode: d, name: n })),
     },
     'reference/currencies.json': { currencies },
+    'fx-seed.json': {
+      // The prototype's indicative snapshot: units per 1 USD, covering all 160 codes. Seeded into
+      // `fx_rates` by `npm run seed:fx` so slice 3's conversion is not blocked on procuring a
+      // provider (BACKEND_PLAN §4 slice 3, §7).
+      //
+      // **It is a seed, not a fallback.** Nothing reads this file at request time. An unknown code at
+      // conversion time is an error, never rate 1.0 (defect D15), and a missing rate set is a loud
+      // failure rather than a quiet substitution — which is exactly what a code-level fallback would
+      // become the first time a provider outage lasted a day.
+      base: 'USD',
+      rates: Object.fromEntries(
+        currencies.map(({ code }) => {
+          const rate = design.FX[code];
+          if (typeof rate !== 'number' || !(rate > 0)) {
+            throw new Error(`the design's FX table has no usable rate for ${code}`);
+          }
+          return [code, rate];
+        }),
+      ),
+    },
     'reference/languages.json': {
       // All 87 are retained because the design's picker lists them; `shipped` is what the client
       // filters on, and only English and Arabic are translated (BACKEND_PLAN §7).
@@ -393,6 +445,9 @@ function assertCounts(files) {
     ['multi-select steps', kindCount('multiSelect'), 2],
     ['countries', files['reference/countries.json'].countries.length, 251],
     ['currencies', files['reference/currencies.json'].currencies.length, 160],
+    // A partial rate set silently breaks somebody's display currency, which is indistinguishable from
+    // the hardcoded fallback the spec forbids. So the seed is all-or-nothing too.
+    ['seeded FX rates', Object.keys(files['fx-seed.json'].rates).length, 160],
     ['languages', files['reference/languages.json'].languages.length, 87],
     ['transport modes', files['picklists.json'].transport.length, 22],
     ['other types', files['picklists.json'].other.length, 20],

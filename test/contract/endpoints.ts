@@ -170,22 +170,23 @@ export const endpoints: readonly EndpointContract[] = [
     path: '/v1/screens/home',
     slice: 3,
     fixtures: ['home-inr.json', 'home-first-run.json'],
-    status: 'pending',
+    status: 'live',
+    note: 'Two fixtures, two legal shapes: `savings.remaining` is a Money in one and null in the other, which is how the client models it. Spending and Learn standing arrive empty until slices 4 and 5 supply them.',
   },
   {
     method: 'GET',
     path: '/v1/budget',
     slice: 3,
     fixtures: ['budget-inr.json', 'budget-aed.json', 'money-exponents.json'],
-    status: 'pending',
+    status: 'live',
   },
   {
     method: 'GET',
     path: '/v1/fx/rates',
     slice: 3,
     fixtures: [],
-    status: 'pending',
-    note: 'Newest rate set plus its date; no fixture in the corpus because the client reads rates only through screen payloads.',
+    status: 'live',
+    note: 'Newest rate set plus its date; no fixture in the corpus because the client reads rates only through screen payloads. Cacheable — the same rates for everybody (invariant 8).',
   },
 
   // ── Slice 4 — expenses ──────────────────────────────────────────────────────────────────────

@@ -158,3 +158,35 @@ export function assertMatchesShape(expected: unknown, actual: unknown, label: st
       problems.map(({ path, problem }) => `  ${path || '(root)'}: ${problem}`).join('\n'),
   );
 }
+
+/**
+ * Satisfy **at least one** of several fixtures.
+ *
+ * Some endpoints have more than one legal payload shape, and the corpus documents that by carrying more
+ * than one fixture. `home-first-run.json` has a `Money` at `savings.remaining` while `home-inr.json` has
+ * `null` there — between them they say the field is `Money?`, which is exactly how the client models it.
+ * Asserting against a single fixture would make one of the two legal responses a failure.
+ *
+ * This is not a loosening. Every fixture is still checked in full; the response has to match one of them
+ * completely, and when none matches, the closest fixture's problems are reported — because a response that
+ * *nearly* matches one shape is far more useful to read than a list of every way it failed all of them.
+ */
+export function assertMatchesAnyShape(
+  fixtures: readonly { name: string; value: unknown }[],
+  actual: unknown,
+  label: string,
+): void {
+  let closest: { name: string; problems: ShapeProblem[] } | undefined;
+
+  for (const { name, value } of fixtures) {
+    const problems = shapeProblems(value, actual);
+    if (problems.length === 0) return;
+    if (closest === undefined || problems.length < closest.problems.length) closest = { name, problems };
+  }
+
+  const names = fixtures.map((fixture) => fixture.name).join(', ');
+  throw new Error(
+    `${label} satisfies none of ${names}. Closest was ${closest?.name ?? '(none)'}:\n` +
+      (closest?.problems ?? []).map(({ path, problem }) => `  ${path || '(root)'}: ${problem}`).join('\n'),
+  );
+}

@@ -3,6 +3,7 @@
     {
       "id": "scams",
       "icon": "shield",
+      "accent": 3,
       "short": "Scam awareness",
       "title": "Spotting scams in the UAE",
       "lede": "The tricks change often. The warning signs do not. Learn the signs once and you are covered for most of them.",
@@ -98,6 +99,7 @@
     {
       "id": "remit",
       "icon": "globe",
+      "accent": 2,
       "short": "Remittances in the UAE",
       "title": "Sending money home, without losing part of it",
       "lede": "The UAE is one of the biggest senders of money in the world. Small differences in rate add up fast when you send every month.",
@@ -170,6 +172,7 @@
     {
       "id": "debt",
       "icon": "steps",
+      "accent": 4,
       "short": "Debt management guidance",
       "title": "Getting on top of debt in the UAE",
       "lede": "Debt is not a character flaw. It is a maths problem with a plan attached. Here is the plan.",

@@ -40,6 +40,15 @@ const tipsSchema = z.object({
 const articleSchema = z.object({
   id: nonEmpty,
   icon: nonEmpty,
+  /**
+   * Which of the client's five accent slots the article is drawn in, `1…5`.
+   *
+   * Assigned at extraction by mapping the design's per-article colour onto the nearest of the five
+   * accents the client actually has (`[sun, mint, coral, sky, violet]`). Content rather than a client
+   * constant, because it belongs to the article — a fourth article should arrive with its colour, not
+   * with a client release.
+   */
+  accent: z.number().int().min(1).max(5),
   short: nonEmpty,
   title: nonEmpty,
   lede: richText,
@@ -378,6 +387,7 @@ export type ArticleTeaser = Omit<Article, 'sections' | 'sources'>;
 const teaserOf = (article: Article): ArticleTeaser => ({
   id: article.id,
   icon: article.icon,
+  accent: article.accent,
   short: article.short,
   title: article.title,
   lede: article.lede,

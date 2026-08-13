@@ -54,5 +54,14 @@ export async function ensureIndexes(logger: Logger): Promise<void> {
     ])),
   );
 
+  // ── Slice 3 — money ─────────────────────────────────────────────────────────────────────────
+  built.push(
+    ...(await collection(COLLECTIONS.fxRates).createIndexes([
+      // One document per day, and the index is what makes writing idempotent: a job that runs twice
+      // does not produce two versions of one day's truth.
+      { key: { dateKey: 1 }, unique: true, name: 'dateKey_unique' },
+    ])),
+  );
+
   logger.info({ indexes: built.length }, 'indexes ensured');
 }

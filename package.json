@@ -17,6 +17,7 @@
     "contract:sync": "node scripts/sync-contract-corpus.mjs",
     "content:extract": "node scripts/extract-content.mjs",
     "content:check": "node scripts/extract-content.mjs --check",
+    "seed:fx": "node --env-file-if-exists=.env scripts/seed-fx.mjs",
     "verify:db": "bash scripts/verify-db.sh"
   },
   "dependencies": {

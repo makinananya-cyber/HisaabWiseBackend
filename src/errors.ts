@@ -113,8 +113,16 @@ export class ApiError extends Error {
 
   constructor(
     readonly code: ErrorCode,
+    /**
+     * The **developer's** message: what shows in a stack trace and in the log line.
+     *
+     * A domain function that refuses something should say why here — "cannot add INR to AED" is worth
+     * far more to whoever is debugging than "Internal server error", and a pure function throwing
+     * outside a request has no log line to fall back on. It does not reach the client for an
+     * `INTERNAL`; see `body`.
+     */
     message?: string,
-    /** Detail for the log only. Never serialised — it may name fields or internals. */
+    /** Structured detail for the log only. Never serialised — it may name fields or internals. */
     readonly detail?: Record<string, unknown>,
   ) {
     super(message ?? ERROR_CODES[code]);
@@ -124,7 +132,15 @@ export class ApiError extends Error {
     return httpStatusFor(this.code);
   }
 
+  /**
+   * The response body.
+   *
+   * **An `INTERNAL` always answers with the canonical text, never `this.message`.** The message on an
+   * internal failure is written for a developer and names internals — a collection, a currency pair, a
+   * field path — and a `500` is exactly the response an attacker probes for. Every other code's message
+   * is client-facing by construction, so it passes through.
+   */
   get body(): { error: { code: ErrorCode; message: string } } {
-    return errorBody(this.code, this.message);
+    return errorBody(this.code, this.code === 'INTERNAL' ? ERROR_CODES.INTERNAL : this.message);
   }
 }
