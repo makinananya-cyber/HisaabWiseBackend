@@ -5,7 +5,12 @@ import { computeBudget } from '../domain/budget';
 import { convert, present } from '../domain/money';
 import { monthKey } from '../domain/time';
 import { requireSession } from '../middleware/auth';
+import { entriesForMonth } from '../repositories/expenseEntries';
+import { forUser as fixedCostsForUser } from '../repositories/fixedCosts';
 import { latestRateSet } from '../repositories/fxRates';
+import type { User } from '../repositories/users';
+import { liveMonthFor } from './expenses';
+import { asMonthSpending, monthTotals } from '../screens/expenses';
 import { buildHome, type LearnStanding, type MonthSpending } from '../screens/home';
 import { money } from '../types/money';
 import type { AppEnv } from '../types/hono';
@@ -17,27 +22,40 @@ import type { AppEnv } from '../types/hono';
  * `Cache-Control: no-store`, and the Cloudflare cache rules bypass `/v1/screens/*` entirely. A HIT here
  * would be one person's salary served to another.
  *
- * Slice 3 lands Home and `GET /v1/budget`. The month's spending and the reader's Learn standing are
- * supplied as **empty** until slices 4 and 5 fill them, which is not a stub: a user who has just
- * registered genuinely has no expenses and no XP, and `home-first-run.json` is that exact state. The
- * seam is `MonthSpending` and `LearnStanding`, so those slices change what is passed in rather than how
- * Home is built.
+ * The month's spending comes from `monthTotals` in `screens/expenses.ts` — **the same function the Expenses
+ * screen reads**, which is what makes the two agree about the same month. The prototype computed a month's
+ * totals separately on each screen, which is defect D1's mechanism.
+ *
+ * The reader's Learn standing is still supplied as **empty** until slice 5 fills it; the seam is
+ * `LearnStanding`, so that slice changes what is passed in rather than how Home is built.
  */
 
 export const screenRoutes = new Hono<AppEnv>();
 
 /**
- * A month with nothing in it.
+ * No Learn progress yet.
  *
- * Named rather than inlined so the two slices that replace it can find every call site, and so this
- * reads as "no data yet" rather than as an accidental zero.
+ * Named rather than inlined so slice 5 can find every call site, and so this reads as "not implemented yet"
+ * rather than as an accidental zero.
  */
-const noSpending = (currency: string): MonthSpending => ({
-  byCategory: {},
-  additionalIncome: money(0, currency),
-});
-
 const noLearning: LearnStanding = { streak: 0, xp: 0, nextLessonTitle: undefined };
+
+/**
+ * The live month's spending for a user, in their display currency.
+ *
+ * Shared by Home and `/v1/budget` so that all three surfaces — plus Expenses, which reads the same function
+ * — describe one month identically.
+ */
+async function spendingFor(user: User, now: Date): Promise<{ spending: MonthSpending; rates: Awaited<ReturnType<typeof latestRateSet>> }> {
+  const [live, rates] = await Promise.all([liveMonthFor(user, now), latestRateSet()]);
+  const [monthEntries, fixed] = await Promise.all([
+    entriesForMonth(user._id, live),
+    fixedCostsForUser(user._id, user.displayCurrency),
+  ]);
+
+  const totals = monthTotals(monthEntries, fixed, user.displayCurrency, rates);
+  return { spending: asMonthSpending(totals), rates };
+}
 
 /**
  * `GET /v1/screens/home`.
@@ -56,13 +74,14 @@ screenRoutes.get('/v1/screens/home', requireSession(), async (c) => {
 
   const user = c.var.user;
   const now = new Date();
+  const { spending, rates } = await spendingFor(user, now);
 
   return c.json(
     buildHome({
       user,
       now,
-      rates: await latestRateSet(),
-      spending: noSpending(user.displayCurrency),
+      rates,
+      spending,
       learning: noLearning,
       language: resolveLanguage(c.req.header('accept-language')),
     }),
@@ -83,17 +102,25 @@ screenRoutes.get('/v1/budget', requireSession(), async (c) => {
 
   const user = c.var.user;
   const now = new Date();
-  const rates = await latestRateSet();
   const currency = user.displayCurrency;
+  const { spending, rates } = await spendingFor(user, now);
 
-  const spending = noSpending(currency);
   const salary = convert(user.salary, currency, rates);
   const goal = convert(user.savingsGoal, currency, rates);
 
+  // needs = rent + utilities + groceries; wants = transport + entertainment + other (DATA_MODEL §2).
+  const amountOf = (id: keyof typeof spending.byCategory): typeof goal =>
+    spending.byCategory[id] ?? money(0, currency);
   const budget = computeBudget({
     income: { ...salary, minor: salary.minor + spending.additionalIncome.minor },
-    needs: money(0, currency),
-    wantsSpent: money(0, currency),
+    needs: {
+      ...goal,
+      minor: amountOf('rent').minor + amountOf('utilities').minor + amountOf('groceries').minor,
+    },
+    wantsSpent: {
+      ...goal,
+      minor: amountOf('transport').minor + amountOf('entertainment').minor + amountOf('other').minor,
+    },
     goal,
   });
 

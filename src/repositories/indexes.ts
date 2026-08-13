@@ -63,5 +63,31 @@ export async function ensureIndexes(logger: Logger): Promise<void> {
     ])),
   );
 
+  // ── Slice 4 — expenses ──────────────────────────────────────────────────────────────────────
+  built.push(
+    ...(await collection(COLLECTIONS.expenseEntries).createIndexes([
+      // Every read is month-scoped. `_id` is a client-supplied UUID and MongoDB indexes it uniquely for
+      // free, which is the idempotency mechanism for a replayed create (ADR-0011) — there is nothing to
+      // declare here for it.
+      { key: { userId: 1, monthKey: 1 }, name: 'userId_monthKey' },
+    ])),
+  );
+
+  built.push(
+    ...(await collection(COLLECTIONS.fixedCosts).createIndexes([
+      { key: { userId: 1 }, unique: true, name: 'userId_unique' },
+    ])),
+  );
+
+  // ── Slice 6 — reports ───────────────────────────────────────────────────────────────────────
+  built.push(
+    ...(await collection(COLLECTIONS.monthArchives).createIndexes([
+      // **The idempotency backbone of the month-rollover job.** A retry cannot double-write, and that is
+      // enforced here rather than by the job remembering to check — which is what makes running it every
+      // fifteen minutes, and running it twice, safe.
+      { key: { userId: 1, monthKey: 1 }, unique: true, name: 'userId_monthKey_unique' },
+    ])),
+  );
+
   logger.info({ indexes: built.length }, 'indexes ensured');
 }

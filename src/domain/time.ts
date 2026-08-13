@@ -134,6 +134,25 @@ export function daysBetween(earlier: string, later: string): number {
 }
 
 /**
+ * `"Today"`, `"Yesterday"`, `"3 days ago"` — the label beside a logged expense.
+ *
+ * **The server owns this, and that is the point.** The design writes it in the browser from the device
+ * clock, which is defect D5's shape: two devices in different zones disagree about which entries are
+ * "today", and a user who changes their clock relabels their history. Here it is computed from two day
+ * keys in the *stored* zone, so it is the same answer for the same entry however it is read.
+ *
+ * A future date reads as `"Today"` rather than `"in 2 days"`: entry dates are capped to the live month
+ * and default to now, so a forward date means clock skew between the client's idea of now and the
+ * server's — and "Today" is the least wrong thing to say about it.
+ */
+export function relativeDayLabel(entryDayKey: string, todayDayKey: string): string {
+  const days = daysBetween(entryDayKey, todayDayKey);
+  if (days <= 0) return 'Today';
+  if (days === 1) return 'Yesterday';
+  return `${String(days)} days ago`;
+}
+
+/**
  * Age in whole years on a given day, in the user's zone.
  *
  * For the 13+ gate. Computed from the date of birth the user chose rather than from an age they typed,
