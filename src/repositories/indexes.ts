@@ -79,6 +79,13 @@ export async function ensureIndexes(logger: Logger): Promise<void> {
     ])),
   );
 
+  // ── Slice 5 — learn ─────────────────────────────────────────────────────────────────────────
+  built.push(
+    ...(await collection(COLLECTIONS.learnProgress).createIndexes([
+      { key: { userId: 1 }, unique: true, name: 'userId_unique' },
+    ])),
+  );
+
   // ── Slice 6 — reports ───────────────────────────────────────────────────────────────────────
   built.push(
     ...(await collection(COLLECTIONS.monthArchives).createIndexes([

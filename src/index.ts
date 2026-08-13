@@ -11,6 +11,7 @@ import { authRoutes } from './routes/auth';
 import { contentRoutes } from './routes/content';
 import { expenseRoutes } from './routes/expenses';
 import { healthRoutes } from './routes/health';
+import { learnRoutes } from './routes/learn';
 import { meRoutes } from './routes/me';
 import { screenRoutes } from './routes/screens';
 import type { AppEnv } from './types/hono';
@@ -65,6 +66,7 @@ export function createApp(config: Config, logger: Logger): Hono<AppEnv> {
   app.route('/', meRoutes);
   app.route('/', screenRoutes);
   app.route('/', expenseRoutes);
+  app.route('/', learnRoutes);
 
   // Every error response in this service uses one envelope: `{error: {code, message}}`.
   app.notFound((c) => c.json(errorBody('NOT_FOUND'), 404));

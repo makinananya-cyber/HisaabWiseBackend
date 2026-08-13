@@ -1,12 +1,14 @@
 import { Hono } from 'hono';
 
-import { resolveLanguage } from '../content';
+import { getContent, resolveLanguage, type Language } from '../content';
 import { computeBudget } from '../domain/budget';
 import { convert, present } from '../domain/money';
-import { monthKey } from '../domain/time';
+import { currentStreak, nextLesson } from '../domain/learn';
+import { dayKey, monthKey } from '../domain/time';
 import { requireSession } from '../middleware/auth';
 import { entriesForMonth } from '../repositories/expenseEntries';
 import { forUser as fixedCostsForUser } from '../repositories/fixedCosts';
+import { asProgress, forUser as learnProgressForUser } from '../repositories/learnProgress';
 import { latestRateSet } from '../repositories/fxRates';
 import type { User } from '../repositories/users';
 import { liveMonthFor } from './expenses';
@@ -33,12 +35,23 @@ import type { AppEnv } from '../types/hono';
 export const screenRoutes = new Hono<AppEnv>();
 
 /**
- * No Learn progress yet.
+ * The reader's Learn standing, for Home's learning card.
  *
- * Named rather than inlined so slice 5 can find every call site, and so this reads as "not implemented yet"
- * rather than as an accidental zero.
+ * The streak is evaluated lazily against the stored day key here exactly as it is on the Learn screen, so
+ * the two cannot disagree — which they would if Home read the stored checkpoint directly.
  */
-const noLearning: LearnStanding = { streak: 0, xp: 0, nextLessonTitle: undefined };
+async function learningFor(user: User, now: Date, language: Language): Promise<LearnStanding> {
+  const stored = await learnProgressForUser(user._id);
+  const progress = asProgress(stored);
+  const curriculum = getContent(language).curriculum.value;
+  const next = nextLesson(curriculum, progress.done);
+
+  return {
+    streak: currentStreak(progress.streak, progress.lastActiveDayKey, dayKey(now, user.timezone)),
+    xp: progress.xp,
+    nextLessonTitle: next?.lesson.title,
+  };
+}
 
 /**
  * The live month's spending for a user, in their display currency.
@@ -74,18 +87,13 @@ screenRoutes.get('/v1/screens/home', requireSession(), async (c) => {
 
   const user = c.var.user;
   const now = new Date();
-  const { spending, rates } = await spendingFor(user, now);
+  const language = resolveLanguage(c.req.header('accept-language'));
+  const [{ spending, rates }, learning] = await Promise.all([
+    spendingFor(user, now),
+    learningFor(user, now, language),
+  ]);
 
-  return c.json(
-    buildHome({
-      user,
-      now,
-      rates,
-      spending,
-      learning: noLearning,
-      language: resolveLanguage(c.req.header('accept-language')),
-    }),
-  );
+  return c.json(buildHome({ user, now, rates, spending, learning, language }));
 });
 
 /**
