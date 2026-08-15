@@ -5,6 +5,7 @@ import {
   present,
   shareOf,
   sum,
+  wholePercentages,
   type DisplayMoney,
   type RateSet,
 } from '../domain/money';
@@ -211,6 +212,11 @@ export function buildMonthReport(
 
   const biggest = [...spendingCategories].sort((a, b) => b.amount.minor - a.amount.minor)[0];
 
+  const categoryShareLabels = wholePercentages(
+    spendingCategories.map((category) => category.amount),
+    totals.spent,
+  );
+
   return {
     monthKey: archive.monthKey,
     title: `${monthName(archive.monthKey)} ${yearOf(archive.monthKey)}`,
@@ -232,12 +238,14 @@ export function buildMonthReport(
         spendingCategories.length === 0
           ? 'No categories'
           : `${String(spendingCategories.length)} categor${spendingCategories.length === 1 ? 'y' : 'ies'}`,
-      categories: spendingCategories.map((category) => ({
+      categories: spendingCategories.map((category, index) => ({
         id: category.id,
         name: category.name,
         amount: present(category.amount),
         share: shareOf(category.amount, totals.spent),
-        shareLabel: `${String(percentage(category.amount, totals.spent))}%`,
+        // Allocated as a set, for the same reason as Home's legend: a column under a donut is read as
+        // adding up, and rounding each row on its own does not.
+        shareLabel: `${String(categoryShareLabels[index] ?? 0)}%`,
         slot: category.slot,
       })),
     },

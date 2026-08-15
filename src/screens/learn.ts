@@ -259,7 +259,11 @@ export function buildCompletion(input: {
       accessibilityLabel: `${String(accuracy)} percent accuracy`,
     },
     streakLine: input.streakGrew
-      ? `Your streak just grew to ${String(input.streak)} days. Come back tomorrow and keep it alive.`
+      ? // **`day` when it is one.** The very first lesson anybody finishes reaches this line with a streak
+        // of exactly 1, so "grew to 1 days" was not an edge case — it was the sentence every new reader
+        // met on their first success.
+        `Your streak just grew to ${String(input.streak)} ${input.streak === 1 ? 'day' : 'days'}. ` +
+        'Come back tomorrow and keep it alive.'
       : 'You have already learned something today — that is how this compounds.',
     week: weekStrip(input.activeDayKeys, input.todayDayKey),
     screen: input.screen,

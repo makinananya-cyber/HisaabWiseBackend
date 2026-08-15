@@ -20,6 +20,7 @@ import {
   sum,
   tokenGap,
   type RateSet,
+  wholePercentages,
 } from '../../src/domain/money';
 import { money, MoneyError } from '../../src/types/money';
 
@@ -337,5 +338,43 @@ describe('the Money constructor', () => {
   it('refuses an unknown currency rather than defaulting the exponent to 2', () => {
     // A default would make `minor` mean something different by a factor of ten.
     expect(() => money(50_000, 'ZZZ')).toThrow(/unknown currency/);
+  });
+});
+
+describe('whole percentages that add up', () => {
+  const aed = (major: number) => money(Math.round(major * 100), 'AED');
+
+  it('totals 100 for the case that printed 101', () => {
+    // The observed legend: 50 · 14 · 16 · 9 · 5 · 7 down the side of a donut labelled with the whole.
+    const parts = [aed(4_500), aed(1_260), aed(1_440), aed(810), aed(450), aed(630)];
+    const total = aed(9_090);
+
+    const shares = wholePercentages(parts, total);
+
+    expect(shares.reduce((running, value) => running + value, 0)).toBe(100);
+  });
+
+  it('never moves a slice more than one point from its own rounding', () => {
+    const parts = [aed(1_000), aed(1_000), aed(1_000)];
+    const total = aed(3_000);
+
+    // Three exact thirds: 33.33 each. Two get 33 and one is handed the leftover point.
+    expect(wholePercentages(parts, total).toSorted()).toEqual([33, 33, 34]);
+  });
+
+  it('leaves a category with nothing in it at zero rather than handing it the leftover', () => {
+    const shares = wholePercentages([aed(1_000), aed(0), aed(2_000)], aed(3_000));
+
+    expect(shares[1]).toBe(0);
+    expect(shares.reduce((running, value) => running + value, 0)).toBe(100);
+  });
+
+  it('is all zeroes against a zero whole rather than dividing by it', () => {
+    expect(wholePercentages([aed(0), aed(0)], aed(0))).toEqual([0, 0]);
+  });
+
+  it('totals the rounded sum, not 100, when the parts do not cover the whole', () => {
+    // Half the income accounted for: the column should read 50, not be inflated to 100.
+    expect(wholePercentages([aed(250), aed(250)], aed(1_000))).toEqual([25, 25]);
   });
 });

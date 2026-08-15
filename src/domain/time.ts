@@ -153,10 +153,22 @@ export function relativeDayLabel(entryDayKey: string, todayDayKey: string): stri
 }
 
 /**
+ * How old an account holder must be.
+ *
+ * **The gate is `age < MINIMUM_AGE_YEARS`, so turning 16 today is old enough.** The client's date picker
+ * has to agree with this exactly — it greys out every date that would fail — and the two disagreeing by a
+ * day is a real defect this app has already had: the picker offered the sixteenth birthday as the newest
+ * selectable date and then refused to select it, while the server would have accepted it.
+ *
+ * One number, exported, so the answer to "how old" lives in a single place a change can be made in.
+ */
+export const MINIMUM_AGE_YEARS = 16;
+
+/**
  * Age in whole years on a given day, in the user's zone.
  *
- * For the 13+ gate. Computed from the date of birth the user chose rather than from an age they typed,
- * because an age is a fact that changes without the server hearing about it.
+ * For the ``MINIMUM_AGE_YEARS`` gate. Computed from the date of birth the user chose rather than from an
+ * age they typed, because an age is a fact that changes without the server hearing about it.
  */
 export function ageInYears(dob: Date, now: Date, timezone: string): number {
   const [birthYear = 0, birthMonth = 0, birthDay = 0] = parts(dayKey(dob, 'UTC'));

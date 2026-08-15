@@ -66,6 +66,24 @@ describe('passwordChangedLabel', () => {
   it('pluralises one month and one year correctly', () => {
     expect(passwordChangedLabel(new Date('2026-07-14T09:00:00Z'), now, zone)).toBe('Changed 1 month ago');
   });
+
+  /**
+   * **A password that has never been changed was only ever *set*.**
+   *
+   * Registration stamps `passwordChangedAt` with the creation time, so without this every brand-new account
+   * read "Changed just now" — which tells a reader who has never touched their password that somebody just
+   * changed it, and makes the genuine version of that message indistinguishable from the ordinary case.
+   */
+  it('says the password was set, not changed, when it has never been changed', () => {
+    const createdAt = new Date('2026-08-13T09:00:00Z');
+
+    expect(passwordChangedLabel(createdAt, now, zone, createdAt)).toBe('Set when you created your account');
+    // One second later is a real change, on the same day, and reads as one.
+    const changed = new Date('2026-08-13T09:00:01Z');
+    expect(passwordChangedLabel(changed, now, zone, createdAt)).toBe('Changed just now');
+    // And with no creation time to compare against, the label behaves exactly as it always did.
+    expect(passwordChangedLabel(createdAt, now, zone)).toBe('Changed just now');
+  });
 });
 
 describe('phoneDisplay', () => {
@@ -205,8 +223,13 @@ describeIntegration('Account and compliance', () => {
         'currency',
         'password',
       ]);
-      // Just registered, so the password changed today.
-      expect(required(screen.rows[3], 'the password row').hint).toBe('Changed just now');
+      // **Just registered, so the password has never been *changed* — it was set.**
+      //
+      // This read "Changed just now" until a test session pointed out what that tells a brand-new reader: that
+      // somebody changed their password minutes ago. Registration stamps `passwordChangedAt` with the creation
+      // time, so every new account said it, and a real "somebody changed your password" would have been
+      // indistinguishable from the ordinary case.
+      expect(required(screen.rows[3], 'the password row').hint).toBe('Set when you created your account');
       expect(required(screen.rows[1], 'the language row').value).toBe('English');
       expect(required(screen.rows[2], 'the currency row').value).toBe('INR');
     });
@@ -771,6 +794,46 @@ describeIntegration('Account and compliance', () => {
           })
         ).status,
       ).toBe(422);
+    });
+  });
+  describe('PUT /v1/me/goal', () => {
+    /**
+     * **The client sends the figure Home offered it, and Home offers *display* currency.**
+     *
+     * A live test found this: an account whose salary is authored in one currency and whose display currency is
+     * another was offered a suggested goal in the display currency, pressed "Raise goal", and the request was
+     * refused for not being in a currency the client is never told about (iOS ADR-0003 hands it display strings,
+     * not authoring figures). So the route converts, exactly as `PUT /v1/me/currency` converts before storing.
+     */
+    it('accepts a goal in the display currency and stores it against the salary', async () => {
+      const { token } = await account();
+
+      // Move the display currency away from the salary's, which is what makes the two differ at all.
+      expect((await send('PUT', '/v1/me/currency', token, { currency: 'AED' })).status).toBe(200);
+
+      // Typed here rather than through `screenOf`, which knows the *account* payload.
+      interface HomeSavings {
+        savings: {
+          goal: { minor: number; currency: string };
+          goalNudge: { suggested: { minor: number; currency: string } } | null;
+        };
+      }
+      const readHome = async (): Promise<HomeSavings> =>
+        (await send('GET', '/v1/screens/home', token)).json() as Promise<HomeSavings>;
+
+      const home = await readHome();
+      const suggested = home.savings.goalNudge?.suggested ?? home.savings.goal;
+      // The figure Home offers is in the reader's display currency, not the salary's.
+      expect(suggested.currency).toBe('AED');
+
+      const response = await send('PUT', '/v1/me/goal', token, {
+        savingsGoal: { minor: suggested.minor, currency: suggested.currency },
+      });
+      expect(response.status, await response.clone().text()).toBe(200);
+
+      // And the suggestion is gone, because the goal is no longer behind the pay.
+      const after = await readHome();
+      expect(after.savings.goalNudge).toBeNull();
     });
   });
 });

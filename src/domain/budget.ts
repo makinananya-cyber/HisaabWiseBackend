@@ -123,6 +123,20 @@ export function computeBudget(input: BudgetInput): BudgetOutput {
  * next to a number saying 100% is exactly the disagreement defect D11 describes. Thresholding the exact
  * ratio instead would be more literally correct and would produce a screen that looks broken.
  */
+/**
+ * The savings goal a salary suggests — the **20** of 50/30/20.
+ *
+ * Registration's Submit and its "Skip for now" both send this figure, and until now that was the only
+ * moment it was ever computed: a goal was authored once and then never revisited. So a reader whose pay
+ * rose kept a goal measured against their old salary, and "% of goal" drifted past any useful reading —
+ * 635% in one observed case, against a goal that had become 12% of what they now earned.
+ *
+ * **This suggests; it does not enforce.** A goal is the reader's to choose, and somebody deliberately
+ * saving less than a fifth of their pay is not making a mistake the app should correct behind their back.
+ * Callers offer the figure and let them take it.
+ */
+export const suggestedSavingsGoal = (salary: Money): Money => fraction(salary, 20, 100);
+
 export function verdictFor(saved: Money, goal: Money): Verdict {
   if (isZero(goal)) return 'hit';
   const achieved = percentage(saved, goal);

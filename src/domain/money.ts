@@ -261,6 +261,43 @@ export const percentageLabel = (part: Money, whole: Money, suffix: string): stri
   `${String(percentage(part, whole))}% ${suffix}`;
 
 /**
+ * Whole-number percentages for a set of parts that **add up to the total the reader can see**.
+ *
+ * Rounding each share on its own is what printed `50 · 14 · 16 · 9 · 5 · 7` — 101% — down the legend of a
+ * donut labelled with the whole. Largest remainder gives every slice its floor first and then hands the
+ * leftover points to the slices that lost the most to flooring, so the column totals what it should and no
+ * slice sits more than one point from its own honest rounding.
+ *
+ * The target is the rounded sum of the exact shares rather than a hardcoded 100, so this is still correct
+ * for a set of parts that deliberately does not cover the whole.
+ *
+ * **A zero part stays zero.** Handing a leftover point to a category with nothing in it would print `1%`
+ * beside `AED 0`, which is worse than the error being corrected.
+ */
+export function wholePercentages(parts: readonly Money[], whole: Money): number[] {
+  if (whole.minor === 0) return parts.map(() => 0);
+
+  const exact = parts.map((part) => (part.minor / whole.minor) * 100);
+  const floors = exact.map((value) => Math.floor(value));
+  const target = Math.round(exact.reduce((running, value) => running + value, 0));
+  let leftover = target - floors.reduce((running, value) => running + value, 0);
+
+  const shares = [...floors];
+  const byRemainder = exact
+    .map((value, index) => ({ index, remainder: value - Math.floor(value) }))
+    .filter(({ index }) => (parts[index]?.minor ?? 0) > 0)
+    .sort((a, b) => b.remainder - a.remainder);
+
+  for (const { index } of byRemainder) {
+    if (leftover <= 0) break;
+    shares[index] = (shares[index] ?? 0) + 1;
+    leftover -= 1;
+  }
+
+  return shares;
+}
+
+/**
  * A fraction rounded to four decimal places, for the donut and the bars.
  *
  * Four places because that is what the corpus carries (`0.5416`), and because it is enough precision

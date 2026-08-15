@@ -155,10 +155,41 @@ describeIntegration('identity', () => {
       expect(await codeOf(response)).toBe('EMAIL_TAKEN');
     });
 
-    it('refuses an applicant under 13', async () => {
+    it('refuses an applicant under 16', async () => {
       const response = await post('/v1/auth/register', registration({ dateOfBirth: '2020-01-01' }));
 
       expect(await codeOf(response)).toBe('UNDER_AGE');
+    });
+
+    /**
+     * The boundary, from both sides, because the client's date picker greys out every date that would
+     * fail here and the two have already disagreed by exactly one day: the picker offered the sixteenth
+     * birthday as its newest selectable date and then refused to select it, while this route would have
+     * accepted it. Whichever way the rule goes, both ends have to agree — so it is asserted rather than
+     * described.
+     */
+    it('accepts an applicant who turns 16 today, and refuses one a day younger', async () => {
+      const timeZone = 'Asia/Dubai';
+      const today = new Date();
+      const localToday = new Intl.DateTimeFormat('en-CA', { timeZone }).format(today); // YYYY-MM-DD
+      const [year, month, day] = localToday.split('-').map(Number);
+
+      const sixteenthBirthdayToday = `${String((year ?? 0) - 16)}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+      const oneDayTooYoung = new Date(Date.UTC((year ?? 0) - 16, (month ?? 1) - 1, (day ?? 1) + 1))
+        .toISOString()
+        .slice(0, 10);
+
+      const justOldEnough = await post(
+        '/v1/auth/register',
+        registration({ dateOfBirth: sixteenthBirthdayToday, timeZone }),
+      );
+      expect(justOldEnough.status).toBe(201);
+
+      const justTooYoung = await post(
+        '/v1/auth/register',
+        registration({ dateOfBirth: oneDayTooYoung, timeZone }),
+      );
+      expect(await codeOf(justTooYoung)).toBe('UNDER_AGE');
     });
 
     it('refuses a submission that did not accept the terms', async () => {

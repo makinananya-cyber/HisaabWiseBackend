@@ -5,16 +5,19 @@ import {
   meterVerdictFor,
   remainingToGoal,
   totalSpent,
+  suggestedSavingsGoal,
   type MeterVerdict,
 } from '../domain/budget';
 import {
   convert,
   currencyToken,
+  fraction,
   percentageLabel,
   present,
   shareOf,
   sum,
   tokenGap,
+  wholePercentages,
   type DisplayMoney,
   type RateSet,
 } from '../domain/money';
@@ -181,6 +184,16 @@ export interface HomePayload {
     readonly position: number;
     readonly verdict: MeterVerdict;
     readonly remaining: DisplayMoney | null;
+    /**
+     * What the goal would be at a fifth of today's pay, when that is **more** than the stored goal.
+     *
+     * `null` is the ordinary case and means "say nothing". It is only non-null when a raise has left the
+     * goal behind, which is the one moment the suggestion is worth a reader's attention.
+     */
+    readonly goalNudge: {
+      readonly suggested: DisplayMoney;
+      readonly current: DisplayMoney;
+    } | null;
   };
   readonly tip: {
     readonly id: string;
@@ -263,6 +276,27 @@ export function buildHome(input: HomeInput): HomePayload {
 
   const remaining = remainingToGoal(budget.saved, goal);
 
+  /**
+   * The goal nudge, or nothing.
+   *
+   * **Only when the suggestion is higher**, because a raise is the case worth mentioning and "you could
+   * save less" is not advice this app should offer. The threshold is one percent of pay rather than one
+   * minor unit, so a goal that is merely a rounding or an exchange-rate tick away from a fifth of pay does
+   * not put a card on somebody's Home screen every morning.
+   */
+  const suggestedGoal = suggestedSavingsGoal(salary);
+  const nudgeThreshold = Math.max(1, fraction(salary, 1, 100).minor);
+  const goalNudge =
+    suggestedGoal.minor - goal.minor >= nudgeThreshold
+      ? { suggested: present(suggestedGoal), current: present(goal) }
+      : null;
+
+  // Allocated once, for the whole legend, so the column adds up to the figure in the middle of the donut.
+  const categoryShareLabels = wholePercentages(
+    categoryAmounts.map((category) => category.amount),
+    total,
+  );
+
   return {
     greeting: greetingFor(now, user.timezone),
     name: user.displayName,
@@ -278,14 +312,15 @@ export function buildHome(input: HomeInput): HomePayload {
       // so the legend does not change shape as the month fills in.
       categories: isFirstRun
         ? []
-        : categoryAmounts.map((category) => ({
+        : categoryAmounts.map((category, index) => ({
             id: category.id,
             name: category.name,
             amount: present(category.amount),
-            // The share is computed from the *unrounded* amounts and the label rounds independently, so
-            // a 54.16% slice reads "54%" rather than compounding two roundings.
+            // The share is computed from the *unrounded* amounts, so a 54.16% slice draws at 54.16%.
             share: shareOf(category.amount, total),
-            shareLabel: `${String(Math.round((category.amount.minor / total.minor) * 100))}%`,
+            // The *labels* are allocated as a set rather than rounded one at a time, because a legend
+            // under a donut is read as a column that adds up — and rounding each on its own printed 101%.
+            shareLabel: `${String(categoryShareLabels[index] ?? 0)}%`,
             slot: category.slot,
           })),
     },
@@ -298,6 +333,7 @@ export function buildHome(input: HomeInput): HomePayload {
       position: meterPosition(budget.saved, goal),
       verdict: meterVerdictFor(budget.saved, goal),
       remaining: remaining === null ? null : present(remaining),
+      goalNudge,
     },
 
     tip: {

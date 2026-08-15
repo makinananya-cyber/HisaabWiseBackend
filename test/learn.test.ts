@@ -212,7 +212,9 @@ describeIntegration('Learn', () => {
       const completion = await completionOf(await complete(token, 'u1l1'));
 
       expect(completion.screen.streak.value).toBe(1);
-      expect(completion.streakLine).toContain('Your streak just grew to 1 days');
+      // **`day`, singular.** Every reader's first completed lesson lands on exactly this sentence, so the
+      // plural was not an edge case — it was the first thing the app ever said about their streak.
+      expect(completion.streakLine).toContain('Your streak just grew to 1 day.');
     });
 
     it('does not grow the streak twice in one day', async () => {

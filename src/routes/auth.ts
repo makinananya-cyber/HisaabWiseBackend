@@ -4,9 +4,9 @@ import { z } from 'zod';
 import { equaliseTiming, hashSecret, verifySecret } from '../auth/hashing';
 import { mintAccessToken, refreshTokenExpiry } from '../auth/tokens';
 import type { Config } from '../config';
-import { getContent } from '../content';
+import { getContent, PREFERENCE_LANGUAGES } from '../content';
 import { normaliseAnswer } from '../domain/securityAnswers';
-import { ageInYears, calendarDate, isValidTimezone } from '../domain/time';
+import { ageInYears, calendarDate, isValidTimezone, MINIMUM_AGE_YEARS } from '../domain/time';
 import { ApiError } from '../errors';
 import { requireSession } from '../middleware/auth';
 import { stitchInstall } from '../repositories/events';
@@ -169,7 +169,7 @@ const registerSchema = z.object({
   securityAnswers: securityAnswersSchema,
   acceptedTerms: z.boolean(),
   timeZone: timezoneSchema,
-  language: z.enum(['en', 'ar']),
+  language: z.enum(PREFERENCE_LANGUAGES),
   /**
    * The install this registration came from, so the events it recorded before there was an account can be
    * stitched to it — which is what makes activation measurable across the registration boundary.
@@ -195,8 +195,9 @@ authRoutes.post('/v1/auth/register', async (c) => {
   if (dob === null) {
     throw new ApiError('VALIDATION_FAILED', undefined, { dateOfBirth: 'expected YYYY-MM-DD' });
   }
-  // The 13+ gate, computed in the zone the device reported — a birthday is a local fact.
-  if (ageInYears(dob, now, input.timeZone) < 13) throw new ApiError('UNDER_AGE');
+  // The 16+ gate, computed in the zone the device reported — a birthday is a local fact, and the
+  // comparison is `< MINIMUM_AGE_YEARS` so somebody who turns 16 *today* is old enough.
+  if (ageInYears(dob, now, input.timeZone) < MINIMUM_AGE_YEARS) throw new ApiError('UNDER_AGE');
 
   if (input.salary.currency !== input.savingsGoal.currency) {
     throw new ApiError('VALIDATION_FAILED', undefined, {

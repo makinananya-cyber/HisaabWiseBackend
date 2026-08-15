@@ -6,6 +6,7 @@ import { ApiError } from '../errors';
 import { requireSession } from '../middleware/auth';
 import * as users from '../repositories/users';
 import type { AppEnv } from '../types/hono';
+import { PREFERENCE_LANGUAGES } from '../content';
 
 /**
  * The identity routes — who the user is, and the preferences that are not any one screen's business.
@@ -64,7 +65,7 @@ meRoutes.get('/v1/me', requireSession(), (c) => {
  */
 meRoutes.put('/v1/me/language', requireSession(), async (c) => {
   const raw: unknown = await c.req.json().catch(() => undefined);
-  const parsed = z.object({ language: z.enum(['en', 'ar']) }).safeParse(raw);
+  const parsed = z.object({ language: z.enum(PREFERENCE_LANGUAGES) }).safeParse(raw);
   if (!parsed.success) throw new ApiError('VALIDATION_FAILED');
 
   c.header('Cache-Control', 'no-store');

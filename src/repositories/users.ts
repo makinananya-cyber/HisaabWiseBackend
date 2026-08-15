@@ -4,6 +4,7 @@ import { z } from 'zod';
 import { ApiError } from '../errors';
 import { storedMoneySchema, type Money } from '../types/money';
 import { collection, COLLECTIONS, isDuplicateKeyError } from './collections';
+import { PREFERENCE_LANGUAGES, type PreferenceLanguage } from '../content';
 
 /**
  * The `users` collection — the identity record, and **the single owner of salary** (invariant 2).
@@ -64,7 +65,7 @@ const userSchema = z.object({
   savingsGoal: storedMoneySchema,
   goalWasSkipped: z.boolean(),
   displayCurrency: z.string().length(3),
-  language: z.enum(['en', 'ar']),
+  language: z.enum(PREFERENCE_LANGUAGES),
   timezone: z.string().min(1),
   securityQuestions: z.array(securityQuestionSchema).length(2),
   securityEpoch: z.number().int().positive(),
@@ -91,7 +92,7 @@ export interface NewUser {
   readonly savingsGoal: Money;
   readonly goalWasSkipped: boolean;
   readonly displayCurrency: string;
-  readonly language: 'en' | 'ar';
+  readonly language: PreferenceLanguage;
   readonly timezone: string;
   readonly securityQuestions: { questionId: string; answerHash: string }[];
 }
@@ -285,7 +286,7 @@ export const setTimezone = async (id: ObjectId, timezone: string): Promise<void>
   await users().updateOne({ _id: id }, { $set: { timezone } });
 };
 
-export const setLanguage = async (id: ObjectId, language: 'en' | 'ar'): Promise<void> => {
+export const setLanguage = async (id: ObjectId, language: PreferenceLanguage): Promise<void> => {
   await users().updateOne({ _id: id }, { $set: { language } });
 };
 
@@ -299,11 +300,19 @@ export const setDisplayCurrency = async (id: ObjectId, displayCurrency: string):
  * **Email is not among them**, and cannot be: it is the identity (invariant 4), it is locked on the
  * screen, and there is no parameter here for a client bug or a future refactor to fill in.
  */
+/**
+ * The three editable personal details.
+ *
+ * **`phone: undefined` and `phone: null` are different instructions**, and collapsing them is how a
+ * partial update silently destroyed a stored number: a request that simply did not mention the phone had
+ * it cleared. `undefined` now means "the caller said nothing, leave it alone"; `null` means "clear it".
+ */
 export async function setPersonalDetails(
   id: ObjectId,
-  details: { displayName: string; salary: Money; phone: Phone | null },
+  details: { displayName: string; salary: Money; phone?: Phone | null },
 ): Promise<void> {
-  await users().updateOne({ _id: id }, { $set: details });
+  const { phone, ...rest } = details;
+  await users().updateOne({ _id: id }, { $set: phone === undefined ? rest : { ...rest, phone } });
 }
 
 /**

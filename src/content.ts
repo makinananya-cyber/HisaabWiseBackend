@@ -202,6 +202,22 @@ export const SHIPPED_LANGUAGES = ['en'] as const;
 export type Language = (typeof SHIPPED_LANGUAGES)[number];
 
 /**
+ * The languages the Account screen **offers as a preference** — which is deliberately not
+ * `SHIPPED_LANGUAGES`.
+ *
+ * The two lists answer different questions. `SHIPPED_LANGUAGES` is "which content files exist on disk";
+ * this is "which languages a reader may choose to be". They are allowed to differ because the second is a
+ * stored fact about a person and the first is a build artefact: a reader can say they are a Hindi speaker
+ * before the Hindi copy is written, and `resolveLanguage` narrows content to what actually exists, so they
+ * get English words rather than an error.
+ *
+ * Keep the widening one-way. A language may appear here before it has files; a language with files must
+ * never be missing from here, or a reader could not choose the copy that already exists.
+ */
+export const PREFERENCE_LANGUAGES = ['en', 'ar', 'hi'] as const;
+export type PreferenceLanguage = (typeof PREFERENCE_LANGUAGES)[number];
+
+/**
  * The language to serve, from an `Accept-Language` header.
  *
  * Falls back to English rather than failing: a reader whose device is set to French should get

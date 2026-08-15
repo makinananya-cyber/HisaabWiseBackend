@@ -63,13 +63,28 @@ export function initialsOf(displayName: string): string {
 }
 
 /**
- * `"Changed 3 months ago"`, `"Changed just now"`.
+ * `"Changed 3 months ago"`, `"Changed just now"`, or `"Set when you created your account"`.
  *
  * **Computed against the reader's day boundary**, not against a wall-clock difference, so a password changed
  * at 23:50 yesterday reads "yesterday" rather than "13 hours ago". Months are approximated at 30 days, which
  * is what a human means by "3 months ago" and what the design's own copy implies.
+ *
+ * **A password that has never been changed does not say "Changed just now".** Registration stamps
+ * `passwordChangedAt` with the creation time, so every brand-new account read as though its owner had just
+ * changed their password minutes ago — which is a confusing thing to tell somebody who has never changed it and
+ * would make a real "somebody changed your password" impossible to notice. When the two timestamps are the same
+ * instant, the password has only ever been *set*, and the row says so.
  */
-export function passwordChangedLabel(changedAt: Date, now: Date, timezone: string): string {
+export function passwordChangedLabel(
+  changedAt: Date,
+  now: Date,
+  timezone: string,
+  createdAt?: Date,
+): string {
+  if (changedAt.getTime() === createdAt?.getTime()) {
+    return 'Set when you created your account';
+  }
+
   const days = daysBetween(dayKey(changedAt, timezone), dayKey(now, timezone));
 
   if (days <= 0) return 'Changed just now';
@@ -153,7 +168,7 @@ export function buildAccount(input: AccountInput): AccountPayload {
       {
         section: 'password',
         name: 'Password',
-        hint: passwordChangedLabel(user.passwordChangedAt, now, user.timezone),
+        hint: passwordChangedLabel(user.passwordChangedAt, now, user.timezone, user.createdAt),
       },
     ],
 

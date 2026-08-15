@@ -3,6 +3,7 @@ import { z } from 'zod';
 
 import { hashSecret, verifySecret } from '../auth/hashing';
 import { resolveLanguage, type Language } from '../content';
+import { convert } from '../domain/money';
 import { normaliseAnswer } from '../domain/securityAnswers';
 import { isKnownCurrency } from '../types/money';
 import { ApiError } from '../errors';
@@ -90,7 +91,10 @@ accountRoutes.put('/v1/me', requireSession(), async (c) => {
   await users.setPersonalDetails(user._id, {
     displayName: input.displayName,
     salary: input.salary,
-    phone: input.phone ?? null,
+    // **Absent and `null` are different requests.** Omitting the key leaves the stored number alone;
+    // sending `null` clears it. The screen sends every field, so a reader is unaffected either way — but
+    // the endpoint had no guard, and one caller forgetting one key permanently destroyed a phone number.
+    ...(input.phone === undefined ? {} : { phone: input.phone }),
   });
 
   c.header('Cache-Control', 'no-store');
@@ -126,6 +130,112 @@ accountRoutes.put('/v1/me/currency', requireSession(), async (c) => {
 
   c.header('Cache-Control', 'no-store');
   return c.json(await currentAccount(user._id, resolveLanguage(c.req.header('accept-language'))));
+});
+
+/**
+ * `PUT /v1/me/goal` — the savings goal.
+ *
+ * The goal was authored at registration and then had **no route at all**, so a reader whose pay rose could
+ * not move it: "% of goal" simply drifted (635% in one observed case, on a goal that had become a twelfth
+ * of their pay). Home now suggests a new figure when a raise leaves the goal behind, and this is what makes
+ * that suggestion something the reader can act on rather than just read.
+ *
+ * **Stored in the salary's currency, in whatever currency it arrives.** The pair is compared by the budget
+ * engine, so two currencies would make `saved` a conversion rather than a subtraction — but which currency the
+ * salary was authored in is not something the client knows, so the conversion is this route's job. See below.
+ */
+accountRoutes.put('/v1/me/goal', requireSession(), async (c) => {
+  const input = await body(c, z.object({ savingsGoal: moneyInputSchema }));
+  const user = c.var.user;
+
+  /**
+   * **Converted into the salary's currency rather than refused for not being in it.**
+   *
+   * The goal is stored beside the salary and compared against it by the budget engine, so it has to end up in
+   * the salary's authoring currency — but the *client* does not know what that is, and deliberately does not
+   * (iOS ADR-0003: it is handed display strings, not authoring figures). This route refused anything in another
+   * currency until a live test tried the obvious thing: Home offers a suggested goal in the reader's **display**
+   * currency, the reader presses "Raise my goal", and the request was rejected for a currency the client was
+   * never told to use. So the conversion happens here, exactly as `PUT /v1/me/currency` converts before storing.
+   */
+  const authored =
+    input.savingsGoal.currency === user.salary.currency
+      ? input.savingsGoal
+      : convert(input.savingsGoal, user.salary.currency, await latestRateSet());
+
+  // `goalWasSkipped` becomes false: a reader who sets a figure by hand has chosen it, whatever they did at
+  // registration, and the flag exists to record that they had not.
+  await users.setSavingsGoal(user._id, authored, false);
+
+  c.header('Cache-Control', 'no-store');
+  return c.json(await currentAccount(user._id, resolveLanguage(c.req.header('accept-language'))));
+});
+
+/**
+ * `POST /v1/me/password/check` — is what the reader has typed so far right?
+ *
+ * **This is a deliberate reversal of an earlier decision, and the trade-off is worth stating.** The change
+ * itself is one atomic request (below) precisely so the server keeps no session-scoped "got past step one"
+ * state. But that left the wizard collecting a current password, two security answers and a new password
+ * before saying that the *first* field was wrong — three steps of work thrown away, and the reader left
+ * guessing which one it was.
+ *
+ * So this route exists to fail fast, and it is honest about what it is: **a password- and answer-checking
+ * oracle behind a valid session**. Somebody holding a stolen access token can use it to test guesses at the
+ * current password without needing to complete a change. That is why:
+ *
+ *   - it is **advisory only** — it writes nothing, and `POST /v1/me/password` re-verifies everything, so the
+ *     server remains the authority and no state is carried between the two;
+ *   - a wrong answer **counts against the same recovery lockout** the forgot-password flow uses, so guessing
+ *     here is as expensive as guessing there;
+ *   - it never says which of the two security answers missed, for the same reason the change route does not.
+ *
+ * Every refusal is a `422`, never a `401` — on this client a `401` means "your token is no good" and would
+ * spend the refresh token, ending the session over a typo.
+ */
+accountRoutes.post('/v1/me/password/check', requireSession(), async (c) => {
+  const input = await body(
+    c,
+    z.object({
+      currentPassword: z.string().min(1).max(256),
+      /** Absent means "only check the password" — step one asks that much and no more. */
+      securityAnswers: z
+        .array(z.object({ questionId: z.string().regex(/^sq\d{2}$/), answer: z.string().min(1).max(200) }))
+        .length(2)
+        .optional(),
+    }),
+  );
+
+  const user = c.var.user;
+  const now = new Date();
+
+  if (users.isLocked(user.recoveryLockedUntil, now)) throw new ApiError('ACCOUNT_LOCKED');
+
+  if (!(await verifySecret(user.passwordHash, input.currentPassword))) {
+    await users.recordFailedRecovery(user._id, now);
+    throw new ApiError('INVALID_CREDENTIALS', 'that is not the current password');
+  }
+
+  if (input.securityAnswers !== undefined) {
+    const answers = input.securityAnswers;
+    // Both verified whatever the first said, so the timing does not reveal which failed.
+    const verdicts = await Promise.all(
+      user.securityQuestions.map(async ({ questionId, answerHash }) => {
+        const given = answers.find((answer) => answer.questionId === questionId);
+        if (given === undefined) return false;
+        return verifySecret(answerHash, normaliseAnswer(given.answer));
+      }),
+    );
+    if (verdicts.includes(false)) {
+      await users.recordFailedRecovery(user._id, now);
+      throw new ApiError('SECURITY_ANSWERS_INVALID');
+    }
+  }
+
+  await users.clearFailedRecoveries(user._id);
+
+  c.header('Cache-Control', 'no-store');
+  return c.json({ ok: true });
 });
 
 /**

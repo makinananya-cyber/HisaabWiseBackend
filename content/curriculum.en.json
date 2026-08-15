@@ -69,11 +69,11 @@
               "kind": "teach",
               "heading": "A simple example, step by step",
               "paragraphs": [
-                "Let's take an example from a country that *does* have income tax, so you can see how gross and net work."
+                "Imagine for a moment that you worked somewhere that *did* take income tax, so you can see how gross and net differ."
               ],
               "example": {
                 "heading": "Working it out",
-                "body": "Step 1. Gross pay: **{c}5,000**\n\nStep 2. Income tax taken off: **{c}500**\n\nStep 3. Pension taken off: **{c}300**\n\nStep 4. Add the deductions: 500 + 300 = **{c}800**\n\nStep 5. Take them off the gross: 5,000 − 800 = **{c}4,200**\n\nGross is {c}5,000. Net is **{c}4,200**. She can only spend {c}4,200."
+                "body": "Step 1. Gross pay: **{c}5,000**\n\nStep 2. Income tax taken off: **{c}500**\n\nStep 3. Pension taken off: **{c}300**\n\nStep 4. Add the deductions: 500 + 300 = **{c}800**\n\nStep 5. Take them off the gross: 5,000 − 800 = **{c}4,200**\n\nGross is {c}5,000. Net is **{c}4,200**. You could only spend {c}4,200."
               },
               "tip": "The steps never change: start with gross, take off everything, and what is left is net."
             },
