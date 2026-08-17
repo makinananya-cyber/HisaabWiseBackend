@@ -1,0 +1,205 @@
+{
+  "isFirstCompletion": true,
+  "xpEarned": {
+    "value": 50,
+    "display": "+50",
+    "accessibilityLabel": "50 experience points earned"
+  },
+  "accuracy": {
+    "value": 75,
+    "display": "75%",
+    "accessibilityLabel": "75 percent accuracy"
+  },
+  "streakLine": "Your streak just grew to 5 days. Come back tomorrow and keep it alive.",
+  "week": [
+    {
+      "label": "Su",
+      "isComplete": true,
+      "isToday": false,
+      "accessibilityLabel": "Sunday, lesson finished"
+    },
+    {
+      "label": "Mo",
+      "isComplete": true,
+      "isToday": false,
+      "accessibilityLabel": "Monday, lesson finished"
+    },
+    {
+      "label": "Tu",
+      "isComplete": true,
+      "isToday": false,
+      "accessibilityLabel": "Tuesday, lesson finished"
+    },
+    {
+      "label": "We",
+      "isComplete": true,
+      "isToday": false,
+      "accessibilityLabel": "Wednesday, lesson finished"
+    },
+    {
+      "label": "Th",
+      "isComplete": true,
+      "isToday": true,
+      "accessibilityLabel": "Today, lesson finished"
+    },
+    {
+      "label": "Fr",
+      "isComplete": false,
+      "isToday": false,
+      "accessibilityLabel": "Friday, nothing finished"
+    },
+    {
+      "label": "Sa",
+      "isComplete": false,
+      "isToday": false,
+      "accessibilityLabel": "Saturday, nothing finished"
+    }
+  ],
+  "screen": {
+    "streak": {
+      "value": 5,
+      "display": "5",
+      "accessibilityLabel": "5-day streak"
+    },
+    "xp": {
+      "value": 170,
+      "display": "170",
+      "accessibilityLabel": "170 experience points"
+    },
+    "currencyToken": "₹",
+    "nextLesson": {
+      "unitId": "u2",
+      "lessonId": "u2l1",
+      "title": "Cash Flow Tracking"
+    },
+    "units": [
+      {
+        "id": "u1",
+        "isUnlocked": true
+      },
+      {
+        "id": "u2",
+        "isUnlocked": true
+      },
+      {
+        "id": "u3",
+        "isUnlocked": false
+      },
+      {
+        "id": "u4",
+        "isUnlocked": false
+      },
+      {
+        "id": "u5",
+        "isUnlocked": false
+      }
+    ],
+    "lessons": [
+      {
+        "id": "u1l1",
+        "state": "completed",
+        "segments": 4,
+        "filledSegments": 4,
+        "progressLabel": "Completed, all 4 questions right"
+      },
+      {
+        "id": "u1l2",
+        "state": "completed",
+        "segments": 4,
+        "filledSegments": 4,
+        "progressLabel": "Completed, all 4 questions right"
+      },
+      {
+        "id": "u1l3",
+        "state": "completed",
+        "segments": 4,
+        "filledSegments": 4,
+        "progressLabel": "Completed, 3 of 4 questions right"
+      },
+      {
+        "id": "u2l1",
+        "state": "available",
+        "segments": 4,
+        "filledSegments": 0,
+        "progressLabel": "Not started, 4 questions"
+      },
+      {
+        "id": "u2l2",
+        "state": "locked",
+        "segments": 5,
+        "filledSegments": 0,
+        "progressLabel": "Locked until you finish the lesson before it"
+      },
+      {
+        "id": "u2l3",
+        "state": "locked",
+        "segments": 4,
+        "filledSegments": 0,
+        "progressLabel": "Locked until you finish the lesson before it"
+      },
+      {
+        "id": "u2l4",
+        "state": "locked",
+        "segments": 4,
+        "filledSegments": 0,
+        "progressLabel": "Locked until you finish the lesson before it"
+      },
+      {
+        "id": "u3l1",
+        "state": "locked",
+        "segments": 5,
+        "filledSegments": 0,
+        "progressLabel": "Locked until you finish the lesson before it"
+      },
+      {
+        "id": "u3l2",
+        "state": "locked",
+        "segments": 5,
+        "filledSegments": 0,
+        "progressLabel": "Locked until you finish the lesson before it"
+      },
+      {
+        "id": "u3l3",
+        "state": "locked",
+        "segments": 5,
+        "filledSegments": 0,
+        "progressLabel": "Locked until you finish the lesson before it"
+      },
+      {
+        "id": "u4l1",
+        "state": "locked",
+        "segments": 4,
+        "filledSegments": 0,
+        "progressLabel": "Locked until you finish the lesson before it"
+      },
+      {
+        "id": "u4l2",
+        "state": "locked",
+        "segments": 5,
+        "filledSegments": 0,
+        "progressLabel": "Locked until you finish the lesson before it"
+      },
+      {
+        "id": "u5l1",
+        "state": "locked",
+        "segments": 4,
+        "filledSegments": 0,
+        "progressLabel": "Locked until you finish the lesson before it"
+      },
+      {
+        "id": "u5l2",
+        "state": "locked",
+        "segments": 4,
+        "filledSegments": 0,
+        "progressLabel": "Locked until you finish the lesson before it"
+      },
+      {
+        "id": "u5l3",
+        "state": "locked",
+        "segments": 5,
+        "filledSegments": 0,
+        "progressLabel": "Locked until you finish the lesson before it"
+      }
+    ]
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "month": "2026-08",
+  "currency": "INR",
+  "income": {
+    "minor": 6500000,
+    "currency": "INR",
+    "exponent": 2,
+    "display": ""
+  },
+  "needs": {
+    "minor": 3000000,
+    "currency": "INR",
+    "exponent": 2,
+    "display": "₹30,000"
+  },
+  "wantsSpent": {
+    "minor": 1200000,
+    "currency": "INR",
+    "exponent": 2,
+    "display": "₹12,000"
+  },
+  "wantsAllowance": {
+    "minor": 1950000,
+    "currency": "INR",
+    "exponent": 2,
+    "display": "₹19,500"
+  },
+  "savingsAllowance": {
+    "minor": 1300000,
+    "currency": "INR",
+    "exponent": 2,
+    "display": "₹13,000"
+  },
+  "adapted": false,
+  "saved": {
+    "minor": 2300000,
+    "currency": "INR",
+    "exponent": 2,
+    "display": "₹23,000"
+  },
+  "net": {
+    "minor": 2300000,
+    "currency": "INR",
+    "exponent": 2,
+    "display": "₹23,000"
+  },
+  "overspent": false,
+  "surplus": {
+    "minor": 800000,
+    "currency": "INR",
+    "exponent": 2,
+    "display": "₹8,000"
+  },
+  "verdict": "hit"
+}

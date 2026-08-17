@@ -1,0 +1,57 @@
+# Gates for `release` and `main`. No `feature/mvp` trigger, by rule — local development is
+# deliberately pipeline-free, and `npm run lint && npm run typecheck && npm test` before a PR is
+# the substitute (workspace Rule 2).
+#
+# The deploy job is deliberately absent until the hosting target is chosen. Once it is, it becomes
+# a second job gated on `checks`, using a GitHub Environment (`staging` / `production`) to scope
+# its credentials — see BACKEND_PLAN.md §6.
+name: CI
+
+on:
+  push:
+    branches: [release, main]
+  pull_request:
+    branches: [release, main]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  checks:
+    name: lint · typecheck · test · build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      # `npm ci` compiles the argon2 native addon; ubuntu-latest already has the toolchain.
+      - run: npm ci
+
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm test
+
+      # The contract corpus is committed, so this verifies the committed copy still matches the
+      # iOS repo *when both are checked out*. In this single-repo job the sibling checkout is
+      # absent, so the script is skipped rather than failing for the wrong reason — the real guard
+      # runs locally, where the iOS repo is present, and any drift lands as a reviewable diff.
+      - name: Contract corpus drift
+        run: |
+          if [ -d ../HisaabWiseIOS ]; then
+            npm run contract:sync -- --check
+          else
+            echo "HisaabWiseIOS not checked out; skipping drift check (corpus is committed)."
+          fi
+
+      - run: npm run build
+
+      # A deployable image is the artefact this pipeline exists to produce, so it is built here
+      # even before there is somewhere to push it. A Dockerfile that only breaks at deploy time
+      # is a Dockerfile nobody has built.
+      - name: Build the container image
+        run: docker build -t hisaabwise-backend:${{ github.sha }} .

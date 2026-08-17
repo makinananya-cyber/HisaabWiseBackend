@@ -1,0 +1,72 @@
+{
+  "greeting": "Good morning",
+  "name": "Ananya",
+  "dateLabel": "Tuesday, 11 August",
+  "monthLabel": "August",
+  "spending": {
+    "total": {
+      "minor": 0,
+      "currency": "INR",
+      "exponent": 2,
+      "display": "₹0"
+    },
+    "shareOfPayLabel": "0% of pay",
+    "isFirstRun": true,
+    "categories": []
+  },
+  "savings": {
+    "saved": {
+      "minor": 0,
+      "currency": "INR",
+      "exponent": 2,
+      "display": "₹0"
+    },
+    "goal": {
+      "minor": 1300000,
+      "currency": "INR",
+      "exponent": 2,
+      "display": "₹13,000"
+    },
+    "zeroLabel": "₹0",
+    "percentageLabel": "0% of goal",
+    "position": 0.0,
+    "verdict": "low",
+    "remaining": {
+      "minor": 1300000,
+      "currency": "INR",
+      "exponent": 2,
+      "display": "₹13,000"
+    }
+  },
+  "tip": {
+    "id": "tip-07",
+    "dayKey": "2026-08-11",
+    "text": "To find 10% of a number, move the dot one step left. {c}6,400 becomes {c}640. Double it and there is your 20% savings target.",
+    "currencyToken": "₹"
+  },
+  "learning": {
+    "streak": 0,
+    "summary": "No XP yet · start with Gross vs. Net Income",
+    "nextLesson": "Gross vs. Net Income"
+  },
+  "articles": [
+    {
+      "id": "scams",
+      "short": "Scam awareness",
+      "icon": "shield",
+      "accent": 3
+    },
+    {
+      "id": "remittance",
+      "short": "Sending money home",
+      "icon": "globe",
+      "accent": 4
+    },
+    {
+      "id": "credit",
+      "short": "Borrowing and credit",
+      "icon": "steps",
+      "accent": 1
+    }
+  ]
+}

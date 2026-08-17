@@ -1,0 +1,526 @@
+{
+  "languages": [
+    {
+      "code": "af",
+      "name": "Afrikaans",
+      "nativeName": "Afrikaans",
+      "shipped": false
+    },
+    {
+      "code": "sq",
+      "name": "Albanian",
+      "nativeName": "Shqip",
+      "shipped": false
+    },
+    {
+      "code": "am",
+      "name": "Amharic",
+      "nativeName": "አማርኛ",
+      "shipped": false
+    },
+    {
+      "code": "ar",
+      "name": "Arabic",
+      "nativeName": "العربية",
+      "shipped": true
+    },
+    {
+      "code": "hy",
+      "name": "Armenian",
+      "nativeName": "Հայերեն",
+      "shipped": false
+    },
+    {
+      "code": "as",
+      "name": "Assamese",
+      "nativeName": "অসমীয়া",
+      "shipped": false
+    },
+    {
+      "code": "az",
+      "name": "Azerbaijani",
+      "nativeName": "Azərbaycan",
+      "shipped": false
+    },
+    {
+      "code": "bn",
+      "name": "Bangla",
+      "nativeName": "বাংলা",
+      "shipped": false
+    },
+    {
+      "code": "eu",
+      "name": "Basque",
+      "nativeName": "Euskara",
+      "shipped": false
+    },
+    {
+      "code": "be",
+      "name": "Belarusian",
+      "nativeName": "Беларуская",
+      "shipped": false
+    },
+    {
+      "code": "bs",
+      "name": "Bosnian",
+      "nativeName": "Bosanski",
+      "shipped": false
+    },
+    {
+      "code": "pt-BR",
+      "name": "Brazilian Portuguese",
+      "nativeName": "Português (Brasil)",
+      "shipped": false
+    },
+    {
+      "code": "en-GB",
+      "name": "British English",
+      "nativeName": "British English",
+      "shipped": false
+    },
+    {
+      "code": "bg",
+      "name": "Bulgarian",
+      "nativeName": "Български",
+      "shipped": false
+    },
+    {
+      "code": "my",
+      "name": "Burmese",
+      "nativeName": "မြန်မာ",
+      "shipped": false
+    },
+    {
+      "code": "ca",
+      "name": "Catalan",
+      "nativeName": "Català",
+      "shipped": false
+    },
+    {
+      "code": "hr",
+      "name": "Croatian",
+      "nativeName": "Hrvatski",
+      "shipped": false
+    },
+    {
+      "code": "cs",
+      "name": "Czech",
+      "nativeName": "Čeština",
+      "shipped": false
+    },
+    {
+      "code": "da",
+      "name": "Danish",
+      "nativeName": "Dansk",
+      "shipped": false
+    },
+    {
+      "code": "nl",
+      "name": "Dutch",
+      "nativeName": "Nederlands",
+      "shipped": false
+    },
+    {
+      "code": "en",
+      "name": "English",
+      "nativeName": "English",
+      "shipped": true
+    },
+    {
+      "code": "et",
+      "name": "Estonian",
+      "nativeName": "Eesti",
+      "shipped": false
+    },
+    {
+      "code": "fil",
+      "name": "Filipino",
+      "nativeName": "Filipino",
+      "shipped": false
+    },
+    {
+      "code": "fi",
+      "name": "Finnish",
+      "nativeName": "Suomi",
+      "shipped": false
+    },
+    {
+      "code": "fr",
+      "name": "French",
+      "nativeName": "Français",
+      "shipped": false
+    },
+    {
+      "code": "gl",
+      "name": "Galician",
+      "nativeName": "Galego",
+      "shipped": false
+    },
+    {
+      "code": "ka",
+      "name": "Georgian",
+      "nativeName": "Ქართული",
+      "shipped": false
+    },
+    {
+      "code": "de",
+      "name": "German",
+      "nativeName": "Deutsch",
+      "shipped": false
+    },
+    {
+      "code": "el",
+      "name": "Greek",
+      "nativeName": "Ελληνικά",
+      "shipped": false
+    },
+    {
+      "code": "gu",
+      "name": "Gujarati",
+      "nativeName": "ગુજરાતી",
+      "shipped": false
+    },
+    {
+      "code": "ha",
+      "name": "Hausa",
+      "nativeName": "Hausa",
+      "shipped": false
+    },
+    {
+      "code": "he",
+      "name": "Hebrew",
+      "nativeName": "עברית",
+      "shipped": false
+    },
+    {
+      "code": "hi",
+      "name": "Hindi",
+      "nativeName": "हिन्दी",
+      "shipped": false
+    },
+    {
+      "code": "hu",
+      "name": "Hungarian",
+      "nativeName": "Magyar",
+      "shipped": false
+    },
+    {
+      "code": "is",
+      "name": "Icelandic",
+      "nativeName": "Íslenska",
+      "shipped": false
+    },
+    {
+      "code": "ig",
+      "name": "Igbo",
+      "nativeName": "Igbo",
+      "shipped": false
+    },
+    {
+      "code": "id",
+      "name": "Indonesian",
+      "nativeName": "Indonesia",
+      "shipped": false
+    },
+    {
+      "code": "ga",
+      "name": "Irish",
+      "nativeName": "Gaeilge",
+      "shipped": false
+    },
+    {
+      "code": "it",
+      "name": "Italian",
+      "nativeName": "Italiano",
+      "shipped": false
+    },
+    {
+      "code": "ja",
+      "name": "Japanese",
+      "nativeName": "日本語",
+      "shipped": false
+    },
+    {
+      "code": "kn",
+      "name": "Kannada",
+      "nativeName": "ಕನ್ನಡ",
+      "shipped": false
+    },
+    {
+      "code": "kk",
+      "name": "Kazakh",
+      "nativeName": "Қазақ тілі",
+      "shipped": false
+    },
+    {
+      "code": "km",
+      "name": "Khmer",
+      "nativeName": "ខ្មែរ",
+      "shipped": false
+    },
+    {
+      "code": "rw",
+      "name": "Kinyarwanda",
+      "nativeName": "Ikinyarwanda",
+      "shipped": false
+    },
+    {
+      "code": "ko",
+      "name": "Korean",
+      "nativeName": "한국어",
+      "shipped": false
+    },
+    {
+      "code": "ky",
+      "name": "Kyrgyz",
+      "nativeName": "Кыргызча",
+      "shipped": false
+    },
+    {
+      "code": "lo",
+      "name": "Lao",
+      "nativeName": "ລາວ",
+      "shipped": false
+    },
+    {
+      "code": "lv",
+      "name": "Latvian",
+      "nativeName": "Latviešu",
+      "shipped": false
+    },
+    {
+      "code": "lt",
+      "name": "Lithuanian",
+      "nativeName": "Lietuvių",
+      "shipped": false
+    },
+    {
+      "code": "mk",
+      "name": "Macedonian",
+      "nativeName": "Македонски",
+      "shipped": false
+    },
+    {
+      "code": "mg",
+      "name": "Malagasy",
+      "nativeName": "Malagasy",
+      "shipped": false
+    },
+    {
+      "code": "ms",
+      "name": "Malay",
+      "nativeName": "Melayu",
+      "shipped": false
+    },
+    {
+      "code": "ml",
+      "name": "Malayalam",
+      "nativeName": "മലയാളം",
+      "shipped": false
+    },
+    {
+      "code": "mt",
+      "name": "Maltese",
+      "nativeName": "Malti",
+      "shipped": false
+    },
+    {
+      "code": "mr",
+      "name": "Marathi",
+      "nativeName": "मराठी",
+      "shipped": false
+    },
+    {
+      "code": "mn",
+      "name": "Mongolian",
+      "nativeName": "Монгол",
+      "shipped": false
+    },
+    {
+      "code": "ne",
+      "name": "Nepali",
+      "nativeName": "नेपाली",
+      "shipped": false
+    },
+    {
+      "code": "nb",
+      "name": "Norwegian Bokmål",
+      "nativeName": "Norsk bokmål",
+      "shipped": false
+    },
+    {
+      "code": "or",
+      "name": "Odia",
+      "nativeName": "ଓଡ଼ିଆ",
+      "shipped": false
+    },
+    {
+      "code": "ps",
+      "name": "Pashto",
+      "nativeName": "پښتو",
+      "shipped": false
+    },
+    {
+      "code": "fa",
+      "name": "Persian",
+      "nativeName": "فارسی",
+      "shipped": false
+    },
+    {
+      "code": "pl",
+      "name": "Polish",
+      "nativeName": "Polski",
+      "shipped": false
+    },
+    {
+      "code": "pt",
+      "name": "Portuguese",
+      "nativeName": "Português",
+      "shipped": false
+    },
+    {
+      "code": "pa",
+      "name": "Punjabi",
+      "nativeName": "ਪੰਜਾਬੀ",
+      "shipped": false
+    },
+    {
+      "code": "ro",
+      "name": "Romanian",
+      "nativeName": "Română",
+      "shipped": false
+    },
+    {
+      "code": "ru",
+      "name": "Russian",
+      "nativeName": "Русский",
+      "shipped": false
+    },
+    {
+      "code": "sr",
+      "name": "Serbian",
+      "nativeName": "Српски",
+      "shipped": false
+    },
+    {
+      "code": "zh-Hans",
+      "name": "Simplified Chinese",
+      "nativeName": "简体中文",
+      "shipped": false
+    },
+    {
+      "code": "si",
+      "name": "Sinhala",
+      "nativeName": "සිංහල",
+      "shipped": false
+    },
+    {
+      "code": "sk",
+      "name": "Slovak",
+      "nativeName": "Slovenčina",
+      "shipped": false
+    },
+    {
+      "code": "sl",
+      "name": "Slovenian",
+      "nativeName": "Slovenščina",
+      "shipped": false
+    },
+    {
+      "code": "so",
+      "name": "Somali",
+      "nativeName": "Soomaali",
+      "shipped": false
+    },
+    {
+      "code": "es",
+      "name": "Spanish",
+      "nativeName": "Español",
+      "shipped": false
+    },
+    {
+      "code": "sw",
+      "name": "Swahili",
+      "nativeName": "Kiswahili",
+      "shipped": false
+    },
+    {
+      "code": "sv",
+      "name": "Swedish",
+      "nativeName": "Svenska",
+      "shipped": false
+    },
+    {
+      "code": "ta",
+      "name": "Tamil",
+      "nativeName": "தமிழ்",
+      "shipped": false
+    },
+    {
+      "code": "te",
+      "name": "Telugu",
+      "nativeName": "తెలుగు",
+      "shipped": false
+    },
+    {
+      "code": "th",
+      "name": "Thai",
+      "nativeName": "ไทย",
+      "shipped": false
+    },
+    {
+      "code": "zh-Hant",
+      "name": "Traditional Chinese",
+      "nativeName": "繁體中文",
+      "shipped": false
+    },
+    {
+      "code": "tr",
+      "name": "Turkish",
+      "nativeName": "Türkçe",
+      "shipped": false
+    },
+    {
+      "code": "uk",
+      "name": "Ukrainian",
+      "nativeName": "Українська",
+      "shipped": false
+    },
+    {
+      "code": "ur",
+      "name": "Urdu",
+      "nativeName": "اردو",
+      "shipped": false
+    },
+    {
+      "code": "uz",
+      "name": "Uzbek",
+      "nativeName": "O‘zbek",
+      "shipped": false
+    },
+    {
+      "code": "vi",
+      "name": "Vietnamese",
+      "nativeName": "Tiếng Việt",
+      "shipped": false
+    },
+    {
+      "code": "cy",
+      "name": "Welsh",
+      "nativeName": "Cymraeg",
+      "shipped": false
+    },
+    {
+      "code": "yo",
+      "name": "Yoruba",
+      "nativeName": "Èdè Yorùbá",
+      "shipped": false
+    },
+    {
+      "code": "zu",
+      "name": "Zulu",
+      "nativeName": "IsiZulu",
+      "shipped": false
+    }
+  ]
+}

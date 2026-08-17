@@ -1,0 +1,4 @@
+{
+  "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjQxMDI0NDQ4MDAsInNlYyI6MX0.not-a-signature",
+  "refreshToken": "refresh-token-as-the-server-issued-it"
+}

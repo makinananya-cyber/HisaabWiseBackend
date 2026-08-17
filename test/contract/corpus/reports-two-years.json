@@ -1,0 +1,180 @@
+{
+  "summary": {
+    "goalsMetLabel": "Goal met in 1 of 3 months",
+    "monthCount": {
+      "value": 3,
+      "display": "3"
+    },
+    "averageSpend": {
+      "minor": 5347333,
+      "currency": "INR",
+      "exponent": 2,
+      "display": "₹53,470"
+    },
+    "totalSaved": {
+      "minor": 2958000,
+      "currency": "INR",
+      "exponent": 2,
+      "display": "₹29,580"
+    }
+  },
+  "trend": {
+    "goalPosition": 0.8,
+    "bars": [
+      {
+        "monthKey": "2025-12",
+        "label": "Dec",
+        "fill": 0.88,
+        "verdict": "hit",
+        "percentageLabel": "110% of goal",
+        "accessibilityLabel": "December 2025, 110% of goal, ₹13,200 saved"
+      },
+      {
+        "monthKey": "2026-01",
+        "label": "Jan",
+        "fill": 0.632,
+        "verdict": "near",
+        "percentageLabel": "79% of goal",
+        "accessibilityLabel": "January 2026, 79% of goal, ₹10,270 saved"
+      },
+      {
+        "monthKey": "2026-02",
+        "label": "Feb",
+        "fill": 0.376,
+        "verdict": "miss",
+        "percentageLabel": "47% of goal",
+        "accessibilityLabel": "February 2026, 47% of goal, ₹6,110 saved"
+      }
+    ]
+  },
+  "years": [
+    {
+      "label": "2026",
+      "totalSaved": {
+        "minor": 1638000,
+        "currency": "INR",
+        "exponent": 2,
+        "display": "₹16,380"
+      },
+      "months": [
+        {
+          "monthKey": "2026-02",
+          "label": "February",
+          "spent": {
+            "minor": 5889000,
+            "currency": "INR",
+            "exponent": 2,
+            "display": "₹58,890"
+          },
+          "percentageLabel": "47% of goal",
+          "verdict": "miss",
+          "segments": [
+            {
+              "slot": 1,
+              "share": 0.507
+            },
+            {
+              "slot": 2,
+              "share": 0.278
+            },
+            {
+              "slot": 3,
+              "share": 0.063
+            },
+            {
+              "slot": 4,
+              "share": 0.113
+            },
+            {
+              "slot": 5,
+              "share": 0.015
+            },
+            {
+              "slot": 6,
+              "share": 0.024
+            }
+          ]
+        },
+        {
+          "monthKey": "2026-01",
+          "label": "January",
+          "spent": {
+            "minor": 5473000,
+            "currency": "INR",
+            "exponent": 2,
+            "display": "₹54,730"
+          },
+          "percentageLabel": "79% of goal",
+          "verdict": "near",
+          "segments": [
+            {
+              "slot": 1,
+              "share": 0.475
+            },
+            {
+              "slot": 2,
+              "share": 0.265
+            },
+            {
+              "slot": 3,
+              "share": 0.065
+            },
+            {
+              "slot": 4,
+              "share": 0.125
+            },
+            {
+              "slot": 5,
+              "share": 0.04
+            },
+            {
+              "slot": 6,
+              "share": 0.03
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "2025",
+      "totalSaved": {
+        "minor": 1320000,
+        "currency": "INR",
+        "exponent": 2,
+        "display": "₹13,200"
+      },
+      "months": [
+        {
+          "monthKey": "2025-12",
+          "label": "December",
+          "spent": {
+            "minor": 4680000,
+            "currency": "INR",
+            "exponent": 2,
+            "display": "₹46,800"
+          },
+          "percentageLabel": "110% of goal",
+          "verdict": "hit",
+          "segments": [
+            {
+              "slot": 1,
+              "share": 0.53
+            },
+            {
+              "slot": 2,
+              "share": 0.27
+            },
+            {
+              "slot": 3,
+              "share": 0.07
+            },
+            {
+              "slot": 4,
+              "share": 0.13
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+# Cloudflare Workers deployment.
+#
+# The Node deployment (Render, see render.yaml) is unaffected by this file. Both build the same Hono
+# app from src/index.ts; only the entrypoint and three runtime-specific implementations differ.
+#
+# ── Secrets ───────────────────────────────────────────────────────────────────────────────────────
+# MONGODB_URI and JWT_ACCESS_SECRET are NOT here on purpose. This file is committed, so a secret in
+# [vars] would be a secret in git. Set them as encrypted secrets instead:
+#
+#   npx wrangler secret put MONGODB_URI
+#   npx wrangler secret put JWT_ACCESS_SECRET
+#
+# or in the dashboard under Settings > Variables and Secrets with the type set to Secret, not Text.
+
+name = "hisaabwisebackend"
+main = "src/worker.ts"
+
+# 2025-03-20 is the *floor*: it is where the `node:net` and `node:tls` implementations the native
+# `mongodb` driver needs became available, which ADR-0016 records verifying against the real cluster
+# under `wrangler dev`. The date here is newer than that floor deliberately — it matches what the
+# Worker was provisioned with, and wrangler.toml overrides the dashboard on every deploy, so pinning
+# the floor here would silently *downgrade* the runtime the service was created against.
+compatibility_date = "2026-08-14"
+# `nodejs_compat`, not `nodejs_compat_v2`. The v2 behaviour became the default as of 2026-08-04, and
+# because the date above is later than that, naming the flag explicitly is now a hard deploy error:
+#   "The compatibility flag nodejs_compat_v2 became the default as of 2026-08-04"
+# The plain flag is still required — it is what supplies the `node:net`, `node:tls` and `node:crypto`
+# implementations the native mongodb driver connects to Atlas through.
+compatibility_flags = ["nodejs_compat"]
+
+[observability]
+enabled = true
+
+# Mirrors the intervals src/scheduler.ts uses on Node. Every 15 minutes rather than hourly because
+# Asia/Kolkata is +05:30 and Asia/Kathmandu +05:45 (Product Spec §4.5); daily for the purge, since a
+# thirty-day grace period does not need finer granularity than a day.
+[triggers]
+crons = ["*/15 * * * *", "0 3 * * *"]
+
+[vars]
+NODE_ENV = "production"
+LOG_LEVEL = "info"
+# One connection per isolate, which is invariant 9's original mechanism. Isolates are ephemeral and
+# numerous, so a larger pool multiplies against Atlas's connection ceiling rather than being reused
+# the way a single long-lived Node process reuses one.
+MONGODB_MAX_POOL_SIZE = "1"
+ACCESS_TOKEN_TTL = "15m"
+REFRESH_TOKEN_TTL = "60d"
+FX_BASE_CURRENCY = "USD"
+RATE_LIMIT_WINDOW_MS = "60000"
+RATE_LIMIT_MAX = "100"

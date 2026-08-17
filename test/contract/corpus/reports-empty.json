@@ -1,0 +1,26 @@
+{
+  "summary": {
+    "goalsMetLabel": "No months have closed yet",
+    "monthCount": {
+      "value": 0,
+      "display": "0"
+    },
+    "averageSpend": {
+      "minor": 0,
+      "currency": "INR",
+      "exponent": 2,
+      "display": "₹0"
+    },
+    "totalSaved": {
+      "minor": 0,
+      "currency": "INR",
+      "exponent": 2,
+      "display": "₹0"
+    }
+  },
+  "trend": {
+    "goalPosition": 0.8,
+    "bars": []
+  },
+  "years": []
+}

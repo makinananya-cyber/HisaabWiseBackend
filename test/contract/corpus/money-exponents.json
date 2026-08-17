@@ -1,0 +1,8 @@
+[
+  { "minor": 50000, "currency": "AED", "exponent": 2, "display": "AED 500" },
+  { "minor": 500000, "currency": "KWD", "exponent": 3, "display": "KWD 500" },
+  { "minor": 500000, "currency": "BHD", "exponent": 3, "display": "BHD 500" },
+  { "minor": 500000, "currency": "OMR", "exponent": 3, "display": "OMR 500" },
+  { "minor": 75000, "currency": "JPY", "exponent": 0, "display": "JPY 75,000" },
+  { "minor": 680000, "currency": "KRW", "exponent": 0, "display": "KRW 680,000" }
+]

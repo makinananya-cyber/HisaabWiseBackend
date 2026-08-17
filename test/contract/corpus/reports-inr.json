@@ -1,0 +1,315 @@
+{
+  "summary": {
+    "goalsMetLabel": "Goal met in 2 of 6 months",
+    "monthCount": {
+      "value": 6,
+      "display": "6"
+    },
+    "averageSpend": {
+      "minor": 5705000,
+      "currency": "INR",
+      "exponent": 2,
+      "display": "₹57,050"
+    },
+    "totalSaved": {
+      "minor": 7670000,
+      "currency": "INR",
+      "exponent": 2,
+      "display": "₹76,700"
+    }
+  },
+  "trend": {
+    "goalPosition": 0.5383,
+    "bars": [
+      {
+        "monthKey": "2026-02",
+        "label": "Feb",
+        "fill": 0.4899,
+        "verdict": "near",
+        "percentageLabel": "91% of goal",
+        "accessibilityLabel": "February 2026, 91% of goal, ₹11,830 saved"
+      },
+      {
+        "monthKey": "2026-03",
+        "label": "Mar",
+        "fill": 0.3284,
+        "verdict": "miss",
+        "percentageLabel": "61% of goal",
+        "accessibilityLabel": "March 2026, 61% of goal, ₹7,930 saved"
+      },
+      {
+        "monthKey": "2026-04",
+        "label": "Apr",
+        "fill": 0.5814,
+        "verdict": "hit",
+        "percentageLabel": "108% of goal",
+        "accessibilityLabel": "April 2026, 108% of goal, ₹14,040 saved"
+      },
+      {
+        "monthKey": "2026-05",
+        "label": "May",
+        "fill": 0.4791,
+        "verdict": "near",
+        "percentageLabel": "89% of goal",
+        "accessibilityLabel": "May 2026, 89% of goal, ₹11,570 saved"
+      },
+      {
+        "monthKey": "2026-06",
+        "label": "Jun",
+        "fill": 0.9259,
+        "verdict": "hit",
+        "percentageLabel": "172% of goal",
+        "accessibilityLabel": "June 2026, 172% of goal, ₹22,360 saved"
+      },
+      {
+        "monthKey": "2026-07",
+        "label": "Jul",
+        "fill": 0.3714,
+        "verdict": "miss",
+        "percentageLabel": "69% of goal",
+        "accessibilityLabel": "July 2026, 69% of goal, ₹8,970 saved"
+      }
+    ]
+  },
+  "years": [
+    {
+      "label": "2026",
+      "totalSaved": {
+        "minor": 7670000,
+        "currency": "INR",
+        "exponent": 2,
+        "display": "₹76,700"
+      },
+      "months": [
+        {
+          "monthKey": "2026-07",
+          "label": "July",
+          "spent": {
+            "minor": 6203000,
+            "currency": "INR",
+            "exponent": 2,
+            "display": "₹62,030"
+          },
+          "percentageLabel": "69% of goal",
+          "verdict": "miss",
+          "segments": [
+            {
+              "slot": 1,
+              "share": 0.408
+            },
+            {
+              "slot": 2,
+              "share": 0.26
+            },
+            {
+              "slot": 3,
+              "share": 0.069
+            },
+            {
+              "slot": 4,
+              "share": 0.158
+            },
+            {
+              "slot": 5,
+              "share": 0.052
+            },
+            {
+              "slot": 6,
+              "share": 0.053
+            }
+          ]
+        },
+        {
+          "monthKey": "2026-06",
+          "label": "June",
+          "spent": {
+            "minor": 5564000,
+            "currency": "INR",
+            "exponent": 2,
+            "display": "₹55,640"
+          },
+          "percentageLabel": "172% of goal",
+          "verdict": "hit",
+          "segments": [
+            {
+              "slot": 1,
+              "share": 0.385
+            },
+            {
+              "slot": 2,
+              "share": 0.237
+            },
+            {
+              "slot": 3,
+              "share": 0.057
+            },
+            {
+              "slot": 4,
+              "share": 0.138
+            },
+            {
+              "slot": 5,
+              "share": 0.057
+            },
+            {
+              "slot": 6,
+              "share": 0.126
+            }
+          ]
+        },
+        {
+          "monthKey": "2026-05",
+          "label": "May",
+          "spent": {
+            "minor": 5843000,
+            "currency": "INR",
+            "exponent": 2,
+            "display": "₹58,430"
+          },
+          "percentageLabel": "89% of goal",
+          "verdict": "near",
+          "segments": [
+            {
+              "slot": 1,
+              "share": 0.446
+            },
+            {
+              "slot": 2,
+              "share": 0.26
+            },
+            {
+              "slot": 3,
+              "share": 0.062
+            },
+            {
+              "slot": 4,
+              "share": 0.15
+            },
+            {
+              "slot": 5,
+              "share": 0.036
+            },
+            {
+              "slot": 6,
+              "share": 0.046
+            }
+          ]
+        },
+        {
+          "monthKey": "2026-04",
+          "label": "April",
+          "spent": {
+            "minor": 5596000,
+            "currency": "INR",
+            "exponent": 2,
+            "display": "₹55,960"
+          },
+          "percentageLabel": "108% of goal",
+          "verdict": "hit",
+          "segments": [
+            {
+              "slot": 1,
+              "share": 0.497
+            },
+            {
+              "slot": 2,
+              "share": 0.253
+            },
+            {
+              "slot": 3,
+              "share": 0.056
+            },
+            {
+              "slot": 4,
+              "share": 0.147
+            },
+            {
+              "slot": 5,
+              "share": 0.014
+            },
+            {
+              "slot": 6,
+              "share": 0.033
+            }
+          ]
+        },
+        {
+          "monthKey": "2026-03",
+          "label": "March",
+          "spent": {
+            "minor": 5707000,
+            "currency": "INR",
+            "exponent": 2,
+            "display": "₹57,070"
+          },
+          "percentageLabel": "61% of goal",
+          "verdict": "miss",
+          "segments": [
+            {
+              "slot": 1,
+              "share": 0.422
+            },
+            {
+              "slot": 2,
+              "share": 0.256
+            },
+            {
+              "slot": 3,
+              "share": 0.072
+            },
+            {
+              "slot": 4,
+              "share": 0.113
+            },
+            {
+              "slot": 5,
+              "share": 0.082
+            },
+            {
+              "slot": 6,
+              "share": 0.055
+            }
+          ]
+        },
+        {
+          "monthKey": "2026-02",
+          "label": "February",
+          "spent": {
+            "minor": 5317000,
+            "currency": "INR",
+            "exponent": 2,
+            "display": "₹53,170"
+          },
+          "percentageLabel": "91% of goal",
+          "verdict": "near",
+          "segments": [
+            {
+              "slot": 1,
+              "share": 0.507
+            },
+            {
+              "slot": 2,
+              "share": 0.278
+            },
+            {
+              "slot": 3,
+              "share": 0.063
+            },
+            {
+              "slot": 4,
+              "share": 0.113
+            },
+            {
+              "slot": 5,
+              "share": 0.015
+            },
+            {
+              "slot": 6,
+              "share": 0.024
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

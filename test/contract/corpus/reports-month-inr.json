@@ -1,0 +1,486 @@
+{
+  "monthKey": "2026-02",
+  "title": "February 2026",
+  "verdict": "near",
+  "percentageLabel": "91% of goal",
+  "totals": {
+    "spent": {
+      "minor": 5317000,
+      "currency": "INR",
+      "exponent": 2,
+      "display": "₹53,170"
+    },
+    "fixed": {
+      "minor": 3296000,
+      "currency": "INR",
+      "exponent": 2,
+      "display": "₹32,960"
+    },
+    "variable": {
+      "minor": 2021000,
+      "currency": "INR",
+      "exponent": 2,
+      "display": "₹20,210"
+    },
+    "additionalIncome": {
+      "minor": 0,
+      "currency": "INR",
+      "exponent": 2,
+      "display": "₹0"
+    },
+    "isAdapted": true
+  },
+  "spending": {
+    "shareOfIncomeLabel": "82% of income",
+    "categoryCountLabel": "6 categories",
+    "categories": [
+      {
+        "id": "rent",
+        "name": "Rent",
+        "amount": {
+          "minor": 2696000,
+          "currency": "INR",
+          "exponent": 2,
+          "display": "₹26,960"
+        },
+        "share": 0.5071,
+        "shareLabel": "51%",
+        "slot": 1
+      },
+      {
+        "id": "groceries",
+        "name": "Groceries",
+        "amount": {
+          "minor": 1478000,
+          "currency": "INR",
+          "exponent": 2,
+          "display": "₹14,780"
+        },
+        "share": 0.278,
+        "shareLabel": "28%",
+        "slot": 2
+      },
+      {
+        "id": "transport",
+        "name": "Transport",
+        "amount": {
+          "minor": 335000,
+          "currency": "INR",
+          "exponent": 2,
+          "display": "₹3,350"
+        },
+        "share": 0.063,
+        "shareLabel": "6%",
+        "slot": 3
+      },
+      {
+        "id": "utilities",
+        "name": "Utilities",
+        "amount": {
+          "minor": 600000,
+          "currency": "INR",
+          "exponent": 2,
+          "display": "₹6,000"
+        },
+        "share": 0.1128,
+        "shareLabel": "11%",
+        "slot": 4
+      },
+      {
+        "id": "entertainment",
+        "name": "Entertainment",
+        "amount": {
+          "minor": 81000,
+          "currency": "INR",
+          "exponent": 2,
+          "display": "₹810"
+        },
+        "share": 0.0152,
+        "shareLabel": "2%",
+        "slot": 5
+      },
+      {
+        "id": "other",
+        "name": "Other",
+        "amount": {
+          "minor": 127000,
+          "currency": "INR",
+          "exponent": 2,
+          "display": "₹1,270"
+        },
+        "share": 0.0239,
+        "shareLabel": "2%",
+        "slot": 6
+      }
+    ]
+  },
+  "savings": {
+    "saved": {
+      "minor": 1183000,
+      "currency": "INR",
+      "exponent": 2,
+      "display": "₹11,830"
+    },
+    "goal": {
+      "minor": 1300000,
+      "currency": "INR",
+      "exponent": 2,
+      "display": "₹13,000"
+    },
+    "zeroLabel": "₹0",
+    "position": 0.91,
+    "shareOfIncomeLabel": "18% of income saved",
+    "remaining": {
+      "minor": 117000,
+      "currency": "INR",
+      "exponent": 2,
+      "display": "₹1,170"
+    }
+  },
+  "wants": {
+    "used": {
+      "minor": 543000,
+      "currency": "INR",
+      "exponent": 2,
+      "display": "₹5,430"
+    },
+    "allowance": {
+      "minor": 863000,
+      "currency": "INR",
+      "exponent": 2,
+      "display": "₹8,630"
+    },
+    "percentageLabel": "63%",
+    "fill": 0.6292,
+    "isOver": false,
+    "remaining": {
+      "minor": 320000,
+      "currency": "INR",
+      "exponent": 2,
+      "display": "₹3,200"
+    }
+  },
+  "split": {
+    "income": {
+      "minor": 6500000,
+      "currency": "INR",
+      "exponent": 2,
+      "display": "₹65,000"
+    },
+    "segments": [
+      {
+        "portion": "needs",
+        "amount": {
+          "minor": 4774000,
+          "currency": "INR",
+          "exponent": 2,
+          "display": "₹47,740"
+        },
+        "share": 0.7345,
+        "target": {
+          "minor": 3250000,
+          "currency": "INR",
+          "exponent": 2,
+          "display": "₹32,500"
+        }
+      },
+      {
+        "portion": "wants",
+        "amount": {
+          "minor": 543000,
+          "currency": "INR",
+          "exponent": 2,
+          "display": "₹5,430"
+        },
+        "share": 0.0835,
+        "target": {
+          "minor": 863000,
+          "currency": "INR",
+          "exponent": 2,
+          "display": "₹8,630"
+        }
+      },
+      {
+        "portion": "saved",
+        "amount": {
+          "minor": 1183000,
+          "currency": "INR",
+          "exponent": 2,
+          "display": "₹11,830"
+        },
+        "share": 0.182,
+        "target": {
+          "minor": 863000,
+          "currency": "INR",
+          "exponent": 2,
+          "display": "₹8,630"
+        }
+      },
+      {
+        "portion": "surplus",
+        "amount": {
+          "minor": 0,
+          "currency": "INR",
+          "exponent": 2,
+          "display": "₹0"
+        },
+        "share": 0.0
+      }
+    ]
+  },
+  "groups": [
+    {
+      "id": "rent",
+      "name": "Rent",
+      "slot": 1,
+      "icon": "rent",
+      "flow": "out",
+      "total": {
+        "minor": 2696000,
+        "currency": "INR",
+        "exponent": 2,
+        "display": "₹26,960"
+      },
+      "summaryLabel": "1 entry · 51% of spend",
+      "entries": [
+        {
+          "label": "Rent",
+          "dateLabel": "Fixed each month",
+          "amount": {
+            "minor": 2696000,
+            "currency": "INR",
+            "exponent": 2,
+            "display": "₹26,960"
+          }
+        }
+      ]
+    },
+    {
+      "id": "groceries",
+      "name": "Groceries",
+      "slot": 2,
+      "icon": "groceries",
+      "flow": "out",
+      "total": {
+        "minor": 1478000,
+        "currency": "INR",
+        "exponent": 2,
+        "display": "₹14,780"
+      },
+      "summaryLabel": "3 entries · 28% of spend",
+      "entries": [
+        {
+          "label": "Groceries",
+          "dateLabel": "2 Feb",
+          "amount": {
+            "minor": 558000,
+            "currency": "INR",
+            "exponent": 2,
+            "display": "₹5,580"
+          }
+        },
+        {
+          "label": "Groceries",
+          "dateLabel": "14 Feb",
+          "amount": {
+            "minor": 490000,
+            "currency": "INR",
+            "exponent": 2,
+            "display": "₹4,900"
+          }
+        },
+        {
+          "label": "Groceries",
+          "dateLabel": "24 Feb",
+          "amount": {
+            "minor": 430000,
+            "currency": "INR",
+            "exponent": 2,
+            "display": "₹4,300"
+          }
+        }
+      ]
+    },
+    {
+      "id": "transport",
+      "name": "Transport",
+      "slot": 3,
+      "icon": "transport",
+      "flow": "out",
+      "total": {
+        "minor": 335000,
+        "currency": "INR",
+        "exponent": 2,
+        "display": "₹3,350"
+      },
+      "summaryLabel": "2 entries · 6% of spend",
+      "entries": [
+        {
+          "label": "Metro / subway",
+          "dateLabel": "5 Feb",
+          "amount": {
+            "minor": 189000,
+            "currency": "INR",
+            "exponent": 2,
+            "display": "₹1,890"
+          }
+        },
+        {
+          "label": "Ride-hailing app",
+          "dateLabel": "18 Feb",
+          "amount": {
+            "minor": 146000,
+            "currency": "INR",
+            "exponent": 2,
+            "display": "₹1,460"
+          }
+        }
+      ]
+    },
+    {
+      "id": "utilities",
+      "name": "Utilities",
+      "slot": 4,
+      "icon": "utilities",
+      "flow": "out",
+      "total": {
+        "minor": 600000,
+        "currency": "INR",
+        "exponent": 2,
+        "display": "₹6,000"
+      },
+      "summaryLabel": "3 entries · 11% of spend",
+      "entries": [
+        {
+          "label": "Electricity",
+          "dateLabel": "Fixed each month",
+          "amount": {
+            "minor": 355000,
+            "currency": "INR",
+            "exponent": 2,
+            "display": "₹3,550"
+          }
+        },
+        {
+          "label": "Water",
+          "dateLabel": "Fixed each month",
+          "amount": {
+            "minor": 83000,
+            "currency": "INR",
+            "exponent": 2,
+            "display": "₹830"
+          }
+        },
+        {
+          "label": "Phone / data",
+          "dateLabel": "Fixed each month",
+          "amount": {
+            "minor": 162000,
+            "currency": "INR",
+            "exponent": 2,
+            "display": "₹1,620"
+          }
+        }
+      ]
+    },
+    {
+      "id": "entertainment",
+      "name": "Entertainment",
+      "slot": 5,
+      "icon": "entertainment",
+      "flow": "out",
+      "total": {
+        "minor": 81000,
+        "currency": "INR",
+        "exponent": 2,
+        "display": "₹810"
+      },
+      "summaryLabel": "1 entry · 2% of spend",
+      "entries": [
+        {
+          "label": "Cinema — Reel Cinemas",
+          "dateLabel": "21 Feb",
+          "amount": {
+            "minor": 81000,
+            "currency": "INR",
+            "exponent": 2,
+            "display": "₹810"
+          }
+        }
+      ]
+    },
+    {
+      "id": "other",
+      "name": "Other",
+      "slot": 6,
+      "icon": "other",
+      "flow": "out",
+      "total": {
+        "minor": 127000,
+        "currency": "INR",
+        "exponent": 2,
+        "display": "₹1,270"
+      },
+      "summaryLabel": "1 entry · 2% of spend",
+      "entries": [
+        {
+          "label": "Medical & pharmacy",
+          "dateLabel": "9 Feb",
+          "amount": {
+            "minor": 127000,
+            "currency": "INR",
+            "exponent": 2,
+            "display": "₹1,270"
+          }
+        }
+      ]
+    },
+    {
+      "id": "income",
+      "name": "Additional income",
+      "slot": 1,
+      "icon": "income",
+      "flow": "in",
+      "total": {
+        "minor": 0,
+        "currency": "INR",
+        "exponent": 2,
+        "display": "₹0"
+      },
+      "summaryLabel": "0 entries · on top of salary",
+      "entries": []
+    }
+  ],
+  "facts": [
+    {
+      "kind": "salary",
+      "value": "₹65,000",
+      "note": "No extra income"
+    },
+    {
+      "kind": "goal",
+      "value": "₹13,000",
+      "note": "Set at the start of the month"
+    },
+    {
+      "kind": "saved",
+      "value": "₹11,830",
+      "note": "18% of everything that came in"
+    },
+    {
+      "kind": "biggestCost",
+      "value": "Rent",
+      "note": "₹26,960 that month"
+    },
+    {
+      "kind": "needs",
+      "value": "₹47,740",
+      "note": "Rent, bills and food"
+    },
+    {
+      "kind": "leftOver",
+      "value": "₹11,830",
+      "note": "Income minus everything spent"
+    }
+  ]
+}

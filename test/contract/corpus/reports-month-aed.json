@@ -1,0 +1,486 @@
+{
+  "monthKey": "2026-02",
+  "title": "February 2026",
+  "verdict": "near",
+  "percentageLabel": "91% of goal",
+  "totals": {
+    "spent": {
+      "minor": 233714,
+      "currency": "AED",
+      "exponent": 2,
+      "display": "AED 2,337"
+    },
+    "fixed": {
+      "minor": 144879,
+      "currency": "AED",
+      "exponent": 2,
+      "display": "AED 1,449"
+    },
+    "variable": {
+      "minor": 88835,
+      "currency": "AED",
+      "exponent": 2,
+      "display": "AED 888"
+    },
+    "additionalIncome": {
+      "minor": 0,
+      "currency": "AED",
+      "exponent": 2,
+      "display": "AED 0"
+    },
+    "isAdapted": true
+  },
+  "spending": {
+    "shareOfIncomeLabel": "82% of income",
+    "categoryCountLabel": "6 categories",
+    "categories": [
+      {
+        "id": "rent",
+        "name": "Rent",
+        "amount": {
+          "minor": 118505,
+          "currency": "AED",
+          "exponent": 2,
+          "display": "AED 1,185"
+        },
+        "share": 0.5071,
+        "shareLabel": "51%",
+        "slot": 1
+      },
+      {
+        "id": "groceries",
+        "name": "Groceries",
+        "amount": {
+          "minor": 64967,
+          "currency": "AED",
+          "exponent": 2,
+          "display": "AED 650"
+        },
+        "share": 0.278,
+        "shareLabel": "28%",
+        "slot": 2
+      },
+      {
+        "id": "transport",
+        "name": "Transport",
+        "amount": {
+          "minor": 14725,
+          "currency": "AED",
+          "exponent": 2,
+          "display": "AED 147"
+        },
+        "share": 0.063,
+        "shareLabel": "6%",
+        "slot": 3
+      },
+      {
+        "id": "utilities",
+        "name": "Utilities",
+        "amount": {
+          "minor": 26374,
+          "currency": "AED",
+          "exponent": 2,
+          "display": "AED 264"
+        },
+        "share": 0.1128,
+        "shareLabel": "11%",
+        "slot": 4
+      },
+      {
+        "id": "entertainment",
+        "name": "Entertainment",
+        "amount": {
+          "minor": 3560,
+          "currency": "AED",
+          "exponent": 2,
+          "display": "AED 36"
+        },
+        "share": 0.0152,
+        "shareLabel": "2%",
+        "slot": 5
+      },
+      {
+        "id": "other",
+        "name": "Other",
+        "amount": {
+          "minor": 5582,
+          "currency": "AED",
+          "exponent": 2,
+          "display": "AED 56"
+        },
+        "share": 0.0239,
+        "shareLabel": "2%",
+        "slot": 6
+      }
+    ]
+  },
+  "savings": {
+    "saved": {
+      "minor": 52000,
+      "currency": "AED",
+      "exponent": 2,
+      "display": "AED 520"
+    },
+    "goal": {
+      "minor": 57143,
+      "currency": "AED",
+      "exponent": 2,
+      "display": "AED 571"
+    },
+    "zeroLabel": "AED 0",
+    "position": 0.91,
+    "shareOfIncomeLabel": "18% of income saved",
+    "remaining": {
+      "minor": 5143,
+      "currency": "AED",
+      "exponent": 2,
+      "display": "AED 51"
+    }
+  },
+  "wants": {
+    "used": {
+      "minor": 23868,
+      "currency": "AED",
+      "exponent": 2,
+      "display": "AED 239"
+    },
+    "allowance": {
+      "minor": 37934,
+      "currency": "AED",
+      "exponent": 2,
+      "display": "AED 379"
+    },
+    "percentageLabel": "63%",
+    "fill": 0.6292,
+    "isOver": false,
+    "remaining": {
+      "minor": 14066,
+      "currency": "AED",
+      "exponent": 2,
+      "display": "AED 141"
+    }
+  },
+  "split": {
+    "income": {
+      "minor": 285714,
+      "currency": "AED",
+      "exponent": 2,
+      "display": "AED 2,857"
+    },
+    "segments": [
+      {
+        "portion": "needs",
+        "amount": {
+          "minor": 209846,
+          "currency": "AED",
+          "exponent": 2,
+          "display": "AED 2,098"
+        },
+        "share": 0.7345,
+        "target": {
+          "minor": 142857,
+          "currency": "AED",
+          "exponent": 2,
+          "display": "AED 1,429"
+        }
+      },
+      {
+        "portion": "wants",
+        "amount": {
+          "minor": 23868,
+          "currency": "AED",
+          "exponent": 2,
+          "display": "AED 239"
+        },
+        "share": 0.0835,
+        "target": {
+          "minor": 37934,
+          "currency": "AED",
+          "exponent": 2,
+          "display": "AED 379"
+        }
+      },
+      {
+        "portion": "saved",
+        "amount": {
+          "minor": 52000,
+          "currency": "AED",
+          "exponent": 2,
+          "display": "AED 520"
+        },
+        "share": 0.182,
+        "target": {
+          "minor": 37934,
+          "currency": "AED",
+          "exponent": 2,
+          "display": "AED 379"
+        }
+      },
+      {
+        "portion": "surplus",
+        "amount": {
+          "minor": 0,
+          "currency": "AED",
+          "exponent": 2,
+          "display": "AED 0"
+        },
+        "share": 0.0
+      }
+    ]
+  },
+  "groups": [
+    {
+      "id": "rent",
+      "name": "Rent",
+      "slot": 1,
+      "icon": "rent",
+      "flow": "out",
+      "total": {
+        "minor": 118505,
+        "currency": "AED",
+        "exponent": 2,
+        "display": "AED 1,185"
+      },
+      "summaryLabel": "1 entry · 51% of spend",
+      "entries": [
+        {
+          "label": "Rent",
+          "dateLabel": "Fixed each month",
+          "amount": {
+            "minor": 118505,
+            "currency": "AED",
+            "exponent": 2,
+            "display": "AED 1,185"
+          }
+        }
+      ]
+    },
+    {
+      "id": "groceries",
+      "name": "Groceries",
+      "slot": 2,
+      "icon": "groceries",
+      "flow": "out",
+      "total": {
+        "minor": 64967,
+        "currency": "AED",
+        "exponent": 2,
+        "display": "AED 650"
+      },
+      "summaryLabel": "3 entries · 28% of spend",
+      "entries": [
+        {
+          "label": "Groceries",
+          "dateLabel": "2 Feb",
+          "amount": {
+            "minor": 24527,
+            "currency": "AED",
+            "exponent": 2,
+            "display": "AED 245"
+          }
+        },
+        {
+          "label": "Groceries",
+          "dateLabel": "14 Feb",
+          "amount": {
+            "minor": 21538,
+            "currency": "AED",
+            "exponent": 2,
+            "display": "AED 215"
+          }
+        },
+        {
+          "label": "Groceries",
+          "dateLabel": "24 Feb",
+          "amount": {
+            "minor": 18901,
+            "currency": "AED",
+            "exponent": 2,
+            "display": "AED 189"
+          }
+        }
+      ]
+    },
+    {
+      "id": "transport",
+      "name": "Transport",
+      "slot": 3,
+      "icon": "transport",
+      "flow": "out",
+      "total": {
+        "minor": 14725,
+        "currency": "AED",
+        "exponent": 2,
+        "display": "AED 147"
+      },
+      "summaryLabel": "2 entries · 6% of spend",
+      "entries": [
+        {
+          "label": "Metro / subway",
+          "dateLabel": "5 Feb",
+          "amount": {
+            "minor": 8308,
+            "currency": "AED",
+            "exponent": 2,
+            "display": "AED 83"
+          }
+        },
+        {
+          "label": "Ride-hailing app",
+          "dateLabel": "18 Feb",
+          "amount": {
+            "minor": 6418,
+            "currency": "AED",
+            "exponent": 2,
+            "display": "AED 64"
+          }
+        }
+      ]
+    },
+    {
+      "id": "utilities",
+      "name": "Utilities",
+      "slot": 4,
+      "icon": "utilities",
+      "flow": "out",
+      "total": {
+        "minor": 26374,
+        "currency": "AED",
+        "exponent": 2,
+        "display": "AED 264"
+      },
+      "summaryLabel": "3 entries · 11% of spend",
+      "entries": [
+        {
+          "label": "Electricity",
+          "dateLabel": "Fixed each month",
+          "amount": {
+            "minor": 15604,
+            "currency": "AED",
+            "exponent": 2,
+            "display": "AED 156"
+          }
+        },
+        {
+          "label": "Water",
+          "dateLabel": "Fixed each month",
+          "amount": {
+            "minor": 3648,
+            "currency": "AED",
+            "exponent": 2,
+            "display": "AED 36"
+          }
+        },
+        {
+          "label": "Phone / data",
+          "dateLabel": "Fixed each month",
+          "amount": {
+            "minor": 7121,
+            "currency": "AED",
+            "exponent": 2,
+            "display": "AED 71"
+          }
+        }
+      ]
+    },
+    {
+      "id": "entertainment",
+      "name": "Entertainment",
+      "slot": 5,
+      "icon": "entertainment",
+      "flow": "out",
+      "total": {
+        "minor": 3560,
+        "currency": "AED",
+        "exponent": 2,
+        "display": "AED 36"
+      },
+      "summaryLabel": "1 entry · 2% of spend",
+      "entries": [
+        {
+          "label": "Cinema — Reel Cinemas",
+          "dateLabel": "21 Feb",
+          "amount": {
+            "minor": 3560,
+            "currency": "AED",
+            "exponent": 2,
+            "display": "AED 36"
+          }
+        }
+      ]
+    },
+    {
+      "id": "other",
+      "name": "Other",
+      "slot": 6,
+      "icon": "other",
+      "flow": "out",
+      "total": {
+        "minor": 5582,
+        "currency": "AED",
+        "exponent": 2,
+        "display": "AED 56"
+      },
+      "summaryLabel": "1 entry · 2% of spend",
+      "entries": [
+        {
+          "label": "Medical & pharmacy",
+          "dateLabel": "9 Feb",
+          "amount": {
+            "minor": 5582,
+            "currency": "AED",
+            "exponent": 2,
+            "display": "AED 56"
+          }
+        }
+      ]
+    },
+    {
+      "id": "income",
+      "name": "Additional income",
+      "slot": 1,
+      "icon": "income",
+      "flow": "in",
+      "total": {
+        "minor": 0,
+        "currency": "AED",
+        "exponent": 2,
+        "display": "AED 0"
+      },
+      "summaryLabel": "0 entries · on top of salary",
+      "entries": []
+    }
+  ],
+  "facts": [
+    {
+      "kind": "salary",
+      "value": "AED 2,857",
+      "note": "No extra income"
+    },
+    {
+      "kind": "goal",
+      "value": "AED 571",
+      "note": "Set at the start of the month"
+    },
+    {
+      "kind": "saved",
+      "value": "AED 520",
+      "note": "18% of everything that came in"
+    },
+    {
+      "kind": "biggestCost",
+      "value": "Rent",
+      "note": "AED 1,185 that month"
+    },
+    {
+      "kind": "needs",
+      "value": "AED 2,098",
+      "note": "Rent, bills and food"
+    },
+    {
+      "kind": "leftOver",
+      "value": "AED 520",
+      "note": "Income minus everything spent"
+    }
+  ]
+}

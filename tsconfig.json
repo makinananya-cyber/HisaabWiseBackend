@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "es2023",
+    "lib": ["es2023"],
+    "module": "esnext",
+    // `bundler` because esbuild produces the build output, so extensionless relative imports
+    // resolve the same way in `tsc --noEmit`, in vitest, and in the bundle. It also keeps vitest
+    // free of the `.js`-specifier friction that `nodenext` would introduce.
+    "moduleResolution": "bundler",
+
+    "types": ["node"],
+
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "exactOptionalPropertyTypes": true,
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+
+    // Type checking only. `npm run build` is esbuild; keeping tsc out of the emit path means the
+    // typecheck gate and the bundle cannot disagree about module resolution.
+    "noEmit": true
+  },
+  "include": ["src", "test", "*.config.ts"]
+}
