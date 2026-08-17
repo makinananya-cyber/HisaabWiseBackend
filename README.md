@@ -1,5 +1,6 @@
 # HisaabWiseBackend
 
+
 TypeScript backend for HisaabWise — **Node 22, Hono, MongoDB Atlas**.
 
 Project rules, stack decisions, and the non-negotiable invariants live in the workspace `CLAUDE.md`
