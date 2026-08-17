@@ -21,7 +21,12 @@ main = "src/worker.ts"
 # Worker was provisioned with, and wrangler.toml overrides the dashboard on every deploy, so pinning
 # the floor here would silently *downgrade* the runtime the service was created against.
 compatibility_date = "2026-08-14"
-compatibility_flags = ["nodejs_compat_v2"]
+# `nodejs_compat`, not `nodejs_compat_v2`. The v2 behaviour became the default as of 2026-08-04, and
+# because the date above is later than that, naming the flag explicitly is now a hard deploy error:
+#   "The compatibility flag nodejs_compat_v2 became the default as of 2026-08-04"
+# The plain flag is still required — it is what supplies the `node:net`, `node:tls` and `node:crypto`
+# implementations the native mongodb driver connects to Atlas through.
+compatibility_flags = ["nodejs_compat"]
 
 [observability]
 enabled = true
