@@ -280,8 +280,49 @@ function resourceFrom<Value>(value: Value): ContentResource<Value> {
   return { value, body, etag };
 }
 
-/** Where `content/` sits relative to the compiled or transpiled entrypoint. */
-const contentDir = path.join(import.meta.dirname, '..', 'content');
+/**
+ * Where the raw bytes of a content file come from.
+ *
+ * ADR-0008, as amended by ADR-0016, says content is static, versioned with the deploy, ETag'd and
+ * never in the database. That reasoning is about *where content lives in the architecture*, and it
+ * is untouched here. What varies is only the mechanism of the read: Node reads the files from disk
+ * beside the entrypoint, and a Cloudflare Worker has no filesystem, so its bundle carries them as
+ * imported modules. Both hand the same JSON text to the same validation below.
+ *
+ * @param file a path relative to `content/`, e.g. `tips.en.json` or `reference/countries.json`.
+ * @throws if the file cannot be produced; the caller wraps it with the file name attached.
+ */
+export type ContentSource = (file: string) => string;
+
+/**
+ * The Node source: the files on disk beside the entrypoint, as ADR-0008-as-amended describes.
+ *
+ * The directory is resolved inside the function rather than at module scope, because
+ * `import.meta.dirname` is undefined under workerd and computing it on import would throw before
+ * a Worker ever got the chance to install its own source.
+ */
+function diskSource(file: string): string {
+  return readFileSync(path.join(import.meta.dirname, '..', 'content', file), 'utf8');
+}
+
+let source: ContentSource = diskSource;
+
+/**
+ * Install a different way of producing content bytes, before `loadContent` is called.
+ *
+ * The Worker entrypoint uses this to serve the content its bundle already contains. Calling it
+ * after content is loaded has no effect, which is why it throws rather than failing quietly — a
+ * source installed too late would silently be the wrong one.
+ */
+export function setContentSource(next: ContentSource): void {
+  if (loaded) {
+    throw new ContentError(
+      'setContentSource was called after loadContent; install the source from the entrypoint ' +
+        'before any content is read.',
+    );
+  }
+  source = next;
+}
 
 /**
  * Read and validate one content file.
@@ -290,11 +331,9 @@ const contentDir = path.join(import.meta.dirname, '..', 'content');
  * is the fail-fast the module docstring promises.
  */
 function read<Schema extends z.ZodType>(file: string, schema: Schema): z.infer<Schema> {
-  const target = path.join(contentDir, file);
-
   let raw: string;
   try {
-    raw = readFileSync(target, 'utf8');
+    raw = source(file);
   } catch (err) {
     throw new ContentError(
       `content/${file} could not be read (${err instanceof Error ? err.message : String(err)}). ` +

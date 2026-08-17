@@ -1,4 +1,4 @@
-import type { Logger } from 'pino';
+import type { AppLogger } from './logging';
 
 import { runMonthRollover } from './jobs/monthRollover';
 import { runPurgeDeleted } from './jobs/purgeDeleted';
@@ -44,7 +44,7 @@ export const PURGE_INTERVAL_MS = 24 * 60 * 60 * 1_000;
 interface ScheduledJob {
   readonly name: string;
   readonly intervalMs: number;
-  run(logger: Logger): Promise<unknown>;
+  run(logger: AppLogger): Promise<unknown>;
 }
 
 const JOBS: ScheduledJob[] = [
@@ -71,7 +71,7 @@ export interface RunningScheduler {
  * would otherwise have all of them run at once, and there is nothing time-critical about the first pass —
  * catch-up-safe selection means a month due at boot is still due fifteen minutes later.
  */
-export function startScheduler(logger: Logger): RunningScheduler {
+export function startScheduler(logger: AppLogger): RunningScheduler {
   const timers: NodeJS.Timeout[] = [];
   let stopped = false;
 

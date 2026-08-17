@@ -1,6 +1,6 @@
 import { createHash } from 'node:crypto';
 
-import type { Logger } from 'pino';
+import type { AppLogger } from '../logging';
 
 import * as events from '../repositories/events';
 import * as entries from '../repositories/expenseEntries';
@@ -79,7 +79,7 @@ export async function purgeUser(userId: Parameters<typeof users.findById>[0], no
  * rather than scanning the table. Sequential, and one failure does not stop the pass — the same reasoning as
  * the rollover job.
  */
-export async function runPurgeDeleted(logger: Logger, now: Date = new Date()): Promise<PurgeOutcome> {
+export async function runPurgeDeleted(logger: AppLogger, now: Date = new Date()): Promise<PurgeOutcome> {
   const cutoff = new Date(now.getTime() - GRACE_PERIOD_DAYS * 86_400_000);
   const candidates = await users.deletedBefore(cutoff);
 

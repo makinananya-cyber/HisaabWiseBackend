@@ -1,7 +1,5 @@
 import { createHash, randomBytes, timingSafeEqual } from 'node:crypto';
 
-import argon2 from 'argon2';
-
 import type { Config } from '../config';
 
 /**
@@ -21,28 +19,69 @@ import type { Config } from '../config';
  */
 
 /**
- * argon2id parameters from configuration, so cost is tunable without a code change.
+ * The argon2id primitive, behind an interface, because the two runtimes cannot share one.
  *
- * `raw: false` is stated rather than left to the default, because the library's two `hash` overloads
- * differ only by that flag — `raw: true` returns a `Buffer` — and being explicit is what makes the
- * returned PHC string a type-level fact rather than an assumption.
+ * Node uses the native `argon2` addon — a compiled `.node` binary, measured at 23 ms hash / 21 ms
+ * verify at the configured parameters. workerd cannot load a native addon at all, so a Worker
+ * supplies a WebAssembly implementation instead.
+ *
+ * Both produce and consume the same PHC string (`$argon2id$v=19$m=…,t=…,p=…$salt$hash`), which is
+ * what makes the seam safe: a password hashed on Node verifies on Workers and the reverse, so the
+ * same user table serves both deployments and a migration between them needs no re-hashing.
+ *
+ * The parameters stay in configuration on both sides. If cost has to rise, **raise the time cost,
+ * never lower the memory cost** — memory hardness is what defeats GPU cracking, and that reasoning
+ * does not change with the runtime.
  */
-const options = (config: Config): argon2.HashOptions & { raw: false } => ({
-  type: argon2.argon2id,
-  memoryCost: config.ARGON2_MEMORY_KIB,
+export interface Argon2Backend {
+  hash(secret: string, params: Argon2Params): Promise<string>;
+  verify(hash: string, secret: string): Promise<boolean>;
+}
+
+export interface Argon2Params {
+  readonly memoryKib: number;
+  readonly timeCost: number;
+  readonly parallelism: 1;
+}
+
+let backend: Argon2Backend | undefined;
+
+/**
+ * Install the runtime's argon2id implementation. Called once from the entrypoint, before any
+ * request is served.
+ *
+ * There is deliberately no default. A silent fallback to a weaker hash is the kind of mistake that
+ * is invisible until a database leaks, so an entrypoint that forgets this fails loudly on the first
+ * login instead.
+ */
+export function setArgon2Backend(next: Argon2Backend): void {
+  backend = next;
+}
+
+function required(): Argon2Backend {
+  if (!backend) {
+    throw new Error(
+      'No argon2 backend is installed. Call setArgon2Backend() from the entrypoint — ' +
+        'src/argon2.node.ts on Node, src/argon2.wasm.ts on Cloudflare Workers.',
+    );
+  }
+  return backend;
+}
+
+const paramsOf = (config: Config): Argon2Params => ({
+  memoryKib: config.ARGON2_MEMORY_KIB,
   timeCost: config.ARGON2_TIME_COST,
   parallelism: 1,
-  raw: false,
 });
 
 /**
  * Hash a password or a security answer.
  *
- * The salt is generated per hash by the library and encoded into the returned PHC string, so there is
- * no salt column and no chance of reusing one.
+ * The salt is generated per hash by the implementation and encoded into the returned PHC string, so
+ * there is no salt column and no chance of reusing one.
  */
 export const hashSecret = async (config: Config, secret: string): Promise<string> =>
-  argon2.hash(secret, options(config));
+  required().hash(secret, paramsOf(config));
 
 /**
  * Verify a password or a security answer against a stored hash.
@@ -52,7 +91,7 @@ export const hashSecret = async (config: Config, secret: string): Promise<string
  */
 export async function verifySecret(hash: string, secret: string): Promise<boolean> {
   try {
-    return await argon2.verify(hash, secret);
+    return await required().verify(hash, secret);
   } catch {
     return false;
   }

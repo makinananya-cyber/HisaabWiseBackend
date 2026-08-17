@@ -1,4 +1,4 @@
-import type { Logger } from 'pino';
+import type { AppLogger } from '../logging';
 
 import { computeBudget } from '../domain/budget';
 import { convert } from '../domain/money';
@@ -103,7 +103,7 @@ export async function rolloverUser(
   user: users.User,
   now: Date,
   rates: IdentifiedRateSet | undefined,
-  logger: Logger,
+  logger: AppLogger,
 ): Promise<UserRolloverOutcome> {
   const archivedKeys = await archives.archivedMonthKeys(user._id);
   const due = monthDueFor(user, now, archivedKeys);
@@ -197,7 +197,7 @@ export async function rolloverUser(
  * A failure on one user is logged and the pass continues. That is the fan-out's whole point — one user's
  * bad document must not stop the other thousand from filing.
  */
-export async function runMonthRollover(logger: Logger, now: Date = new Date()): Promise<RolloverOutcome> {
+export async function runMonthRollover(logger: AppLogger, now: Date = new Date()): Promise<RolloverOutcome> {
   const rates = await latestRateSet();
   const candidates = await users.activeUserIds();
 

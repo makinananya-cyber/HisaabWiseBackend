@@ -34,6 +34,10 @@ export default tseslint.config(
       // The entrypoint opens and closes the pool. It owns the connection lifecycle and touches no
       // collection.
       'src/server.ts',
+      // The Cloudflare Workers entrypoint, for the same reason as `src/server.ts`. It connects
+      // lazily rather than at boot because a Worker has no boot, but it owns the same lifecycle and
+      // likewise touches no collection.
+      'src/worker.ts',
       'src/db.ts',
     ],
     rules: {

@@ -4,7 +4,7 @@ import { Hono, type Context } from 'hono';
 import { z } from 'zod';
 
 import { getContent, resolveLanguage } from '../content';
-import { renderCurriculumPdf } from '../content/curriculumPdf';
+import { renderPdf } from '../content/pdfRenderer';
 import {
   correctCount,
   currentStreak,
@@ -266,6 +266,6 @@ learnRoutes.get('/v1/content/curriculum/pdf', requireSession(), async (c) => {
 
   if (c.req.header('if-none-match')?.includes(etag) === true) return c.body(null, 304, headers);
 
-  const pdf = await renderCurriculumPdf(language, currency);
+  const pdf = await renderPdf(language, currency);
   return c.body(new Uint8Array(pdf), 200, { ...headers, 'Content-Length': String(pdf.byteLength) });
 });

@@ -75,6 +75,27 @@ export class ConfigurationError extends Error {
 }
 
 /**
+ * Where configuration comes from, stated as a plain record rather than as `NodeJS.ProcessEnv`.
+ *
+ * On Node it is `process.env`. On Cloudflare Workers there is no `process.env` to read: the
+ * platform hands the Worker its bindings as the second argument to `fetch`, per request. Both are
+ * string-keyed records, so widening the type is the whole of the change needed to serve both.
+ */
+export type EnvSource = Record<string, string | undefined>;
+
+/**
+ * `process` is absent under workerd unless `nodejs_compat` is on, and empty even then, so this
+ * reaches for it defensively rather than assuming it. A Worker always passes its bindings
+ * explicitly and never falls through to this.
+ */
+function defaultEnv(): EnvSource {
+  // `globalThis.process` is typed as always present because `@types/node` is in scope, but under
+  // workerd it genuinely may not be — hence the runtime check the types say is unnecessary.
+  const runtime = globalThis as { process?: { env?: EnvSource } };
+  return runtime.process?.env ?? {};
+}
+
+/**
  * Validate an environment into a `Config`.
  *
  * Takes the environment as an argument rather than reading `process.env` directly so tests can
@@ -83,7 +104,7 @@ export class ConfigurationError extends Error {
  * @throws {ConfigurationError} listing every problem at once — one boot, one complete answer,
  * rather than a developer fixing variables one restart at a time.
  */
-export function loadConfig(env: NodeJS.ProcessEnv = process.env): Config {
+export function loadConfig(env: EnvSource = defaultEnv()): Config {
   const parsed = configSchema.safeParse(env);
   if (parsed.success) {
     assertTlsVerificationIntact(parsed.data, env);
@@ -111,7 +132,7 @@ export function loadConfig(env: NodeJS.ProcessEnv = process.env): Config {
  * It is refused outright in production, where nobody has a good reason and the blast radius is
  * every user. A local workaround must not be able to become a deployed one.
  */
-function assertTlsVerificationIntact(config: Config, env: NodeJS.ProcessEnv): void {
+function assertTlsVerificationIntact(config: Config, env: EnvSource): void {
   if (env.NODE_TLS_REJECT_UNAUTHORIZED !== '0') return;
 
   if (config.NODE_ENV === 'production') {

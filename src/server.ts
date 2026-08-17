@@ -1,7 +1,11 @@
 import { serve } from '@hono/node-server';
 
+import { nodeArgon2 } from './auth/argon2.node';
+import { setArgon2Backend } from './auth/hashing';
 import { loadConfig } from './config';
 import { loadContent } from './content';
+import { renderCurriculumPdf } from './content/curriculumPdf';
+import { setPdfRenderer } from './content/pdfRenderer';
 import { closeDatabase, connectDatabase } from './db';
 import { createApp } from './index';
 import { createLogger } from './logger';
@@ -21,6 +25,12 @@ import { startScheduler } from './scheduler';
 async function main(): Promise<void> {
   const config = loadConfig();
   const logger = createLogger(config);
+
+  // The runtime's implementations of the two things that cannot be shared with the Worker build:
+  // the native argon2 addon, and pdfkit. Installed before anything can serve a request, so a
+  // missing backend is a boot failure rather than a 500 on someone's first login.
+  setArgon2Backend(nodeArgon2);
+  setPdfRenderer(renderCurriculumPdf);
 
   const content = loadContent();
   logger.info({ languages: [...content.keys()] }, 'content loaded');

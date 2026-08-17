@@ -3,7 +3,7 @@ import { randomUUID } from 'node:crypto';
 import { Hono } from 'hono';
 import { cors } from 'hono/cors';
 import { secureHeaders } from 'hono/secure-headers';
-import type { Logger } from 'pino';
+import type { AppLogger } from './logging';
 
 import type { Config } from './config';
 import { ApiError, errorBody } from './errors';
@@ -24,7 +24,7 @@ import type { AppEnv } from './types/hono';
  * A factory rather than a module-scope singleton so tests construct an app around an explicit
  * configuration. The same function serves production — `src/server.ts` calls it once.
  */
-export function createApp(config: Config, logger: Logger): Hono<AppEnv> {
+export function createApp(config: Config, logger: AppLogger): Hono<AppEnv> {
   const app = new Hono<AppEnv>();
 
   // Configuration and a request-scoped logger, in place of Workers' `c.env`.

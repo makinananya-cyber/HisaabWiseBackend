@@ -1,4 +1,4 @@
-import type { Logger } from 'pino';
+import type { AppLogger } from '../logging';
 
 import { collection, COLLECTIONS } from './collections';
 
@@ -18,7 +18,7 @@ import { collection, COLLECTIONS } from './collections';
  * Called from the entrypoint after the pool connects and before the port is bound: an index that failed
  * to build is a deploy that should not serve, because the guarantees above would silently not hold.
  */
-export async function ensureIndexes(logger: Logger): Promise<void> {
+export async function ensureIndexes(logger: AppLogger): Promise<void> {
   const built: string[] = [];
 
   // ── Slice 2 — identity ──────────────────────────────────────────────────────────────────────

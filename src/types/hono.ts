@@ -1,4 +1,4 @@
-import type { Logger } from 'pino';
+import type { AppLogger } from '../logging';
 
 import type { Config } from '../config';
 import type { User } from '../repositories/users';
@@ -18,7 +18,7 @@ import type { User } from '../repositories/users';
 export interface AppEnv {
   Variables: {
     config: Config;
-    log: Logger;
+    log: AppLogger;
     user: User;
     /**
      * The refresh-token family this session descends from, read off the access token's `fam` claim.

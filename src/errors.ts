@@ -27,6 +27,13 @@ export const ERROR_CODES = {
   /** A body that failed zod validation. The offending fields go to the log, not the response. */
   VALIDATION_FAILED: 'The request body was not valid',
   RATE_LIMITED: 'Too many requests',
+  /**
+   * A route that exists and was called correctly, but which this deployment cannot serve.
+   *
+   * It exists for the curriculum PDF on Cloudflare Workers, where pdfkit cannot run. Deliberately
+   * distinct from `INTERNAL`: nothing has gone wrong, and a client should not retry.
+   */
+  NOT_IMPLEMENTED: 'Not available from this deployment',
 
   // ── Session ─────────────────────────────────────────────────────────────────────────────────
   /**
@@ -79,6 +86,7 @@ const STATUS: Record<ErrorCode, ContentfulStatusCode> = {
   INTERNAL: 500,
   VALIDATION_FAILED: 422,
   RATE_LIMITED: 429,
+  NOT_IMPLEMENTED: 501,
   UNAUTHENTICATED: 401,
   FORBIDDEN: 403,
   EMAIL_TAKEN: 409,
