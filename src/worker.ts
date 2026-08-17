@@ -4,7 +4,7 @@
 import type { ExecutionContext, ScheduledController } from '@cloudflare/workers-types';
 import type { Hono } from 'hono';
 
-import { wasmArgon2 } from './auth/argon2.wasm';
+import { wasmArgon2 } from './auth/argon2Wasm';
 import { setArgon2Backend } from './auth/hashing';
 import { loadConfig, type Config, type EnvSource } from './config';
 import { loadContent, setContentSource } from './content';

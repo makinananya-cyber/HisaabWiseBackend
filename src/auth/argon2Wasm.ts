@@ -6,6 +6,13 @@ import type { Argon2Backend } from './hashing';
  * The Cloudflare Workers argon2id backend: `hash-wasm`, a WebAssembly build that needs no native
  * addon and no Node bindings.
  *
+ * **Do not rename this file to anything containing `.wasm.`** — it was `argon2.wasm.ts` first, and
+ * wrangler's default module rules map `**~/*.wasm` to `CompiledWasm`, so the *TypeScript source*
+ * was uploaded as a WebAssembly module. The deploy failed inside Cloudflare's API with
+ * `expected magic word 00 61 73 6d, found 69 6d 70 6f` — `69 6d 70 6f` being the ASCII for the
+ * `impo` of this file's own `import` statement. It bundles locally either way; only the upload
+ * rejects it, so `wrangler deploy --dry-run` does not catch this.
+ *
  * **This is the part of the Workers port that carries real risk**, and it is worth being precise
  * about why rather than discovering it in production.
  *

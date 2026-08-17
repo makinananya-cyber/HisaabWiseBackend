@@ -15,10 +15,12 @@
 name = "hisaabwisebackend"
 main = "src/worker.ts"
 
-# ≥ 2025-03-20 is the floor at which the native `mongodb` driver connects to Atlas from workerd —
-# it needs the `node:net` and `node:tls` implementations that landed by that date. ADR-0016 records
-# this being verified against the real cluster under `wrangler dev`.
-compatibility_date = "2025-03-20"
+# 2025-03-20 is the *floor*: it is where the `node:net` and `node:tls` implementations the native
+# `mongodb` driver needs became available, which ADR-0016 records verifying against the real cluster
+# under `wrangler dev`. The date here is newer than that floor deliberately — it matches what the
+# Worker was provisioned with, and wrangler.toml overrides the dashboard on every deploy, so pinning
+# the floor here would silently *downgrade* the runtime the service was created against.
+compatibility_date = "2026-08-14"
 compatibility_flags = ["nodejs_compat_v2"]
 
 [observability]

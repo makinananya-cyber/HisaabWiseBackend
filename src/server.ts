@@ -1,6 +1,6 @@
 import { serve } from '@hono/node-server';
 
-import { nodeArgon2 } from './auth/argon2.node';
+import { nodeArgon2 } from './auth/argon2Native';
 import { setArgon2Backend } from './auth/hashing';
 import { loadConfig } from './config';
 import { loadContent } from './content';

@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect, it } from 'vitest';
 
-import { nodeArgon2 } from '../src/auth/argon2.node';
-import { wasmArgon2 } from '../src/auth/argon2.wasm';
+import { nodeArgon2 } from '../src/auth/argon2Native';
+import { wasmArgon2 } from '../src/auth/argon2Wasm';
 import { hashSecret, setArgon2Backend, verifySecret } from '../src/auth/hashing';
 import { loadConfig } from '../src/config';
 
