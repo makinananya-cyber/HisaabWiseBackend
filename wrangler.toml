@@ -31,6 +31,19 @@ compatibility_flags = ["nodejs_compat"]
 [observability]
 enabled = true
 
+# The connection broker (invariant 9). Every request is forwarded to one singleton instance of this
+# class, which owns the MongoDB connection for its lifetime — the only place on Workers a socket can
+# outlive the request that opened it. See src/worker.ts for why a request isolate cannot.
+[[durable_objects.bindings]]
+name = "APP_BROKER"
+class_name = "AppBroker"
+
+# SQLite-backed storage is the modern default for a new Durable Object class even though this one
+# stores nothing durably — it brokers a connection, it does not persist state.
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["AppBroker"]
+
 # Mirrors the intervals src/scheduler.ts uses on Node. Every 15 minutes rather than hourly because
 # Asia/Kolkata is +05:30 and Asia/Kathmandu +05:45 (Product Spec §4.5); daily for the purge, since a
 # thirty-day grace period does not need finer granularity than a day.
@@ -40,10 +53,12 @@ crons = ["*/15 * * * *", "0 3 * * *"]
 [vars]
 NODE_ENV = "production"
 LOG_LEVEL = "info"
-# One connection per isolate, which is invariant 9's original mechanism. Isolates are ephemeral and
-# numerous, so a larger pool multiplies against Atlas's connection ceiling rather than being reused
-# the way a single long-lived Node process reuses one.
-MONGODB_MAX_POOL_SIZE = "1"
+# A small pool, held by the single `AppBroker` actor. `maxPoolSize: 1` was invariant 9's mechanism
+# when every ephemeral isolate opened its own connection; now that one long-lived Durable Object owns
+# the connection (see src/worker.ts), the pool is reused rather than multiplied, so a handful of
+# connections lets the actor serve concurrent requests without threatening Atlas's ceiling — there is
+# only ever one pool.
+MONGODB_MAX_POOL_SIZE = "5"
 ACCESS_TOKEN_TTL = "15m"
 REFRESH_TOKEN_TTL = "60d"
 FX_BASE_CURRENCY = "USD"
