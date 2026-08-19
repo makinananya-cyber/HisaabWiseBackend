@@ -62,7 +62,7 @@ function required(): Argon2Backend {
   if (!backend) {
     throw new Error(
       'No argon2 backend is installed. Call setArgon2Backend() from the entrypoint — ' +
-        'src/auth/argon2Native.ts on Node, src/auth/argon2Wasm.ts on Cloudflare Workers.',
+        'src/auth/argon2Native.ts on Node, src/auth/argon2Workers.ts on Cloudflare Workers.',
     );
   }
   return backend;

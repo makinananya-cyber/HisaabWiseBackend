@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect, it } from 'vitest';
 
 import { nodeArgon2 } from '../src/auth/argon2Native';
-import { wasmArgon2 } from '../src/auth/argon2Wasm';
+import { workersArgon2 } from '../src/auth/argon2Workers';
 import { hashSecret, setArgon2Backend, verifySecret } from '../src/auth/hashing';
 import { loadConfig } from '../src/config';
 
@@ -29,8 +29,8 @@ describe('the argon2 backend seam', () => {
     await expect(verifySecret(hash, 'not the password')).resolves.toBe(false);
   });
 
-  it('round-trips a secret on the WebAssembly backend', async () => {
-    setArgon2Backend(wasmArgon2);
+  it('round-trips a secret on the Workers backend', async () => {
+    setArgon2Backend(workersArgon2);
     const hash = await hashSecret(config, 'correct horse battery staple');
 
     expect(hash.startsWith('$argon2id$')).toBe(true);
@@ -43,13 +43,13 @@ describe('the argon2 backend seam', () => {
    * migration in either direction that nobody has to notice. If this ever fails, the two
    * deployments cannot share a database and that must not be discovered in production.
    */
-  it('verifies a Node-written hash on the WebAssembly backend, and the reverse', async () => {
+  it('verifies a Node-written hash on the Workers backend, and the reverse', async () => {
     const secret = 'a shared password';
 
     setArgon2Backend(nodeArgon2);
     const fromNode = await hashSecret(config, secret);
 
-    setArgon2Backend(wasmArgon2);
+    setArgon2Backend(workersArgon2);
     await expect(verifySecret(fromNode, secret)).resolves.toBe(true);
     await expect(verifySecret(fromNode, 'wrong')).resolves.toBe(false);
     const fromWasm = await hashSecret(config, secret);
@@ -66,7 +66,7 @@ describe('the argon2 backend seam', () => {
       ARGON2_TIME_COST: '3',
     });
 
-    for (const backend of [nodeArgon2, wasmArgon2]) {
+    for (const backend of [nodeArgon2, workersArgon2]) {
       setArgon2Backend(backend);
       const hash = await hashSecret(costly, 'secret');
       expect(hash).toContain('m=32768');
@@ -80,7 +80,7 @@ describe('the argon2 backend seam', () => {
    * guess was interesting. Asserted on both backends because the two libraries throw differently.
    */
   it('reads a malformed stored hash as a non-match rather than throwing', async () => {
-    for (const backend of [nodeArgon2, wasmArgon2]) {
+    for (const backend of [nodeArgon2, workersArgon2]) {
       setArgon2Backend(backend);
       await expect(verifySecret('not a phc string', 'secret')).resolves.toBe(false);
       await expect(verifySecret('', 'secret')).resolves.toBe(false);
