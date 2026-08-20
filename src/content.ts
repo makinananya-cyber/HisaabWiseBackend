@@ -177,6 +177,85 @@ const securityQuestionsSchema = z.object({
   questions: z.array(z.object({ id: nonEmpty, text: nonEmpty })),
 });
 
+/**
+ * The screen-builder UI strings, per language.
+ *
+ * **Plumbing, not counts.** Unlike tips/curriculum/etc., these have no fixed cardinality to assert — they
+ * are the fixed set of labels the screen builders (`home`, `expenses`, `account`) emit, sourced from a
+ * per-language file so a translation pass can drop real copy in later. Strict so a stray key or a missing
+ * one fails to boot rather than rendering a blank label. Templates carry `{token}` placeholders
+ * (`{xp}`, `{lesson}`, `{n}`) that the builder interpolates.
+ */
+const uiSchema = z
+  .object({
+    home: z
+      .object({
+        greeting: z
+          .object({ morning: nonEmpty, afternoon: nonEmpty, evening: nonEmpty })
+          .strict(),
+        ofPay: nonEmpty,
+        ofGoal: nonEmpty,
+        categories: z
+          .object({
+            rent: nonEmpty,
+            groceries: nonEmpty,
+            transport: nonEmpty,
+            utilities: nonEmpty,
+            entertainment: nonEmpty,
+            other: nonEmpty,
+          })
+          .strict(),
+        learning: z
+          .object({ noXp: nonEmpty, xpComplete: nonEmpty, noXpStart: nonEmpty, xpNext: nonEmpty })
+          .strict(),
+      })
+      .strict(),
+    expenses: z
+      .object({
+        categories: z
+          .object({
+            groceries: z.object({ name: nonEmpty, hint: nonEmpty }).strict(),
+            transport: z.object({ name: nonEmpty, hint: nonEmpty }).strict(),
+            entertainment: z.object({ name: nonEmpty, hint: nonEmpty }).strict(),
+            other: z.object({ name: nonEmpty, hint: nonEmpty }).strict(),
+            income: z.object({ name: nonEmpty, hint: nonEmpty }).strict(),
+            utilities: z.object({ name: nonEmpty, hint: nonEmpty }).strict(),
+            rent: z.object({ name: nonEmpty, hint: nonEmpty }).strict(),
+          })
+          .strict(),
+        relativeDay: z
+          .object({ today: nonEmpty, yesterday: nonEmpty, daysAgo: nonEmpty })
+          .strict(),
+        entryCount: z.object({ one: nonEmpty, other: nonEmpty }).strict(),
+      })
+      .strict(),
+    account: z
+      .object({
+        rows: z
+          .object({
+            personalInformation: z.object({ name: nonEmpty, sub: nonEmpty }).strict(),
+            language: z.object({ name: nonEmpty, sub: nonEmpty }).strict(),
+            currency: z.object({ name: nonEmpty, sub: nonEmpty }).strict(),
+            password: z.object({ name: nonEmpty }).strict(),
+          })
+          .strict(),
+        passwordChanged: z
+          .object({
+            set: nonEmpty,
+            justNow: nonEmpty,
+            yesterday: nonEmpty,
+            daysAgo: nonEmpty,
+            monthsAgoOne: nonEmpty,
+            monthsAgoOther: nonEmpty,
+            yearsAgoOne: nonEmpty,
+            yearsAgoOther: nonEmpty,
+          })
+          .strict(),
+      })
+      .strict(),
+  })
+  .strict();
+
 // ── Types, inferred from the schemas (Rule 1) ─────────────────────────────────────────────────
 
 export type Tips = z.infer<typeof tipsSchema>;
@@ -191,14 +270,21 @@ export type Currencies = z.infer<typeof currenciesSchema>;
 export type Currency = Currencies['currencies'][number];
 export type Languages = z.infer<typeof languagesSchema>;
 export type SecurityQuestions = z.infer<typeof securityQuestionsSchema>;
+export type Ui = z.infer<typeof uiSchema>;
 
 // ── Language ──────────────────────────────────────────────────────────────────────────────────
 
 /**
- * The languages content exists in. `ar` is planned and not yet translated (BACKEND_PLAN §7), so
- * `SHIPPED_LANGUAGES` is what actually has files, and it is the list `resolveLanguage` narrows to.
+ * The languages content exists in. Each entry MUST have the four `content/<name>.<lang>.json` files on
+ * disk (`tips`, `articles`, `curriculum`, `security-questions`) with matching ids and counts — `loadLanguage`
+ * asserts that at boot — and it is the list `resolveLanguage` narrows to.
+ *
+ * `ar` and `hi` are wired here so the whole translation pipeline is live end to end; their content files
+ * currently carry English placeholder copy awaiting a translation pass, so a reader who picks Arabic or
+ * Hindi gets the localised *plumbing* (the right file served, dates formatted in-locale) with English words
+ * until the copy lands. That is a deliberate, temporary state — the same one the iOS `AppLanguage` doc notes.
  */
-export const SHIPPED_LANGUAGES = ['en'] as const;
+export const SHIPPED_LANGUAGES = ['en', 'ar', 'hi'] as const;
 export type Language = (typeof SHIPPED_LANGUAGES)[number];
 
 /**
@@ -463,6 +549,8 @@ export interface LoadedContent {
   readonly currencies: ContentResource<Currencies>;
   readonly languages: ContentResource<Languages>;
   readonly securityQuestions: ContentResource<SecurityQuestions>;
+  /** The screen-builder UI strings — no fixed counts, so not in `assertCounts`. */
+  readonly ui: ContentResource<Ui>;
   /** Lessons by id, in curriculum order — the lookup Learn's grading and unlocking both need. */
   readonly lessonById: ReadonlyMap<string, Lesson>;
   /** Currency exponents and symbols by code — the money domain's only source for them. */
@@ -477,6 +565,7 @@ function loadLanguage(language: Language): LoadedContent {
   const articles = read(`articles.${language}.json`, articlesSchema);
   const curriculum = read(`curriculum.${language}.json`, curriculumSchema);
   const securityQuestions = read(`security-questions.${language}.json`, securityQuestionsSchema);
+  const ui = read(`ui.${language}.json`, uiSchema);
   const picklists = read('picklists.json', picklistsSchema);
   const countries = read('reference/countries.json', countriesSchema);
   const currencies = read('reference/currencies.json', currenciesSchema);
@@ -494,6 +583,7 @@ function loadLanguage(language: Language): LoadedContent {
     currencies: resourceFrom(currencies),
     languages: resourceFrom(languages),
     securityQuestions: resourceFrom(securityQuestions),
+    ui: resourceFrom(ui),
     lessonById: new Map(
       curriculum.units.flatMap((unit) => unit.lessons.map((lesson) => [lesson.id, lesson] as const)),
     ),

@@ -1,0 +1,255 @@
+{
+  "articles": [
+    {
+      "id": "scams",
+      "icon": "shield",
+      "accent": 3,
+      "short": "Scam awareness",
+      "title": "Spotting scams in the UAE",
+      "lede": "The tricks change often. The warning signs do not. Learn the signs once and you are covered for most of them.",
+      "sections": [
+        {
+          "heading": "The five signs of a scam",
+          "paragraphs": [
+            "Fake messages used to be easy to spot because of bad spelling. That is no longer true. Look at the **shape** of the message instead of the writing."
+          ],
+          "entries": [
+            {
+              "term": "It is urgent",
+              "detail": "Your account closes today. Your visa has a problem. Panic stops you from checking, and that is the whole point."
+            },
+            {
+              "term": "There is a link you did not expect",
+              "detail": "Never sign in through a link in a message. Open your bank app yourself, or type the address in."
+            },
+            {
+              "term": "They ask for a code, PIN or password",
+              "detail": "No bank, telecom company or government office will ever ask for these. Not once, no matter how much they seem to know about you."
+            },
+            {
+              "term": "They ask you to keep it secret",
+              "detail": "Real organisations do not ask you to hide anything from your family."
+            },
+            {
+              "term": "The payment method is unusual",
+              "detail": "Gift cards, crypto, or a transfer to a personal account. Almost always fraud."
+            }
+          ]
+        },
+        {
+          "heading": "The tricks used most here",
+          "entries": [
+            {
+              "term": "The fake bank call",
+              "detail": "Someone says they are from your bank's fraud team. They ask for the code just sent to your phone, to \"stop\" a payment. That code is what *approves* the payment."
+            },
+            {
+              "term": "The visa or Emirates ID problem",
+              "detail": "A caller says there is an issue with your documents and asks you to pay a fine immediately. Government fines are never collected this way."
+            },
+            {
+              "term": "The delivery fee",
+              "detail": "A text says your parcel is held and asks for a small customs fee. The tiny amount is bait — they want your card details, not the fee."
+            },
+            {
+              "term": "The prize you did not enter for",
+              "detail": "A call saying you have won a raffle from a telecom company or mall, then asking for your bank details to send the money."
+            },
+            {
+              "term": "The investment with guaranteed returns",
+              "detail": "Slick dashboards showing your balance rising. When you try to withdraw, there is a fee to pay first. Guaranteed returns do not exist."
+            },
+            {
+              "term": "The job that charges you",
+              "detail": "Easy work from home, but first you must pay a registration or visa fee. Real employers do not charge you to hire you."
+            }
+          ]
+        },
+        {
+          "heading": "If it happens to you",
+          "paragraphs": [
+            "Speed matters more than anything else. Money can sometimes be stopped within hours, but rarely after a few days."
+          ],
+          "steps": [
+            "**Call your bank now**, using the number printed on your card — not one from the message. Ask them to freeze the account and try to recall the payment.",
+            "**Change your passwords**, starting with your email. Your email can reset everything else, so it is the most important one.",
+            "**Report it officially.** Dubai Police run the eCrime platform and the 901 line. Abu Dhabi Police run the Aman service on 800 2626 or by text to 2828. The Ministry of Interior has an eCrimes section in the MoI UAE app, and the Public Prosecution has the My Safe Society app. In an emergency, call 999.",
+            "**Check your credit report** with the Al Etihad Credit Bureau for any account opened in your name."
+          ],
+          "callout": "Being tricked does not mean you were careless. These are professional, well-funded teams who rehearse their scripts. Reporting quickly is what helps — embarrassment only buys them time."
+        },
+        {
+          "heading": "One habit that stops most of it",
+          "paragraphs": [
+            "Whenever a message or call about money makes you feel rushed, **hang up and call back** on a number you looked up yourself. Fraudsters depend on you staying inside the conversation they started. Leaving it removes their power completely."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "UAE Government — Report cybercrimes online",
+          "url": "https://u.ae/en/information-and-services/justice-safety-and-the-law/cyber-safety-and-digital-security/report-cybercrimes-online"
+        },
+        {
+          "title": "How to report phone scams in the UAE",
+          "url": "https://www.bayut.com/mybayut/report-phone-scams-uae/"
+        }
+      ]
+    },
+    {
+      "id": "remit",
+      "icon": "globe",
+      "accent": 2,
+      "short": "Remittances in the UAE",
+      "title": "Sending money home, without losing part of it",
+      "lede": "The UAE is one of the biggest senders of money in the world. Small differences in rate add up fast when you send every month.",
+      "sections": [
+        {
+          "heading": "The fee is not the real cost",
+          "paragraphs": [
+            "Most people compare transfer fees. That is the small number.",
+            "The bigger cost is usually the **exchange rate margin** — the gap between the real market rate and the rate you are offered. It is built into the rate, so you never see it as a charge.",
+            "Banks commonly apply a margin of around **1% to 3%**. On a large transfer that is far more than any fee."
+          ]
+        },
+        {
+          "heading": "The one number to check",
+          "paragraphs": [
+            "The **mid-market rate** is the real global rate for a currency — the one a search engine or a currency site shows you. No one gives you exactly that rate, but the distance from it tells you the true cost.",
+            "Compare that rate with what a provider offers, and you can see the hidden cost immediately."
+          ],
+          "callout": "Many providers advertise **zero fees** and then take their money back through a worse rate. Always compare the amount your family actually receives, not the fee you are charged."
+        },
+        {
+          "heading": "How to compare properly",
+          "steps": [
+            "Look up today's **mid-market rate** for your currency pair.",
+            "Get a quote from two or three providers for the **same amount**, at roughly the same time of day.",
+            "Ignore the fee and the rate separately. Ask one question: **how much arrives?**",
+            "Check how long it takes. Instant transfers sometimes cost more, and are not always needed.",
+            "Repeat this once every few months. Rates and offers change, and loyalty is rarely rewarded."
+          ]
+        },
+        {
+          "heading": "Staying safe and legal",
+          "entries": [
+            {
+              "term": "Use a licensed provider",
+              "detail": "The Central Bank of the UAE licenses and supervises banks, exchange houses and digital transfer apps. Only use providers that appear on that list."
+            },
+            {
+              "term": "Be careful of \"better than everyone\" rates",
+              "detail": "An informal channel offering a far better rate than the whole market is a warning sign, not a bargain. You have no protection if the money disappears."
+            },
+            {
+              "term": "Keep your receipts",
+              "detail": "Save the transfer reference. It is what lets a provider trace money that has not arrived."
+            },
+            {
+              "term": "Watch the timing",
+              "detail": "Rates move during the day and around weekends and holidays. If you are not in a hurry, comparing on a normal working day often gets you more."
+            }
+          ]
+        },
+        {
+          "heading": "A habit worth building",
+          "paragraphs": [
+            "If you send money home every month, treat it as a **fixed cost in your budget**, like rent. Decide the amount at the start of the month rather than whatever is left at the end. It makes your own budget honest, and it makes the amount you send predictable for the people receiving it."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Best ways to send money abroad from the UAE",
+          "url": "https://www.stashaway.ae/r/best-way-send-money-abroad-in-uae"
+        },
+        {
+          "title": "Central Bank of the UAE — Rulebook",
+          "url": "https://rulebook.centralbank.ae/"
+        }
+      ]
+    },
+    {
+      "id": "debt",
+      "icon": "steps",
+      "accent": 4,
+      "short": "Debt management guidance",
+      "title": "Getting on top of debt in the UAE",
+      "lede": "Debt is not a character flaw. It is a maths problem with a plan attached. Here is the plan.",
+      "sections": [
+        {
+          "heading": "Know your debt burden ratio",
+          "paragraphs": [
+            "UAE banks work to a rule called the **debt burden ratio**, or DBR. It compares your total monthly debt payments to your monthly income.",
+            "The formula is simple: **DBR = total monthly debt payments ÷ monthly income × 100**.",
+            "The Central Bank sets a cap of **50%**. Some banks use a stricter limit of their own. Everything counts: your mortgage, personal loan, car loan and the minimum payments on your credit cards."
+          ],
+          "callout": "If you earn {c}10,000 a month, your total debt payments should not go above {c}5,000. If you are close to that line, a new loan will be difficult to get — and taking one would be a bad idea even if you could."
+        },
+        {
+          "heading": "Attack one debt at a time",
+          "paragraphs": [
+            "Whichever approach you pick, the setup is the same. Pay the **minimum on every debt**, every month, without fail. Then put every spare dirham on **one** debt only.",
+            "Splitting extra money across everything feels fair and is measurably worse, because nothing ever gets finished."
+          ],
+          "entries": [
+            {
+              "term": "Highest rate first (avalanche)",
+              "detail": "Order your debts by interest rate and attack the most expensive one. This always costs the least in total."
+            },
+            {
+              "term": "Smallest balance first (snowball)",
+              "detail": "Order by size and clear the smallest one first. It costs slightly more, but the early win keeps people going — and a plan you finish beats a perfect plan you abandon."
+            }
+          ]
+        },
+        {
+          "heading": "Know what your debt actually costs",
+          "paragraphs": [
+            "UAE credit cards commonly charge around **3% a month**, which is roughly 36% a year. Paying only the minimum on a card can keep you in debt for years while most of your payment goes to interest.",
+            "On personal and car loans, watch out for the **flat rate**. A flat rate is charged on the full original amount for the entire term, so a \"4% flat\" loan costs far more than 4%. Always ask for the **reducing balance rate** or the APR, and compare loans on that."
+          ]
+        },
+        {
+          "heading": "Talk to your bank before you miss a payment",
+          "paragraphs": [
+            "This is the step most people skip, and it is the one that helps most. Banks would rather restructure a loan than chase a default."
+          ],
+          "steps": [
+            "Work out your real numbers first: income, essential costs, and every debt with its rate and minimum payment.",
+            "Contact your bank **before** you miss a payment, not after. You have far more options while your record is clean.",
+            "Ask specifically about **restructuring** — a longer term with lower payments, or consolidating several debts into one.",
+            "Get any agreement **in writing** before you accept it, and check the total cost, not just the monthly payment.",
+            "If you consolidate, **freeze or close the cleared cards the same day**. The most common way consolidation fails is the cards filling up again."
+          ]
+        },
+        {
+          "heading": "Watch your credit file",
+          "paragraphs": [
+            "The **Al Etihad Credit Bureau** keeps your credit report and score in the UAE. The score runs from **300 to 900**, and higher is better.",
+            "You can request your own report, and doing so **does not lower your score**. Errors are more common than people expect — an account that is not yours, or a loan you have already cleared. You can ask for them to be corrected, and doing so can move your score."
+          ],
+          "callout": "Two habits carry most of your score: **pay on time**, and **keep your card balances low** compared with your limits. Everything else is small by comparison."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Debt burden ratio in the UAE explained",
+          "url": "https://joinoliva.com/en/learn/glossary/debt-burden-ratio-dbr"
+        },
+        {
+          "title": "Emirates NBD — your debt burden ratio",
+          "url": "https://www.emiratesnbd.com/en/help-and-support/your-debt-burden-ratio"
+        },
+        {
+          "title": "Guide to the AECB credit score",
+          "url": "https://www.stashaway.ae/r/complete-guide-aecb-credit-score"
+        },
+        {
+          "title": "Central Bank of the UAE — mortgage and personal loan rules",
+          "url": "https://rulebook.centralbank.ae/en/entiresection/1793"
+        }
+      ]
+    }
+  ]
+}

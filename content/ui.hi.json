@@ -1,0 +1,63 @@
+{
+  "home": {
+    "greeting": {
+      "morning": "Good morning",
+      "afternoon": "Good afternoon",
+      "evening": "Good evening"
+    },
+    "ofPay": "of pay",
+    "ofGoal": "of goal",
+    "categories": {
+      "rent": "Rent",
+      "groceries": "Groceries",
+      "transport": "Transport",
+      "utilities": "Utilities",
+      "entertainment": "Entertainment",
+      "other": "Other"
+    },
+    "learning": {
+      "noXp": "No XP yet",
+      "xpComplete": "{xp} XP · every lesson complete",
+      "noXpStart": "No XP yet · start with {lesson}",
+      "xpNext": "{xp} XP · next up, {lesson}"
+    }
+  },
+  "expenses": {
+    "categories": {
+      "groceries": { "name": "Groceries", "hint": "Add each shop as you go" },
+      "transport": { "name": "Transport", "hint": "Pick how you travelled" },
+      "entertainment": { "name": "Entertainment", "hint": "Nights out, films, events" },
+      "other": { "name": "Other", "hint": "Everything else" },
+      "income": { "name": "Additional Income", "hint": "Money coming in" },
+      "utilities": { "name": "Utilities", "hint": "Fixed each month" },
+      "rent": { "name": "Rent", "hint": "Fixed each month" }
+    },
+    "relativeDay": {
+      "today": "Today",
+      "yesterday": "Yesterday",
+      "daysAgo": "{n} days ago"
+    },
+    "entryCount": {
+      "one": "entry",
+      "other": "entries"
+    }
+  },
+  "account": {
+    "rows": {
+      "personalInformation": { "name": "Personal Information", "sub": "Username, salary, phone" },
+      "language": { "name": "Language", "sub": "How the app is written" },
+      "currency": { "name": "Currency", "sub": "How your money is shown" },
+      "password": { "name": "Password" }
+    },
+    "passwordChanged": {
+      "set": "Set when you created your account",
+      "justNow": "Changed just now",
+      "yesterday": "Changed yesterday",
+      "daysAgo": "Changed {n} days ago",
+      "monthsAgoOne": "Changed 1 month ago",
+      "monthsAgoOther": "Changed {n} months ago",
+      "yearsAgoOne": "Changed 1 year ago",
+      "yearsAgoOther": "Changed {n} years ago"
+    }
+  }
+}

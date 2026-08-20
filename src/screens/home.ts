@@ -1,4 +1,4 @@
-import { getContent, type Language } from '../content';
+import { getContent, type Language, type Ui } from '../content';
 import {
   computeBudget,
   meterPosition,
@@ -88,30 +88,53 @@ export interface LearnStanding {
 // ── Labels ────────────────────────────────────────────────────────────────────────────────────
 
 /**
- * `"Good morning"` / `"Good afternoon"` / `"Good evening"`, by the reader's local hour.
+ * The date/greeting formatters format in the **reader's language**, with a locale forced to Latin digits.
+ *
+ * `${language}-u-nu-latn` keeps the numbering system Latin even in Arabic (ADR-0011 requires Latin digits
+ * throughout), while letting the month and weekday words come out in the reader's language. The greeting
+ * *words* are not formatting — they are copy, and live in the `ui` content file — so `greetingFor` picks a
+ * key by the hour and the builder resolves it.
+ */
+// English formats in `en-GB`, not bare `en`: the design's date is day-then-month ("Thursday, 20 August"),
+// which is the UAE/British order, and bare `en` resolves to `en-US` ("Thursday, August 20"). Arabic and
+// Hindi already order day-then-month, so only English needs the region pinned. Latin digits throughout
+// (ADR-0011) via `-u-nu-latn`.
+const localeFor = (language: Language): string =>
+  language === 'en' ? 'en-GB-u-nu-latn' : `${language}-u-nu-latn`;
+
+/**
+ * Which greeting applies, by the reader's local hour — `'morning'` / `'afternoon'` / `'evening'`.
  *
  * **In the stored timezone, not the server's** (invariant 6). A Dubai user opening the app at 8am must
- * not be greeted with "Good evening" because the process happens to run in Virginia.
+ * not be greeted with "Good evening" because the process happens to run in Virginia. The hour is read with
+ * a Latin-digit locale so `Number(...)` parses it in every language. The word itself is resolved from the
+ * `ui` content by the caller.
  */
-export function greetingFor(instant: Date, timezone: string): string {
+export function greetingKeyFor(instant: Date, timezone: string, language: Language): keyof Ui['home']['greeting'] {
   const hour = Number(
-    new Intl.DateTimeFormat('en-GB', { timeZone: timezone, hour: '2-digit', hour12: false }).format(instant),
+    new Intl.DateTimeFormat(localeFor(language), {
+      timeZone: timezone,
+      hour: '2-digit',
+      hour12: false,
+    }).format(instant),
   );
-  if (hour < 12) return 'Good morning';
-  if (hour < 18) return 'Good afternoon';
-  return 'Good evening';
+  if (hour < 12) return 'morning';
+  if (hour < 18) return 'afternoon';
+  return 'evening';
 }
 
 /**
  * `"Tuesday, 11 August"` — the client prints it verbatim, so the server owns the calendar.
  *
- * Assembled from two formatters rather than one, because a single `en-GB` format with `weekday`, `day` and
- * `month` yields `"Thursday 13 August"` — **no comma**, which is not what the design carries. The comma is
- * part of the string the client draws, so it has to be put there rather than hoped for from a locale.
+ * Assembled from two formatters rather than one, because a single format with `weekday`, `day` and `month`
+ * yields `"Thursday 13 August"` — **no comma**, which is not what the design carries. The comma is part of
+ * the string the client draws, so it has to be put there rather than hoped for from a locale. Formatted in
+ * the reader's language (Latin digits per ADR-0011).
  */
-export function dateLabelFor(instant: Date, timezone: string): string {
-  const weekday = new Intl.DateTimeFormat('en-GB', { timeZone: timezone, weekday: 'long' }).format(instant);
-  const dayAndMonth = new Intl.DateTimeFormat('en-GB', {
+export function dateLabelFor(instant: Date, timezone: string, language: Language): string {
+  const locale = localeFor(language);
+  const weekday = new Intl.DateTimeFormat(locale, { timeZone: timezone, weekday: 'long' }).format(instant);
+  const dayAndMonth = new Intl.DateTimeFormat(locale, {
     timeZone: timezone,
     day: 'numeric',
     month: 'long',
@@ -119,9 +142,9 @@ export function dateLabelFor(instant: Date, timezone: string): string {
   return `${weekday}, ${dayAndMonth}`;
 }
 
-/** `"August"`. */
-export const monthLabelFor = (instant: Date, timezone: string): string =>
-  new Intl.DateTimeFormat('en-GB', { timeZone: timezone, month: 'long' }).format(instant);
+/** `"August"`, in the reader's language (Latin digits per ADR-0011). */
+export const monthLabelFor = (instant: Date, timezone: string, language: Language): string =>
+  new Intl.DateTimeFormat(localeFor(language), { timeZone: timezone, month: 'long' }).format(instant);
 
 /**
  * Which tip the reader sees today.
@@ -148,12 +171,13 @@ export function tipIndexFor(dayKeyValue: string, userId: string, poolSize: numbe
  * The prototype writes this in the browser; it is here because the client prints it verbatim and because
  * the pluralisation and the "no XP yet" branch are content decisions, not layout ones.
  */
-export function learningSummary(standing: LearnStanding): string {
+export function learningSummary(standing: LearnStanding, labels: Ui['home']['learning']): string {
+  const xp = String(standing.xp);
   if (standing.nextLessonTitle === undefined) {
-    return standing.xp === 0 ? 'No XP yet' : `${String(standing.xp)} XP · every lesson complete`;
+    return standing.xp === 0 ? labels.noXp : labels.xpComplete.replace('{xp}', xp);
   }
-  if (standing.xp === 0) return `No XP yet · start with ${standing.nextLessonTitle}`;
-  return `${String(standing.xp)} XP · next up, ${standing.nextLessonTitle}`;
+  if (standing.xp === 0) return labels.noXpStart.replace('{lesson}', standing.nextLessonTitle);
+  return labels.xpNext.replace('{xp}', xp).replace('{lesson}', standing.nextLessonTitle);
 }
 
 // ── The payload ───────────────────────────────────────────────────────────────────────────────
@@ -235,6 +259,7 @@ export function buildHome(input: HomeInput): HomePayload {
   const { user, now, rates, spending, learning, language } = input;
   const currency = user.displayCurrency;
   const content = getContent(language);
+  const ui = content.ui.value.home;
 
   const localDayKey = dayKey(now, user.timezone);
 
@@ -298,15 +323,15 @@ export function buildHome(input: HomeInput): HomePayload {
   );
 
   return {
-    greeting: greetingFor(now, user.timezone),
+    greeting: ui.greeting[greetingKeyFor(now, user.timezone, language)],
     name: user.displayName,
-    dateLabel: dateLabelFor(now, user.timezone),
-    monthLabel: monthLabelFor(now, user.timezone),
+    dateLabel: dateLabelFor(now, user.timezone, language),
+    monthLabel: monthLabelFor(now, user.timezone, language),
 
     spending: {
       total: present(total),
       // "% of pay" is computed against the server-owned salary — defect D1's fix, in one line.
-      shareOfPayLabel: percentageLabel(total, salary, 'of pay'),
+      shareOfPayLabel: percentageLabel(total, salary, ui.ofPay),
       isFirstRun,
       // An empty donut carries no segments; a populated one carries every category, including a zero,
       // so the legend does not change shape as the month fills in.
@@ -314,7 +339,7 @@ export function buildHome(input: HomeInput): HomePayload {
         ? []
         : categoryAmounts.map((category, index) => ({
             id: category.id,
-            name: category.name,
+            name: ui.categories[category.id],
             amount: present(category.amount),
             // The share is computed from the *unrounded* amounts, so a 54.16% slice draws at 54.16%.
             share: shareOf(category.amount, total),
@@ -329,7 +354,7 @@ export function buildHome(input: HomeInput): HomePayload {
       saved: present(budget.saved),
       goal: present(goal),
       zeroLabel: present(money(0, currency)).display,
-      percentageLabel: percentageLabel(budget.saved, goal, 'of goal'),
+      percentageLabel: percentageLabel(budget.saved, goal, ui.ofGoal),
       position: meterPosition(budget.saved, goal),
       verdict: meterVerdictFor(budget.saved, goal),
       remaining: remaining === null ? null : present(remaining),
@@ -350,7 +375,7 @@ export function buildHome(input: HomeInput): HomePayload {
 
     learning: {
       streak: learning.streak,
-      summary: learningSummary(learning),
+      summary: learningSummary(learning, ui.learning),
       nextLesson: learning.nextLessonTitle ?? '',
     },
 

@@ -1,3 +1,4 @@
+import { getContent, type Language, type Ui } from '../content';
 import { computeBudget } from '../domain/budget';
 import { convert, currencyToken, present, sum, type DisplayMoney, type RateSet } from '../domain/money';
 import { dayKey, relativeDayLabel } from '../domain/time';
@@ -287,11 +288,17 @@ export interface ExpensesInput {
   readonly monthLabel: string;
   readonly totals: MonthTotals;
   readonly rates: RateSet | undefined;
+  readonly language: Language;
 }
 
-/** `"2 entries"`, `"1 entry"`, `"0 entries"` — pluralised here because the client prints it verbatim. */
-export const entryCountLabel = (count: number): string =>
-  `${String(count)} ${count === 1 ? 'entry' : 'entries'}`;
+/**
+ * `"2 entries"`, `"1 entry"`, `"0 entries"` — pluralised here because the client prints it verbatim.
+ *
+ * The singular/plural words are passed in from the localised `ui` content rather than hardcoded, so the
+ * builder stays the single source of language.
+ */
+export const entryCountLabel = (count: number, words: Ui['expenses']['entryCount']): string =>
+  `${String(count)} ${count === 1 ? words.one : words.other}`;
 
 /**
  * Build the Expenses payload.
@@ -302,9 +309,10 @@ export const entryCountLabel = (count: number): string =>
  * which is the fixture confirming it.
  */
 export function buildExpenses(input: ExpensesInput): ExpensesPayload {
-  const { user, now, monthLabel, totals, rates } = input;
+  const { user, now, monthLabel, totals, rates, language } = input;
   const currency = user.displayCurrency;
   const today = dayKey(now, user.timezone);
+  const ui = getContent(language).ui.value.expenses;
 
   const salary = convert(user.salary, currency, rates);
   const budget = computeBudget({
@@ -350,10 +358,11 @@ export function buildExpenses(input: ExpensesInput): ExpensesPayload {
 
     categories: CATEGORIES.map((category) => {
       const total = totals.byCategory[category.id];
+      const labels = ui.categories[category.id];
       const base = {
         id: category.id,
-        name: category.name,
-        hint: category.hint,
+        name: labels.name,
+        hint: labels.hint,
         // Additional income reads `+₹900`: it is the only inbound category, and without the sign a
         // reader has no way to tell it from an expense of the same size.
         total: category.flow === 'in' ? withPlus(present(total)) : present(total),
@@ -371,12 +380,12 @@ export function buildExpenses(input: ExpensesInput): ExpensesPayload {
           ...base,
           // Only `log` categories carry a count. A fixed cost has no entries to count, and the client's
           // field is optional for exactly that reason.
-          entryCountLabel: entryCountLabel(rows.length),
+          entryCountLabel: entryCountLabel(rows.length, ui.entryCount),
           entries: rows.map((row) => ({
             id: row.entry._id,
             label: row.entry.label,
             amount: present(row.amount),
-            dateLabel: relativeDayLabel(dayKey(row.entry.entryDate, user.timezone), today),
+            dateLabel: relativeDayLabel(dayKey(row.entry.entryDate, user.timezone), today, ui.relativeDay),
           })),
         };
       }

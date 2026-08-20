@@ -1,4 +1,4 @@
-import { getContent, type Language } from '../content';
+import { getContent, type Language, type Ui } from '../content';
 import { convert, currencyToken, present, type DisplayMoney, type RateSet } from '../domain/money';
 import { daysBetween, dayKey } from '../domain/time';
 import type { User } from '../repositories/users';
@@ -75,27 +75,41 @@ export function initialsOf(displayName: string): string {
  * would make a real "somebody changed your password" impossible to notice. When the two timestamps are the same
  * instant, the password has only ever been *set*, and the row says so.
  */
+const ENGLISH_PASSWORD_CHANGED: Ui['account']['passwordChanged'] = {
+  set: 'Set when you created your account',
+  justNow: 'Changed just now',
+  yesterday: 'Changed yesterday',
+  daysAgo: 'Changed {n} days ago',
+  monthsAgoOne: 'Changed 1 month ago',
+  monthsAgoOther: 'Changed {n} months ago',
+  yearsAgoOne: 'Changed 1 year ago',
+  yearsAgoOther: 'Changed {n} years ago',
+};
+
 export function passwordChangedLabel(
   changedAt: Date,
   now: Date,
   timezone: string,
   createdAt?: Date,
+  labels: Ui['account']['passwordChanged'] = ENGLISH_PASSWORD_CHANGED,
 ): string {
   if (changedAt.getTime() === createdAt?.getTime()) {
-    return 'Set when you created your account';
+    return labels.set;
   }
 
   const days = daysBetween(dayKey(changedAt, timezone), dayKey(now, timezone));
 
-  if (days <= 0) return 'Changed just now';
-  if (days === 1) return 'Changed yesterday';
-  if (days < 30) return `Changed ${String(days)} days ago`;
+  if (days <= 0) return labels.justNow;
+  if (days === 1) return labels.yesterday;
+  if (days < 30) return labels.daysAgo.replace('{n}', String(days));
 
   const months = Math.round(days / 30);
-  if (months < 12) return `Changed ${String(months)} month${months === 1 ? '' : 's'} ago`;
+  if (months < 12) {
+    return (months === 1 ? labels.monthsAgoOne : labels.monthsAgoOther).replace('{n}', String(months));
+  }
 
   const years = Math.round(days / 365);
-  return `Changed ${String(years)} year${years === 1 ? '' : 's'} ago`;
+  return (years === 1 ? labels.yearsAgoOne : labels.yearsAgoOther).replace('{n}', String(years));
 }
 
 /**
@@ -110,8 +124,25 @@ export function phoneDisplay(dialCode: string, national: string): string {
   return `${dialCode} ${groups.join(' ')}`;
 }
 
-/** The English name of a language code, from the reference list the picker is built from. */
+/**
+ * The **endonym** of a language code — its own native name, independent of the app's language.
+ *
+ * A reader's language is shown in that language's own script ('en'→"English", 'hi'→"हिन्दी",
+ * 'ar'→"العربية"), which is the convention every language picker follows: you recognise your own language
+ * by how it writes its own name, not by how English spells it. `Intl.DisplayNames([code], …)` asks ICU for
+ * the name *in that same locale*, which is exactly the endonym. This is a real, correct value — not a
+ * translation placeholder — so it is fine to ship ahead of the copy pass.
+ *
+ * Falls back to the reference list's English name when ICU cannot resolve the code (or hands the code back
+ * unchanged), so an exotic code still reads as a name rather than a bare tag.
+ */
 function languageName(code: string, language: Language): string {
+  try {
+    const endonym = new Intl.DisplayNames([code], { type: 'language' }).of(code);
+    if (endonym !== undefined && endonym !== code) return endonym;
+  } catch {
+    // Malformed code — fall through to the reference list.
+  }
   const match = getContent(language).languages.value.languages.find((entry) => entry.code === code);
   return match?.name ?? code;
 }
@@ -136,6 +167,7 @@ export function buildAccount(input: AccountInput): AccountPayload {
   const { user, now, language } = input;
   const currency = user.displayCurrency;
   const content = getContent(language);
+  const ui = content.ui.value.account;
 
   // The salary is shown in the currency it was **authored** in, not the display currency: this is the field
   // the user edits, and converting it would mean typing a figure and seeing a different one back.
@@ -157,18 +189,28 @@ export function buildAccount(input: AccountInput): AccountPayload {
     },
 
     rows: [
-      { section: 'personal', name: 'Personal Information', hint: 'Username, salary, phone' },
+      {
+        section: 'personal',
+        name: ui.rows.personalInformation.name,
+        hint: ui.rows.personalInformation.sub,
+      },
       {
         section: 'language',
-        name: 'Language',
-        hint: 'How the app is written',
+        name: ui.rows.language.name,
+        hint: ui.rows.language.sub,
         value: languageName(user.language, language),
       },
-      { section: 'currency', name: 'Currency', hint: 'How your money is shown', value: currency },
+      { section: 'currency', name: ui.rows.currency.name, hint: ui.rows.currency.sub, value: currency },
       {
         section: 'password',
-        name: 'Password',
-        hint: passwordChangedLabel(user.passwordChangedAt, now, user.timezone, user.createdAt),
+        name: ui.rows.password.name,
+        hint: passwordChangedLabel(
+          user.passwordChangedAt,
+          now,
+          user.timezone,
+          user.createdAt,
+          ui.passwordChanged,
+        ),
       },
     ],
 
