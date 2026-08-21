@@ -1,5 +1,11 @@
 import { getContent, type Language, type Ui } from '../content';
-import { computeBudget } from '../domain/budget';
+import {
+  computeBudget,
+  DEFAULT_WANTS_SHARE,
+  effectiveWantsShare,
+  feasibleWantsShares,
+  wantsAllowanceForShare,
+} from '../domain/budget';
 import { convert, currencyToken, present, sum, type DisplayMoney, type RateSet } from '../domain/money';
 import { dayKey, relativeDayLabel } from '../domain/time';
 import type { ExpenseEntry, LogCategory } from '../repositories/expenseEntries';
@@ -260,6 +266,18 @@ export interface ExpensesPayload {
     readonly percentageLabel: string;
     readonly fill: number;
     readonly isOver: boolean;
+    /**
+     * The share of income the wants allowance is taken from, whole percent, or `null` when the reader has
+     * not chosen one (the client's `WantsShare` sheet ticks the matching row). Emitted so the sheet reflects
+     * what is in force rather than guessing.
+     */
+    readonly sharePercent: number | null;
+    /**
+     * Each share the sheet offers, with the wants allowance it would produce **in the reader's own money** —
+     * so a row can read "30% · AED 1,855" and the reader chooses against real figures rather than bare
+     * percentages. Computed by the engine (`wantsAllowanceForShare`), never by the client (invariant 3).
+     */
+    readonly options: { readonly percent: number; readonly allowance: DisplayMoney }[];
   };
   readonly entry: {
     readonly code: string;
@@ -315,12 +333,22 @@ export function buildExpenses(input: ExpensesInput): ExpensesPayload {
   const ui = getContent(language).ui.value.expenses;
 
   const salary = convert(user.salary, currency, rates);
+  const income = { ...salary, minor: salary.minor + totals.additionalIncome.minor };
+  const goal = convert(user.savingsGoal, currency, rates);
   const budget = computeBudget({
-    income: { ...salary, minor: salary.minor + totals.additionalIncome.minor },
+    income,
     needs: totals.needs,
     wantsSpent: totals.wantsSpent,
-    goal: convert(user.savingsGoal, currency, rates),
+    goal,
+    wantsSharePercent: user.wantsSharePercent,
   });
+
+  // The shares the sheet may offer — only those that still leave the reader's goal reachable — and the one
+  // the engine is actually applying (their request, clamped down to what keeps the goal reachable). Both are
+  // the engine's, so the sheet cannot show a row the write would refuse.
+  const requestedShare = user.wantsSharePercent ?? DEFAULT_WANTS_SHARE;
+  const effectiveShare = effectiveWantsShare(income, totals.needs, goal, requestedShare);
+  const offeredShares = feasibleWantsShares(income, totals.needs, goal);
 
   const token = currencyToken(currency);
 
@@ -342,6 +370,15 @@ export function buildExpenses(input: ExpensesInput): ExpensesPayload {
       // uncapped fill would draw outside its track.
       fill: fillOf(totals.wantsSpent, budget.wantsAllowance),
       isOver: totals.wantsSpent.minor > budget.wantsAllowance.minor,
+      // The share in force — the reader's choice clamped to what is feasible, so the sheet's tick matches the
+      // allowance above rather than a percentage the goal would not allow.
+      sharePercent: effectiveShare,
+      // Only the feasible shares, each with the wants allowance it produces in the reader's money — so a row
+      // reads "30% · AED 1,855" and an option that would break the savings goal is not offered at all.
+      options: offeredShares.map((percent) => ({
+        percent,
+        allowance: present(wantsAllowanceForShare(income, totals.needs, percent)),
+      })),
     },
 
     /**

@@ -80,6 +80,8 @@ describeIntegration('Expenses', () => {
       percentageLabel: string;
       fill: number;
       isOver: boolean;
+      sharePercent: number | null;
+      options: { percent: number; allowance: { minor: number; display: string } }[];
     };
     entry: { code: string; symbol: string; displayCode: string; exponent: number };
     categories: {
@@ -669,6 +671,63 @@ describeIntegration('Expenses', () => {
 
       // `saved` is a residual, so spending ₹1,000 reduces it by exactly ₹1,000.
       expect(before.saved.minor - after.saved.minor).toBe(100_000);
+    });
+  });
+
+  // ── The wants share ───────────────────────────────────────────────────────────────────────────
+
+  /**
+   * `PUT /v1/me/budget/wants` — the reader moves the middle figure of their 50/30/20, and the wants bar,
+   * its `sharePercent`, and the per-option amounts all come back recomputed from server truth (ADR-0020,
+   * invariant 3). A fresh account with no expenses sits in the plain branch, so the allowances are clean
+   * percentages of its ₹65,000 income.
+   */
+  describe('the wants share', () => {
+    it('defaults to 30, and offers every share when the goal leaves room for all of them', async () => {
+      const screen = await expenses(await register());
+
+      // A fresh account has no needs logged, so ₹13,000 (20%) is reachable at every share — all seven show.
+      expect(screen.wants.sharePercent).toBe(30);
+      expect(screen.wants.options.map((o) => o.percent)).toEqual([10, 15, 20, 25, 30, 35, 40]);
+      // 30% of ₹65,000 = ₹19,500; 40% = ₹26,000. The reader sees these beside the rows.
+      expect(screen.wants.options.find((o) => o.percent === 30)?.allowance.minor).toBe(1_950_000);
+      expect(screen.wants.options.find((o) => o.percent === 40)?.allowance.minor).toBe(2_600_000);
+      // Default allowance is the 30% share.
+      expect(screen.wants.allowance.minor).toBe(1_950_000);
+    });
+
+    it('drops the shares that would break the savings goal', async () => {
+      // Rent of ₹30,000 (needs), plus the ₹13,000 goal, leaves at most ₹22,000 for wants — so 35% (₹22,750)
+      // and 40% (₹26,000) are not offered, but the run up to 30% (₹19,500) is.
+      const token = await register();
+      await request('PUT', '/v1/expenses/fixed/rent', token, {
+        amount: { minor: 3_000_000, currency: 'INR' },
+      });
+
+      const screen = await expenses(token);
+      expect(screen.wants.options.map((o) => o.percent)).toEqual([10, 15, 20, 25, 30]);
+    });
+
+    it('persists a chosen share and recomputes the allowance', async () => {
+      const token = await register();
+
+      const updated = await screenOf(await request('PUT', '/v1/me/budget/wants', token, { percent: 40 }));
+      expect(updated.wants.sharePercent).toBe(40);
+      expect(updated.wants.allowance.minor).toBe(2_600_000); // 40% of ₹65,000
+
+      // It survives — a fresh read of the screen carries the same choice.
+      const reread = await expenses(token);
+      expect(reread.wants.sharePercent).toBe(40);
+      expect(reread.wants.allowance.minor).toBe(2_600_000);
+    });
+
+    it('refuses a share outside the offered set', async () => {
+      const token = await register();
+      for (const percent of [33, 5, 45, 0]) {
+        const response = await request('PUT', '/v1/me/budget/wants', token, { percent });
+        // `VALIDATION_FAILED` is 422 (errors.ts), the same refusal every bad body gets.
+        expect(response.status, `percent ${String(percent)}`).toBe(422);
+      }
     });
   });
 });

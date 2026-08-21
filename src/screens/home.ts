@@ -288,6 +288,8 @@ export function buildHome(input: HomeInput): HomePayload {
     needs,
     wantsSpent,
     goal,
+    // The live month honours the reader's chosen split, so Home's allowances agree with Expenses'.
+    wantsSharePercent: user.wantsSharePercent,
   });
 
   const total = totalSpent(budget);

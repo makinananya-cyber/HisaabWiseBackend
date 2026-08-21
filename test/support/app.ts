@@ -1,3 +1,5 @@
+import { nodeArgon2 } from '../../src/auth/argon2Native';
+import { setArgon2Backend } from '../../src/auth/hashing';
 import { createApp } from '../../src/index';
 import { loadConfig, type Config } from '../../src/config';
 import { loadContent } from '../../src/content';
@@ -27,5 +29,9 @@ export function testConfig(overrides: Partial<NodeJS.ProcessEnv> = {}): Config {
  */
 export function testApp(config: Config = testConfig()) {
   loadContent();
+  // The HTTP entrypoints install an argon2 backend before serving (`src/server.ts`, `src/worker.ts`);
+  // the test harness has to as well, or every registration- or sign-in-driven suite 500s on the first
+  // hash. Node's native backend, exactly as `server.ts` uses.
+  setArgon2Backend(nodeArgon2);
   return createApp(config, createLogger(config));
 }

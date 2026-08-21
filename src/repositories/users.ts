@@ -64,6 +64,15 @@ const userSchema = z.object({
   salary: storedMoneySchema,
   savingsGoal: storedMoneySchema,
   goalWasSkipped: z.boolean(),
+  /**
+   * The share of income the reader has chosen for their wants budget, whole percent, or `null` when they
+   * have not moved it off the 50/30/20 default (`PUT /v1/me/budget/wants`, domain `budget.ts`).
+   *
+   * **`.default(null)`, so accounts created before this field parse cleanly** — a document that predates it
+   * simply has no chosen share, which is exactly what `null` means. The budget engine reads `null` as the
+   * plain rule, so an untouched account behaves precisely as it did before.
+   */
+  wantsSharePercent: z.number().int().nullable().default(null),
   displayCurrency: z.string().length(3),
   language: z.enum(PREFERENCE_LANGUAGES),
   timezone: z.string().min(1),
@@ -167,6 +176,8 @@ export async function insertUser(user: NewUser): Promise<User> {
     recoveryLockedUntil: null,
     pushTokens: [],
     streakOptIn: false,
+    // No chosen wants share yet — a new account is on the plain 50/30/20 until it says otherwise.
+    wantsSharePercent: null,
     deletedAt: null,
     createdAt: now,
   };
@@ -376,4 +387,13 @@ export const setSavingsGoal = async (
   goalWasSkipped: boolean,
 ): Promise<void> => {
   await users().updateOne({ _id: id }, { $set: { savingsGoal, goalWasSkipped } });
+};
+
+/**
+ * Store the reader's chosen wants share, whole percent — the middle figure of their 50/30/20 (domain
+ * `budget.ts`). The API validates it against `WANTS_SHARE_OPTIONS` before this is called, so what reaches
+ * the document is always a share the engine can apply.
+ */
+export const setWantsShare = async (id: ObjectId, wantsSharePercent: number): Promise<void> => {
+  await users().updateOne({ _id: id }, { $set: { wantsSharePercent } });
 };

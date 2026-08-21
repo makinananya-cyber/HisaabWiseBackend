@@ -396,7 +396,8 @@ describeIntegration('Home and the budget engine', () => {
       expect(body.income.display).toBe('₹65,000');
       expect(body.wantsAllowance.minor).toBe(1_950_000);
       expect(body.currency).toBe('INR');
-      expect(body.savingsAllowance.minor).toBe(1_300_000);
+      // No needs logged yet, so savings is the residual: income − 0 − 30% wants = 70% = ₹45,500.
+      expect(body.savingsAllowance.minor).toBe(4_550_000);
       expect(body.adapted).toBe(false);
       // Nothing spent, so the whole income is the residual and the goal is comfortably met.
       expect(body.saved.minor).toBe(6_500_000);
