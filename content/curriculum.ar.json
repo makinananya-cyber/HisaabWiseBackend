@@ -4,88 +4,88 @@
       "id": "u1",
       "number": 1,
       "accent": "sun",
-      "title": "Build the Foundation",
-      "subtitle": "Income & Mindset",
-      "blurb": "Before you can plan your money, you need to know how much of it is really yours.",
+      "title": "ابنِ الأساس",
+      "subtitle": "الدخل والعقلية",
+      "blurb": "قبل أن تخطط لأموالك، عليك أن تعرف كم منها هو فعلاً ملك لك.",
       "lessons": [
         {
           "id": "u1l1",
           "number": 1,
           "icon": "wallet",
-          "title": "Gross vs. Net Income",
-          "blurb": "Know what really lands in your bank account.",
+          "title": "الدخل الإجمالي مقابل الدخل الصافي",
+          "blurb": "اعرف ما الذي يصل فعلاً إلى حسابك المصرفي.",
           "steps": [
             {
               "kind": "teach",
-              "heading": "Two numbers, not one",
+              "heading": "رقمان، لا رقم واحد",
               "paragraphs": [
-                "When you get a job, you hear one number. But there are really two.",
-                "**Gross income** is the full amount your job promises to pay you. It is the number in your contract.",
-                "**Net income** is the money that actually arrives in your bank account. People also call it **take-home pay**.",
-                "Your budget can only use the second number."
+                "عندما تحصل على وظيفة، تسمع رقماً واحداً. لكن في الحقيقة هناك رقمان.",
+                "**الدخل الإجمالي** هو المبلغ الكامل الذي تَعِدُك وظيفتك بدفعه لك. إنه الرقم المكتوب في عقدك.",
+                "**الدخل الصافي** هو المال الذي يصل فعلاً إلى حسابك المصرفي. ويسميه الناس أيضاً **الراتب المقبوض**.",
+                "ميزانيتك لا يمكنها استخدام سوى الرقم الثاني."
               ],
-              "tip": "Gross = the promise. Net = the money. Plan with the money."
+              "tip": "الإجمالي = الوعد. الصافي = المال. خطّط بالمال."
             },
             {
               "kind": "teach",
-              "heading": "Good news if you work in the UAE",
+              "heading": "خبر سار إن كنت تعمل في الإمارات",
               "paragraphs": [
-                "In many countries, the government takes a part of your pay. This is called **income tax**. Your employer takes it out before you are paid.",
-                "**The UAE does not do this.** There is no income tax on salaries here. You keep 100% of your pay.",
-                "So for most people in the UAE, gross and net are the same number.",
-                "It is still good to know the word. You may work for a company in another country one day, or move abroad."
+                "في كثير من الدول، تأخذ الحكومة جزءاً من راتبك. يُسمى هذا **ضريبة الدخل**. ويقتطعه صاحب العمل قبل أن تُدفَع لك أموالك.",
+                "**الإمارات لا تفعل ذلك.** لا توجد ضريبة دخل على الرواتب هنا. تحتفظ بنسبة 100% من راتبك.",
+                "لذلك بالنسبة لمعظم الناس في الإمارات، يكون الإجمالي والصافي هما الرقم نفسه.",
+                "مع ذلك من الجيد أن تعرف المصطلح. فقد تعمل يوماً ما لدى شركة في دولة أخرى، أو تنتقل للعيش في الخارج."
               ],
               "list": [
                 {
-                  "term": "UAE and GCC nationals",
-                  "detail": "A small part of your pay goes to a government pension fund. Expat workers do not pay this."
+                  "term": "مواطنو الإمارات ودول مجلس التعاون",
+                  "detail": "جزء صغير من راتبك يذهب إلى صندوق تقاعد حكومي. أما العمال الوافدون فلا يدفعون هذا."
                 },
                 {
-                  "term": "Health insurance",
-                  "detail": "It is required in Dubai and Abu Dhabi. Most companies pay for it. Some ask you to pay a small share."
+                  "term": "التأمين الصحي",
+                  "detail": "إنه إلزامي في دبي وأبوظبي. ومعظم الشركات تدفع تكلفته. وبعضها يطلب منك دفع حصة صغيرة."
                 },
                 {
-                  "term": "Loan payments",
-                  "detail": "If you took a bank loan, the bank may take the payment from your salary each month."
+                  "term": "أقساط القروض",
+                  "detail": "إن كنت قد أخذت قرضاً من البنك، فقد يقتطع البنك القسط من راتبك كل شهر."
                 }
               ],
-              "tip": "No income tax on salary in the UAE. But there is 5% **VAT** — a tax added to the price of most things you buy in shops."
+              "tip": "لا ضريبة دخل على الراتب في الإمارات. لكن هناك **ضريبة القيمة المضافة** بنسبة 5% — وهي ضريبة تُضاف إلى سعر معظم ما تشتريه في المتاجر."
             },
             {
               "kind": "teach",
-              "heading": "The part of your salary that is split up",
+              "heading": "الجزء من راتبك الذي يُقسَّم",
               "paragraphs": [
-                "In the UAE, your salary is usually written in parts on your contract:",
-                "**Basic salary** is the main part. **Allowances** are extra amounts for housing and transport.",
-                "Add them together and you get your total pay. This split matters a lot for one reason: your **end-of-service gratuity** is only calculated on the basic salary, not the total."
+                "في الإمارات، يُكتب راتبك عادةً على شكل أجزاء في عقدك:",
+                "**الراتب الأساسي** هو الجزء الرئيسي. و**البدلات** مبالغ إضافية للسكن والمواصلات.",
+                "اجمعها معاً تحصل على إجمالي راتبك. هذا التقسيم مهم جداً لسبب واحد: **مكافأة نهاية الخدمة** تُحتسب على الراتب الأساسي فقط، لا على الإجمالي."
               ],
               "example": {
-                "heading": "Same total, different basic",
-                "body": "Two people both earn **{c}8,000** a month.\n\n**Sara:** basic {c}5,000 + allowances {c}3,000\n**Omar:** basic {c}3,000 + allowances {c}5,000\n\nSame money each month. But Sara's gratuity when she leaves will be much bigger, because it is based on her basic pay."
+                "heading": "الإجمالي نفسه، أساسي مختلف",
+                "body": "شخصان يكسب كلٌّ منهما **{c}8,000** شهرياً.\n\n**سارة:** أساسي {c}5,000 + بدلات {c}3,000\n**عمر:** أساسي {c}3,000 + بدلات {c}5,000\n\nالمال نفسه كل شهر. لكن مكافأة سارة عند تركها العمل ستكون أكبر بكثير، لأنها تُحتسب على راتبها الأساسي."
               },
-              "tip": "When you read a job offer, look at the basic salary — not only the total."
+              "tip": "عندما تقرأ عرض عمل، انظر إلى الراتب الأساسي — لا إلى الإجمالي وحده."
             },
             {
               "kind": "teach",
-              "heading": "A simple example, step by step",
+              "heading": "مثال بسيط، خطوة بخطوة",
               "paragraphs": [
-                "Imagine for a moment that you worked somewhere that *did* take income tax, so you can see how gross and net differ."
+                "تخيّل للحظة أنك عملت في مكان *يقتطع* ضريبة الدخل، لترى كيف يختلف الإجمالي عن الصافي."
               ],
               "example": {
-                "heading": "Working it out",
-                "body": "Step 1. Gross pay: **{c}5,000**\n\nStep 2. Income tax taken off: **{c}500**\n\nStep 3. Pension taken off: **{c}300**\n\nStep 4. Add the deductions: 500 + 300 = **{c}800**\n\nStep 5. Take them off the gross: 5,000 − 800 = **{c}4,200**\n\nGross is {c}5,000. Net is **{c}4,200**. You could only spend {c}4,200."
+                "heading": "حساب الأمر",
+                "body": "الخطوة 1. الراتب الإجمالي: **{c}5,000**\n\nالخطوة 2. ضريبة الدخل المقتطعة: **{c}500**\n\nالخطوة 3. التقاعد المقتطع: **{c}300**\n\nالخطوة 4. اجمع الاقتطاعات: 500 + 300 = **{c}800**\n\nالخطوة 5. اطرحها من الإجمالي: 5,000 − 800 = **{c}4,200**\n\nالإجمالي {c}5,000. والصافي **{c}4,200**. لا يمكنك إنفاق سوى {c}4,200."
               },
-              "tip": "The steps never change: start with gross, take off everything, and what is left is net."
+              "tip": "الخطوات لا تتغير أبداً: ابدأ بالإجمالي، اطرح كل شيء، وما يتبقى هو الصافي."
             },
             {
               "kind": "singleChoice",
-              "prompt": "You are making a monthly budget. Which number should you use?",
-              "explanation": "Only use net income. That is the money that really arrives. If you plan with gross, you plan to spend money you never receive.",
+              "prompt": "أنت تُعِدّ ميزانية شهرية. أي رقم يجب أن تستخدم؟",
+              "explanation": "استخدم الدخل الصافي فقط. فهو المال الذي يصل فعلاً. إن خططت بالإجمالي، فأنت تخطط لإنفاق مال لن تستلمه أبداً.",
               "options": [
-                "Gross income",
-                "Net income",
-                "Both added together",
-                "Neither"
+                "الدخل الإجمالي",
+                "الدخل الصافي",
+                "الاثنان مجموعين معاً",
+                "لا هذا ولا ذاك"
               ],
               "answers": [
                 1
@@ -93,12 +93,12 @@
             },
             {
               "kind": "singleChoice",
-              "prompt": "You work in the UAE and earn {c}6,000 a month. How much income tax comes off your salary?",
-              "explanation": "The UAE does not take income tax from salaries. You keep the full {c}6,000. This is one of the biggest money advantages of working here.",
+              "prompt": "تعمل في الإمارات وتكسب {c}6,000 شهرياً. كم مقدار ضريبة الدخل التي تُقتطع من راتبك؟",
+              "explanation": "الإمارات لا تقتطع ضريبة دخل من الرواتب. تحتفظ بكامل الـ {c}6,000. وهذه من أكبر مزايا المال في العمل هنا.",
               "options": [
                 "{c}600",
                 "{c}300",
-                "Nothing — the UAE has no income tax on salaries",
+                "لا شيء — الإمارات لا تفرض ضريبة دخل على الرواتب",
                 "{c}1,200"
               ],
               "answers": [
@@ -107,20 +107,20 @@
             },
             {
               "kind": "numeric",
-              "prompt": "Ali's gross pay is {c}4,000. His deductions are {c}400 in total. What is his net pay?",
-              "explanation": "4,000 − 400 = 3,600. Take the deductions off the gross pay. What is left is the net pay.",
+              "prompt": "راتب علي الإجمالي {c}4,000. واقتطاعاته {c}400 في المجموع. فما راتبه الصافي؟",
+              "explanation": "4,000 − 400 = 3,600. اطرح الاقتطاعات من الراتب الإجمالي. ما يتبقى هو الراتب الصافي.",
               "answer": 3600,
               "showsCurrencySymbol": true
             },
             {
               "kind": "singleChoice",
-              "prompt": "Your UAE gratuity when you leave a job is based on which part of your salary?",
-              "explanation": "Gratuity uses the basic salary only. Allowances for housing and transport are not counted. So two people with the same total pay can get very different gratuity.",
+              "prompt": "مكافأة نهاية الخدمة في الإمارات عند تركك العمل تُحتسب على أي جزء من راتبك؟",
+              "explanation": "المكافأة تُحتسب على الراتب الأساسي فقط. بدلات السكن والمواصلات لا تُحتسب. لذلك قد يحصل شخصان بإجمالي راتب متساوٍ على مكافأتين مختلفتين جداً.",
               "options": [
-                "Your total pay",
-                "Your basic salary only",
-                "Your housing allowance",
-                "Your transport allowance"
+                "إجمالي راتبك",
+                "راتبك الأساسي فقط",
+                "بدل السكن",
+                "بدل المواصلات"
               ],
               "answers": [
                 1
@@ -132,61 +132,61 @@
           "id": "u1l2",
           "number": 2,
           "icon": "clock",
-          "title": "The Time-Value of Money",
-          "blurb": "Why money loses power while it sits still.",
+          "title": "القيمة الزمنية للمال",
+          "blurb": "لماذا يفقد المال قوته وهو ثابت في مكانه.",
           "steps": [
             {
               "kind": "teach",
-              "heading": "Money today is worth more than money later",
+              "heading": "مال اليوم يساوي أكثر من مال الغد",
               "paragraphs": [
-                "Imagine someone offers you {c}100 today, or {c}100 in three years. Which do you take?",
-                "Take it today. This idea has a name: the **time value of money**.",
-                "There are two reasons. First, money you have now can grow. Second, prices go up while you wait, so the same {c}100 buys less later."
+                "تخيّل أن أحدهم عرض عليك {c}100 اليوم، أو {c}100 بعد ثلاث سنوات. أيهما تختار؟",
+                "خذها اليوم. لهذه الفكرة اسم: **القيمة الزمنية للمال**.",
+                "هناك سببان. الأول، المال الذي تملكه الآن يمكن أن ينمو. والثاني، الأسعار ترتفع وأنت تنتظر، فالـ {c}100 نفسها تشتري أقل لاحقاً."
               ]
             },
             {
               "kind": "teach",
-              "heading": "What inflation means",
+              "heading": "ماذا يعني التضخم",
               "paragraphs": [
-                "**Inflation** means prices go up over time. It is shown as a percentage each year.",
-                "Inflation does not take money out of your account. It does something quieter. It reduces your **purchasing power** — how much you can actually buy with your money."
+                "**التضخم** يعني ارتفاع الأسعار مع مرور الوقت. ويُعبَّر عنه بنسبة مئوية كل عام.",
+                "التضخم لا يسحب المال من حسابك. بل يفعل شيئاً أهدأ. فهو يقلل **قوتك الشرائية** — أي كم يمكنك فعلاً أن تشتري بأموالك."
               ],
               "example": {
-                "heading": "The same bag of food",
-                "body": "A bag of food costs **{c}100** today.\n\nInflation this year is **4%**.\n\n4% of 100 = **{c}4**\n\nNext year the same bag costs **{c}104**.\n\nYour {c}100 is still {c}100. But it can no longer buy that bag. You did not lose money. You lost buying power."
+                "heading": "كيس الطعام نفسه",
+                "body": "يكلّف كيس طعام **{c}100** اليوم.\n\nالتضخم هذا العام **4%**.\n\n4% من 100 = **{c}4**\n\nفي العام المقبل يكلّف الكيس نفسه **{c}104**.\n\nالـ {c}100 التي لديك ما زالت {c}100. لكنها لم تعد قادرة على شراء ذلك الكيس. أنت لم تخسر مالاً. بل خسرت قوة شرائية."
               },
-              "tip": "Inflation is slow and quiet. That is why it is easy to forget about."
+              "tip": "التضخم بطيء وهادئ. لهذا يسهل نسيانه."
             },
             {
               "kind": "teach",
-              "heading": "Real return: the number that matters",
+              "heading": "العائد الحقيقي: الرقم الذي يهم",
               "paragraphs": [
-                "When a bank tells you an interest rate, there are two ways to look at it.",
-                "**Nominal return** is the rate the bank shows you.",
-                "**Real return** is that rate minus inflation. It tells you if your buying power really grew.",
-                "The formula is easy: **real return = interest rate − inflation**."
+                "عندما يخبرك البنك بمعدل فائدة، هناك طريقتان للنظر إليه.",
+                "**العائد الاسمي** هو المعدل الذي يعرضه عليك البنك.",
+                "**العائد الحقيقي** هو ذلك المعدل ناقص التضخم. وهو يخبرك ما إذا كانت قوتك الشرائية قد نمت فعلاً.",
+                "الصيغة سهلة: **العائد الحقيقي = معدل الفائدة − التضخم**."
               ],
               "example": {
-                "heading": "When saving still loses",
-                "body": "Your savings account pays **2%** a year.\n\nInflation is **4%** a year.\n\n2% − 4% = **−2%**\n\nYour balance went up. But you can buy 2% less than before. The account did not really help you."
+                "heading": "عندما يخسّرك الادخار رغم ذلك",
+                "body": "حساب التوفير لديك يدفع **2%** سنوياً.\n\nالتضخم **4%** سنوياً.\n\n2% − 4% = **−2%**\n\nارتفع رصيدك. لكنك تستطيع أن تشتري أقل بنسبة 2% مما قبل. الحساب لم يساعدك فعلاً."
               },
-              "tip": "When someone shows you a return, ask: is that before or after inflation?"
+              "tip": "عندما يعرض عليك أحدهم عائداً، اسأل: هل هذا قبل التضخم أم بعده؟"
             },
             {
               "kind": "teach",
-              "heading": "A quick trick: the Rule of 70",
+              "heading": "حيلة سريعة: قاعدة الـ 70",
               "paragraphs": [
-                "Here is an easy trick you can do in your head.",
-                "Take the number **70**. Divide it by the inflation rate. The answer is roughly how many years until prices double.",
-                "Inflation 7% → 70 ÷ 7 = **10 years**\nInflation 5% → 70 ÷ 5 = **14 years**\nInflation 2% → 70 ÷ 2 = **35 years**",
-                "When prices double, your money buys half as much."
+                "إليك حيلة سهلة يمكنك أداؤها في ذهنك.",
+                "خذ الرقم **70**. اقسمه على معدل التضخم. والجواب هو تقريباً عدد السنوات حتى تتضاعف الأسعار.",
+                "تضخم 7% ← 70 ÷ 7 = **10 سنوات**\nتضخم 5% ← 70 ÷ 5 = **14 سنة**\nتضخم 2% ← 70 ÷ 2 = **35 سنة**",
+                "عندما تتضاعف الأسعار، يشتري مالك نصف ما كان يشتريه."
               ],
-              "tip": "Just remember: **70 divided by the rate**. No calculator needed."
+              "tip": "تذكّر فقط: **70 مقسومة على المعدل**. لا حاجة إلى آلة حاسبة."
             },
             {
               "kind": "singleChoice",
-              "prompt": "Your savings account pays 3% a year. Inflation is 5%. What is your real return?",
-              "explanation": "Real return = 3% − 5% = −2%. Your balance grows, but prices grow faster. So you can buy less than before.",
+              "prompt": "حساب التوفير لديك يدفع 3% سنوياً. والتضخم 5%. فما عائدك الحقيقي؟",
+              "explanation": "العائد الحقيقي = 3% − 5% = −2%. رصيدك ينمو، لكن الأسعار تنمو أسرع. فتستطيع أن تشتري أقل مما قبل.",
               "options": [
                 "8%",
                 "3%",
@@ -199,20 +199,20 @@
             },
             {
               "kind": "numeric",
-              "prompt": "Inflation is 5% a year. Using the Rule of 70, how many YEARS until prices double? Type the number only.",
-              "explanation": "70 ÷ 5 = 14 years. In 14 years the same shopping costs twice as much. That is why money kept in cash for a long time is not really safe.",
+              "prompt": "التضخم 5% سنوياً. باستخدام قاعدة الـ 70، كم عدد السنوات حتى تتضاعف الأسعار؟ اكتب الرقم فقط.",
+              "explanation": "70 ÷ 5 = 14 سنة. بعد 14 سنة يكلّف التسوق نفسه ضِعف ثمنه. لهذا فإن المال المحتفظ به نقداً لفترة طويلة ليس آمناً حقاً.",
               "answer": 14,
               "showsCurrencySymbol": false
             },
             {
               "kind": "singleChoice",
-              "prompt": "What does 'purchasing power' mean?",
-              "explanation": "Purchasing power is about what your money can buy, not the number in your account. Inflation makes that number buy less each year.",
+              "prompt": "ماذا تعني \"القوة الشرائية\"؟",
+              "explanation": "القوة الشرائية تتعلق بما يستطيع مالك شراءه، لا بالرقم في حسابك. والتضخم يجعل ذلك الرقم يشتري أقل كل عام.",
               "options": [
-                "How much money is in your account",
-                "How much you can actually buy with your money",
-                "The interest your bank pays",
-                "Your credit card limit"
+                "كم من المال في حسابك",
+                "كم يمكنك أن تشتري فعلاً بأموالك",
+                "الفائدة التي يدفعها بنكك",
+                "حد بطاقتك الائتمانية"
               ],
               "answers": [
                 1
@@ -220,13 +220,13 @@
             },
             {
               "kind": "singleChoice",
-              "prompt": "Someone offers you {c}500 now or {c}500 in two years. Which is worth more?",
-              "explanation": "Money now is worth more. You can use it, save it or grow it. And in two years, prices will be higher, so {c}500 will buy less.",
+              "prompt": "يعرض عليك أحدهم {c}500 الآن أو {c}500 بعد سنتين. أيهما يساوي أكثر؟",
+              "explanation": "المال الآن يساوي أكثر. تستطيع استخدامه أو ادخاره أو تنميته. وبعد سنتين ستكون الأسعار أعلى، فالـ {c}500 ستشتري أقل.",
               "options": [
-                "{c}500 in two years",
-                "{c}500 now",
-                "They are exactly equal",
-                "It depends on your bank"
+                "{c}500 بعد سنتين",
+                "{c}500 الآن",
+                "إنهما متساويان تماماً",
+                "يعتمد على بنكك"
               ],
               "answers": [
                 1
@@ -238,75 +238,75 @@
           "id": "u1l3",
           "number": 3,
           "icon": "split",
-          "title": "Needs vs. Wants",
-          "blurb": "Sort your spending into two simple groups.",
+          "title": "الاحتياجات مقابل الرغبات",
+          "blurb": "صنّف إنفاقك إلى مجموعتين بسيطتين.",
           "steps": [
             {
               "kind": "teach",
-              "heading": "Two kinds of spending",
+              "heading": "نوعان من الإنفاق",
               "paragraphs": [
-                "Every time money leaves your account, it is doing one of two jobs.",
-                "A **need** keeps you safe, fed, healthy and able to work. If you stop paying it, something in your life breaks.",
-                "A **want** makes life nicer. If you stop paying it, you feel sad — but nothing breaks.",
-                "Wants are not bad. They are the reason we work. But you must know which is which."
+                "في كل مرة يغادر فيها المال حسابك، يؤدي واحدة من مهمتين.",
+                "**الاحتياج** يبقيك آمناً ومُشبعاً وصحيحاً وقادراً على العمل. إن توقفت عن دفعه، ينكسر شيء في حياتك.",
+                "**الرغبة** تجعل الحياة أجمل. إن توقفت عن دفعها، تشعر بالحزن — لكن لا شيء ينكسر.",
+                "الرغبات ليست سيئة. إنها سبب عملنا. لكن عليك أن تعرف أيهما أيّ."
               ]
             },
             {
               "kind": "teach",
-              "heading": "Three questions to help you decide",
+              "heading": "ثلاثة أسئلة تساعدك على اتخاذ القرار",
               "paragraphs": [
-                "When you are not sure, ask yourself these:"
+                "عندما لا تكون متأكداً، اسأل نفسك هذه الأسئلة:"
               ],
               "list": [
                 {
-                  "term": "Can I live one month without it?",
-                  "detail": "If yes, it is probably a want."
+                  "term": "هل أستطيع العيش شهراً واحداً بدونه؟",
+                  "detail": "إن كان نعم، فهو على الأرجح رغبة."
                 },
                 {
-                  "term": "Does it keep me healthy, housed or able to work?",
-                  "detail": "If yes, it is a need. Rent, food, medicine, and getting to work are all needs."
+                  "term": "هل يبقيني صحيحاً أو مأوىً أو قادراً على العمل؟",
+                  "detail": "إن كان نعم، فهو احتياج. الإيجار والطعام والدواء والوصول إلى العمل كلها احتياجات."
                 },
                 {
-                  "term": "Am I paying for the basic thing, or the nicer version?",
-                  "detail": "The basic thing is the need. The nicer version on top is a want."
+                  "term": "هل أدفع مقابل الشيء الأساسي، أم النسخة الأفخم؟",
+                  "detail": "الشيء الأساسي هو الاحتياج. والنسخة الأفخم فوقه هي رغبة."
                 }
               ],
-              "tip": "Most spending is a need with a want on top. Learning to see the line between them is the whole skill."
+              "tip": "معظم الإنفاق هو احتياج مع رغبة فوقه. وتعلّم رؤية الخط الفاصل بينهما هو المهارة كلها."
             },
             {
               "kind": "teach",
-              "heading": "Real examples",
+              "heading": "أمثلة حقيقية",
               "paragraphs": [
-                "Here is how it works with everyday things in the UAE."
+                "إليك كيف يعمل الأمر مع أشياء يومية في الإمارات."
               ],
               "example": {
-                "heading": "Same category, two answers",
-                "body": "**Food.** Groceries are a need. Ordering food on an app is a want.\n\n**Phone.** A basic plan so you can call and work is a need. The newest phone every year is a want.\n\n**Transport.** Getting to work by Metro or bus is a need. A taxi because you are late is a want.\n\n**Clothes.** Clothes for work are a need. The fifth pair of shoes is a want."
+                "heading": "الفئة نفسها، جوابان",
+                "body": "**الطعام.** شراء البقالة احتياج. وطلب الطعام عبر تطبيق رغبة.\n\n**الهاتف.** باقة أساسية تتيح لك الاتصال والعمل احتياج. وأحدث هاتف كل عام رغبة.\n\n**المواصلات.** الوصول إلى العمل بالمترو أو الحافلة احتياج. وسيارة الأجرة لأنك متأخر رغبة.\n\n**الملابس.** ملابس العمل احتياج. والزوج الخامس من الأحذية رغبة."
               },
-              "tip": "You are allowed to buy wants. Just name them honestly, so you know what you can cut if money gets tight."
+              "tip": "مسموح لك بشراء الرغبات. فقط سمِّها بصدق، لتعرف ما الذي يمكنك التخلي عنه إن ضاق المال."
             },
             {
               "kind": "teach",
-              "heading": "Why this matters for your budget",
+              "heading": "لماذا يهم هذا لميزانيتك",
               "paragraphs": [
-                "This is not just a game. It is the first step for every budget.",
-                "The most popular budget rule is the **50/30/20 rule**. It splits your take-home pay like this: 50% for needs, 30% for wants, 20% for savings.",
-                "You cannot use that rule until you can sort your spending into needs and wants.",
-                "It also gives you a warning sign. If your needs go over half your pay, your fixed costs — like rent — are too high for your income."
+                "هذه ليست مجرد لعبة. إنها الخطوة الأولى لكل ميزانية.",
+                "أشهر قاعدة للميزانية هي **قاعدة 50/30/20**. وهي تقسّم راتبك المقبوض هكذا: 50% للاحتياجات، 30% للرغبات، 20% للادخار.",
+                "لا يمكنك استخدام تلك القاعدة حتى تستطيع تصنيف إنفاقك إلى احتياجات ورغبات.",
+                "كما أنها تعطيك علامة تحذير. إن تجاوزت احتياجاتك نصف راتبك، فإن تكاليفك الثابتة — كالإيجار — أعلى من أن يتحمّلها دخلك."
               ],
-              "tip": "Do the sorting once a month, when you look at your bank statement. It is easier than deciding in the shop."
+              "tip": "قم بالتصنيف مرة في الشهر، حين تنظر إلى كشف حسابك المصرفي. هذا أسهل من اتخاذ القرار في المتجر."
             },
             {
               "kind": "multiSelect",
-              "prompt": "Which of these are NEEDS? Pick all the correct ones.",
-              "explanation": "Rent, food, electricity and medicine keep you safe and healthy. Netflix and holidays are nice, but nothing breaks if you stop them. That makes them wants.",
+              "prompt": "أيٌّ من هذه احتياجات؟ اختر كل الإجابات الصحيحة.",
+              "explanation": "الإيجار والطعام والكهرباء والدواء تبقيك آمناً وصحيحاً. نتفليكس والعطلات جميلة، لكن لا شيء ينكسر إن توقفت عنها. وهذا يجعلها رغبات.",
               "options": [
-                "Rent",
-                "Netflix subscription",
-                "Groceries",
-                "Electricity bill",
-                "A holiday trip",
-                "Medicine"
+                "الإيجار",
+                "اشتراك نتفليكس",
+                "البقالة",
+                "فاتورة الكهرباء",
+                "رحلة عطلة",
+                "الدواء"
               ],
               "answers": [
                 0,
@@ -317,13 +317,13 @@
             },
             {
               "kind": "singleChoice",
-              "prompt": "You pay {c}200 a month for a phone plan with a new phone. A basic plan with the same calls and data costs {c}80. How do you sort this?",
-              "explanation": "You need a phone to work and stay in touch — that part costs {c}80. The extra {c}120 buys a nicer phone. That part is a want.",
+              "prompt": "تدفع {c}200 شهرياً لباقة هاتف مع هاتف جديد. باقة أساسية بالمكالمات والبيانات نفسها تكلّف {c}80. كيف تصنّف هذا؟",
+              "explanation": "تحتاج إلى هاتف لتعمل وتبقى على تواصل — وهذا الجزء يكلّف {c}80. والـ {c}120 الإضافية تشتري هاتفاً أفخم. وهذا الجزء رغبة.",
               "options": [
-                "All {c}200 is a need",
-                "All {c}200 is a want",
-                "{c}80 is the need, {c}120 is a want",
-                "It cannot be sorted"
+                "الـ {c}200 كلها احتياج",
+                "الـ {c}200 كلها رغبة",
+                "الـ {c}80 احتياج، والـ {c}120 رغبة",
+                "لا يمكن تصنيفه"
               ],
               "answers": [
                 2
@@ -331,13 +331,13 @@
             },
             {
               "kind": "singleChoice",
-              "prompt": "Your needs now take 65% of your take-home pay. What does this tell you?",
-              "explanation": "It is information, not blame. When needs go over half your pay, the cause is usually one big cost like rent or car payments — not small daily spending.",
+              "prompt": "احتياجاتك الآن تأخذ 65% من راتبك المقبوض. ماذا يخبرك هذا؟",
+              "explanation": "إنها معلومة، لا لوم. عندما تتجاوز الاحتياجات نصف راتبك، يكون السبب عادةً تكلفة كبيرة واحدة كالإيجار أو أقساط السيارة — لا الإنفاق اليومي الصغير.",
               "options": [
-                "You are bad with money",
-                "Your fixed costs, like rent, are high for your income",
-                "You should stop saving",
-                "Nothing at all"
+                "أنك سيئ في إدارة المال",
+                "أن تكاليفك الثابتة، كالإيجار، مرتفعة بالنسبة لدخلك",
+                "أنه يجب أن تتوقف عن الادخار",
+                "لا شيء على الإطلاق"
               ],
               "answers": [
                 1
@@ -345,8 +345,8 @@
             },
             {
               "kind": "singleChoice",
-              "prompt": "Under the 50/30/20 rule, how much of your take-home pay goes to wants?",
-              "explanation": "30% goes to wants. 50% goes to needs and 20% goes to savings. You will use this rule a lot in the next unit.",
+              "prompt": "وفق قاعدة 50/30/20، كم من راتبك المقبوض يذهب للرغبات؟",
+              "explanation": "30% تذهب للرغبات. 50% تذهب للاحتياجات و20% تذهب للادخار. ستستخدم هذه القاعدة كثيراً في الوحدة التالية.",
               "options": [
                 "50%",
                 "30%",
@@ -365,80 +365,80 @@
       "id": "u2",
       "number": 2,
       "accent": "mint",
-      "title": "Control Cash Flow",
-      "subtitle": "Budgeting & Saving",
-      "blurb": "See where your money goes, give every dirham a job, and build a safety cushion.",
+      "title": "تحكّم في التدفق النقدي",
+      "subtitle": "الميزانية والادخار",
+      "blurb": "شاهد أين يذهب مالك، وأعطِ كل درهم مهمة، وابنِ وسادة أمان.",
       "lessons": [
         {
           "id": "u2l1",
           "number": 1,
           "icon": "flow",
-          "title": "Cash Flow Tracking",
-          "blurb": "Write down what comes in and what goes out.",
+          "title": "تتبّع التدفق النقدي",
+          "blurb": "دوّن ما يدخل وما يخرج.",
           "steps": [
             {
               "kind": "teach",
-              "heading": "Money in, money out",
+              "heading": "مال يدخل، مال يخرج",
               "paragraphs": [
-                "**Cash flow** just means money moving in and out of your account.",
-                "**Money in** is your salary, freelance work, gifts, refunds.",
-                "**Money out** is rent, food, transport, shopping, savings.",
-                "**Net cash flow** = money in − money out. If it is positive, you kept some. If it is negative, you spent more than you earned."
+                "**التدفق النقدي** يعني ببساطة حركة المال داخل حسابك وخارجه.",
+                "**المال الداخل** هو راتبك، والعمل الحر، والهدايا، والمبالغ المستردة.",
+                "**المال الخارج** هو الإيجار والطعام والمواصلات والتسوق والادخار.",
+                "**صافي التدفق النقدي** = المال الداخل − المال الخارج. إن كان موجباً، فقد احتفظت ببعضه. وإن كان سالباً، فقد أنفقت أكثر مما كسبت."
               ],
-              "tip": "Positive is good. Negative every month is a problem, even if your account is not empty yet."
+              "tip": "الموجب جيد. أما السالب كل شهر فهو مشكلة، حتى لو لم يكن حسابك فارغاً بعد."
             },
             {
               "kind": "teach",
-              "heading": "Writing it down changes what you spend",
+              "heading": "تدوين الأمر يغيّر ما تنفقه",
               "paragraphs": [
-                "Something strange happens when people start writing down what they spend. They spend less — without even trying.",
-                "Why? Because most extra spending is not a decision. It just happens. A coffee here. A delivery fee there. A subscription you forgot about.",
-                "Small amounts feel like nothing. Together they are big. This is called **expense leakage** — money leaving through small holes you did not notice."
+                "يحدث شيء غريب عندما يبدأ الناس بتدوين ما ينفقونه. ينفقون أقل — دون أن يحاولوا حتى.",
+                "لماذا؟ لأن معظم الإنفاق الزائد ليس قراراً. إنه يحدث فقط. قهوة هنا. رسوم توصيل هناك. اشتراك نسيته.",
+                "تبدو المبالغ الصغيرة وكأنها لا شيء. لكنها معاً كبيرة. يُسمى هذا **تسرّب المصاريف** — مال يغادر عبر ثقوب صغيرة لم تلاحظها."
               ],
               "example": {
-                "heading": "The coffee example",
-                "body": "One coffee costs **{c}15**.\n\nYou buy one 4 days a week:\n15 × 4 = **{c}60 a week**\n\nIn a month (4 weeks):\n60 × 4 = **{c}240 a month**\n\nIn a year:\n240 × 12 = **{c}2,880 a year**\n\nNobody decides to spend {c}2,880 on coffee. They decide {c}15, again and again."
+                "heading": "مثال القهوة",
+                "body": "تكلّف القهوة الواحدة **{c}15**.\n\nتشتري واحدة 4 أيام في الأسبوع:\n15 × 4 = **{c}60 في الأسبوع**\n\nفي الشهر (4 أسابيع):\n60 × 4 = **{c}240 في الشهر**\n\nفي السنة:\n240 × 12 = **{c}2,880 في السنة**\n\nلا أحد يقرر إنفاق {c}2,880 على القهوة. بل يقرر {c}15، مرة بعد مرة."
               },
-              "tip": "You are not writing things down to feel bad. You are doing it to find the small holes."
+              "tip": "أنت لا تدوّن الأشياء لتشعر بالسوء. بل تفعل ذلك لتجد الثقوب الصغيرة."
             },
             {
               "kind": "teach",
-              "heading": "Three easy ways to track",
+              "heading": "ثلاث طرق سهلة للتتبّع",
               "paragraphs": [
-                "The best method is the one you will still use next month. Pick one:"
+                "أفضل طريقة هي التي ستظل تستخدمها الشهر المقبل. اختر واحدة:"
               ],
               "list": [
                 {
-                  "term": "Log it right away",
-                  "detail": "Add it in the app when you pay. It takes 10 seconds and you do not have to remember later."
+                  "term": "سجّله فوراً",
+                  "detail": "أضِفه في التطبيق عند الدفع. يستغرق 10 ثوانٍ ولا تضطر إلى تذكّره لاحقاً."
                 },
                 {
-                  "term": "Check once a week",
-                  "detail": "Sit down once a week with your bank app and sort everything. Slower, but it catches what you forgot."
+                  "term": "راجع مرة في الأسبوع",
+                  "detail": "اجلس مرة أسبوعياً مع تطبيق بنكك وصنّف كل شيء. أبطأ، لكنه يلتقط ما نسيته."
                 },
                 {
-                  "term": "Set fixed costs once",
-                  "detail": "Rent and subscriptions are the same every month. Add them one time. Then only track your daily spending."
+                  "term": "حدّد التكاليف الثابتة مرة واحدة",
+                  "detail": "الإيجار والاشتراكات هي نفسها كل شهر. أضِفها مرة واحدة. ثم تتبّع إنفاقك اليومي فقط."
                 }
               ],
-              "tip": "Give it 30 days before you judge it. One month shows you a picture. Three months show you a habit."
+              "tip": "امنحه 30 يوماً قبل أن تحكم عليه. شهر واحد يريك صورة. وثلاثة أشهر تريك عادة."
             },
             {
               "kind": "numeric",
-              "prompt": "This month Layla earned {c}5,000 from her job and {c}500 from freelance work. She spent {c}4,200. What is her net cash flow?",
-              "explanation": "Money in = 5,000 + 500 = 5,500. Money out = 4,200. Net cash flow = 5,500 − 4,200 = 1,300. That extra 1,300 is what she can save.",
+              "prompt": "هذا الشهر كسبت ليلى {c}5,000 من وظيفتها و{c}500 من عمل حر. وأنفقت {c}4,200. فما صافي تدفقها النقدي؟",
+              "explanation": "المال الداخل = 5,000 + 500 = 5,500. المال الخارج = 4,200. صافي التدفق النقدي = 5,500 − 4,200 = 1,300. تلك الـ 1,300 الإضافية هي ما تستطيع ادخاره.",
               "answer": 1300,
               "showsCurrencySymbol": true
             },
             {
               "kind": "singleChoice",
-              "prompt": "Someone spends more than they earn every month, but their account is not empty. What is happening?",
-              "explanation": "The extra money has to come from somewhere. It is coming out of savings, or from a credit card. That cannot go on forever.",
+              "prompt": "أحدهم ينفق أكثر مما يكسب كل شهر، لكن حسابه ليس فارغاً. ماذا يحدث؟",
+              "explanation": "المال الإضافي لا بد أن يأتي من مكان ما. إنه يأتي من المدّخرات، أو من بطاقة ائتمان. ولا يمكن أن يستمر ذلك إلى الأبد.",
               "options": [
-                "Nothing — they are fine",
-                "They are using savings or borrowing to fill the gap",
-                "Their salary is going up",
-                "It is impossible"
+                "لا شيء — إنه بخير",
+                "إنه يستخدم مدّخراته أو يقترض لسدّ الفجوة",
+                "راتبه في ازدياد",
+                "هذا مستحيل"
               ],
               "answers": [
                 1
@@ -446,13 +446,13 @@
             },
             {
               "kind": "singleChoice",
-              "prompt": "What is 'expense leakage'?",
-              "explanation": "Leakage is many tiny spends, not one big mistake. It is also the easiest kind to fix, because you barely miss the things you cut.",
+              "prompt": "ما هو \"تسرّب المصاريف\"؟",
+              "explanation": "التسرّب هو مصاريف صغيرة كثيرة، لا خطأ كبير واحد. وهو أيضاً أسهل نوع لإصلاحه، لأنك بالكاد تفتقد الأشياء التي تتخلى عنها.",
               "options": [
-                "A mistake by your bank",
-                "Small purchases you barely notice that add up to a big total",
-                "Money spent on rent",
-                "A type of savings account"
+                "خطأ من بنكك",
+                "مشتريات صغيرة بالكاد تلاحظها تتراكم لتصبح مبلغاً كبيراً",
+                "مال يُنفَق على الإيجار",
+                "نوع من حسابات التوفير"
               ],
               "answers": [
                 1
@@ -460,8 +460,8 @@
             },
             {
               "kind": "numeric",
-              "prompt": "You spend {c}20 on lunch, 5 days a week. How much is that in ONE WEEK?",
-              "explanation": "20 × 5 = 100 a week. Over a month that is about {c}400, and over a year about {c}4,800. Small numbers get big when they repeat.",
+              "prompt": "تنفق {c}20 على الغداء، 5 أيام في الأسبوع. كم يبلغ ذلك في أسبوع واحد؟",
+              "explanation": "20 × 5 = 100 في الأسبوع. وعلى مدى شهر يبلغ نحو {c}400، وعلى مدى سنة نحو {c}4,800. الأرقام الصغيرة تكبر عندما تتكرر.",
               "answer": 100,
               "showsCurrencySymbol": true
             }
@@ -471,99 +471,99 @@
           "id": "u2l2",
           "number": 2,
           "icon": "pie",
-          "title": "Budgeting Frameworks",
-          "blurb": "Give every dirham a job before you spend it.",
+          "title": "أطر وضع الميزانية",
+          "blurb": "أعطِ كل درهم مهمة قبل أن تنفقه.",
           "steps": [
             {
               "kind": "teach",
-              "heading": "A budget is a plan, not a punishment",
+              "heading": "الميزانية خطة، لا عقاب",
               "paragraphs": [
-                "A **budget** is simply deciding where your money will go — *before* you spend it.",
-                "That is the important part. You decide when you are calm, not when you are standing in a shop.",
-                "A budget rule gives your plan a shape, so you do not start from nothing every month."
+                "**الميزانية** هي ببساطة أن تقرر إلى أين سيذهب مالك — *قبل* أن تنفقه.",
+                "هذا هو الجزء المهم. أنت تقرر وأنت هادئ، لا وأنت واقف في متجر.",
+                "قاعدة الميزانية تعطي خطتك شكلاً، فلا تبدأ من الصفر كل شهر."
               ]
             },
             {
               "kind": "teach",
-              "heading": "The 50/30/20 rule",
+              "heading": "قاعدة 50/30/20",
               "paragraphs": [
-                "Take your take-home pay. Split it into three parts."
+                "خذ راتبك المقبوض. قسّمه إلى ثلاثة أجزاء."
               ],
               "list": [
                 {
-                  "term": "50% for needs",
-                  "detail": "Rent, bills, groceries, transport to work, insurance."
+                  "term": "50% للاحتياجات",
+                  "detail": "الإيجار والفواتير والبقالة والمواصلات إلى العمل والتأمين."
                 },
                 {
-                  "term": "30% for wants",
-                  "detail": "Eating out, shopping, trips, fun. Planned, so no guilt."
+                  "term": "30% للرغبات",
+                  "detail": "تناول الطعام بالخارج والتسوق والرحلات والمتعة. مخطَّط لها، فلا شعور بالذنب."
                 },
                 {
-                  "term": "20% for savings",
-                  "detail": "Emergency fund, investing, and paying extra on any debt."
+                  "term": "20% للادخار",
+                  "detail": "صندوق الطوارئ والاستثمار ودفع مبلغ إضافي على أي دَين."
                 }
               ],
               "example": {
-                "heading": "On {c}5,000 take-home pay",
-                "body": "Needs: 50% of 5,000\n5,000 × 0.50 = **{c}2,500**\n\nWants: 30% of 5,000\n5,000 × 0.30 = **{c}1,500**\n\nSavings: 20% of 5,000\n5,000 × 0.20 = **{c}1,000**\n\nCheck: 2,500 + 1,500 + 1,000 = 5,000 ✓"
+                "heading": "على راتب مقبوض {c}5,000",
+                "body": "الاحتياجات: 50% من 5,000\n5,000 × 0.50 = **{c}2,500**\n\nالرغبات: 30% من 5,000\n5,000 × 0.30 = **{c}1,500**\n\nالادخار: 20% من 5,000\n5,000 × 0.20 = **{c}1,000**\n\nتحقّق: 2,500 + 1,500 + 1,000 = 5,000 ✓"
               },
-              "tip": "To find 10% of any number, just move the dot one place left. 5,000 → 500. Then 20% is double that = 1,000."
+              "tip": "لإيجاد 10% من أي رقم، حرّك الفاصلة خانة واحدة إلى اليسار. 5,000 ← 500. ثم 20% ضِعف ذلك = 1,000."
             },
             {
               "kind": "teach",
-              "heading": "Two other ways to budget",
+              "heading": "طريقتان أخريان لوضع الميزانية",
               "paragraphs": [
-                "Different people need different systems. Two more that work well:"
+                "أناس مختلفون يحتاجون أنظمة مختلفة. إليك طريقتين أخريين تعملان جيداً:"
               ],
               "list": [
                 {
-                  "term": "Zero-based budgeting",
-                  "detail": "You give every dirham a job until nothing is left unnamed. Very exact. More work. Good if you like being in control."
+                  "term": "الميزانية الصفرية",
+                  "detail": "تعطي كل درهم مهمة حتى لا يبقى شيء بلا اسم. دقيقة جداً. وتتطلب جهداً أكبر. مناسبة إن كنت تحب أن تكون مسيطراً."
                 },
                 {
-                  "term": "Pay yourself first",
-                  "detail": "The day you get paid, your savings move out automatically. You live on what is left. Almost no effort, and it works very well."
+                  "term": "ادفع لنفسك أولاً",
+                  "detail": "يوم تقبض راتبك، تنتقل مدّخراتك تلقائياً. وتعيش على ما تبقى. جهد يكاد يكون معدوماً، وتعمل جيداً جداً."
                 }
               ],
-              "tip": "'Pay yourself first' works because you do not need willpower. A bank transfer never gets tired or tempted."
+              "tip": "\"ادفع لنفسك أولاً\" تنجح لأنك لا تحتاج إرادة قوية. فالتحويل المصرفي لا يتعب ولا يُغرى أبداً."
             },
             {
               "kind": "teach",
-              "heading": "When your needs do not fit in 50%",
+              "heading": "عندما لا تتّسع احتياجاتك ضمن 50%",
               "paragraphs": [
-                "In cities like Dubai and Abu Dhabi, rent is high. Many people cannot fit their needs into 50%. That is normal.",
-                "Do not throw the rule away. Change it:",
-                "Step 1. Pay your needs from your income.\nStep 2. Take what is left.\nStep 3. Split that in half — one half for wants, one half for savings."
+                "في مدن مثل دبي وأبوظبي، الإيجار مرتفع. وكثير من الناس لا يستطيعون إدخال احتياجاتهم ضمن 50%. وهذا طبيعي.",
+                "لا تتخلّ عن القاعدة. غيّرها:",
+                "الخطوة 1. ادفع احتياجاتك من دخلك.\nالخطوة 2. خذ ما تبقّى.\nالخطوة 3. قسّمه نصفين — نصف للرغبات، ونصف للادخار."
               ],
               "example": {
-                "heading": "When needs are high",
-                "body": "Take-home pay: **{c}5,000**\nNeeds: **{c}3,200**\n\nWhat is left:\n5,000 − 3,200 = **{c}1,800**\n\nSplit it in half:\n1,800 ÷ 2 = **{c}900**\n\n{c}900 for wants, {c}900 for savings. You are still saving every month."
+                "heading": "عندما تكون الاحتياجات مرتفعة",
+                "body": "الراتب المقبوض: **{c}5,000**\nالاحتياجات: **{c}3,200**\n\nما تبقّى:\n5,000 − 3,200 = **{c}1,800**\n\nقسّمه نصفين:\n1,800 ÷ 2 = **{c}900**\n\n{c}900 للرغبات، {c}900 للادخار. ما زلت تدّخر كل شهر."
               },
-              "tip": "Change the numbers, keep the habit. Saving something beats saving nothing."
+              "tip": "غيّر الأرقام، واحتفظ بالعادة. ادخار شيء أفضل من ادخار لا شيء."
             },
             {
               "kind": "numeric",
-              "prompt": "Your take-home pay is {c}4,000. Under the 50/30/20 rule, how much goes to SAVINGS?",
-              "explanation": "20% of 4,000. Find 10% first: 400. Double it: 800. So {c}800 goes to savings, {c}2,000 to needs and {c}1,200 to wants.",
+              "prompt": "راتبك المقبوض {c}4,000. وفق قاعدة 50/30/20، كم يذهب للادخار؟",
+              "explanation": "20% من 4,000. أوجِد 10% أولاً: 400. ضاعِفها: 800. إذن {c}800 تذهب للادخار، و{c}2,000 للاحتياجات، و{c}1,200 للرغبات.",
               "answer": 800,
               "showsCurrencySymbol": true
             },
             {
               "kind": "numeric",
-              "prompt": "Your take-home pay is {c}3,000. Under the 50/30/20 rule, how much goes to NEEDS?",
-              "explanation": "50% means half. 3,000 ÷ 2 = 1,500. Needs get {c}1,500, wants get {c}900, savings get {c}600.",
+              "prompt": "راتبك المقبوض {c}3,000. وفق قاعدة 50/30/20، كم يذهب للاحتياجات؟",
+              "explanation": "50% تعني النصف. 3,000 ÷ 2 = 1,500. الاحتياجات تأخذ {c}1,500، والرغبات {c}900، والادخار {c}600.",
               "answer": 1500,
               "showsCurrencySymbol": true
             },
             {
               "kind": "singleChoice",
-              "prompt": "Which budget method gives every single dirham a job until nothing is left over?",
-              "explanation": "Zero-based budgeting means income minus all your plans equals zero. Every dirham has a name before the month starts.",
+              "prompt": "أي طريقة ميزانية تعطي كل درهم واحد مهمة حتى لا يبقى شيء؟",
+              "explanation": "الميزانية الصفرية تعني أن الدخل ناقص كل خططك يساوي صفراً. كل درهم له اسم قبل أن يبدأ الشهر.",
               "options": [
-                "The 50/30/20 rule",
-                "Zero-based budgeting",
-                "Pay yourself first",
-                "Cash flow tracking"
+                "قاعدة 50/30/20",
+                "الميزانية الصفرية",
+                "ادفع لنفسك أولاً",
+                "تتبّع التدفق النقدي"
               ],
               "answers": [
                 1
@@ -571,13 +571,13 @@
             },
             {
               "kind": "singleChoice",
-              "prompt": "Why does 'pay yourself first' work better than saving what is left at the end?",
-              "explanation": "At the end of the month, there is usually nothing left. Moving savings on payday makes saving automatic and spending the leftover.",
+              "prompt": "لماذا تنجح \"ادفع لنفسك أولاً\" أكثر من ادخار ما تبقّى في النهاية؟",
+              "explanation": "في نهاية الشهر، لا يتبقى عادةً شيء. نقل المدّخرات يوم القبض يجعل الادخار تلقائياً وينفق ما تبقّى.",
               "options": [
-                "It pays more interest",
-                "The money moves automatically before you can spend it",
-                "Banks require it",
-                "It is faster"
+                "لأنها تدفع فائدة أكبر",
+                "لأن المال ينتقل تلقائياً قبل أن تستطيع إنفاقه",
+                "لأن البنوك تشترط ذلك",
+                "لأنها أسرع"
               ],
               "answers": [
                 1
@@ -585,13 +585,13 @@
             },
             {
               "kind": "singleChoice",
-              "prompt": "Your needs take 64% of your pay. What should you do?",
-              "explanation": "Bend the rule, keep the habit. Splitting the rest in half means you still save every month, even when rent is high.",
+              "prompt": "احتياجاتك تأخذ 64% من راتبك. ماذا يجب أن تفعل؟",
+              "explanation": "عدّل القاعدة، واحتفظ بالعادة. تقسيم ما تبقّى نصفين يعني أنك ما زلت تدّخر كل شهر، حتى عندما يكون الإيجار مرتفعاً.",
               "options": [
-                "Stop budgeting until you earn more",
-                "Pay needs first, then split what is left evenly between wants and savings",
-                "Put everything left into wants",
-                "Borrow money to make it fit"
+                "أوقف الميزانية حتى تكسب أكثر",
+                "ادفع الاحتياجات أولاً، ثم قسّم ما تبقّى بالتساوي بين الرغبات والادخار",
+                "ضع كل ما تبقّى في الرغبات",
+                "اقترض مالاً ليتّسع الأمر"
               ],
               "answers": [
                 1
@@ -603,88 +603,88 @@
           "id": "u2l3",
           "number": 3,
           "icon": "shield",
-          "title": "Emergency Fund",
-          "blurb": "Money set aside for bad surprises.",
+          "title": "صندوق الطوارئ",
+          "blurb": "مال مخصَّص للمفاجآت السيئة.",
           "steps": [
             {
               "kind": "teach",
-              "heading": "What it is",
+              "heading": "ما هو",
               "paragraphs": [
-                "An **emergency fund** is money you keep for real emergencies. Losing your job. A hospital bill. A car repair.",
-                "Its job is not to grow. Its job is to stop a surprise from turning into debt.",
-                "It also gives you choices. If you have money saved, you can say no to a bad job or a bad flat. If you have nothing saved, you have to say yes."
+                "**صندوق الطوارئ** هو مال تحتفظ به للطوارئ الحقيقية. فقدان وظيفتك. فاتورة مستشفى. إصلاح سيارة.",
+                "مهمته ليست أن ينمو. مهمته أن يمنع مفاجأة من أن تتحول إلى دَين.",
+                "كما أنه يمنحك خيارات. إن كان لديك مال مدّخر، تستطيع رفض وظيفة سيئة أو شقة سيئة. وإن لم يكن لديك شيء مدّخر، تضطر إلى القبول."
               ],
-              "tip": "In the UAE, if you lose your job you may also have to leave the country within a set time. That makes having cash ready even more important."
+              "tip": "في الإمارات، إن فقدت وظيفتك فقد يتعين عليك أيضاً مغادرة البلاد خلال مدة محددة. وهذا يجعل توفّر النقد جاهزاً أكثر أهمية."
             },
             {
               "kind": "teach",
-              "heading": "How big should it be?",
+              "heading": "ما حجمه المناسب؟",
               "paragraphs": [
-                "The normal advice is **3 to 6 months of your essential costs**.",
-                "Read that again: **essential costs**. Not your salary. Not everything you spend.",
-                "Only count what it costs to keep your life running: rent, food, bills, transport, insurance. Not restaurants or holidays — those stop in an emergency anyway."
+                "النصيحة المعتادة هي **من 3 إلى 6 أشهر من تكاليفك الأساسية**.",
+                "اقرأ ذلك مجدداً: **تكاليفك الأساسية**. لا راتبك. ولا كل ما تنفقه.",
+                "احسب فقط ما يكلّف إبقاء حياتك تسير: الإيجار والطعام والفواتير والمواصلات والتأمين. لا المطاعم ولا العطلات — فتلك تتوقف في حالة الطوارئ على أي حال."
               ],
               "example": {
-                "heading": "Working out the target",
-                "body": "Nadia's essential costs each month:\n\nRent: {c}2,000\nFood: {c}700\nBills (DEWA, phone): {c}300\nTransport: {c}200\n\nAdd them up:\n2,000 + 700 + 300 + 200 = **{c}3,200 a month**\n\n3 months: 3,200 × 3 = **{c}9,600**\n6 months: 3,200 × 6 = **{c}19,200**"
+                "heading": "حساب الهدف",
+                "body": "تكاليف نادية الأساسية كل شهر:\n\nالإيجار: {c}2,000\nالطعام: {c}700\nالفواتير (ديوا، الهاتف): {c}300\nالمواصلات: {c}200\n\nاجمعها:\n2,000 + 700 + 300 + 200 = **{c}3,200 في الشهر**\n\n3 أشهر: 3,200 × 3 = **{c}9,600**\n6 أشهر: 3,200 × 6 = **{c}19,200**"
               },
-              "tip": "Choose 3 months if your job is stable. Choose 6 months if your income changes, or if you are the only earner."
+              "tip": "اختر 3 أشهر إن كانت وظيفتك مستقرة. واختر 6 أشهر إن كان دخلك متغيراً، أو إن كنت المُعيل الوحيد."
             },
             {
               "kind": "teach",
-              "heading": "Where to keep it",
+              "heading": "أين تحتفظ به",
               "paragraphs": [
-                "Two things matter, in this order.",
-                "**1. You can reach it fast.** This is called **liquidity** — how quickly you can turn something into cash without losing value.",
-                "**2. It cannot fall in value.** So a savings account, not shares.",
-                "Keep it in a **separate savings account**. Separate enough that you do not treat it as spending money. Easy enough to reach in one day."
+                "يهمّ أمران، بهذا الترتيب.",
+                "**1. تستطيع الوصول إليه بسرعة.** يُسمى هذا **السيولة** — مدى سرعة تحويل شيء إلى نقد دون خسارة قيمته.",
+                "**2. لا يمكن أن تنخفض قيمته.** لذا حساب توفير، لا أسهم.",
+                "احتفظ به في **حساب توفير منفصل**. منفصل بما يكفي لئلا تعامله كمال للإنفاق. وسهل الوصول بما يكفي لتناله في يوم واحد."
               ],
               "list": [
                 {
-                  "term": "Good place",
-                  "detail": "A separate savings account, ideally at a different bank from your daily one."
+                  "term": "مكان جيد",
+                  "detail": "حساب توفير منفصل، ويُفضَّل في بنك مختلف عن بنكك اليومي."
                 },
                 {
-                  "term": "Bad place",
-                  "detail": "The stock market. Share prices often fall at the same time people lose jobs."
+                  "term": "مكان سيئ",
+                  "detail": "سوق الأسهم. أسعار الأسهم كثيراً ما تهبط في الوقت نفسه الذي يفقد فيه الناس وظائفهم."
                 },
                 {
-                  "term": "Bad place",
-                  "detail": "A long fixed deposit you cannot touch for years."
+                  "term": "مكان سيئ",
+                  "detail": "وديعة ثابتة طويلة لا تستطيع المساس بها لسنوات."
                 },
                 {
-                  "term": "Bad place",
-                  "detail": "Your everyday account. You will spend it without noticing."
+                  "term": "مكان سيئ",
+                  "detail": "حسابك اليومي. ستنفقه دون أن تلاحظ."
                 }
               ]
             },
             {
               "kind": "teach",
-              "heading": "Starting small",
+              "heading": "البدء بالقليل",
               "paragraphs": [
-                "{c}19,200 sounds impossible when you have nothing saved. So do not start there.",
-                "Start with a **first goal** of {c}2,000. That already covers most small emergencies — a phone screen, a car repair, a flight home.",
-                "Then build to one month. Then three. Then six.",
-                "And when you use it, that is not failure. That is the fund doing its job. Fill it again and keep going."
+                "يبدو {c}19,200 مستحيلاً حين لا يكون لديك شيء مدّخر. لذا لا تبدأ من هناك.",
+                "ابدأ بـ **هدف أول** قدره {c}2,000. فهذا يغطي بالفعل معظم الطوارئ الصغيرة — شاشة هاتف، إصلاح سيارة، تذكرة سفر إلى الوطن.",
+                "ثم ابنِ حتى شهر واحد. ثم ثلاثة. ثم ستة.",
+                "وعندما تستخدمه، فهذا ليس فشلاً. بل هو الصندوق يؤدي مهمته. أعِد ملأه واستمر."
               ],
-              "tip": "Half an emergency fund is not a failed emergency fund. Every month you add is one more month of safety."
+              "tip": "نصف صندوق طوارئ ليس صندوق طوارئ فاشلاً. كل شهر تضيف فيه هو شهر إضافي من الأمان."
             },
             {
               "kind": "numeric",
-              "prompt": "Hassan's essential costs are {c}2,500 a month. How much does he need for a 3-MONTH emergency fund?",
-              "explanation": "2,500 × 3 = 7,500. Multiply your monthly essential costs by the number of months you want to cover.",
+              "prompt": "تكاليف حسن الأساسية {c}2,500 في الشهر. كم يحتاج لصندوق طوارئ يغطي 3 أشهر؟",
+              "explanation": "2,500 × 3 = 7,500. اضرب تكاليفك الشهرية الأساسية في عدد الأشهر التي تريد تغطيتها.",
               "answer": 7500,
               "showsCurrencySymbol": true
             },
             {
               "kind": "singleChoice",
-              "prompt": "Where should you keep your emergency fund?",
-              "explanation": "You need it fast and you need it safe. Shares can fall. A fixed deposit is locked. Your everyday account gets spent. A separate savings account solves all three.",
+              "prompt": "أين يجب أن تحتفظ بصندوق طوارئك؟",
+              "explanation": "تحتاجه بسرعة وتحتاجه آمناً. الأسهم قد تهبط. والوديعة الثابتة مقفلة. وحسابك اليومي يُنفَق. وحساب التوفير المنفصل يحل المشكلات الثلاث.",
               "options": [
-                "In shares, so it grows",
-                "In a separate savings account you can reach quickly",
-                "In your everyday spending account",
-                "In a 5-year fixed deposit"
+                "في أسهم، لينمو",
+                "في حساب توفير منفصل تستطيع الوصول إليه بسرعة",
+                "في حساب إنفاقك اليومي",
+                "في وديعة ثابتة لمدة 5 سنوات"
               ],
               "answers": [
                 1
@@ -692,13 +692,13 @@
             },
             {
               "kind": "singleChoice",
-              "prompt": "Which of these is a real emergency?",
-              "explanation": "An emergency is unexpected, urgent and necessary. A sale is a planned purchase in disguise. Losing your job is exactly what the fund is for.",
+              "prompt": "أيٌّ من هذه طارئ حقيقي؟",
+              "explanation": "الطارئ غير متوقع وعاجل وضروري. أما التخفيض فهو عملية شراء مخطَّط لها متخفّية. وفقدان وظيفتك هو تحديداً ما وُجِد الصندوق من أجله.",
               "options": [
-                "A big sale on a laptop",
-                "Losing your job",
-                "A holiday you want to book",
-                "A new phone model"
+                "تخفيض كبير على حاسوب محمول",
+                "فقدان وظيفتك",
+                "عطلة تريد حجزها",
+                "طراز هاتف جديد"
               ],
               "answers": [
                 1
@@ -706,13 +706,13 @@
             },
             {
               "kind": "singleChoice",
-              "prompt": "You should measure your emergency fund against which number?",
-              "explanation": "In a real emergency you stop spending on fun anyway. Using essential costs makes the target smaller and much easier to reach.",
+              "prompt": "بأي رقم يجب أن تقيس صندوق طوارئك؟",
+              "explanation": "في الطارئ الحقيقي تتوقف عن الإنفاق على المتعة على أي حال. واستخدام التكاليف الأساسية يجعل الهدف أصغر وأسهل بكثير للوصول إليه.",
               "options": [
-                "Your yearly salary",
-                "Everything you spend, including fun",
-                "Your essential monthly costs only",
-                "Your credit card limit"
+                "راتبك السنوي",
+                "كل ما تنفقه، بما في ذلك المتعة",
+                "تكاليفك الشهرية الأساسية فقط",
+                "حد بطاقتك الائتمانية"
               ],
               "answers": [
                 2
@@ -724,95 +724,95 @@
           "id": "u2l4",
           "number": 4,
           "icon": "bank",
-          "title": "Banking Setup",
-          "blurb": "Set up your accounts so good habits happen automatically.",
+          "title": "إعداد الحسابات المصرفية",
+          "blurb": "رتّب حساباتك لتحدث العادات الجيدة تلقائياً.",
           "steps": [
             {
               "kind": "teach",
-              "heading": "Two types of account",
+              "heading": "نوعان من الحسابات",
               "paragraphs": [
-                "**A current account** is for money moving through. Your salary arrives here. Your rent and bills leave from here. It usually pays no interest, and that is fine.",
-                "**A savings account** is for money sitting still. It pays you interest. It sometimes has small limits on taking money out — which actually helps you save."
+                "**الحساب الجاري** للمال الذي يمرّ عبره. راتبك يصل هنا. وإيجارك وفواتيرك تغادر من هنا. وعادةً لا يدفع فائدة، ولا بأس بذلك.",
+                "**حساب التوفير** للمال الثابت في مكانه. وهو يدفع لك فائدة. وأحياناً تكون له حدود صغيرة على السحب — وهذا يساعدك فعلاً على الادخار."
               ],
-              "tip": "In the UAE your salary is usually paid through the **WPS** (Wage Protection System). It goes straight into your current account each month."
+              "tip": "في الإمارات يُدفَع راتبك عادةً عبر **نظام حماية الأجور (WPS)**. ويذهب مباشرةً إلى حسابك الجاري كل شهر."
             },
             {
               "kind": "teach",
-              "heading": "How to compare interest rates",
+              "heading": "كيف تقارن معدلات الفائدة",
               "paragraphs": [
-                "Banks show a rate on savings accounts. Two rates can look the same but pay different amounts.",
-                "**Nominal rate** is the simple yearly percentage.",
-                "**APY or AER** is the rate *after* counting interest earned on your interest during the year. This is the honest number. Always compare using this one.",
-                "**Compounding** means your interest starts earning interest too. Monthly is better than yearly."
+                "تعرض البنوك معدلاً على حسابات التوفير. وقد يبدو معدلان متماثلين لكنهما يدفعان مبالغ مختلفة.",
+                "**المعدل الاسمي** هو النسبة المئوية السنوية البسيطة.",
+                "**النسبة السنوية للعائد (APY أو AER)** هي المعدل *بعد* احتساب الفائدة المكتسَبة على فائدتك خلال العام. وهذا هو الرقم الصادق. قارِن دائماً باستخدام هذا.",
+                "**التراكم** يعني أن فائدتك تبدأ هي أيضاً بكسب فائدة. والشهري أفضل من السنوي."
               ],
               "example": {
-                "heading": "Two accounts, same money",
-                "body": "You have **{c}10,000** saved for one year.\n\nAccount A pays **1%**:\n10,000 × 0.01 = **{c}100**\n\nAccount B pays **4%**:\n10,000 × 0.04 = **{c}400**\n\nDifference: **{c}300 a year**\n\nSame money. Same risk. You only had to fill in a form."
+                "heading": "حسابان، المال نفسه",
+                "body": "لديك **{c}10,000** مدّخرة لمدة عام.\n\nالحساب أ يدفع **1%**:\n10,000 × 0.01 = **{c}100**\n\nالحساب ب يدفع **4%**:\n10,000 × 0.04 = **{c}400**\n\nالفرق: **{c}300 في السنة**\n\nالمال نفسه. والمخاطرة نفسها. كل ما فعلته هو ملء استمارة."
               },
-              "tip": "Compare accounts using APY or AER, not the big number in the advert."
+              "tip": "قارِن الحسابات باستخدام APY أو AER، لا الرقم الكبير في الإعلان."
             },
             {
               "kind": "teach",
-              "heading": "A simple three-account setup",
+              "heading": "إعداد بسيط من ثلاثة حسابات",
               "paragraphs": [
-                "The most useful thing you can do is not picking the perfect bank. It is arranging your accounts so the right thing happens by itself."
+                "أنفع ما يمكنك فعله ليس اختيار البنك المثالي. بل ترتيب حساباتك ليحدث الشيء الصحيح من تلقاء نفسه."
               ],
               "list": [
                 {
-                  "term": "1. The main account",
-                  "detail": "Your salary lands here. All your bills leave from here."
+                  "term": "1. الحساب الرئيسي",
+                  "detail": "راتبك يصل هنا. وكل فواتيرك تغادر من هنا."
                 },
                 {
-                  "term": "2. The savings account",
-                  "detail": "A separate account for your emergency fund and goals. Money goes in. It only comes out for its purpose."
+                  "term": "2. حساب التوفير",
+                  "detail": "حساب منفصل لصندوق طوارئك وأهدافك. المال يدخله. ولا يخرج إلا لغرضه."
                 },
                 {
-                  "term": "3. The spending money",
-                  "detail": "What is left after bills and savings. This is what you can spend freely this month."
+                  "term": "3. مال الإنفاق",
+                  "detail": "ما تبقّى بعد الفواتير والادخار. هذا ما يمكنك إنفاقه بحرية هذا الشهر."
                 }
               ],
-              "tip": "Set up an automatic transfer to savings on payday — not at the end of the month. This is 'pay yourself first' done by your bank."
+              "tip": "أعِدّ تحويلاً تلقائياً إلى الادخار يوم القبض — لا في نهاية الشهر. هذه هي \"ادفع لنفسك أولاً\" ينفذها بنكك."
             },
             {
               "kind": "teach",
-              "heading": "Watch out for fees",
+              "heading": "احذر الرسوم",
               "paragraphs": [
-                "Interest is easy to see. Fees are easy to miss. Both come from the same pocket.",
-                "Common ones in the UAE:"
+                "الفائدة سهلة الرؤية. والرسوم سهلة الإغفال. وكلاهما يأتي من الجيب نفسه.",
+                "الشائعة في الإمارات:"
               ],
               "list": [
                 {
-                  "term": "Minimum balance fee",
-                  "detail": "Many UAE accounts charge you if your balance drops below a set amount — often {c}3,000 or {c}5,000."
+                  "term": "رسوم الحد الأدنى للرصيد",
+                  "detail": "كثير من الحسابات في الإمارات تفرض عليك رسوماً إن انخفض رصيدك دون مبلغ محدد — غالباً {c}3,000 أو {c}5,000."
                 },
                 {
-                  "term": "ATM fee from another bank",
-                  "detail": "A small charge each time you use a different bank's machine."
+                  "term": "رسوم الصراف الآلي لبنك آخر",
+                  "detail": "رسم صغير في كل مرة تستخدم فيها ماكينة بنك مختلف."
                 },
                 {
-                  "term": "Card annual fee",
-                  "detail": "A yearly charge on some credit cards."
+                  "term": "الرسم السنوي للبطاقة",
+                  "detail": "رسم سنوي على بعض البطاقات الائتمانية."
                 },
                 {
-                  "term": "Foreign currency fee",
-                  "detail": "Usually 2% to 3% when you buy something in another currency or shop online abroad."
+                  "term": "رسوم العملة الأجنبية",
+                  "detail": "عادةً من 2% إلى 3% عندما تشتري شيئاً بعملة أخرى أو تتسوق عبر الإنترنت من الخارج."
                 }
               ],
               "example": {
-                "heading": "A small fee, one year",
-                "body": "A minimum balance fee of **{c}25 a month**:\n\n25 × 12 = **{c}300 a year**\n\nIf your account only pays {c}100 in interest, the fee costs you more than the interest gives you."
+                "heading": "رسم صغير، عام واحد",
+                "body": "رسم حد أدنى للرصيد قدره **{c}25 في الشهر**:\n\n25 × 12 = **{c}300 في السنة**\n\nإن كان حسابك يدفع {c}100 فقط كفائدة، فإن الرسم يكلّفك أكثر مما تعطيه الفائدة."
               },
-              "tip": "Once a year, look through your statements for the words 'fee' or 'charge'. Most people find something they can stop."
+              "tip": "مرة في السنة، راجع كشوف حسابك بحثاً عن كلمتي \"رسم\" أو \"عمولة\". معظم الناس يجدون شيئاً يمكنهم إيقافه."
             },
             {
               "kind": "singleChoice",
-              "prompt": "Which number should you use to compare two savings accounts?",
-              "explanation": "APY and AER include the effect of compounding. Two accounts with the same simple rate can pay different amounts, so this is the fair way to compare.",
+              "prompt": "أي رقم يجب أن تستخدم لمقارنة حسابي توفير؟",
+              "explanation": "APY وAER يشملان أثر التراكم. وقد يدفع حسابان بالمعدل البسيط نفسه مبلغين مختلفين، لذا هذه هي الطريقة العادلة للمقارنة.",
               "options": [
-                "The big number in the advert",
-                "The APY or AER",
-                "The bank's size",
-                "The minimum balance"
+                "الرقم الكبير في الإعلان",
+                "النسبة السنوية للعائد APY أو AER",
+                "حجم البنك",
+                "الحد الأدنى للرصيد"
               ],
               "answers": [
                 1
@@ -820,20 +820,20 @@
             },
             {
               "kind": "numeric",
-              "prompt": "You keep {c}5,000 in a savings account that pays 4% a year. How much interest do you earn in one year?",
-              "explanation": "5,000 × 0.04 = 200. Tip: find 1% first by moving the dot two places left (5,000 → 50), then multiply by 4 to get 200.",
+              "prompt": "تحتفظ بـ {c}5,000 في حساب توفير يدفع 4% سنوياً. كم فائدة تكسب في عام واحد؟",
+              "explanation": "5,000 × 0.04 = 200. نصيحة: أوجِد 1% أولاً بتحريك الفاصلة خانتين إلى اليسار (5,000 ← 50)، ثم اضرب في 4 لتحصل على 200.",
               "answer": 200,
               "showsCurrencySymbol": true
             },
             {
               "kind": "singleChoice",
-              "prompt": "When should money move into your savings account?",
-              "explanation": "If you wait until the end of the month, there is usually nothing left. An automatic transfer on payday makes saving happen first.",
+              "prompt": "متى يجب أن ينتقل المال إلى حساب توفيرك؟",
+              "explanation": "إن انتظرت حتى نهاية الشهر، لا يتبقى عادةً شيء. والتحويل التلقائي يوم القبض يجعل الادخار يحدث أولاً.",
               "options": [
-                "At the end of the month, if any is left",
-                "Automatically on payday",
-                "Only when you remember",
-                "Once a year"
+                "في نهاية الشهر، إن تبقّى شيء",
+                "تلقائياً يوم القبض",
+                "فقط عندما تتذكّر",
+                "مرة في السنة"
               ],
               "answers": [
                 1
@@ -841,13 +841,13 @@
             },
             {
               "kind": "singleChoice",
-              "prompt": "What does 'liquidity' mean?",
-              "explanation": "Liquidity is about speed and safety of access. A savings account is very liquid. A property is not. That is why your emergency fund goes in a savings account.",
+              "prompt": "ماذا تعني \"السيولة\"؟",
+              "explanation": "السيولة تتعلق بسرعة وأمان الوصول. حساب التوفير عالي السيولة. والعقار ليس كذلك. لهذا يذهب صندوق طوارئك إلى حساب توفير.",
               "options": [
-                "How much interest something pays",
-                "How fast you can turn it into cash without losing value",
-                "How big your balance is",
-                "How old the account is"
+                "مقدار الفائدة التي يدفعها شيء ما",
+                "مدى سرعة تحويله إلى نقد دون خسارة قيمته",
+                "حجم رصيدك",
+                "عمر الحساب"
               ],
               "answers": [
                 1
@@ -861,111 +861,111 @@
       "id": "u3",
       "number": 3,
       "accent": "coral",
-      "title": "Master Borrowing",
-      "subtitle": "Debt & Credit",
-      "blurb": "Borrowing can help you or hurt you. Learn to tell the difference.",
+      "title": "أتقِن الاقتراض",
+      "subtitle": "الدَّين والائتمان",
+      "blurb": "الاقتراض قد يساعدك أو يؤذيك. تعلّم كيف تميّز بين الاثنين.",
       "lessons": [
         {
           "id": "u3l1",
           "number": 1,
           "icon": "gauge",
-          "title": "Credit Mechanics",
-          "blurb": "How your credit score really works.",
+          "title": "آليات الائتمان",
+          "blurb": "كيف تعمل درجتك الائتمانية فعلاً.",
           "steps": [
             {
               "kind": "teach",
-              "heading": "What a credit score is",
+              "heading": "ما هي الدرجة الائتمانية",
               "paragraphs": [
-                "A **credit score** is a number that shows how well you pay back money you borrow.",
-                "Banks look at it before they give you a loan or a credit card. They are asking one question: will this person pay us back on time?",
-                "In the UAE, the score comes from the **Al Etihad Credit Bureau (AECB)**. The score goes from **300 to 900**. Higher is better.",
-                "Your score does more than decide yes or no. It also decides your interest rate — how much the loan costs you."
+                "**الدرجة الائتمانية** رقم يبيّن مدى جودة سدادك للمال الذي تقترضه.",
+                "تنظر إليها البنوك قبل أن تمنحك قرضاً أو بطاقة ائتمان. وهي تطرح سؤالاً واحداً: هل سيسدّد هذا الشخص لنا في الوقت المحدد؟",
+                "في الإمارات، تأتي الدرجة من **شركة الاتحاد للمعلومات الائتمانية (AECB)**. وتتراوح الدرجة من **300 إلى 900**. والأعلى أفضل.",
+                "درجتك تفعل أكثر من مجرد تقرير نعم أو لا. فهي أيضاً تحدد معدل فائدتك — أي كم يكلّفك القرض."
               ],
               "list": [
                 {
                   "term": "300 – 619",
-                  "detail": "Poor. Loans will be hard to get."
+                  "detail": "ضعيفة. سيكون الحصول على القروض صعباً."
                 },
                 {
                   "term": "620 – 679",
-                  "detail": "Fair. Some options, but not the best rates."
+                  "detail": "مقبولة. بعض الخيارات، لكن ليس بأفضل المعدلات."
                 },
                 {
                   "term": "680 – 730",
-                  "detail": "Good. Most banks will say yes."
+                  "detail": "جيدة. معظم البنوك ستوافق."
                 },
                 {
                   "term": "731 – 900",
-                  "detail": "Excellent. You get the best offers."
+                  "detail": "ممتازة. تحصل على أفضل العروض."
                 }
               ]
             },
             {
               "kind": "teach",
-              "heading": "The five things that build your score",
+              "heading": "الأمور الخمسة التي تبني درجتك",
               "paragraphs": [
-                "Different countries use slightly different systems, but they all look at these five things:"
+                "تستخدم الدول المختلفة أنظمة مختلفة قليلاً، لكنها جميعاً تنظر إلى هذه الأمور الخمسة:"
               ],
               "list": [
                 {
-                  "term": "1. Payment history — the biggest one",
-                  "detail": "Do you pay on time, every time? This matters more than everything else."
+                  "term": "1. سجل السداد — الأهم",
+                  "detail": "هل تسدّد في الوقت المحدد، في كل مرة؟ هذا يهم أكثر من كل شيء آخر."
                 },
                 {
-                  "term": "2. How much credit you use",
-                  "detail": "If your card limit is {c}10,000 and you owe {c}3,000, you are using 30%. Lower is better."
+                  "term": "2. مقدار الائتمان الذي تستخدمه",
+                  "detail": "إن كان حد بطاقتك {c}10,000 وتدين بـ {c}3,000، فأنت تستخدم 30%. والأقل أفضل."
                 },
                 {
-                  "term": "3. How long you have had credit",
-                  "detail": "Older accounts help. This is why closing your oldest card can hurt you."
+                  "term": "3. منذ متى ولديك ائتمان",
+                  "detail": "الحسابات الأقدم تساعد. لهذا قد يؤذيك إغلاق أقدم بطاقة لديك."
                 },
                 {
-                  "term": "4. The types of credit you have",
-                  "detail": "Having both a card and a loan shows you can handle both."
+                  "term": "4. أنواع الائتمان التي لديك",
+                  "detail": "امتلاك بطاقة وقرض معاً يبيّن أنك تستطيع التعامل مع الاثنين."
                 },
                 {
-                  "term": "5. New applications",
-                  "detail": "Applying for many cards or loans quickly looks like you are in trouble."
+                  "term": "5. الطلبات الجديدة",
+                  "detail": "التقدّم بطلبات كثيرة لبطاقات أو قروض بسرعة يبدو وكأنك في ضائقة."
                 }
               ],
-              "tip": "Remember only two things and you cover most of it: **pay on time** and **keep your card balance low**."
+              "tip": "تذكّر أمرين فقط تغطِّ بهما معظم الأمر: **ادفع في الوقت المحدد** و**أبقِ رصيد بطاقتك منخفضاً**."
             },
             {
               "kind": "teach",
-              "heading": "Credit utilisation: the fastest way to improve",
+              "heading": "نسبة استخدام الائتمان: أسرع طريقة للتحسّن",
               "paragraphs": [
-                "**Credit utilisation** means how much of your card limit you are using.",
-                "The formula: **utilisation = balance ÷ limit × 100**",
-                "Payment history takes years to build. But utilisation can change in one month. That makes it the fastest thing you can fix.",
-                "Try to keep it **under 30%**."
+                "**نسبة استخدام الائتمان** تعني مقدار ما تستخدمه من حد بطاقتك.",
+                "الصيغة: **نسبة الاستخدام = الرصيد ÷ الحد × 100**",
+                "سجل السداد يستغرق سنوات لبنائه. لكن نسبة الاستخدام قد تتغير في شهر واحد. وهذا يجعلها أسرع شيء تستطيع إصلاحه.",
+                "حاول أن تُبقيها **دون 30%**."
               ],
               "example": {
-                "heading": "Working it out",
-                "body": "Your card limit: **{c}10,000**\nYour balance: **{c}2,000**\n\nStep 1. Divide:\n2,000 ÷ 10,000 = **0.2**\n\nStep 2. Multiply by 100:\n0.2 × 100 = **20%**\n\n20% is under 30%. This is healthy."
+                "heading": "حساب الأمر",
+                "body": "حد بطاقتك: **{c}10,000**\nرصيدك: **{c}2,000**\n\nالخطوة 1. اقسم:\n2,000 ÷ 10,000 = **0.2**\n\nالخطوة 2. اضرب في 100:\n0.2 × 100 = **20%**\n\n20% دون 30%. وهذا صحّي."
               },
-              "tip": "Your bank reports your balance on the statement date, not the due date. Paying some off *before* the statement gives a lower number."
+              "tip": "يبلّغ بنكك عن رصيدك في تاريخ كشف الحساب، لا في تاريخ الاستحقاق. وسداد جزء منه *قبل* كشف الحساب يعطي رقماً أدنى."
             },
             {
               "kind": "teach",
-              "heading": "Report, score, and checking it",
+              "heading": "التقرير، والدرجة، والاطلاع عليها",
               "paragraphs": [
-                "Your **credit report** is the full file: every account, limit, balance and payment. Your **score** is a single number made from that file.",
-                "There are two types of check:",
-                "A **soft check** is when you look at your own score. It has **no effect at all**.",
-                "A **hard check** is when a bank checks you for a real application. It can lower your score a little for a few months.",
-                "Mistakes happen more than people think. An account that is not yours. A loan you already paid. You can ask the bureau to fix them."
+                "**تقريرك الائتماني** هو الملف الكامل: كل حساب وحد ورصيد وسداد. أما **درجتك** فهي رقم واحد مصنوع من ذلك الملف.",
+                "هناك نوعان من الاستعلام:",
+                "**الاستعلام الميسّر** هو حين تطّلع أنت على درجتك. وليس له **أي تأثير على الإطلاق**.",
+                "**الاستعلام الصارم** هو حين يستعلم بنك عنك لطلب حقيقي. وقد يخفض درجتك قليلاً لبضعة أشهر.",
+                "الأخطاء تحدث أكثر مما يظن الناس. حساب ليس لك. قرض سدّدته بالفعل. تستطيع أن تطلب من الشركة تصحيحها."
               ],
-              "tip": "Checking your own score never hurts it. You can get your AECB report yourself in the UAE — do it once a year."
+              "tip": "الاطلاع على درجتك لا يؤذيها أبداً. تستطيع الحصول على تقرير AECB بنفسك في الإمارات — افعل ذلك مرة في السنة."
             },
             {
               "kind": "singleChoice",
-              "prompt": "Which one matters most for your credit score?",
-              "explanation": "Payment history is the biggest part of every scoring system. The best way to guess if someone will pay on time is to look at whether they have paid on time before.",
+              "prompt": "أيٌّ منها الأهم لدرجتك الائتمانية؟",
+              "explanation": "سجل السداد هو الجزء الأكبر في كل نظام تسجيل. وأفضل طريقة لتخمين ما إذا كان أحدهم سيسدّد في الوقت المحدد هي النظر إن كان قد سدّد في الوقت المحدد من قبل.",
               "options": [
-                "The types of credit you have",
-                "Paying on time",
-                "How many cards you own",
-                "How old you are"
+                "أنواع الائتمان التي لديك",
+                "السداد في الوقت المحدد",
+                "عدد البطاقات التي تملكها",
+                "كم عمرك"
               ],
               "answers": [
                 1
@@ -973,20 +973,20 @@
             },
             {
               "kind": "numeric",
-              "prompt": "Your credit card limit is {c}5,000 and you owe {c}1,000. What is your credit utilisation, as a PERCENTAGE? Type the number only.",
-              "explanation": "1,000 ÷ 5,000 = 0.2. Then 0.2 × 100 = 20%. That is comfortably under the 30% guideline.",
+              "prompt": "حد بطاقتك الائتمانية {c}5,000 وتدين بـ {c}1,000. فما نسبة استخدامك للائتمان، كنسبة مئوية؟ اكتب الرقم فقط.",
+              "explanation": "1,000 ÷ 5,000 = 0.2. ثم 0.2 × 100 = 20%. وهذا مريح ودون إرشاد الـ 30%.",
               "answer": 20,
               "showsCurrencySymbol": false
             },
             {
               "kind": "singleChoice",
-              "prompt": "Does checking your own credit score lower it?",
-              "explanation": "Looking at your own score is a soft check. It is invisible to the score. Only real applications for credit leave a mark.",
+              "prompt": "هل الاطلاع على درجتك الائتمانية يخفضها؟",
+              "explanation": "الاطلاع على درجتك استعلام ميسّر. وهو غير مرئي للدرجة. فقط الطلبات الحقيقية للائتمان تترك أثراً.",
               "options": [
-                "Yes, every time",
-                "No — that is a soft check and has no effect",
-                "Only if you check twice",
-                "Only if the score is low"
+                "نعم، في كل مرة",
+                "لا — هذا استعلام ميسّر وليس له تأثير",
+                "فقط إن اطّلعت مرتين",
+                "فقط إن كانت الدرجة منخفضة"
               ],
               "answers": [
                 1
@@ -994,13 +994,13 @@
             },
             {
               "kind": "singleChoice",
-              "prompt": "What is the credit score range in the UAE?",
-              "explanation": "The Al Etihad Credit Bureau uses 300 to 900. Higher is better. Around 680 and above is usually seen as good.",
+              "prompt": "ما هو نطاق الدرجة الائتمانية في الإمارات؟",
+              "explanation": "تستخدم شركة الاتحاد للمعلومات الائتمانية النطاق من 300 إلى 900. والأعلى أفضل. وعادةً يُعتبر نحو 680 وما فوق درجة جيدة.",
               "options": [
-                "0 to 100",
-                "300 to 900",
-                "1 to 10",
-                "500 to 1000"
+                "0 إلى 100",
+                "300 إلى 900",
+                "1 إلى 10",
+                "500 إلى 1000"
               ],
               "answers": [
                 1
@@ -1008,13 +1008,13 @@
             },
             {
               "kind": "singleChoice",
-              "prompt": "You have an old credit card you rarely use. What happens if you close it?",
-              "explanation": "Closing it removes that limit, so your utilisation percentage goes up. It also shortens your credit history. If the card has no fee, it is usually better to keep it open.",
+              "prompt": "لديك بطاقة ائتمان قديمة نادراً ما تستخدمها. ماذا يحدث إن أغلقتها؟",
+              "explanation": "إغلاقها يزيل ذلك الحد، فترتفع نسبة استخدامك. كما أنه يقصّر سجلك الائتماني. وإن كانت البطاقة بلا رسوم، فمن الأفضل عادةً إبقاؤها مفتوحة.",
               "options": [
-                "Your score goes up",
-                "Your score may go down, because you lose credit history and available limit",
-                "Nothing changes",
-                "Your old payments are deleted"
+                "ترتفع درجتك",
+                "قد تنخفض درجتك، لأنك تفقد سجلاً ائتمانياً وحداً متاحاً",
+                "لا يتغير شيء",
+                "تُحذَف مدفوعاتك القديمة"
               ],
               "answers": [
                 1
@@ -1026,87 +1026,87 @@
           "id": "u3l2",
           "number": 2,
           "icon": "scales",
-          "title": "Good vs. Bad Debt",
-          "blurb": "Some borrowing helps you. Some traps you.",
+          "title": "الدَّين الجيد مقابل السيئ",
+          "blurb": "بعض الاقتراض يساعدك. وبعضه يوقعك في فخ.",
           "steps": [
             {
               "kind": "teach",
-              "heading": "One question sorts all debt",
+              "heading": "سؤال واحد يصنّف كل دَين",
               "paragraphs": [
-                "Debt is not good or bad by itself. What matters is what you do with the money.",
-                "**Good debt** buys something that grows in value, earns you money, or helps you earn more. And the interest rate is low.",
-                "**Bad debt** buys something that loses value or is already finished. And the interest rate is high."
+                "الدَّين ليس جيداً أو سيئاً بذاته. المهم هو ما تفعله بالمال.",
+                "**الدَّين الجيد** يشتري شيئاً تنمو قيمته، أو يكسبك مالاً، أو يساعدك على أن تكسب أكثر. ومعدل الفائدة منخفض.",
+                "**الدَّين السيئ** يشتري شيئاً تفقد قيمته أو انتهى بالفعل. ومعدل الفائدة مرتفع."
               ],
-              "tip": "Ask yourself: when I make the last payment, will I still have something worth money? A home, yes. Last year's holiday, no."
+              "tip": "اسأل نفسك: عندما أسدّد القسط الأخير، هل سيبقى لديّ شيء يساوي مالاً؟ منزل، نعم. عطلة العام الماضي، لا."
             },
             {
               "kind": "teach",
-              "heading": "Examples you will meet",
+              "heading": "أمثلة ستقابلها",
               "paragraphs": [
-                "Here are common types, and why they land where they do:"
+                "إليك أنواعاً شائعة، ولماذا تقع حيث تقع:"
               ],
               "list": [
                 {
-                  "term": "Home loan — usually good",
-                  "detail": "Property often grows in value. The interest rate is one of the lowest you can get."
+                  "term": "قرض المنزل — جيد عادةً",
+                  "detail": "العقار كثيراً ما تنمو قيمته. ومعدل الفائدة من أدنى ما يمكنك الحصول عليه."
                 },
                 {
-                  "term": "Study loan — usually good",
-                  "detail": "It helps you earn more later. Just be careful not to borrow far more than the course will add to your salary."
+                  "term": "قرض الدراسة — جيد عادةً",
+                  "detail": "يساعدك على أن تكسب أكثر لاحقاً. فقط احذر أن تقترض أكثر بكثير مما ستضيفه الدراسة إلى راتبك."
                 },
                 {
-                  "term": "Business loan — can be good",
-                  "detail": "It buys something meant to earn money. There is real risk."
+                  "term": "قرض العمل التجاري — قد يكون جيداً",
+                  "detail": "يشتري شيئاً غرضه أن يكسب مالاً. وفيه مخاطرة حقيقية."
                 },
                 {
-                  "term": "Credit card balance you carry — bad",
-                  "detail": "UAE cards often charge around 3% a month. That is about 36% a year, on things you already used."
+                  "term": "رصيد بطاقة ائتمان تحمله — سيئ",
+                  "detail": "بطاقات الإمارات كثيراً ما تفرض نحو 3% في الشهر. وهذا نحو 36% في السنة، على أشياء استخدمتها بالفعل."
                 },
                 {
-                  "term": "Car loan — usually in the middle",
-                  "detail": "A car loses value fast — often 15% to 20% in the first year. Sometimes you truly need one. Just know what you are buying."
+                  "term": "قرض السيارة — في المنتصف عادةً",
+                  "detail": "السيارة تفقد قيمتها بسرعة — غالباً 15% إلى 20% في السنة الأولى. أحياناً تحتاجها فعلاً. فقط اعرف ما الذي تشتريه."
                 },
                 {
-                  "term": "Buy now, pay later — be careful",
-                  "detail": "It feels free. But missing a payment brings fees, and it is easy to have five running at once."
+                  "term": "اشترِ الآن وادفع لاحقاً — كن حذراً",
+                  "detail": "يبدو مجانياً. لكن تفويت دفعة يجلب رسوماً، ومن السهل أن يكون لديك خمسة منها في وقت واحد."
                 }
               ]
             },
             {
               "kind": "teach",
-              "heading": "The interest rate decides",
+              "heading": "معدل الفائدة هو الحاسم",
               "paragraphs": [
-                "Even a normally good loan turns bad if the rate is high enough.",
-                "The number to look at is the **APR — annual percentage rate**. It puts the interest and the required fees together into one yearly number, so you can compare offers fairly.",
-                "Careful: UAE banks often show a **flat rate** on car and personal loans. A flat rate looks small but costs more than it looks, because it is charged on the full original amount the whole time. Always ask for the **reducing balance rate** or the APR."
+                "حتى القرض الجيد عادةً يتحول إلى سيئ إن كان المعدل مرتفعاً بما يكفي.",
+                "الرقم الذي يجب النظر إليه هو **معدل النسبة السنوية (APR)**. فهو يجمع الفائدة والرسوم المطلوبة معاً في رقم سنوي واحد، لتقارن العروض بإنصاف.",
+                "احذر: بنوك الإمارات كثيراً ما تعرض **معدلاً ثابتاً** على قروض السيارات والقروض الشخصية. المعدل الثابت يبدو صغيراً لكنه يكلّف أكثر مما يبدو، لأنه يُحتسب على كامل المبلغ الأصلي طوال الوقت. اطلب دائماً **معدل الرصيد المتناقص** أو الـ APR."
               ],
               "example": {
-                "heading": "Why paying only the minimum is expensive",
-                "body": "You owe **{c}5,000** on a card at **3% a month**.\n\nInterest in month 1:\n5,000 × 0.03 = **{c}150**\n\nIf you only pay the small minimum, most of it goes to that {c}150 of interest. The {c}5,000 barely moves.\n\nPay {c}500 a month instead, and it is gone in about 11 months."
+                "heading": "لماذا دفع الحد الأدنى فقط مكلف",
+                "body": "تدين بـ **{c}5,000** على بطاقة بمعدل **3% في الشهر**.\n\nالفائدة في الشهر الأول:\n5,000 × 0.03 = **{c}150**\n\nإن دفعت الحد الأدنى الصغير فقط، فإن معظمه يذهب إلى تلك الـ {c}150 من الفائدة. والـ {c}5,000 بالكاد تتحرك.\n\nادفع {c}500 في الشهر بدلاً من ذلك، وتختفي في نحو 11 شهراً."
               },
-              "tip": "The minimum payment is designed to keep you paying for years. It is not a plan to get out."
+              "tip": "الحد الأدنى للدفع مصمَّم لإبقائك تدفع لسنوات. إنه ليس خطة للخروج."
             },
             {
               "kind": "teach",
-              "heading": "One more comparison to remember",
+              "heading": "مقارنة أخرى لتتذكّرها",
               "paragraphs": [
-                "If you have spare money, should you invest it or pay off debt?",
-                "Investing in the stock market has historically returned around 7% to 10% a year over long periods. Nobody can promise that.",
-                "Paying off a debt that costs 30% a year saves you exactly 30%. Guaranteed. No risk.",
-                "So expensive debt comes first, almost always."
+                "إن كان لديك مال فائض، هل تستثمره أم تسدّد دَيناً؟",
+                "الاستثمار في سوق الأسهم حقّق تاريخياً عائداً يتراوح نحو 7% إلى 10% سنوياً على مدى فترات طويلة. ولا أحد يستطيع أن يعِد بذلك.",
+                "سداد دَين يكلّف 30% سنوياً يوفّر لك 30% بالضبط. مضمون. بلا مخاطرة.",
+                "لذا يأتي الدَّين المكلف أولاً، في معظم الحالات دائماً."
               ],
-              "tip": "Paying off a 30% debt is like earning 30% with zero risk. No investment can promise that."
+              "tip": "سداد دَين بنسبة 30% يشبه كسب 30% بلا أي مخاطرة. ولا استثمار يستطيع أن يعِد بذلك."
             },
             {
               "kind": "multiSelect",
-              "prompt": "Which of these are usually GOOD debt? Pick all the correct ones.",
-              "explanation": "Good debt buys something that grows in value or helps you earn more, at a low rate. The card balance and the trip are already spent, and cost a lot to carry.",
+              "prompt": "أيٌّ من هذه دَين جيد عادةً؟ اختر كل الإجابات الصحيحة.",
+              "explanation": "الدَّين الجيد يشتري شيئاً تنمو قيمته أو يساعدك على أن تكسب أكثر، بمعدل منخفض. أما رصيد البطاقة والرحلة فقد أُنفِقا بالفعل، وحملهما مكلف.",
               "options": [
-                "A home loan at 4%",
-                "A credit card balance at 36% a year",
-                "A study loan for a course that raises your salary",
-                "Borrowing for a weekend trip",
-                "A business loan for equipment that earns money"
+                "قرض منزل بنسبة 4%",
+                "رصيد بطاقة ائتمان بنسبة 36% في السنة",
+                "قرض دراسة لدورة ترفع راتبك",
+                "الاقتراض لرحلة نهاية أسبوع",
+                "قرض عمل تجاري لمعدات تكسب مالاً"
               ],
               "answers": [
                 0,
@@ -1116,13 +1116,13 @@
             },
             {
               "kind": "singleChoice",
-              "prompt": "What does APR stand for?",
-              "explanation": "Annual Percentage Rate. It puts interest and required fees into one yearly number, so you can compare two loans fairly.",
+              "prompt": "ماذا يعني اختصار APR؟",
+              "explanation": "معدل النسبة السنوية. فهو يجمع الفائدة والرسوم المطلوبة في رقم سنوي واحد، لتقارن قرضين بإنصاف.",
               "options": [
-                "Approved Payment Rate",
-                "Annual Percentage Rate",
-                "Average Payment Ratio",
-                "Annual Principal Return"
+                "معدل الدفعة المعتمَدة",
+                "معدل النسبة السنوية",
+                "متوسط نسبة الدفع",
+                "العائد السنوي على أصل الدَّين"
               ],
               "answers": [
                 1
@@ -1130,20 +1130,20 @@
             },
             {
               "kind": "numeric",
-              "prompt": "You owe {c}2,000 on a credit card. The card charges 3% a month. How much interest do you pay in ONE month?",
-              "explanation": "2,000 × 0.03 = 60. So {c}60 a month just for carrying the balance. If you pay only {c}80, just {c}20 goes to the actual debt.",
+              "prompt": "تدين بـ {c}2,000 على بطاقة ائتمان. والبطاقة تفرض 3% في الشهر. كم فائدة تدفع في شهر واحد؟",
+              "explanation": "2,000 × 0.03 = 60. إذن {c}60 في الشهر لمجرد حمل الرصيد. وإن دفعت {c}80 فقط، فإن {c}20 فقط تذهب إلى الدَّين الفعلي.",
               "answer": 60,
               "showsCurrencySymbol": true
             },
             {
               "kind": "singleChoice",
-              "prompt": "You have {c}3,000 spare. You also have a credit card debt at 30% a year. What usually makes most sense?",
-              "explanation": "Paying off a 30% debt is the same as earning 30% with no risk. No normal investment can beat that reliably. Clear expensive debt first.",
+              "prompt": "لديك {c}3,000 فائضة. ولديك أيضاً دَين بطاقة ائتمان بنسبة 30% سنوياً. ما الأكثر منطقية عادةً؟",
+              "explanation": "سداد دَين بنسبة 30% يعادل كسب 30% بلا مخاطرة. ولا استثمار عادي يستطيع التفوق على ذلك بموثوقية. صفِّ الدَّين المكلف أولاً.",
               "options": [
-                "Invest it and hope for more than 30%",
-                "Pay off the card debt — that saves you 30% for certain",
-                "Split it in half",
-                "Leave it in a savings account at 3%"
+                "استثمرها وآمُل بأكثر من 30%",
+                "سدّد دَين البطاقة — فهذا يوفّر لك 30% بشكل مؤكد",
+                "قسّمها نصفين",
+                "اتركها في حساب توفير بنسبة 3%"
               ],
               "answers": [
                 1
@@ -1151,13 +1151,13 @@
             },
             {
               "kind": "singleChoice",
-              "prompt": "Why is a car loan usually not counted as good debt?",
-              "explanation": "The rate is often fine. The problem is the car itself — it loses value quickly. Sometimes you genuinely need one, but it is useful to know what you are financing.",
+              "prompt": "لماذا لا يُعدّ قرض السيارة عادةً دَيناً جيداً؟",
+              "explanation": "المعدل غالباً مقبول. المشكلة في السيارة نفسها — فهي تفقد قيمتها بسرعة. أحياناً تحتاجها فعلاً، لكن من المفيد أن تعرف ما الذي تموّله.",
               "options": [
-                "Car loans always have the highest rates",
-                "A car loses value, so you are borrowing for something that shrinks",
-                "Cars are never needed",
-                "It damages your credit score"
+                "لأن قروض السيارات دائماً بأعلى المعدلات",
+                "لأن السيارة تفقد قيمتها، فأنت تقترض لشيء يتقلّص",
+                "لأن السيارات لا تُحتاج أبداً",
+                "لأنه يضر بدرجتك الائتمانية"
               ],
               "answers": [
                 1
@@ -1169,77 +1169,77 @@
           "id": "u3l3",
           "number": 3,
           "icon": "steps",
-          "title": "Paying Off Debt",
-          "blurb": "Two methods. Pick the one you will finish.",
+          "title": "سداد الدَّين",
+          "blurb": "طريقتان. اختر التي ستُكمِلها.",
           "steps": [
             {
               "kind": "teach",
-              "heading": "The rule that comes first",
+              "heading": "القاعدة التي تأتي أولاً",
               "paragraphs": [
-                "Whichever method you choose, the setup is the same.",
-                "**Step 1.** Pay the minimum on every debt, every month. Never miss one. Missing a payment brings fees and hurts your credit score.",
-                "**Step 2.** Take any extra money you have and put it all on **one** debt.",
-                "The method just decides which debt gets the extra money first.",
-                "Do not spread extra money across all your debts. Nothing gets finished, so nothing frees up."
+                "أياً كانت الطريقة التي تختارها، فالإعداد واحد.",
+                "**الخطوة 1.** ادفع الحد الأدنى على كل دَين، كل شهر. لا تفوّت واحداً أبداً. فتفويت دفعة يجلب رسوماً ويضر بدرجتك الائتمانية.",
+                "**الخطوة 2.** خذ أي مال إضافي لديك وضعه كله على دَين **واحد**.",
+                "الطريقة تقرر فقط أي دَين يحصل على المال الإضافي أولاً.",
+                "لا توزّع المال الإضافي على كل ديونك. فلا يُنجَز أي شيء، وبالتالي لا يتحرر شيء."
               ]
             },
             {
               "kind": "teach",
-              "heading": "Method 1: highest rate first (avalanche)",
+              "heading": "الطريقة 1: الأعلى معدلاً أولاً (الانهيار الجليدي)",
               "paragraphs": [
-                "Put your debts in order by **interest rate**, highest first.",
-                "Put all extra money on the highest-rate debt. When it is gone, move to the next one.",
-                "This method costs you the least money in total. It is the maths answer.",
-                "The problem: your highest-rate debt might also be the biggest. You could pay for months and see nothing disappear. Some people give up."
+                "رتّب ديونك حسب **معدل الفائدة**، الأعلى أولاً.",
+                "ضع كل المال الإضافي على الدَّين الأعلى معدلاً. وعندما ينتهي، انتقل إلى التالي.",
+                "هذه الطريقة تكلّفك أقل مال في المجموع. إنها الجواب الحسابي.",
+                "المشكلة: قد يكون دَينك الأعلى معدلاً هو الأكبر أيضاً. فقد تدفع لأشهر ولا ترى شيئاً يختفي. وبعض الناس يستسلمون."
               ],
-              "tip": "Avalanche = highest rate first. An avalanche starts at the highest point of the mountain."
+              "tip": "الانهيار الجليدي = الأعلى معدلاً أولاً. فالانهيار الجليدي يبدأ من أعلى نقطة في الجبل."
             },
             {
               "kind": "teach",
-              "heading": "Method 2: smallest debt first (snowball)",
+              "heading": "الطريقة 2: الأصغر ديناً أولاً (كرة الثلج)",
               "paragraphs": [
-                "Put your debts in order by **size**, smallest first. Ignore the interest rates.",
-                "Kill the smallest one. Then the next smallest.",
-                "This costs a little more in interest. But you clear a whole debt quickly, and that feels good. People who use this method are more likely to finish."
+                "رتّب ديونك حسب **الحجم**، الأصغر أولاً. وتجاهل معدلات الفائدة.",
+                "اقضِ على الأصغر. ثم على التالي الأصغر.",
+                "هذه تكلّف قليلاً أكثر في الفائدة. لكنك تصفّي ديناً كاملاً بسرعة، وهذا شعور جيد. والذين يستخدمون هذه الطريقة أكثر احتمالاً لأن يُكمِلوا."
               ],
               "example": {
-                "heading": "Same debts, two orders",
-                "body": "Card A: **{c}1,000** at 36%\nCard B: **{c}4,000** at 24%\nLoan C: **{c}500** at 12%\n\n**Highest rate first:** A → B → C\nCheapest overall.\n\n**Smallest first:** C → A → B\nFirst win in a few weeks."
+                "heading": "الديون نفسها، ترتيبان",
+                "body": "البطاقة أ: **{c}1,000** بنسبة 36%\nالبطاقة ب: **{c}4,000** بنسبة 24%\nالقرض ج: **{c}500** بنسبة 12%\n\n**الأعلى معدلاً أولاً:** أ ← ب ← ج\nالأرخص إجمالاً.\n\n**الأصغر أولاً:** ج ← أ ← ب\nأول انتصار خلال أسابيع قليلة."
               },
-              "tip": "Snowball = smallest first. A snowball starts small and grows as it rolls."
+              "tip": "كرة الثلج = الأصغر أولاً. فكرة الثلج تبدأ صغيرة وتكبر وهي تتدحرج."
             },
             {
               "kind": "teach",
-              "heading": "Putting all your debts in one place",
+              "heading": "جمع كل ديونك في مكان واحد",
               "paragraphs": [
-                "**Debt consolidation** means putting several debts into one new loan. Ideally the new loan has a lower rate and one payment to remember.",
-                "It can really help. But watch for three things:"
+                "**توحيد الديون** يعني وضع عدة ديون في قرض جديد واحد. ومن الأمثل أن يكون للقرض الجديد معدل أدنى ودفعة واحدة لتذكّرها.",
+                "قد يساعد فعلاً. لكن احذر ثلاثة أمور:"
               ],
               "list": [
                 {
-                  "term": "The fee",
-                  "detail": "There is often a fee to set it up, usually 1% to 5% of the amount. Check it is less than what you save."
+                  "term": "الرسم",
+                  "detail": "غالباً ما يكون هناك رسم لإعداده، عادةً 1% إلى 5% من المبلغ. تأكّد أنه أقل مما توفّره."
                 },
                 {
-                  "term": "The low rate ends",
-                  "detail": "Some offers have a low rate for 6 or 12 months, then jump up. Know the date."
+                  "term": "المعدل المنخفض ينتهي",
+                  "detail": "بعض العروض لها معدل منخفض لمدة 6 أو 12 شهراً، ثم يقفز. اعرف التاريخ."
                 },
                 {
-                  "term": "The cards fill up again",
-                  "detail": "This is the most common problem. You clear your cards, then use them again. Now you have the loan *and* the cards."
+                  "term": "البطاقات تمتلئ من جديد",
+                  "detail": "هذه أكثر المشكلات شيوعاً. تصفّي بطاقاتك، ثم تستخدمها من جديد. فيصبح لديك القرض *و* البطاقات."
                 }
               ],
-              "tip": "If you consolidate, freeze or close the cards the same day. Consolidation fixes the interest rate. It cannot fix a spending habit."
+              "tip": "إن وحّدت ديونك، فجمّد البطاقات أو أغلقها في اليوم نفسه. التوحيد يصلح معدل الفائدة. لكنه لا يستطيع إصلاح عادة الإنفاق."
             },
             {
               "kind": "singleChoice",
-              "prompt": "Which method puts debts in order by interest rate, highest first?",
-              "explanation": "Avalanche targets the highest rate first. It costs the least money in total, because you kill the most expensive debt first.",
+              "prompt": "أي طريقة ترتّب الديون حسب معدل الفائدة، الأعلى أولاً؟",
+              "explanation": "الانهيار الجليدي يستهدف الأعلى معدلاً أولاً. وهو يكلّف أقل مال في المجموع، لأنك تقضي على أغلى دَين أولاً.",
               "options": [
-                "The snowball method",
-                "The avalanche method",
-                "Consolidation",
-                "Minimum payments"
+                "طريقة كرة الثلج",
+                "طريقة الانهيار الجليدي",
+                "التوحيد",
+                "الحد الأدنى للدفعات"
               ],
               "answers": [
                 1
@@ -1247,13 +1247,13 @@
             },
             {
               "kind": "singleChoice",
-              "prompt": "You have three debts: {c}800 at 12%, {c}3,000 at 36%, and {c}1,500 at 20%. Using AVALANCHE, which gets your extra money first?",
-              "explanation": "Avalanche ignores the size and looks only at the rate. 36% is the highest, so that one gets the extra money first.",
+              "prompt": "لديك ثلاثة ديون: {c}800 بنسبة 12%، و{c}3,000 بنسبة 36%، و{c}1,500 بنسبة 20%. باستخدام الانهيار الجليدي، أيها يحصل على مالك الإضافي أولاً؟",
+              "explanation": "الانهيار الجليدي يتجاهل الحجم وينظر إلى المعدل فقط. 36% هو الأعلى، فذلك الدَّين يحصل على المال الإضافي أولاً.",
               "options": [
-                "The {c}800 debt",
-                "The {c}3,000 debt at 36%",
-                "The {c}1,500 debt at 20%",
-                "All three equally"
+                "الدَّين {c}800",
+                "الدَّين {c}3,000 بنسبة 36%",
+                "الدَّين {c}1,500 بنسبة 20%",
+                "الثلاثة بالتساوي"
               ],
               "answers": [
                 1
@@ -1261,13 +1261,13 @@
             },
             {
               "kind": "singleChoice",
-              "prompt": "You have the same three debts. Using SNOWBALL, which gets your extra money first?",
-              "explanation": "Snowball ignores the rate and looks only at the size. {c}800 is the smallest, so it goes first — and you get a win quickly.",
+              "prompt": "لديك الديون الثلاثة نفسها. باستخدام كرة الثلج، أيها يحصل على مالك الإضافي أولاً؟",
+              "explanation": "كرة الثلج تتجاهل المعدل وتنظر إلى الحجم فقط. {c}800 هو الأصغر، فيأتي أولاً — وتحصل على انتصار بسرعة.",
               "options": [
-                "The {c}800 debt",
-                "The {c}3,000 debt",
-                "The {c}1,500 debt",
-                "All three equally"
+                "الدَّين {c}800",
+                "الدَّين {c}3,000",
+                "الدَّين {c}1,500",
+                "الثلاثة بالتساوي"
               ],
               "answers": [
                 0
@@ -1275,13 +1275,13 @@
             },
             {
               "kind": "singleChoice",
-              "prompt": "Why does the snowball method work for many people, even though it costs a bit more?",
-              "explanation": "A plan you finish beats a perfect plan you quit. Money is about half maths and half habit, and snowball helps with the habit part.",
+              "prompt": "لماذا تنجح طريقة كرة الثلج مع كثير من الناس، رغم أنها تكلّف قليلاً أكثر؟",
+              "explanation": "الخطة التي تُكمِلها أفضل من خطة مثالية تتركها. المال نصفه حساب ونصفه عادة، وكرة الثلج تساعد في جزء العادة.",
               "options": [
-                "The payments are smaller",
-                "Finishing a debt quickly keeps you motivated to continue",
-                "Banks prefer it",
-                "It is faster in total"
+                "لأن الدفعات أصغر",
+                "لأن إنهاء دَين بسرعة يبقيك متحمّساً للمتابعة",
+                "لأن البنوك تفضّلها",
+                "لأنها أسرع إجمالاً"
               ],
               "answers": [
                 1
@@ -1289,13 +1289,13 @@
             },
             {
               "kind": "singleChoice",
-              "prompt": "What is the most common problem after consolidating debt?",
-              "explanation": "Consolidation moves the debt, it does not change the habit. If the spending continues, you end up paying the new loan and new card debt at the same time.",
+              "prompt": "ما أكثر مشكلة شيوعاً بعد توحيد الديون؟",
+              "explanation": "التوحيد ينقل الدَّين، لكنه لا يغيّر العادة. وإن استمر الإنفاق، تنتهي وأنت تدفع القرض الجديد ودَين البطاقة الجديد في آن واحد.",
               "options": [
-                "The loan is refused",
-                "The old cards get used again, so you now have both",
-                "Rates always go up",
-                "It is not allowed"
+                "رفض القرض",
+                "استخدام البطاقات القديمة من جديد، فيصبح لديك الاثنان",
+                "المعدلات ترتفع دائماً",
+                "أنه غير مسموح به"
               ],
               "answers": [
                 1
@@ -1309,106 +1309,106 @@
       "id": "u4",
       "number": 4,
       "accent": "sky",
-      "title": "Protect Wealth",
-      "subtitle": "Risk Management",
-      "blurb": "Growing money matters. Not losing it to one accident or one clever message matters just as much.",
+      "title": "احمِ ثروتك",
+      "subtitle": "إدارة المخاطر",
+      "blurb": "تنمية المال مهمة. وعدم خسارته في حادث واحد أو رسالة ماكرة واحدة مهم تماماً بالقدر نفسه.",
       "lessons": [
         {
           "id": "u4l1",
           "number": 1,
           "icon": "umbrella",
-          "title": "Insurance Basics",
-          "blurb": "Buy the cover you need. Skip the rest.",
+          "title": "أساسيات التأمين",
+          "blurb": "اشترِ التغطية التي تحتاجها. وتجاوز الباقي.",
           "steps": [
             {
               "kind": "teach",
-              "heading": "What you are really buying",
+              "heading": "ما الذي تشتريه فعلاً",
               "paragraphs": [
-                "Insurance is not saving and it is not investing.",
-                "You are paying a small, known amount so that a company takes on a big, unknown risk for you.",
-                "If nothing bad happens, you did not waste money. You bought a year with no disaster. That is the thing you were paying for."
+                "التأمين ليس ادخاراً وليس استثماراً.",
+                "أنت تدفع مبلغاً صغيراً معروفاً لكي تتحمّل شركة عنك مخاطرة كبيرة مجهولة.",
+                "إن لم يحدث شيء سيئ، فأنت لم تهدر مالاً. بل اشتريت عاماً بلا كارثة. وهذا هو الشيء الذي كنت تدفع مقابله."
               ]
             },
             {
               "kind": "teach",
-              "heading": "Five words on every policy",
+              "heading": "خمس كلمات في كل وثيقة",
               "paragraphs": [
-                "Every insurance policy in the world uses these words. Learn them once and you can read any policy."
+                "كل وثيقة تأمين في العالم تستخدم هذه الكلمات. تعلّمها مرة واحدة وتستطيع قراءة أي وثيقة."
               ],
               "list": [
                 {
-                  "term": "Premium",
-                  "detail": "What you pay to have the insurance. Monthly or yearly."
+                  "term": "القسط",
+                  "detail": "ما تدفعه لتحصل على التأمين. شهرياً أو سنوياً."
                 },
                 {
-                  "term": "Deductible (or excess)",
-                  "detail": "The part you pay yourself before the company pays. If your excess is {c}500 and the repair costs {c}3,000, you pay {c}500 and they pay {c}2,500."
+                  "term": "التحمّل (أو الاقتطاع)",
+                  "detail": "الجزء الذي تدفعه أنت قبل أن تدفع الشركة. إن كان تحمّلك {c}500 وكلّف الإصلاح {c}3,000، فأنت تدفع {c}500 وهم يدفعون {c}2,500."
                 },
                 {
-                  "term": "Coverage limit",
-                  "detail": "The most the company will ever pay. Above that, you pay."
+                  "term": "حد التغطية",
+                  "detail": "أقصى ما ستدفعه الشركة على الإطلاق. وما فوق ذلك، تدفعه أنت."
                 },
                 {
-                  "term": "Exclusion",
-                  "detail": "Something the policy does not cover. Always read this part."
+                  "term": "الاستثناء",
+                  "detail": "شيء لا تغطّيه الوثيقة. اقرأ هذا الجزء دائماً."
                 },
                 {
-                  "term": "Claim",
-                  "detail": "Asking the company to pay after something happens."
+                  "term": "المطالبة",
+                  "detail": "أن تطلب من الشركة الدفع بعد وقوع أمر ما."
                 }
               ],
-              "tip": "A bigger excess means a smaller premium. Only choose that if you could actually pay the excess tomorrow."
+              "tip": "التحمّل الأكبر يعني قسطاً أصغر. لا تختر ذلك إلا إن كنت تستطيع فعلاً دفع التحمّل غداً."
             },
             {
               "kind": "teach",
-              "heading": "What you need in the UAE",
+              "heading": "ما تحتاجه في الإمارات",
               "paragraphs": [
-                "Four types cover almost everything. Two of them are required by law here."
+                "أربعة أنواع تغطّي كل شيء تقريباً. اثنان منها مطلوبان بالقانون هنا."
               ],
               "list": [
                 {
-                  "term": "Health insurance — required",
-                  "detail": "It is the law in Dubai and Abu Dhabi. Most employers provide it. Check what your plan covers, and whether your family is included."
+                  "term": "التأمين الصحي — مطلوب",
+                  "detail": "إنه القانون في دبي وأبوظبي. ومعظم أصحاب العمل يوفّرونه. تحقّق مما تغطّيه خطتك، وما إذا كانت عائلتك مشمولة."
                 },
                 {
-                  "term": "Car insurance — required",
-                  "detail": "You cannot drive without it. **Third party** covers damage you cause to others. **Comprehensive** also covers your own car."
+                  "term": "تأمين السيارة — مطلوب",
+                  "detail": "لا تستطيع القيادة بدونه. **تأمين الطرف الثالث** يغطّي الضرر الذي تسببه للآخرين. و**التأمين الشامل** يغطّي سيارتك أيضاً."
                 },
                 {
-                  "term": "Home contents insurance",
-                  "detail": "Very cheap and often forgotten. It covers your things — laptop, phone, furniture — against fire, water damage and theft."
+                  "term": "تأمين محتويات المنزل",
+                  "detail": "رخيص جداً وكثيراً ما يُنسى. يغطّي أشياءك — الحاسوب المحمول والهاتف والأثاث — ضد الحريق وأضرار المياه والسرقة."
                 },
                 {
-                  "term": "Life insurance",
-                  "detail": "Pays money to your family if you die. You only need it if someone depends on your income."
+                  "term": "التأمين على الحياة",
+                  "detail": "يدفع مالاً لعائلتك إن مِتّ. لا تحتاجه إلا إن كان أحد يعتمد على دخلك."
                 }
               ],
-              "tip": "Insure things you could not afford to replace by yourself. Do not insure small things you could just pay for."
+              "tip": "أمّن على الأشياء التي لا تستطيع تحمّل استبدالها بنفسك. ولا تؤمّن على أشياء صغيرة تستطيع ببساطة دفع ثمنها."
             },
             {
               "kind": "teach",
-              "heading": "Two types of life insurance",
+              "heading": "نوعان من التأمين على الحياة",
               "paragraphs": [
-                "**Term life** covers you for a set number of years. If you die in that time, your family gets the money. If not, it ends. It is simple and cheap.",
-                "**Whole life** covers you forever and mixes in a savings part. It costs several times more for the same payout, and the savings part usually grows slowly.",
-                "For most people, term life plus separate saving is the better choice.",
-                "How much? A common starting point is **10 times your yearly income**."
+                "**التأمين المؤقت** يغطّيك لعدد محدد من السنوات. إن مِتّ خلال تلك المدة، تحصل عائلتك على المال. وإن لم يحدث، ينتهي. إنه بسيط ورخيص.",
+                "**التأمين الدائم** يغطّيك إلى الأبد ويمزج جزءاً ادخارياً. ويكلّف عدة أضعاف مقابل التعويض نفسه، والجزء الادخاري ينمو عادةً ببطء.",
+                "لمعظم الناس، التأمين المؤقت مع ادخار منفصل هو الخيار الأفضل.",
+                "كم؟ نقطة بداية شائعة هي **10 أضعاف دخلك السنوي**."
               ],
               "example": {
-                "heading": "Do you need it?",
-                "body": "**Maryam** is 25, single, no children, nobody depends on her money.\n→ She probably does not need life insurance yet.\n\n**Yousef** is 35, married, two children, and he is the only earner.\n→ He needs it. If his income stops, his family has nothing.\n\nInsurance protects the people who depend on you."
+                "heading": "هل تحتاجه؟",
+                "body": "**مريم** عمرها 25، عزباء، بلا أطفال، ولا أحد يعتمد على مالها.\n← هي على الأرجح لا تحتاج تأميناً على الحياة بعد.\n\n**يوسف** عمره 35، متزوج، له طفلان، وهو المُعيل الوحيد.\n← هو يحتاجه. إن توقف دخله، فلن يبقى لعائلته شيء.\n\nالتأمين يحمي الناس الذين يعتمدون عليك."
               },
-              "tip": "If nobody would suffer financially without your income, you probably do not need life insurance yet. Check again when that changes."
+              "tip": "إن لم يتضرر أحد مالياً من غياب دخلك، فأنت على الأرجح لا تحتاج تأميناً على الحياة بعد. تحقّق مجدداً عندما يتغير ذلك."
             },
             {
               "kind": "singleChoice",
-              "prompt": "What is the deductible (or excess)?",
-              "explanation": "The deductible is your share of each claim. Choosing a higher one lowers your monthly cost — but only do that if you could pay it at short notice.",
+              "prompt": "ما هو التحمّل (أو الاقتطاع)؟",
+              "explanation": "التحمّل هو حصتك من كل مطالبة. واختيار تحمّل أعلى يخفّض تكلفتك الشهرية — لكن لا تفعل ذلك إلا إن كنت تستطيع دفعه في مهلة قصيرة.",
               "options": [
-                "The monthly cost of the policy",
-                "The part you pay yourself before the company pays",
-                "The most the company will pay",
-                "The agent's commission"
+                "التكلفة الشهرية للوثيقة",
+                "الجزء الذي تدفعه أنت قبل أن تدفع الشركة",
+                "أقصى ما ستدفعه الشركة",
+                "عمولة الوكيل"
               ],
               "answers": [
                 1
@@ -1416,20 +1416,20 @@
             },
             {
               "kind": "numeric",
-              "prompt": "Your car repair costs {c}4,000. Your policy has a {c}500 excess. How much does the insurance company pay?",
-              "explanation": "4,000 − 500 = 3,500. You pay the first {c}500 and the company pays the rest.",
+              "prompt": "إصلاح سيارتك يكلّف {c}4,000. ووثيقتك بها تحمّل قدره {c}500. كم تدفع شركة التأمين؟",
+              "explanation": "4,000 − 500 = 3,500. تدفع أنت أول {c}500 وتدفع الشركة الباقي.",
               "answer": 3500,
               "showsCurrencySymbol": true
             },
             {
               "kind": "singleChoice",
-              "prompt": "Which two types of insurance are required by law in Dubai?",
-              "explanation": "Health insurance is required in Dubai and Abu Dhabi, and car insurance is required anywhere you drive. The others are useful but optional.",
+              "prompt": "أي نوعين من التأمين مطلوبان بالقانون في دبي؟",
+              "explanation": "التأمين الصحي مطلوب في دبي وأبوظبي، وتأمين السيارة مطلوب في أي مكان تقود فيه. أما الباقي فمفيد لكنه اختياري.",
               "options": [
-                "Travel and pet insurance",
-                "Health and car insurance",
-                "Phone and laptop insurance",
-                "Life and home insurance"
+                "تأمين السفر والحيوانات الأليفة",
+                "التأمين الصحي وتأمين السيارة",
+                "تأمين الهاتف والحاسوب المحمول",
+                "التأمين على الحياة والمنزل"
               ],
               "answers": [
                 1
@@ -1437,13 +1437,13 @@
             },
             {
               "kind": "singleChoice",
-              "prompt": "A 24-year-old with no children and nobody depending on their income asks if they need life insurance. The best answer is:",
-              "explanation": "Life insurance replaces your income for people who rely on it. With nobody relying on it, the money is better used on health cover and savings. Check again if you marry or have children.",
+              "prompt": "شخص عمره 24 عاماً، بلا أطفال ولا أحد يعتمد على دخله، يسأل إن كان يحتاج تأميناً على الحياة. أفضل إجابة هي:",
+              "explanation": "التأمين على الحياة يعوّض دخلك للناس الذين يعتمدون عليه. وما دام لا أحد يعتمد عليه، فالأفضل استخدام المال للتغطية الصحية والادخار. تحقّق مجدداً إن تزوّجت أو أنجبت أطفالاً.",
               "options": [
-                "Yes, everyone needs it right away",
-                "Probably not yet — it protects people who depend on your income",
-                "Only if they travel",
-                "Only if they own a phone"
+                "نعم، الجميع يحتاجه فوراً",
+                "على الأرجح ليس بعد — فهو يحمي الناس الذين يعتمدون على دخلك",
+                "فقط إن كان يسافر",
+                "فقط إن كان يملك هاتفاً"
               ],
               "answers": [
                 1
@@ -1455,134 +1455,134 @@
           "id": "u4l2",
           "number": 2,
           "icon": "lock",
-          "title": "Staying Safe from Fraud",
-          "blurb": "Lock your accounts and spot the common tricks.",
+          "title": "البقاء آمناً من الاحتيال",
+          "blurb": "أقفِل حساباتك واكتشف الحيل الشائعة.",
           "steps": [
             {
               "kind": "teach",
-              "heading": "Two locks are better than one",
+              "heading": "قفلان أفضل من واحد",
               "paragraphs": [
-                "**Two-factor authentication** means proving who you are in two different ways. People also write it as 2FA or MFA.",
-                "There are only three kinds of proof:"
+                "**المصادقة الثنائية** تعني إثبات هويتك بطريقتين مختلفتين. ويكتبها الناس أيضاً 2FA أو MFA.",
+                "هناك ثلاثة أنواع فقط من الإثبات:"
               ],
               "list": [
                 {
-                  "term": "Something you know",
-                  "detail": "A password or PIN. The weakest kind on its own — it can be guessed or stolen."
+                  "term": "شيء تعرفه",
+                  "detail": "كلمة مرور أو رقم سري. وهو الأضعف بمفرده — إذ يمكن تخمينه أو سرقته."
                 },
                 {
-                  "term": "Something you have",
-                  "detail": "Your phone, or an authenticator app. A thief needs the actual device."
+                  "term": "شيء تملكه",
+                  "detail": "هاتفك، أو تطبيق مصادقة. يحتاج اللص إلى الجهاز نفسه."
                 },
                 {
-                  "term": "Something you are",
-                  "detail": "Your fingerprint or face. Hard to copy."
+                  "term": "شيء أنت هو",
+                  "detail": "بصمتك أو وجهك. يصعب نسخه."
                 }
               ],
               "afterList": [
-                "A password plus a code from an app is two factors. A password plus a security question is **not** — both are things you know."
+                "كلمة مرور مع رمز من تطبيق هما عاملان. أما كلمة مرور مع سؤال أمان فهما **ليسا** كذلك — فكلاهما شيء تعرفه."
               ],
-              "tip": "An authenticator app is safer than an SMS code. Criminals can sometimes take over your phone number and receive your SMS."
+              "tip": "تطبيق المصادقة أأمن من رمز الرسائل النصية. فالمجرمون يستطيعون أحياناً الاستيلاء على رقم هاتفك واستلام رسائلك النصية."
             },
             {
               "kind": "teach",
-              "heading": "How to spot a fake message",
+              "heading": "كيف تكتشف رسالة مزيّفة",
               "paragraphs": [
-                "**Phishing** means a fake message pretending to be someone you trust. By SMS it is called **smishing**. By phone call it is called **vishing**.",
-                "Fake messages used to have bad spelling. Not any more. So look for these signs instead:"
+                "**التصيّد** يعني رسالة مزيّفة تتظاهر بأنها من شخص تثق به. وعبر الرسائل النصية يُسمى **التصيّد النصي**. وعبر المكالمة الهاتفية يُسمى **التصيّد الصوتي**.",
+                "كانت الرسائل المزيّفة تحتوي على أخطاء إملائية. لم يعد الأمر كذلك. لذا ابحث عن هذه العلامات بدلاً من ذلك:"
               ],
               "list": [
                 {
-                  "term": "It is urgent",
-                  "detail": "\"Your account will close in 24 hours.\" They want you to panic and not think."
+                  "term": "إنها عاجلة",
+                  "detail": "\"سيُغلَق حسابك خلال 24 ساعة.\" يريدونك أن تُذعَر ولا تفكّر."
                 },
                 {
-                  "term": "There is a link you did not expect",
-                  "detail": "Never log in through a link in a message. Open your bank app yourself."
+                  "term": "هناك رابط لم تتوقّعه",
+                  "detail": "لا تسجّل الدخول أبداً عبر رابط في رسالة. افتح تطبيق بنكك بنفسك."
                 },
                 {
-                  "term": "They ask for your OTP, PIN or password",
-                  "detail": "No real bank or company will ever ask for these. Never. Not once."
+                  "term": "يطلبون رمزك المؤقت أو رقمك السري أو كلمة مرورك",
+                  "detail": "لا يوجد بنك أو شركة حقيقية سيطلب هذه أبداً. أبداً. ولا مرة واحدة."
                 },
                 {
-                  "term": "They tell you to keep it secret",
-                  "detail": "Real banks do not ask you to hide things from your family."
+                  "term": "يطلبون منك إبقاء الأمر سراً",
+                  "detail": "البنوك الحقيقية لا تطلب منك إخفاء أمور عن عائلتك."
                 },
                 {
-                  "term": "They want an unusual payment",
-                  "detail": "Gift cards, crypto, or a personal account number. Almost always a scam."
+                  "term": "يريدون دفعة غير معتادة",
+                  "detail": "بطاقات هدايا، أو عملة رقمية، أو رقم حساب شخصي. تكاد تكون دائماً عملية احتيال."
                 }
               ]
             },
             {
               "kind": "teach",
-              "heading": "The tricks used most in the UAE",
+              "heading": "الحيل الأكثر استخداماً في الإمارات",
               "paragraphs": [
-                "These are the ones people lose money to most often:"
+                "هذه هي التي يخسر الناس أموالهم بسببها في أغلب الأحيان:"
               ],
               "list": [
                 {
-                  "term": "Fake bank calls",
-                  "detail": "Someone says they are from your bank's fraud team. They ask for an OTP to \"stop a payment\". Giving it approves the payment."
+                  "term": "مكالمات بنكية مزيّفة",
+                  "detail": "يقول أحدهم إنه من فريق مكافحة الاحتيال في بنكك. ويطلب رمزاً مؤقتاً لـ\"إيقاف دفعة\". وإعطاؤه يوافق على الدفعة."
                 },
                 {
-                  "term": "Fake police or visa calls",
-                  "detail": "Someone says there is a problem with your visa or Emirates ID and asks you to pay a fine now."
+                  "term": "مكالمات شرطة أو تأشيرة مزيّفة",
+                  "detail": "يقول أحدهم إن هناك مشكلة في تأشيرتك أو هويتك الإماراتية ويطلب منك دفع غرامة الآن."
                 },
                 {
-                  "term": "Fake delivery messages",
-                  "detail": "\"Your parcel is waiting, pay {c}5 customs.\" The small amount is bait to get your card details."
+                  "term": "رسائل توصيل مزيّفة",
+                  "detail": "\"طردك في الانتظار، ادفع {c}5 رسوماً جمركية.\" المبلغ الصغير طُعم للحصول على تفاصيل بطاقتك."
                 },
                 {
-                  "term": "Investment promises",
-                  "detail": "Guaranteed high returns on crypto or forex. When you try to take money out, they ask for a fee first. Guaranteed returns do not exist."
+                  "term": "وعود استثمارية",
+                  "detail": "عوائد عالية مضمونة على العملات الرقمية أو الفوركس. وعندما تحاول سحب المال، يطلبون رسماً أولاً. العوائد المضمونة غير موجودة."
                 },
                 {
-                  "term": "Fake job offers",
-                  "detail": "Easy work-from-home money, but you must pay a registration fee first. Real jobs do not charge you."
+                  "term": "عروض عمل مزيّفة",
+                  "detail": "مال سهل من العمل من المنزل، لكن يجب أن تدفع رسم تسجيل أولاً. الوظائف الحقيقية لا تفرض عليك رسوماً."
                 },
                 {
-                  "term": "Fake QR codes",
-                  "detail": "A sticker placed over the real code in a car park or shop. Check where it takes you before paying."
+                  "term": "رموز QR مزيّفة",
+                  "detail": "ملصق موضوع فوق الرمز الحقيقي في موقف سيارات أو متجر. تحقّق إلى أين يأخذك قبل الدفع."
                 }
               ],
-              "tip": "One rule handles most of these: **hang up and call your bank on the number printed on your card.**"
+              "tip": "قاعدة واحدة تتعامل مع معظم هذه: **أغلق الخط واتصل ببنكك على الرقم المطبوع على بطاقتك.**"
             },
             {
               "kind": "teach",
-              "heading": "What to do if it happens",
+              "heading": "ماذا تفعل إن حدث الأمر",
               "paragraphs": [
-                "Speed matters a lot. Money can sometimes be stopped within hours, but rarely after a few days. Do these in order:"
+                "السرعة تهم كثيراً. فالمال يمكن أحياناً إيقافه خلال ساعات، لكن نادراً بعد بضعة أيام. افعل هذه بالترتيب:"
               ],
               "list": [
                 {
-                  "term": "1. Call your bank now",
-                  "detail": "Use the number on your card, not one from the message. Ask them to freeze the account and try to stop the payment."
+                  "term": "1. اتصل ببنكك الآن",
+                  "detail": "استخدم الرقم الموجود على بطاقتك، لا رقماً من الرسالة. اطلب منهم تجميد الحساب ومحاولة إيقاف الدفعة."
                 },
                 {
-                  "term": "2. Change your passwords",
-                  "detail": "Start with your email. Your email can reset everything else, so it is the most important one."
+                  "term": "2. غيّر كلمات مرورك",
+                  "detail": "ابدأ ببريدك الإلكتروني. فبريدك يستطيع إعادة تعيين كل شيء آخر، لذا فهو الأهم."
                 },
                 {
-                  "term": "3. Report it",
-                  "detail": "In the UAE you can report online fraud to the police through the eCrime platform, or call your local police number."
+                  "term": "3. أبلِغ عنه",
+                  "detail": "في الإمارات تستطيع الإبلاغ عن الاحتيال الإلكتروني للشرطة عبر منصة \"إي كرايم\"، أو الاتصال برقم شرطتك المحلية."
                 },
                 {
-                  "term": "4. Check your credit report",
-                  "detail": "Look for loans or cards opened in your name."
+                  "term": "4. راجع تقريرك الائتماني",
+                  "detail": "ابحث عن قروض أو بطاقات فُتِحت باسمك."
                 }
               ],
-              "tip": "Being tricked does not mean you are stupid. These are professional teams. Report it fast — being embarrassed only helps them."
+              "tip": "أن تُخدَع لا يعني أنك غبي. فهذه فرق محترفة. أبلِغ بسرعة — الشعور بالإحراج لا يساعد سوى المحتالين."
             },
             {
               "kind": "singleChoice",
-              "prompt": "Which of these is real two-factor authentication?",
-              "explanation": "The two factors must be different kinds. A password and a security question are both things you know. A password plus an app code is something you know plus something you have.",
+              "prompt": "أيٌّ من هذه مصادقة ثنائية حقيقية؟",
+              "explanation": "يجب أن يكون العاملان من نوعين مختلفين. كلمة المرور وسؤال الأمان كلاهما شيء تعرفه. أما كلمة المرور مع رمز التطبيق فهي شيء تعرفه مع شيء تملكه.",
               "options": [
-                "A password plus a security question",
-                "A password plus a code from an authenticator app",
-                "A password plus a longer password",
-                "A PIN plus your birthday"
+                "كلمة مرور مع سؤال أمان",
+                "كلمة مرور مع رمز من تطبيق مصادقة",
+                "كلمة مرور مع كلمة مرور أطول",
+                "رقم سري مع تاريخ ميلادك"
               ],
               "answers": [
                 1
@@ -1590,13 +1590,13 @@
             },
             {
               "kind": "singleChoice",
-              "prompt": "Someone calls saying they are from your bank. They ask you to read out the OTP just sent to your phone. What is happening?",
-              "explanation": "The OTP is what approves the payment. Reading it out approves it. No bank will ever ask for it, no matter how much they seem to know about you.",
+              "prompt": "يتصل بك أحدهم قائلاً إنه من بنكك. ويطلب منك قراءة الرمز المؤقت الذي أُرسِل للتو إلى هاتفك. ماذا يحدث؟",
+              "explanation": "الرمز المؤقت هو ما يوافق على الدفعة. وقراءته توافق عليها. ولن يطلبه أي بنك أبداً، مهما بدا أنهم يعرفون عنك.",
               "options": [
-                "Normal bank procedure",
-                "A scam — no real bank asks for your OTP",
-                "It is fine because they knew your name",
-                "It is fine because they called you"
+                "إجراء بنكي عادي",
+                "عملية احتيال — لا يوجد بنك حقيقي يطلب رمزك المؤقت",
+                "لا بأس لأنهم عرفوا اسمك",
+                "لا بأس لأنهم اتصلوا بك"
               ],
               "answers": [
                 1
@@ -1604,13 +1604,13 @@
             },
             {
               "kind": "singleChoice",
-              "prompt": "You get an SMS saying your account will be blocked today. There is a link to fix it. What should you do?",
-              "explanation": "Urgent plus a link you did not expect is the classic pattern. Going to your own app removes the scammer completely. If the message was real, it will be waiting there.",
+              "prompt": "تصلك رسالة نصية تقول إن حسابك سيُحظَر اليوم. وفيها رابط لإصلاح الأمر. ماذا يجب أن تفعل؟",
+              "explanation": "العجلة مع رابط لم تتوقّعه هي النمط الكلاسيكي. والذهاب إلى تطبيقك الخاص يُزيل المحتال تماماً. وإن كانت الرسالة حقيقية، فستكون في انتظارك هناك.",
               "options": [
-                "Tap the link quickly because it is urgent",
-                "Ignore the link and open your bank app yourself, or call the number on your card",
-                "Reply to the message",
-                "Send it to a friend"
+                "اضغط الرابط بسرعة لأنه عاجل",
+                "تجاهل الرابط وافتح تطبيق بنكك بنفسك، أو اتصل بالرقم الموجود على بطاقتك",
+                "ردّ على الرسالة",
+                "أرسِلها إلى صديق"
               ],
               "answers": [
                 1
@@ -1618,13 +1618,13 @@
             },
             {
               "kind": "singleChoice",
-              "prompt": "You just sent money to a scammer. What is the FIRST thing to do?",
-              "explanation": "Money can sometimes be stopped within hours, almost never after days. Call your bank first. Everything else, including feeling embarrassed, can wait.",
+              "prompt": "لقد أرسلت للتو مالاً إلى محتال. ما أول شيء يجب فعله؟",
+              "explanation": "المال يمكن أحياناً إيقافه خلال ساعات، ونادراً جداً بعد أيام. اتصل ببنكك أولاً. وكل شيء آخر، بما في ذلك الشعور بالإحراج، يمكن أن ينتظر.",
               "options": [
-                "Wait a few days",
-                "Call your bank immediately on the number on your card",
-                "Post about it online",
-                "Message the scammer for a refund"
+                "انتظر بضعة أيام",
+                "اتصل ببنكك فوراً على الرقم الموجود على بطاقتك",
+                "انشر عن الأمر على الإنترنت",
+                "راسل المحتال طالباً استرداد المال"
               ],
               "answers": [
                 1
@@ -1632,13 +1632,13 @@
             },
             {
               "kind": "singleChoice",
-              "prompt": "An investment app promises a guaranteed 20% return every month. What does this tell you?",
-              "explanation": "No real investment can guarantee returns. The word 'guaranteed' with a high number is the clearest scam sign there is. Real investments always carry risk.",
+              "prompt": "تطبيق استثمار يعِد بعائد مضمون قدره 20% كل شهر. ماذا يخبرك هذا؟",
+              "explanation": "لا يوجد استثمار حقيقي يستطيع ضمان العوائد. وكلمة \"مضمون\" مع رقم مرتفع هي أوضح علامة احتيال على الإطلاق. الاستثمارات الحقيقية تحمل مخاطرة دائماً.",
               "options": [
-                "It is a great opportunity",
-                "It is a scam — guaranteed high returns do not exist",
-                "It is fine if they have a website",
-                "It is fine if a friend uses it"
+                "إنها فرصة رائعة",
+                "إنها عملية احتيال — العوائد العالية المضمونة غير موجودة",
+                "لا بأس بها إن كان لديهم موقع إلكتروني",
+                "لا بأس بها إن كان صديق يستخدمها"
               ],
               "answers": [
                 1
@@ -1652,81 +1652,81 @@
       "id": "u5",
       "number": 5,
       "accent": "violet",
-      "title": "Grow Wealth",
-      "subtitle": "Investing & Retirement",
-      "blurb": "Saving keeps your money safe. Investing helps it grow faster than prices rise.",
+      "title": "نمِّ ثروتك",
+      "subtitle": "الاستثمار والتقاعد",
+      "blurb": "الادخار يبقي مالك آمناً. والاستثمار يساعده على النمو أسرع من ارتفاع الأسعار.",
       "lessons": [
         {
           "id": "u5l1",
           "number": 1,
           "icon": "spark",
-          "title": "Compound Interest",
-          "blurb": "Why starting early beats starting big.",
+          "title": "الفائدة المركّبة",
+          "blurb": "لماذا البدء مبكراً يتفوّق على البدء بمبلغ كبير.",
           "steps": [
             {
               "kind": "teach",
-              "heading": "Two ways interest can work",
+              "heading": "طريقتان يمكن أن تعمل بهما الفائدة",
               "paragraphs": [
-                "**Simple interest** is paid only on the money you put in. Every year you earn the same amount.",
-                "**Compound interest** is paid on your money *plus* the interest you already earned. So your interest starts earning interest too.",
-                "In year one they look the same. After ten years they look very different."
+                "**الفائدة البسيطة** تُدفَع فقط على المال الذي وضعته. وفي كل عام تكسب المبلغ نفسه.",
+                "**الفائدة المركّبة** تُدفَع على مالك *بالإضافة إلى* الفائدة التي كسبتها بالفعل. فتبدأ فائدتك هي أيضاً بكسب فائدة.",
+                "في العام الأول تبدوان متماثلتين. وبعد عشر سنوات تبدوان مختلفتين جداً."
               ],
               "example": {
-                "heading": "{c}1,000 at 10% a year",
-                "body": "**Simple interest:**\nYear 1: {c}100\nYear 2: {c}100\nYear 3: {c}100\nTotal after 3 years: **{c}1,300**\n\n**Compound interest:**\nYear 1: 10% of 1,000 = {c}100 → total {c}1,100\nYear 2: 10% of 1,100 = {c}110 → total {c}1,210\nYear 3: 10% of 1,210 = {c}121 → total **{c}1,331**\n\nSmall difference now. Huge difference in 20 years."
+                "heading": "{c}1,000 بنسبة 10% سنوياً",
+                "body": "**الفائدة البسيطة:**\nالعام 1: {c}100\nالعام 2: {c}100\nالعام 3: {c}100\nالمجموع بعد 3 سنوات: **{c}1,300**\n\n**الفائدة المركّبة:**\nالعام 1: 10% من 1,000 = {c}100 ← المجموع {c}1,100\nالعام 2: 10% من 1,100 = {c}110 ← المجموع {c}1,210\nالعام 3: 10% من 1,210 = {c}121 ← المجموع **{c}1,331**\n\nفرق صغير الآن. فرق هائل بعد 20 عاماً."
               }
             },
             {
               "kind": "teach",
-              "heading": "Time is the strongest part",
+              "heading": "الوقت هو الجزء الأقوى",
               "paragraphs": [
-                "Most people think the amount of money matters most. It does not. **Time** matters most.",
-                "Here is why. Every year, your interest earns interest. The longer it runs, the faster it grows.",
-                "This is the single most useful idea in this whole course."
+                "يظن معظم الناس أن مقدار المال هو الأهم. وهو ليس كذلك. **الوقت** هو الأهم.",
+                "إليك السبب. في كل عام، تكسب فائدتك فائدة. وكلما طالت المدة، نمت أسرع.",
+                "هذه هي الفكرة الأنفع على الإطلاق في هذه الدورة كلها."
               ],
               "example": {
-                "heading": "Two savers, step by step",
-                "body": "Both earn **10% a year** and stop at age 60.\n\n**Amina** saves {c}500 a month from age 25 to 35. Then she stops completely.\nShe puts in: 500 × 12 × 10 = **{c}60,000**\n\n**Khalid** starts at 35 and saves {c}500 a month until 60.\nHe puts in: 500 × 12 × 25 = **{c}150,000**\n\nAt age 60:\nAmina has more money than Khalid.\n\nShe put in far less. But her money had 10 extra years to grow."
+                "heading": "مدّخِران، خطوة بخطوة",
+                "body": "كلاهما يكسب **10% سنوياً** ويتوقفان في سن الـ 60.\n\n**أمينة** تدّخر {c}500 شهرياً من سن 25 إلى 35. ثم تتوقف تماماً.\nتضع: 500 × 12 × 10 = **{c}60,000**\n\n**خالد** يبدأ في سن 35 ويدّخر {c}500 شهرياً حتى 60.\nيضع: 500 × 12 × 25 = **{c}150,000**\n\nفي سن 60:\nأمينة لديها مال أكثر من خالد.\n\nوضعت أقل بكثير. لكن مالها حظي بـ 10 سنوات إضافية للنمو."
               },
-              "tip": "The best time to start was years ago. The second best time is this month. Small and early beats big and late."
+              "tip": "أفضل وقت للبدء كان قبل سنوات. وثاني أفضل وقت هو هذا الشهر. الصغير والمبكر يتفوّق على الكبير والمتأخر."
             },
             {
               "kind": "teach",
-              "heading": "The Rule of 72",
+              "heading": "قاعدة الـ 72",
               "paragraphs": [
-                "Here is a trick to keep for life.",
-                "Take the number **72**. Divide it by your yearly return. The answer is roughly how many years until your money doubles.",
-                "Return 8% → 72 ÷ 8 = **9 years**\nReturn 6% → 72 ÷ 6 = **12 years**\nReturn 12% → 72 ÷ 12 = **6 years**"
+                "إليك حيلة تحتفظ بها مدى الحياة.",
+                "خذ الرقم **72**. اقسمه على عائدك السنوي. والجواب هو تقريباً عدد السنوات حتى يتضاعف مالك.",
+                "عائد 8% ← 72 ÷ 8 = **9 سنوات**\nعائد 6% ← 72 ÷ 6 = **12 سنة**\nعائد 12% ← 72 ÷ 12 = **6 سنوات**"
               ],
-              "tip": "Rule of **70** for inflation. Rule of **72** for returns. Same trick, two uses."
+              "tip": "قاعدة الـ **70** للتضخم. وقاعدة الـ **72** للعوائد. الحيلة نفسها، استخدامان."
             },
             {
               "kind": "teach",
-              "heading": "How to actually start",
+              "heading": "كيف تبدأ فعلاً",
               "paragraphs": [
-                "You do not need a lot of money to begin. You need to begin.",
-                "In the UAE there is **no tax on investment gains for individuals**. What you earn is yours.",
-                "The simplest way to start is a small automatic amount each month, into a low-cost fund. You will learn what those are in the next two lessons.",
-                "Setting up {c}200 a month and forgetting about it beats waiting five years for the perfect plan."
+                "لا تحتاج إلى مال كثير لتبدأ. تحتاج إلى أن تبدأ.",
+                "في الإمارات **لا توجد ضريبة على أرباح الاستثمار للأفراد**. فما تكسبه هو لك.",
+                "أبسط طريقة للبدء هي مبلغ صغير تلقائي كل شهر، في صندوق منخفض التكلفة. وستتعلّم ما هي تلك الصناديق في الدرسين التاليين.",
+                "إعداد {c}200 شهرياً ونسيان الأمر يتفوّق على انتظار خمس سنوات بحثاً عن الخطة المثالية."
               ],
-              "tip": "Do not wait until you have a big amount. The habit is worth more than the size."
+              "tip": "لا تنتظر حتى يكون لديك مبلغ كبير. العادة تساوي أكثر من الحجم."
             },
             {
               "kind": "numeric",
-              "prompt": "Your investment returns 6% a year. Using the Rule of 72, how many YEARS until it doubles? Type the number only.",
-              "explanation": "72 ÷ 6 = 12 years. So money at 6% doubles every 12 years. Over 36 years that is three doublings.",
+              "prompt": "استثمارك يعود بنسبة 6% سنوياً. باستخدام قاعدة الـ 72، كم عدد السنوات حتى يتضاعف؟ اكتب الرقم فقط.",
+              "explanation": "72 ÷ 6 = 12 سنة. إذن المال بنسبة 6% يتضاعف كل 12 سنة. وعلى مدى 36 سنة يكون ذلك ثلاث مضاعفات.",
               "answer": 12,
               "showsCurrencySymbol": false
             },
             {
               "kind": "singleChoice",
-              "prompt": "What is the difference between simple and compound interest?",
-              "explanation": "With simple interest, your earned interest just sits there. With compound interest, it starts earning too. That is why the gap grows bigger every year.",
+              "prompt": "ما الفرق بين الفائدة البسيطة والمركّبة؟",
+              "explanation": "مع الفائدة البسيطة، تظل فائدتك المكتسَبة جامدة. ومع الفائدة المركّبة، تبدأ هي أيضاً بالكسب. لهذا تكبر الفجوة كل عام أكثر.",
               "options": [
-                "Simple interest is only for banks",
-                "Compound interest also pays you interest on the interest you already earned",
-                "Compound interest always has a higher rate",
-                "There is no difference"
+                "الفائدة البسيطة للبنوك فقط",
+                "الفائدة المركّبة تدفع لك فائدة أيضاً على الفائدة التي كسبتها بالفعل",
+                "الفائدة المركّبة دائماً بمعدل أعلى",
+                "لا فرق بينهما"
               ],
               "answers": [
                 1
@@ -1734,20 +1734,20 @@
             },
             {
               "kind": "numeric",
-              "prompt": "You put in {c}1,000 at 10% a year, with compound interest. How much do you have after ONE year?",
-              "explanation": "10% of 1,000 = 100. So 1,000 + 100 = 1,100. In year two you would earn 10% of 1,100, which is 110 — more than year one.",
+              "prompt": "تضع {c}1,000 بنسبة 10% سنوياً، بفائدة مركّبة. كم يكون لديك بعد عام واحد؟",
+              "explanation": "10% من 1,000 = 100. إذن 1,000 + 100 = 1,100. وفي العام الثاني ستكسب 10% من 1,100، أي 110 — أكثر من العام الأول.",
               "answer": 1100,
               "showsCurrencySymbol": true
             },
             {
               "kind": "singleChoice",
-              "prompt": "Amina put in {c}60,000 and Khalid put in {c}150,000. Amina ends up with more. Why?",
-              "explanation": "Same return, less money, better result. Time is the strongest part of compounding. That is the best reason to start now with whatever you can.",
+              "prompt": "وضعت أمينة {c}60,000 ووضع خالد {c}150,000. وانتهت أمينة بمال أكثر. لماذا؟",
+              "explanation": "العائد نفسه، مال أقل، نتيجة أفضل. الوقت هو الجزء الأقوى في التركيب. وهذا أفضل سبب لتبدأ الآن بما تستطيع.",
               "options": [
-                "She got a higher return",
-                "Her money had 10 more years to grow",
-                "Khalid paid more tax",
-                "It is a mistake"
+                "لأنها حصلت على عائد أعلى",
+                "لأن مالها حظي بـ 10 سنوات إضافية للنمو",
+                "لأن خالد دفع ضريبة أكثر",
+                "إنه خطأ"
               ],
               "answers": [
                 1
@@ -1759,69 +1759,69 @@
           "id": "u5l2",
           "number": 2,
           "icon": "layers",
-          "title": "Types of Investment",
-          "blurb": "Know what you are actually buying.",
+          "title": "أنواع الاستثمار",
+          "blurb": "اعرف ما الذي تشتريه فعلاً.",
           "steps": [
             {
               "kind": "teach",
-              "heading": "The four main types",
+              "heading": "الأنواع الأربعة الرئيسية",
               "paragraphs": [
-                "An **asset class** is just a group of investments that behave in a similar way. Almost everything fits into four groups."
+                "**فئة الأصول** هي ببساطة مجموعة من الاستثمارات تتصرّف بطريقة متشابهة. وكل شيء تقريباً يندرج ضمن أربع مجموعات."
               ],
               "list": [
                 {
-                  "term": "Shares (also called stocks or equity)",
-                  "detail": "You own a small piece of a company. If it grows, your piece is worth more. Highest growth over long periods, but the price moves up and down a lot."
+                  "term": "الأسهم (تُسمى أيضاً حصص أو ملكية)",
+                  "detail": "تملك جزءاً صغيراً من شركة. إن نمت، صارت حصتك تساوي أكثر. أعلى نمو على مدى الفترات الطويلة، لكن السعر يتحرك صعوداً وهبوطاً كثيراً."
                 },
                 {
-                  "term": "Bonds (also called fixed income)",
-                  "detail": "You lend money to a government or company. They pay you interest and give your money back at the end. Steadier, but lower growth."
+                  "term": "السندات (تُسمى أيضاً الدخل الثابت)",
+                  "detail": "تُقرِض مالاً لحكومة أو شركة. وهي تدفع لك فائدة وتعيد مالك في النهاية. أثبت، لكن نموه أقل."
                 },
                 {
-                  "term": "Property (real estate)",
-                  "detail": "Buildings and land. Can earn rent and grow in value. But selling takes weeks or months, and there are big fees."
+                  "term": "العقار",
+                  "detail": "المباني والأراضي. يمكن أن يكسب إيجاراً وتنمو قيمته. لكن بيعه يستغرق أسابيع أو أشهراً، وفيه رسوم كبيرة."
                 },
                 {
-                  "term": "Cash",
-                  "detail": "Savings accounts and fixed deposits. Safest and fastest to use, but the lowest growth. After inflation, often a small loss."
+                  "term": "النقد",
+                  "detail": "حسابات التوفير والودائع الثابتة. الأأمن والأسرع استخداماً، لكن أدنى نمو. وبعد التضخم، غالباً خسارة صغيرة."
                 }
               ],
-              "tip": "Shares mean you **own** part of something. Bonds mean you **lend** money to someone."
+              "tip": "الأسهم تعني أنك **تملك** جزءاً من شيء. والسندات تعني أنك **تُقرِض** مالاً لشخص ما."
             },
             {
               "kind": "teach",
-              "heading": "More risk, more possible reward",
+              "heading": "مخاطرة أكبر، مكافأة محتملة أكبر",
               "paragraphs": [
-                "There is one rule under all investing: **higher possible returns come with bigger ups and downs**.",
-                "The word for those ups and downs is **volatility**.",
-                "Shares can drop 30% in a bad year. Cash never drops — but it loses to inflation slowly every year.",
-                "So neither one is simply 'safe'. They are risky in different ways. What matters is **when you need the money**."
+                "هناك قاعدة واحدة تحت كل استثمار: **العوائد المحتملة الأعلى تأتي مع تقلبات أكبر صعوداً وهبوطاً**.",
+                "الكلمة التي تصف ذلك الصعود والهبوط هي **التقلّب**.",
+                "الأسهم قد تهبط 30% في عام سيئ. والنقد لا يهبط أبداً — لكنه يخسر أمام التضخم ببطء كل عام.",
+                "فلا أحد منهما \"آمن\" ببساطة. بل هما محفوفان بالمخاطر بطرق مختلفة. المهم هو **متى تحتاج المال**."
               ],
               "example": {
-                "heading": "Match the money to the time",
-                "body": "**Need it in 6 months** (rent deposit, wedding):\n→ Keep it in cash. You cannot risk a drop.\n\n**Need it in 3 to 5 years** (a car, a course):\n→ Mostly cash and bonds.\n\n**Need it in 20+ years** (retirement):\n→ Mostly shares. You have time to wait out the drops, and inflation is now the bigger enemy."
+                "heading": "طابِق المال مع الوقت",
+                "body": "**تحتاجه خلال 6 أشهر** (تأمين إيجار، زفاف):\n← أبقِه نقداً. لا تستطيع المخاطرة بهبوط.\n\n**تحتاجه خلال 3 إلى 5 سنوات** (سيارة، دورة):\n← غالباً نقد وسندات.\n\n**تحتاجه بعد 20 عاماً أو أكثر** (التقاعد):\n← غالباً أسهم. لديك وقت لتنتظر انتهاء الهبوط، والتضخم الآن هو العدو الأكبر."
               },
-              "tip": "Do not ask 'is this risky?'. Ask 'is this the right risk for when I need the money?'"
+              "tip": "لا تسأل \"هل هذا محفوف بالمخاطر؟\". بل اسأل \"هل هذه هي المخاطرة المناسبة لموعد حاجتي إلى المال؟\""
             },
             {
               "kind": "teach",
-              "heading": "Two more you will hear about",
+              "heading": "نوعان آخران ستسمع عنهما",
               "paragraphs": [
-                "**Gold and commodities.** Gold is popular in the UAE. It can protect against inflation. But remember: gold pays you nothing while you hold it. No rent, no interest. You only make money if you sell it for more.",
-                "**Crypto.** Very new, very volatile, and full of scams. If you ever put money in, only use money you could lose completely.",
-                "Neither one is needed to build a good portfolio."
+                "**الذهب والسلع.** الذهب شائع في الإمارات. ويمكن أن يحمي من التضخم. لكن تذكّر: الذهب لا يدفع لك شيئاً وأنت تحتفظ به. لا إيجار، لا فائدة. ولا تكسب مالاً إلا إن بعته بأكثر.",
+                "**العملات الرقمية.** جديدة جداً، شديدة التقلّب، ومليئة بعمليات الاحتيال. إن وضعت فيها مالاً يوماً، فاستخدم فقط مالاً تستطيع خسارته بالكامل.",
+                "لا حاجة لأي منهما لبناء محفظة جيدة."
               ],
-              "tip": "Some investments pay you while you hold them (rent, interest, dividends). Others only have a price. Know which kind you own."
+              "tip": "بعض الاستثمارات تدفع لك وأنت تحتفظ بها (إيجار، فائدة، توزيعات أرباح). وبعضها له سعر فقط. اعرف أي نوع تملك."
             },
             {
               "kind": "singleChoice",
-              "prompt": "When you buy a bond, what are you doing?",
-              "explanation": "A bond means you are the lender. A share means you are an owner. Lenders get paid before owners if things go wrong, which is why bonds are steadier.",
+              "prompt": "عندما تشتري سنداً، ماذا تفعل؟",
+              "explanation": "السند يعني أنك المُقرِض. والسهم يعني أنك المالك. والمُقرِضون يُدفَع لهم قبل المالكين إن ساءت الأمور، ولهذا فالسندات أثبت.",
               "options": [
-                "Buying part of a company",
-                "Lending money and getting interest",
-                "Buying property",
-                "Opening a savings account"
+                "تشتري جزءاً من شركة",
+                "تُقرِض مالاً وتحصل على فائدة",
+                "تشتري عقاراً",
+                "تفتح حساب توفير"
               ],
               "answers": [
                 1
@@ -1829,13 +1829,13 @@
             },
             {
               "kind": "singleChoice",
-              "prompt": "Which of these takes the LONGEST to turn into cash?",
-              "explanation": "Selling property takes weeks or months and has big fees. Shares and bonds usually sell in a day. Cash is instant. This is why property should never hold your emergency fund.",
+              "prompt": "أيٌّ من هذه يستغرق الأطول للتحول إلى نقد؟",
+              "explanation": "بيع العقار يستغرق أسابيع أو أشهراً وفيه رسوم كبيرة. أما الأسهم والسندات فتُباع عادةً في يوم واحد. والنقد فوري. لهذا لا يجب أبداً أن يحتفظ العقار بصندوق طوارئك.",
               "options": [
-                "A savings account",
-                "Shares",
-                "Property",
-                "A government bond"
+                "حساب توفير",
+                "الأسهم",
+                "العقار",
+                "سند حكومي"
               ],
               "answers": [
                 2
@@ -1843,13 +1843,13 @@
             },
             {
               "kind": "singleChoice",
-              "prompt": "You need money for a rent deposit in 8 months. Where should it be?",
-              "explanation": "Eight months is not long enough to recover if prices fall. Money with a short deadline belongs in cash. The return is small, but you know it will be there.",
+              "prompt": "تحتاج مالاً لتأمين إيجار بعد 8 أشهر. أين يجب أن يكون؟",
+              "explanation": "ثمانية أشهر ليست مدة كافية للتعافي إن هبطت الأسعار. والمال ذو الموعد القريب مكانه النقد. العائد صغير، لكنك تعرف أنه سيكون هناك.",
               "options": [
-                "All in shares",
-                "In cash or a savings account",
-                "In crypto",
-                "In property"
+                "كله في أسهم",
+                "في نقد أو حساب توفير",
+                "في عملات رقمية",
+                "في عقار"
               ],
               "answers": [
                 1
@@ -1857,13 +1857,13 @@
             },
             {
               "kind": "singleChoice",
-              "prompt": "Why is keeping ALL your retirement money in cash actually risky?",
-              "explanation": "Cash feels safe because the number never drops. But over 20 or 30 years, inflation quietly takes a big part of what it can buy.",
+              "prompt": "لماذا إبقاء كل مال تقاعدك نقداً محفوف بالمخاطر فعلاً؟",
+              "explanation": "النقد يبدو آمناً لأن الرقم لا يهبط أبداً. لكن على مدى 20 أو 30 عاماً، يأخذ التضخم بهدوء جزءاً كبيراً مما يستطيع شراءه.",
               "options": [
-                "The bank might close",
-                "Inflation makes it buy less every year, for many years",
-                "Cash is not allowed",
-                "Cash has high fees"
+                "لأن البنك قد يُغلَق",
+                "لأن التضخم يجعله يشتري أقل كل عام، لسنوات كثيرة",
+                "لأن النقد غير مسموح به",
+                "لأن النقد له رسوم عالية"
               ],
               "answers": [
                 1
@@ -1875,73 +1875,73 @@
           "id": "u5l3",
           "number": 3,
           "icon": "grid",
-          "title": "Spreading Your Risk",
-          "blurb": "Do not put all your eggs in one basket.",
+          "title": "توزيع مخاطرك",
+          "blurb": "لا تضع كل بيضك في سلة واحدة.",
           "steps": [
             {
               "kind": "teach",
-              "heading": "Two kinds of risk",
+              "heading": "نوعان من المخاطر",
               "paragraphs": [
-                "**Company risk** is a problem with one company or one industry. A factory fire. A bad product. A fraud.",
-                "You can remove this risk. Own many different things, and one problem cannot hurt you much.",
-                "**Market risk** affects nearly everything at once — a recession, a global event. You cannot remove it. This is the risk you are actually paid to take.",
-                "**Diversification** means spreading your money across many things. Its whole job is to remove the first kind of risk for free."
+                "**مخاطرة الشركة** هي مشكلة في شركة واحدة أو صناعة واحدة. حريق مصنع. منتج سيئ. احتيال.",
+                "تستطيع إزالة هذه المخاطرة. امتلك أشياء كثيرة مختلفة، فلا تستطيع مشكلة واحدة أن تؤذيك كثيراً.",
+                "**مخاطرة السوق** تؤثر في كل شيء تقريباً دفعة واحدة — ركود اقتصادي، حدث عالمي. ولا تستطيع إزالتها. وهذه هي المخاطرة التي يُدفَع لك فعلاً مقابل تحمّلها.",
+                "**التنويع** يعني توزيع مالك على أشياء كثيرة. ومهمته كلها إزالة النوع الأول من المخاطرة مجاناً."
               ],
               "example": {
-                "heading": "One basket vs many",
-                "body": "You put all your savings into your own employer's shares.\n\nThe company has a bad year. You lose your job **and** your savings in the same week.\n\nNow imagine the same money spread across 500 companies.\n\nOne company fails. You barely notice."
+                "heading": "سلة واحدة مقابل سلال كثيرة",
+                "body": "تضع كل مدّخراتك في أسهم صاحب عملك نفسه.\n\nتمرّ الشركة بعام سيئ. فتخسر وظيفتك **و** مدّخراتك في الأسبوع نفسه.\n\nالآن تخيّل المال نفسه موزّعاً على 500 شركة.\n\nتفشل شركة واحدة. فبالكاد تلاحظ."
               }
             },
             {
               "kind": "teach",
-              "heading": "Index funds and why fees matter",
+              "heading": "الصناديق المؤشّرة ولماذا تهمّ الرسوم",
               "paragraphs": [
-                "An **index fund** buys a small piece of every company in a list — for example the 500 biggest companies in a market.",
-                "Nobody is trying to pick winners, so it is very cheap to run. This is called **passive** investing.",
-                "The **expense ratio** is the yearly fee, shown as a percentage of your money. An index fund might charge 0.1%. A managed fund might charge 1.5%.",
-                "That gap looks tiny. It is not, because you pay it every year on everything you have."
+                "**الصندوق المؤشّر** يشتري جزءاً صغيراً من كل شركة في قائمة — مثلاً أكبر 500 شركة في سوق ما.",
+                "لا أحد يحاول انتقاء الفائزين، لذا فتشغيله رخيص جداً. يُسمى هذا الاستثمار **السلبي**.",
+                "**نسبة المصاريف** هي الرسم السنوي، معروضاً كنسبة مئوية من مالك. قد يفرض صندوق مؤشّر 0.1%. وقد يفرض صندوق مُدار 1.5%.",
+                "تبدو تلك الفجوة ضئيلة. وهي ليست كذلك، لأنك تدفعها كل عام على كل ما تملك."
               ],
               "example": {
-                "heading": "What 1.5% costs",
-                "body": "You have **{c}10,000** invested.\n\nFee of 0.1%:\n10,000 × 0.001 = **{c}10 a year**\n\nFee of 1.6%:\n10,000 × 0.016 = **{c}160 a year**\n\nThat is {c}150 more, every single year — and it grows as your money grows. Over 30 years it can take away a third of your final amount."
+                "heading": "كم تكلّف 1.5%",
+                "body": "لديك **{c}10,000** مستثمرة.\n\nرسم 0.1%:\n10,000 × 0.001 = **{c}10 في السنة**\n\nرسم 1.6%:\n10,000 × 0.016 = **{c}160 في السنة**\n\nهذا {c}150 أكثر، كل عام — وينمو كلما نما مالك. وعلى مدى 30 عاماً يمكن أن يأخذ ثلث مبلغك النهائي."
               },
-              "tip": "You cannot control your returns. You can always control your fees. Start there."
+              "tip": "لا تستطيع التحكّم في عوائدك. لكنك تستطيع دائماً التحكّم في رسومك. ابدأ من هناك."
             },
             {
               "kind": "teach",
-              "heading": "Choosing your mix and keeping it",
+              "heading": "اختيار مزيجك والحفاظ عليه",
               "paragraphs": [
-                "**Asset allocation** means how you split your money between shares, bonds and cash. This choice matters more than which exact fund you pick.",
-                "A simple starting idea: the longer until you need the money, the more shares you can hold.",
-                "**Rebalancing** means going back to your chosen mix once a year.",
-                "If shares grow a lot, they become a bigger share of your money than you planned. So you sell a little and buy more bonds. This forces you to sell high and buy low — the opposite of what fear tells you to do."
+                "**توزيع الأصول** يعني كيف تقسّم مالك بين الأسهم والسندات والنقد. وهذا الاختيار يهم أكثر من أي صندوق بعينه تنتقيه.",
+                "فكرة بداية بسيطة: كلما طالت المدة حتى تحتاج المال، زاد ما يمكنك الاحتفاظ به من الأسهم.",
+                "**إعادة التوازن** تعني العودة إلى مزيجك المختار مرة في السنة.",
+                "إن نمت الأسهم كثيراً، صارت حصة أكبر من مالك مما خطّطت له. فتبيع قليلاً وتشتري مزيداً من السندات. وهذا يجبرك على البيع عالياً والشراء منخفضاً — عكس ما يمليه عليك الخوف."
               ],
               "example": {
-                "heading": "Rebalancing in numbers",
-                "body": "Your plan: 70% shares, 30% bonds.\n\nAfter a good year: 80% shares, 20% bonds.\n\nYour money is now riskier than you planned.\n\nFix: sell some shares, buy some bonds, back to 70/30.\n\nOnce a year is enough."
+                "heading": "إعادة التوازن بالأرقام",
+                "body": "خطتك: 70% أسهم، 30% سندات.\n\nبعد عام جيد: 80% أسهم، 20% سندات.\n\nمالك الآن أكثر مخاطرة مما خطّطت له.\n\nالحل: بِع بعض الأسهم، واشترِ بعض السندات، عُد إلى 70/30.\n\nمرة في السنة تكفي."
               },
-              "tip": "Spread across *different kinds* of investment. Twenty technology shares is not spreading out — it is one bet, twenty times."
+              "tip": "وزّع على *أنواع مختلفة* من الاستثمار. عشرون سهماً تقنياً ليست توزيعاً — إنها رهان واحد، عشرين مرة."
             },
             {
               "kind": "teach",
-              "heading": "The part that decides your result",
+              "heading": "الجزء الذي يقرّر نتيجتك",
               "paragraphs": [
-                "The biggest thing that hurts real people's returns is not fees, and not fund choice. It is behaviour.",
-                "People sell when prices fall and buy after prices rise. That is buying high and selling low.",
-                "Market drops are normal. They happen again and again, and they have always recovered for people who waited.",
-                "Three simple defences: set up automatic monthly investing, keep enough cash so you are never forced to sell, and check your account rarely."
+                "أكبر ما يضر بعوائد الناس الحقيقيين ليس الرسوم، ولا اختيار الصندوق. إنه السلوك.",
+                "الناس يبيعون عندما تهبط الأسعار ويشترون بعد أن ترتفع. وذلك شراء عالياً وبيع منخفضاً.",
+                "هبوط السوق أمر طبيعي. يحدث مرة بعد مرة، وقد تعافى دائماً لمن انتظروا.",
+                "ثلاثة دفاعات بسيطة: أعِدّ استثماراً شهرياً تلقائياً، واحتفظ بنقد كافٍ لئلا تُضطر أبداً إلى البيع، واطّلع على حسابك نادراً."
               ],
-              "tip": "Time *in* the market beats timing the market. Boring is the strategy."
+              "tip": "الوقت *في* السوق يتفوّق على توقيت السوق. الملل هو الاستراتيجية."
             },
             {
               "kind": "singleChoice",
-              "prompt": "Which kind of risk can diversification remove?",
-              "explanation": "Owning many things means one company's problem barely matters. Nothing removes market-wide risk — and that is the risk you get paid for taking.",
+              "prompt": "أي نوع من المخاطر يستطيع التنويع إزالته؟",
+              "explanation": "امتلاك أشياء كثيرة يعني أن مشكلة شركة واحدة بالكاد تهم. ولا شيء يزيل المخاطرة الشاملة للسوق — وهي المخاطرة التي يُدفَع لك مقابل تحمّلها.",
               "options": [
-                "Market risk — recessions and global events",
-                "Company risk — a problem with one company",
-                "Inflation",
-                "All risk"
+                "مخاطرة السوق — الركود والأحداث العالمية",
+                "مخاطرة الشركة — مشكلة في شركة واحدة",
+                "التضخم",
+                "كل المخاطر"
               ],
               "answers": [
                 1
@@ -1949,13 +1949,13 @@
             },
             {
               "kind": "singleChoice",
-              "prompt": "What is an expense ratio?",
-              "explanation": "It is the fund's yearly charge, taken from your money whether the fund goes up or down. Over many years a high one can cost you a large part of your total.",
+              "prompt": "ما هي نسبة المصاريف؟",
+              "explanation": "إنه الرسم السنوي للصندوق، يُؤخَذ من مالك سواء صعد الصندوق أم هبط. وعلى مدى سنوات كثيرة قد يكلّفك المرتفع منه جزءاً كبيراً من مجموعك.",
               "options": [
-                "The share of your money in shares",
-                "The yearly fee a fund charges, as a percentage",
-                "Your spending compared to your income",
-                "Last year's return"
+                "حصة مالك في الأسهم",
+                "الرسم السنوي الذي يفرضه الصندوق، كنسبة مئوية",
+                "إنفاقك مقارنةً بدخلك",
+                "عائد العام الماضي"
               ],
               "answers": [
                 1
@@ -1963,20 +1963,20 @@
             },
             {
               "kind": "numeric",
-              "prompt": "You have {c}10,000 invested in a fund with a 2% yearly fee. How much do you pay in fees in one year?",
-              "explanation": "10,000 × 0.02 = 200. A cheaper fund at 0.2% would cost only {c}20. Same investment, {c}180 difference every year.",
+              "prompt": "لديك {c}10,000 مستثمرة في صندوق برسم سنوي قدره 2%. كم تدفع رسوماً في عام واحد؟",
+              "explanation": "10,000 × 0.02 = 200. وصندوق أرخص بنسبة 0.2% سيكلّف {c}20 فقط. الاستثمار نفسه، وفرق {c}180 كل عام.",
               "answer": 200,
               "showsCurrencySymbol": true
             },
             {
               "kind": "singleChoice",
-              "prompt": "Your plan is 70% shares and 30% bonds. After a good year you have 80% shares. What should you do?",
-              "explanation": "This is rebalancing. Your money drifted to being riskier than you planned. Selling a little of what grew and buying what did not brings you back to your plan.",
+              "prompt": "خطتك 70% أسهم و30% سندات. بعد عام جيد صار لديك 80% أسهم. ماذا يجب أن تفعل؟",
+              "explanation": "هذه إعادة توازن. مالك انجرف إلى أن يكون أكثر مخاطرة مما خطّطت له. وبيع قليل مما نما وشراء ما لم ينمُ يعيدك إلى خطتك.",
               "options": [
-                "Buy more shares",
-                "Sell some shares and buy bonds to get back to 70/30",
-                "Sell everything",
-                "Nothing"
+                "اشترِ مزيداً من الأسهم",
+                "بِع بعض الأسهم واشترِ سندات للعودة إلى 70/30",
+                "بِع كل شيء",
+                "لا شيء"
               ],
               "answers": [
                 1
@@ -1984,13 +1984,13 @@
             },
             {
               "kind": "singleChoice",
-              "prompt": "Which of these is really spreading your risk?",
-              "explanation": "Twenty tech shares all fall together — that is one bet made twenty times. Spreading means different industries, different countries and different types of investment.",
+              "prompt": "أيٌّ من هذه توزيع حقيقي لمخاطرك؟",
+              "explanation": "عشرون سهماً تقنياً تهبط كلها معاً — وذلك رهان واحد أُجري عشرين مرة. التوزيع يعني صناعات مختلفة ودولاً مختلفة وأنواعاً مختلفة من الاستثمار.",
               "options": [
-                "Twenty different technology company shares",
-                "A global share fund plus a bond fund",
-                "All your money in your employer's shares",
-                "Five shares in the same bank"
+                "عشرون سهماً لشركات تقنية مختلفة",
+                "صندوق أسهم عالمي مع صندوق سندات",
+                "كل مالك في أسهم صاحب عملك",
+                "خمسة أسهم في البنك نفسه"
               ],
               "answers": [
                 1

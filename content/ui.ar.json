@@ -1,63 +1,63 @@
 {
   "home": {
     "greeting": {
-      "morning": "Good morning",
-      "afternoon": "Good afternoon",
-      "evening": "Good evening"
+      "morning": "صباح الخير",
+      "afternoon": "طاب يومك",
+      "evening": "مساء الخير"
     },
-    "ofPay": "of pay",
-    "ofGoal": "of goal",
+    "ofPay": "من الدخل",
+    "ofGoal": "من الهدف",
     "categories": {
-      "rent": "Rent",
-      "groceries": "Groceries",
-      "transport": "Transport",
-      "utilities": "Utilities",
-      "entertainment": "Entertainment",
-      "other": "Other"
+      "rent": "الإيجار",
+      "groceries": "البقالة",
+      "transport": "المواصلات",
+      "utilities": "الفواتير",
+      "entertainment": "الترفيه",
+      "other": "أخرى"
     },
     "learning": {
-      "noXp": "No XP yet",
-      "xpComplete": "{xp} XP · every lesson complete",
-      "noXpStart": "No XP yet · start with {lesson}",
-      "xpNext": "{xp} XP · next up, {lesson}"
+      "noXp": "لا نقاط خبرة بعد",
+      "xpComplete": "{xp} نقطة خبرة · اكتملت كل الدروس",
+      "noXpStart": "لا نقاط خبرة بعد · ابدأ بـ {lesson}",
+      "xpNext": "{xp} نقطة خبرة · التالي، {lesson}"
     }
   },
   "expenses": {
     "categories": {
-      "groceries": { "name": "Groceries", "hint": "Add each shop as you go" },
-      "transport": { "name": "Transport", "hint": "Pick how you travelled" },
-      "entertainment": { "name": "Entertainment", "hint": "Nights out, films, events" },
-      "other": { "name": "Other", "hint": "Everything else" },
-      "income": { "name": "Additional Income", "hint": "Money coming in" },
-      "utilities": { "name": "Utilities", "hint": "Fixed each month" },
-      "rent": { "name": "Rent", "hint": "Fixed each month" }
+      "groceries": { "name": "البقالة", "hint": "أضف كل متجر أولًا بأول" },
+      "transport": { "name": "المواصلات", "hint": "اختر كيف تنقّلت" },
+      "entertainment": { "name": "الترفيه", "hint": "سهرات، أفلام، فعاليات" },
+      "other": { "name": "أخرى", "hint": "كل شيء آخر" },
+      "income": { "name": "دخل إضافي", "hint": "أموال واردة" },
+      "utilities": { "name": "الفواتير", "hint": "ثابتة كل شهر" },
+      "rent": { "name": "الإيجار", "hint": "ثابت كل شهر" }
     },
     "relativeDay": {
-      "today": "Today",
-      "yesterday": "Yesterday",
-      "daysAgo": "{n} days ago"
+      "today": "اليوم",
+      "yesterday": "أمس",
+      "daysAgo": "قبل {n} أيام"
     },
     "entryCount": {
-      "one": "entry",
-      "other": "entries"
+      "one": "إدخال",
+      "other": "إدخالات"
     }
   },
   "account": {
     "rows": {
-      "personalInformation": { "name": "Personal Information", "sub": "Username, salary, phone" },
-      "language": { "name": "Language", "sub": "How the app is written" },
-      "currency": { "name": "Currency", "sub": "How your money is shown" },
-      "password": { "name": "Password" }
+      "personalInformation": { "name": "المعلومات الشخصية", "sub": "اسم المستخدم، الراتب، الهاتف" },
+      "language": { "name": "اللغة", "sub": "كيف يُكتب التطبيق" },
+      "currency": { "name": "العملة", "sub": "كيف يُعرض مالك" },
+      "password": { "name": "كلمة المرور" }
     },
     "passwordChanged": {
-      "set": "Set when you created your account",
-      "justNow": "Changed just now",
-      "yesterday": "Changed yesterday",
-      "daysAgo": "Changed {n} days ago",
-      "monthsAgoOne": "Changed 1 month ago",
-      "monthsAgoOther": "Changed {n} months ago",
-      "yearsAgoOne": "Changed 1 year ago",
-      "yearsAgoOther": "Changed {n} years ago"
+      "set": "عُيّنت عند إنشاء حسابك",
+      "justNow": "غُيّرت للتو",
+      "yesterday": "غُيّرت أمس",
+      "daysAgo": "غُيّرت قبل {n} أيام",
+      "monthsAgoOne": "غُيّرت قبل شهر",
+      "monthsAgoOther": "غُيّرت قبل {n} أشهر",
+      "yearsAgoOne": "غُيّرت قبل سنة",
+      "yearsAgoOther": "غُيّرت قبل {n} سنوات"
     }
   }
 }

@@ -4,84 +4,84 @@
       "id": "scams",
       "icon": "shield",
       "accent": 3,
-      "short": "Scam awareness",
-      "title": "Spotting scams in the UAE",
-      "lede": "The tricks change often. The warning signs do not. Learn the signs once and you are covered for most of them.",
+      "short": "धोखाधड़ी के प्रति जागरूकता",
+      "title": "UAE में धोखाधड़ी पहचानना",
+      "lede": "तरकीबें अक्सर बदलती रहती हैं। चेतावनी के संकेत नहीं बदलते। इन संकेतों को एक बार सीख लें और आप इनमें से ज़्यादातर से बच जाएँगे।",
       "sections": [
         {
-          "heading": "The five signs of a scam",
+          "heading": "धोखाधड़ी के पाँच संकेत",
           "paragraphs": [
-            "Fake messages used to be easy to spot because of bad spelling. That is no longer true. Look at the **shape** of the message instead of the writing."
+            "पहले नकली संदेशों को खराब वर्तनी की वजह से आसानी से पहचाना जा सकता था। अब ऐसा नहीं है। लिखावट के बजाय संदेश की **बनावट** पर ध्यान दें।"
           ],
           "entries": [
             {
-              "term": "It is urgent",
-              "detail": "Your account closes today. Your visa has a problem. Panic stops you from checking, and that is the whole point."
+              "term": "यह जल्दी का मामला है",
+              "detail": "आपका खाता आज बंद हो रहा है। आपके वीज़ा में कोई समस्या है। घबराहट आपको जाँच करने से रोक देती है, और यही पूरा मकसद होता है।"
             },
             {
-              "term": "There is a link you did not expect",
-              "detail": "Never sign in through a link in a message. Open your bank app yourself, or type the address in."
+              "term": "कोई ऐसा लिंक है जिसकी आपने उम्मीद नहीं की थी",
+              "detail": "संदेश में दिए गए किसी लिंक से कभी साइन इन न करें। खुद अपना बैंक ऐप खोलें, या पता खुद टाइप करें।"
             },
             {
-              "term": "They ask for a code, PIN or password",
-              "detail": "No bank, telecom company or government office will ever ask for these. Not once, no matter how much they seem to know about you."
+              "term": "वे कोड, PIN या पासवर्ड माँगते हैं",
+              "detail": "कोई भी बैंक, टेलीकॉम कंपनी या सरकारी दफ़्तर कभी ये नहीं माँगेगा। एक बार भी नहीं, चाहे वे आपके बारे में कितना ही जानते क्यों न दिखें।"
             },
             {
-              "term": "They ask you to keep it secret",
-              "detail": "Real organisations do not ask you to hide anything from your family."
+              "term": "वे इसे गुप्त रखने को कहते हैं",
+              "detail": "असली संस्थाएँ आपसे अपने परिवार से कुछ भी छिपाने को नहीं कहतीं।"
             },
             {
-              "term": "The payment method is unusual",
-              "detail": "Gift cards, crypto, or a transfer to a personal account. Almost always fraud."
+              "term": "भुगतान का तरीका असामान्य है",
+              "detail": "गिफ़्ट कार्ड, क्रिप्टो, या किसी निजी खाते में ट्रांसफ़र। लगभग हमेशा धोखाधड़ी।"
             }
           ]
         },
         {
-          "heading": "The tricks used most here",
+          "heading": "यहाँ सबसे ज़्यादा इस्तेमाल होने वाली तरकीबें",
           "entries": [
             {
-              "term": "The fake bank call",
-              "detail": "Someone says they are from your bank's fraud team. They ask for the code just sent to your phone, to \"stop\" a payment. That code is what *approves* the payment."
+              "term": "नकली बैंक कॉल",
+              "detail": "कोई कहता है कि वह आपके बैंक की फ़्रॉड टीम से है। वे किसी भुगतान को \"रोकने\" के लिए, आपके फ़ोन पर अभी-अभी भेजा गया कोड माँगते हैं। असल में वही कोड भुगतान को *मंज़ूरी* देता है।"
             },
             {
-              "term": "The visa or Emirates ID problem",
-              "detail": "A caller says there is an issue with your documents and asks you to pay a fine immediately. Government fines are never collected this way."
+              "term": "वीज़ा या Emirates ID की समस्या",
+              "detail": "एक कॉल करने वाला कहता है कि आपके दस्तावेज़ों में कोई समस्या है और आपसे तुरंत जुर्माना भरने को कहता है। सरकारी जुर्माने कभी इस तरह नहीं वसूले जाते।"
             },
             {
-              "term": "The delivery fee",
-              "detail": "A text says your parcel is held and asks for a small customs fee. The tiny amount is bait — they want your card details, not the fee."
+              "term": "डिलीवरी शुल्क",
+              "detail": "एक संदेश कहता है कि आपका पार्सल रोक लिया गया है और एक छोटा-सा सीमा-शुल्क माँगता है। यह मामूली रकम एक चारा है — उन्हें आपके कार्ड की जानकारी चाहिए, शुल्क नहीं।"
             },
             {
-              "term": "The prize you did not enter for",
-              "detail": "A call saying you have won a raffle from a telecom company or mall, then asking for your bank details to send the money."
+              "term": "वह इनाम जिसके लिए आपने हिस्सा नहीं लिया",
+              "detail": "एक कॉल जिसमें कहा जाता है कि आपने किसी टेलीकॉम कंपनी या मॉल के रैफ़ल में इनाम जीता है, और फिर पैसे भेजने के लिए आपके बैंक की जानकारी माँगी जाती है।"
             },
             {
-              "term": "The investment with guaranteed returns",
-              "detail": "Slick dashboards showing your balance rising. When you try to withdraw, there is a fee to pay first. Guaranteed returns do not exist."
+              "term": "गारंटीशुदा मुनाफ़े वाला निवेश",
+              "detail": "चमकदार डैशबोर्ड जो आपका बैलेंस बढ़ता हुआ दिखाते हैं। जब आप पैसे निकालने की कोशिश करते हैं, तो पहले एक शुल्क भरना पड़ता है। गारंटीशुदा मुनाफ़ा जैसी कोई चीज़ नहीं होती।"
             },
             {
-              "term": "The job that charges you",
-              "detail": "Easy work from home, but first you must pay a registration or visa fee. Real employers do not charge you to hire you."
+              "term": "वह नौकरी जो आपसे पैसे वसूलती है",
+              "detail": "घर से आसान काम, लेकिन पहले आपको एक रजिस्ट्रेशन या वीज़ा शुल्क भरना होगा। असली नियोक्ता आपको नौकरी देने के लिए आपसे पैसे नहीं लेते।"
             }
           ]
         },
         {
-          "heading": "If it happens to you",
+          "heading": "अगर यह आपके साथ हो जाए",
           "paragraphs": [
-            "Speed matters more than anything else. Money can sometimes be stopped within hours, but rarely after a few days."
+            "तेज़ी सबसे ज़्यादा मायने रखती है। पैसा कभी-कभी घंटों के भीतर रोका जा सकता है, लेकिन कुछ दिनों के बाद शायद ही कभी।"
           ],
           "steps": [
-            "**Call your bank now**, using the number printed on your card — not one from the message. Ask them to freeze the account and try to recall the payment.",
-            "**Change your passwords**, starting with your email. Your email can reset everything else, so it is the most important one.",
-            "**Report it officially.** Dubai Police run the eCrime platform and the 901 line. Abu Dhabi Police run the Aman service on 800 2626 or by text to 2828. The Ministry of Interior has an eCrimes section in the MoI UAE app, and the Public Prosecution has the My Safe Society app. In an emergency, call 999.",
-            "**Check your credit report** with the Al Etihad Credit Bureau for any account opened in your name."
+            "**अभी अपने बैंक को कॉल करें**, अपने कार्ड पर छपे नंबर का इस्तेमाल करके — संदेश में दिए गए नंबर का नहीं। उनसे खाता फ़्रीज़ करने और भुगतान वापस मँगाने की कोशिश करने को कहें।",
+            "**अपने पासवर्ड बदलें**, अपने ईमेल से शुरुआत करें। आपका ईमेल बाकी सब कुछ रीसेट कर सकता है, इसलिए यह सबसे ज़रूरी है।",
+            "**इसकी आधिकारिक रूप से शिकायत करें।** दुबई पुलिस eCrime प्लेटफ़ॉर्म और 901 लाइन चलाती है। अबू धाबी पुलिस Aman सेवा 800 2626 पर या 2828 पर टेक्स्ट के ज़रिए चलाती है। गृह मंत्रालय की MoI UAE ऐप में एक eCrimes सेक्शन है, और लोक अभियोजन के पास My Safe Society ऐप है। आपात स्थिति में 999 पर कॉल करें।",
+            "**अपनी क्रेडिट रिपोर्ट जाँचें** Al Etihad Credit Bureau के साथ, ताकि पता चले कि आपके नाम पर कोई खाता तो नहीं खोला गया।"
           ],
-          "callout": "Being tricked does not mean you were careless. These are professional, well-funded teams who rehearse their scripts. Reporting quickly is what helps — embarrassment only buys them time."
+          "callout": "धोखा खा जाने का मतलब यह नहीं कि आप लापरवाह थे। ये पेशेवर, अच्छी तरह वित्तपोषित टीमें हैं जो अपनी स्क्रिप्ट का पूर्वाभ्यास करती हैं। जल्दी शिकायत करना ही मदद करता है — शर्मिंदगी सिर्फ़ उन्हें और समय दे देती है।"
         },
         {
-          "heading": "One habit that stops most of it",
+          "heading": "एक आदत जो इसमें से ज़्यादातर को रोक देती है",
           "paragraphs": [
-            "Whenever a message or call about money makes you feel rushed, **hang up and call back** on a number you looked up yourself. Fraudsters depend on you staying inside the conversation they started. Leaving it removes their power completely."
+            "जब भी पैसे के बारे में कोई संदेश या कॉल आपको जल्दबाज़ी में महसूस कराए, तो **फ़ोन काट दें और वापस कॉल करें** ऐसे नंबर पर जिसे आपने खुद ढूँढा हो। धोखेबाज़ इस पर निर्भर करते हैं कि आप उनकी शुरू की गई बातचीत के अंदर बने रहें। उससे बाहर निकलना उनकी ताकत को पूरी तरह छीन लेता है।"
           ]
         }
       ],
@@ -100,61 +100,61 @@
       "id": "remit",
       "icon": "globe",
       "accent": 2,
-      "short": "Remittances in the UAE",
-      "title": "Sending money home, without losing part of it",
-      "lede": "The UAE is one of the biggest senders of money in the world. Small differences in rate add up fast when you send every month.",
+      "short": "UAE में विदेश धन-प्रेषण",
+      "title": "घर पैसे भेजना, उसका एक हिस्सा गँवाए बिना",
+      "lede": "UAE दुनिया में पैसा भेजने वालों में से सबसे बड़ों में एक है। जब आप हर महीने भेजते हैं, तो दर में छोटे-छोटे अंतर तेज़ी से जुड़ जाते हैं।",
       "sections": [
         {
-          "heading": "The fee is not the real cost",
+          "heading": "शुल्क असली लागत नहीं है",
           "paragraphs": [
-            "Most people compare transfer fees. That is the small number.",
-            "The bigger cost is usually the **exchange rate margin** — the gap between the real market rate and the rate you are offered. It is built into the rate, so you never see it as a charge.",
-            "Banks commonly apply a margin of around **1% to 3%**. On a large transfer that is far more than any fee."
+            "ज़्यादातर लोग ट्रांसफ़र शुल्क की तुलना करते हैं। वह तो छोटी रकम है।",
+            "बड़ी लागत आमतौर पर **विनिमय दर का मार्जिन** होती है — असली बाज़ार दर और आपको दी जाने वाली दर के बीच का अंतर। यह दर में ही शामिल होता है, इसलिए यह आपको कभी शुल्क के रूप में नहीं दिखता।",
+            "बैंक आम तौर पर लगभग **1% से 3%** का मार्जिन लगाते हैं। किसी बड़े ट्रांसफ़र पर यह किसी भी शुल्क से कहीं ज़्यादा होता है।"
           ]
         },
         {
-          "heading": "The one number to check",
+          "heading": "जाँचने लायक एक ही आँकड़ा",
           "paragraphs": [
-            "The **mid-market rate** is the real global rate for a currency — the one a search engine or a currency site shows you. No one gives you exactly that rate, but the distance from it tells you the true cost.",
-            "Compare that rate with what a provider offers, and you can see the hidden cost immediately."
+            "**मिड-मार्केट दर** किसी मुद्रा की असली वैश्विक दर होती है — वही जो कोई सर्च इंजन या करेंसी वेबसाइट आपको दिखाती है। कोई भी आपको बिल्कुल वही दर नहीं देता, लेकिन उससे दूरी आपको असली लागत बता देती है।",
+            "उस दर की तुलना किसी प्रदाता द्वारा दी जाने वाली दर से करें, और आप छिपी हुई लागत तुरंत देख सकते हैं।"
           ],
-          "callout": "Many providers advertise **zero fees** and then take their money back through a worse rate. Always compare the amount your family actually receives, not the fee you are charged."
+          "callout": "कई प्रदाता **शून्य शुल्क** का विज्ञापन करते हैं और फिर एक खराब दर के ज़रिए अपना पैसा वापस ले लेते हैं। हमेशा उस रकम की तुलना करें जो आपके परिवार को असल में मिलती है, न कि उस शुल्क की जो आपसे लिया जाता है।"
         },
         {
-          "heading": "How to compare properly",
+          "heading": "सही तरीके से तुलना कैसे करें",
           "steps": [
-            "Look up today's **mid-market rate** for your currency pair.",
-            "Get a quote from two or three providers for the **same amount**, at roughly the same time of day.",
-            "Ignore the fee and the rate separately. Ask one question: **how much arrives?**",
-            "Check how long it takes. Instant transfers sometimes cost more, and are not always needed.",
-            "Repeat this once every few months. Rates and offers change, and loyalty is rarely rewarded."
+            "अपने मुद्रा-जोड़े के लिए आज की **मिड-मार्केट दर** देखें।",
+            "दो या तीन प्रदाताओं से **समान रकम** के लिए, लगभग दिन के एक ही समय पर एक कोटेशन लें।",
+            "शुल्क और दर को अलग-अलग नज़रअंदाज़ करें। बस एक सवाल पूछें: **कितना पहुँचता है?**",
+            "जाँचें कि इसमें कितना समय लगता है। तुरंत होने वाले ट्रांसफ़र कभी-कभी ज़्यादा महँगे होते हैं, और हमेशा ज़रूरी नहीं होते।",
+            "इसे हर कुछ महीनों में एक बार दोहराएँ। दरें और ऑफ़र बदलते रहते हैं, और वफ़ादारी का इनाम शायद ही कभी मिलता है।"
           ]
         },
         {
-          "heading": "Staying safe and legal",
+          "heading": "सुरक्षित और कानूनी बने रहना",
           "entries": [
             {
-              "term": "Use a licensed provider",
-              "detail": "The Central Bank of the UAE licenses and supervises banks, exchange houses and digital transfer apps. Only use providers that appear on that list."
+              "term": "किसी लाइसेंस-प्राप्त प्रदाता का इस्तेमाल करें",
+              "detail": "UAE का केंद्रीय बैंक बैंकों, एक्सचेंज हाउसों और डिजिटल ट्रांसफ़र ऐप्स को लाइसेंस देता है और उनकी निगरानी करता है। केवल उन्हीं प्रदाताओं का इस्तेमाल करें जो उस सूची में हों।"
             },
             {
-              "term": "Be careful of \"better than everyone\" rates",
-              "detail": "An informal channel offering a far better rate than the whole market is a warning sign, not a bargain. You have no protection if the money disappears."
+              "term": "\"सबसे बेहतर\" दरों से सावधान रहें",
+              "detail": "कोई अनौपचारिक माध्यम जो पूरे बाज़ार से कहीं बेहतर दर देता है, वह एक चेतावनी का संकेत है, सौदा नहीं। अगर पैसा गायब हो जाए तो आपके पास कोई सुरक्षा नहीं होती।"
             },
             {
-              "term": "Keep your receipts",
-              "detail": "Save the transfer reference. It is what lets a provider trace money that has not arrived."
+              "term": "अपनी रसीदें सँभालकर रखें",
+              "detail": "ट्रांसफ़र रेफ़रेंस को सहेज कर रखें। यही वह चीज़ है जिससे कोई प्रदाता उस पैसे का पता लगा सकता है जो नहीं पहुँचा।"
             },
             {
-              "term": "Watch the timing",
-              "detail": "Rates move during the day and around weekends and holidays. If you are not in a hurry, comparing on a normal working day often gets you more."
+              "term": "समय पर ध्यान दें",
+              "detail": "दरें दिन के दौरान और सप्ताहांत व छुट्टियों के आसपास बदलती रहती हैं। अगर आपको जल्दी नहीं है, तो किसी सामान्य कामकाजी दिन पर तुलना करने से अक्सर आपको ज़्यादा मिलता है।"
             }
           ]
         },
         {
-          "heading": "A habit worth building",
+          "heading": "बनाने लायक एक आदत",
           "paragraphs": [
-            "If you send money home every month, treat it as a **fixed cost in your budget**, like rent. Decide the amount at the start of the month rather than whatever is left at the end. It makes your own budget honest, and it makes the amount you send predictable for the people receiving it."
+            "अगर आप हर महीने घर पैसे भेजते हैं, तो इसे अपने बजट में एक **तय खर्च** मानें, किराए की तरह। रकम महीने के अंत में जो बचे उसके बजाय शुरुआत में ही तय करें। इससे आपका अपना बजट ईमानदार बनता है, और जो लोग पैसा पा रहे हैं उनके लिए आपके भेजी गई रकम अनुमानित हो जाती है।"
           ]
         }
       ],
@@ -173,63 +173,63 @@
       "id": "debt",
       "icon": "steps",
       "accent": 4,
-      "short": "Debt management guidance",
-      "title": "Getting on top of debt in the UAE",
-      "lede": "Debt is not a character flaw. It is a maths problem with a plan attached. Here is the plan.",
+      "short": "कर्ज़ प्रबंधन मार्गदर्शन",
+      "title": "UAE में कर्ज़ पर काबू पाना",
+      "lede": "कर्ज़ कोई चारित्रिक कमी नहीं है। यह एक गणित की समस्या है जिसके साथ एक योजना जुड़ी होती है। यह रही वह योजना।",
       "sections": [
         {
-          "heading": "Know your debt burden ratio",
+          "heading": "अपना कर्ज़ बोझ अनुपात जानें",
           "paragraphs": [
-            "UAE banks work to a rule called the **debt burden ratio**, or DBR. It compares your total monthly debt payments to your monthly income.",
-            "The formula is simple: **DBR = total monthly debt payments ÷ monthly income × 100**.",
-            "The Central Bank sets a cap of **50%**. Some banks use a stricter limit of their own. Everything counts: your mortgage, personal loan, car loan and the minimum payments on your credit cards."
+            "UAE के बैंक एक नियम के अनुसार काम करते हैं जिसे **कर्ज़ बोझ अनुपात**, या DBR कहते हैं। यह आपके कुल मासिक कर्ज़ भुगतान की तुलना आपकी मासिक आय से करता है।",
+            "फ़ॉर्मूला सरल है: **DBR = कुल मासिक कर्ज़ भुगतान ÷ मासिक आय × 100**।",
+            "केंद्रीय बैंक **50%** की सीमा तय करता है। कुछ बैंक अपनी और सख्त सीमा रखते हैं। सब कुछ गिना जाता है: आपका होम लोन, पर्सनल लोन, कार लोन और आपके क्रेडिट कार्डों पर न्यूनतम भुगतान।"
           ],
-          "callout": "If you earn {c}10,000 a month, your total debt payments should not go above {c}5,000. If you are close to that line, a new loan will be difficult to get — and taking one would be a bad idea even if you could."
+          "callout": "अगर आप महीने में {c}10,000 कमाते हैं, तो आपके कुल कर्ज़ भुगतान {c}5,000 से ऊपर नहीं जाने चाहिए। अगर आप उस सीमा के करीब हैं, तो नया लोन मिलना मुश्किल होगा — और अगर मिल भी जाए तो उसे लेना एक बुरा फ़ैसला होगा।"
         },
         {
-          "heading": "Attack one debt at a time",
+          "heading": "एक बार में एक कर्ज़ पर हमला करें",
           "paragraphs": [
-            "Whichever approach you pick, the setup is the same. Pay the **minimum on every debt**, every month, without fail. Then put every spare dirham on **one** debt only.",
-            "Splitting extra money across everything feels fair and is measurably worse, because nothing ever gets finished."
+            "आप जो भी तरीका चुनें, शुरुआत एक जैसी होती है। **हर कर्ज़ पर न्यूनतम** भुगतान करें, हर महीने, बिना चूके। फिर हर बची हुई दिरहम को **केवल एक** कर्ज़ पर लगाएँ।",
+            "अतिरिक्त पैसा सब पर बाँटना उचित लगता है और नाप-तौल में बदतर होता है, क्योंकि कोई भी कर्ज़ कभी खत्म ही नहीं होता।"
           ],
           "entries": [
             {
-              "term": "Highest rate first (avalanche)",
-              "detail": "Order your debts by interest rate and attack the most expensive one. This always costs the least in total."
+              "term": "सबसे ऊँची दर पहले (avalanche)",
+              "detail": "अपने कर्ज़ों को ब्याज दर के हिसाब से क्रम दें और सबसे महँगे पर हमला करें। कुल मिलाकर इसकी लागत हमेशा सबसे कम होती है।"
             },
             {
-              "term": "Smallest balance first (snowball)",
-              "detail": "Order by size and clear the smallest one first. It costs slightly more, but the early win keeps people going — and a plan you finish beats a perfect plan you abandon."
+              "term": "सबसे छोटा बैलेंस पहले (snowball)",
+              "detail": "आकार के हिसाब से क्रम दें और सबसे छोटा पहले चुका दें। इसकी लागत थोड़ी ज़्यादा होती है, लेकिन शुरुआती जीत लोगों को टिकाए रखती है — और एक ऐसी योजना जो आप पूरी करते हैं, उस बेहतरीन योजना से बढ़कर है जिसे आप बीच में छोड़ देते हैं।"
             }
           ]
         },
         {
-          "heading": "Know what your debt actually costs",
+          "heading": "जानें कि आपके कर्ज़ की असल लागत क्या है",
           "paragraphs": [
-            "UAE credit cards commonly charge around **3% a month**, which is roughly 36% a year. Paying only the minimum on a card can keep you in debt for years while most of your payment goes to interest.",
-            "On personal and car loans, watch out for the **flat rate**. A flat rate is charged on the full original amount for the entire term, so a \"4% flat\" loan costs far more than 4%. Always ask for the **reducing balance rate** or the APR, and compare loans on that."
+            "UAE के क्रेडिट कार्ड आम तौर पर लगभग **3% महीना** लेते हैं, जो लगभग साल में 36% होता है। किसी कार्ड पर केवल न्यूनतम भुगतान करते रहने से आप सालों तक कर्ज़ में रह सकते हैं, जबकि आपके भुगतान का ज़्यादातर हिस्सा ब्याज में चला जाता है।",
+            "पर्सनल और कार लोन पर, **फ़्लैट रेट** से सावधान रहें। फ़्लैट रेट पूरी मूल रकम पर पूरी अवधि के लिए लगाई जाती है, इसलिए \"4% फ़्लैट\" वाला लोन 4% से कहीं ज़्यादा महँगा पड़ता है। हमेशा **रिड्यूसिंग बैलेंस रेट** या APR पूछें, और लोन की तुलना उसी पर करें।"
           ]
         },
         {
-          "heading": "Talk to your bank before you miss a payment",
+          "heading": "भुगतान चूकने से पहले अपने बैंक से बात करें",
           "paragraphs": [
-            "This is the step most people skip, and it is the one that helps most. Banks would rather restructure a loan than chase a default."
+            "यह वह कदम है जिसे ज़्यादातर लोग छोड़ देते हैं, और यही सबसे ज़्यादा मदद करता है। बैंक किसी डिफ़ॉल्ट का पीछा करने के बजाय लोन को पुनर्गठित करना ज़्यादा पसंद करते हैं।"
           ],
           "steps": [
-            "Work out your real numbers first: income, essential costs, and every debt with its rate and minimum payment.",
-            "Contact your bank **before** you miss a payment, not after. You have far more options while your record is clean.",
-            "Ask specifically about **restructuring** — a longer term with lower payments, or consolidating several debts into one.",
-            "Get any agreement **in writing** before you accept it, and check the total cost, not just the monthly payment.",
-            "If you consolidate, **freeze or close the cleared cards the same day**. The most common way consolidation fails is the cards filling up again."
+            "पहले अपने असली आँकड़े निकालें: आय, ज़रूरी खर्च, और हर कर्ज़ उसकी दर और न्यूनतम भुगतान के साथ।",
+            "अपने बैंक से भुगतान चूकने से **पहले** संपर्क करें, बाद में नहीं। जब तक आपका रिकॉर्ड साफ़ है, तब तक आपके पास कहीं ज़्यादा विकल्प होते हैं।",
+            "खास तौर पर **पुनर्गठन** के बारे में पूछें — कम भुगतान वाली एक लंबी अवधि, या कई कर्ज़ों को एक में समेकित करना।",
+            "किसी भी समझौते को स्वीकार करने से पहले उसे **लिखित रूप में** लें, और सिर्फ़ मासिक भुगतान नहीं, बल्कि कुल लागत जाँचें।",
+            "अगर आप समेकित करते हैं, तो **चुकाए गए कार्ड उसी दिन फ़्रीज़ या बंद कर दें**। समेकन के विफल होने का सबसे आम तरीका है कार्डों का फिर से भर जाना।"
           ]
         },
         {
-          "heading": "Watch your credit file",
+          "heading": "अपनी क्रेडिट फ़ाइल पर नज़र रखें",
           "paragraphs": [
-            "The **Al Etihad Credit Bureau** keeps your credit report and score in the UAE. The score runs from **300 to 900**, and higher is better.",
-            "You can request your own report, and doing so **does not lower your score**. Errors are more common than people expect — an account that is not yours, or a loan you have already cleared. You can ask for them to be corrected, and doing so can move your score."
+            "**Al Etihad Credit Bureau** UAE में आपकी क्रेडिट रिपोर्ट और स्कोर रखता है। स्कोर **300 से 900** तक होता है, और जितना ऊँचा उतना बेहतर।",
+            "आप अपनी खुद की रिपोर्ट माँग सकते हैं, और ऐसा करने से **आपका स्कोर कम नहीं होता**। गलतियाँ उतनी दुर्लभ नहीं होतीं जितना लोग सोचते हैं — कोई ऐसा खाता जो आपका नहीं है, या कोई लोन जिसे आप पहले ही चुका चुके हैं। आप उन्हें ठीक करवाने के लिए कह सकते हैं, और ऐसा करने से आपका स्कोर बदल सकता है।"
           ],
-          "callout": "Two habits carry most of your score: **pay on time**, and **keep your card balances low** compared with your limits. Everything else is small by comparison."
+          "callout": "दो आदतें आपके ज़्यादातर स्कोर को संभालती हैं: **समय पर भुगतान करें**, और अपनी सीमा की तुलना में **अपने कार्ड का बैलेंस कम रखें**। बाकी सब कुछ इनके मुक़ाबले छोटा है।"
         }
       ],
       "sources": [

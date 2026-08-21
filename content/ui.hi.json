@@ -1,63 +1,63 @@
 {
   "home": {
     "greeting": {
-      "morning": "Good morning",
-      "afternoon": "Good afternoon",
-      "evening": "Good evening"
+      "morning": "सुप्रभात",
+      "afternoon": "शुभ दोपहर",
+      "evening": "शुभ संध्या"
     },
-    "ofPay": "of pay",
-    "ofGoal": "of goal",
+    "ofPay": "आय का",
+    "ofGoal": "लक्ष्य का",
     "categories": {
-      "rent": "Rent",
-      "groceries": "Groceries",
-      "transport": "Transport",
-      "utilities": "Utilities",
-      "entertainment": "Entertainment",
-      "other": "Other"
+      "rent": "किराया",
+      "groceries": "किराना",
+      "transport": "परिवहन",
+      "utilities": "उपयोगिताएँ",
+      "entertainment": "मनोरंजन",
+      "other": "अन्य"
     },
     "learning": {
-      "noXp": "No XP yet",
-      "xpComplete": "{xp} XP · every lesson complete",
-      "noXpStart": "No XP yet · start with {lesson}",
-      "xpNext": "{xp} XP · next up, {lesson}"
+      "noXp": "अभी कोई XP नहीं",
+      "xpComplete": "{xp} XP · हर पाठ पूरा",
+      "noXpStart": "अभी कोई XP नहीं · {lesson} से शुरू करें",
+      "xpNext": "{xp} XP · अगला, {lesson}"
     }
   },
   "expenses": {
     "categories": {
-      "groceries": { "name": "Groceries", "hint": "Add each shop as you go" },
-      "transport": { "name": "Transport", "hint": "Pick how you travelled" },
-      "entertainment": { "name": "Entertainment", "hint": "Nights out, films, events" },
-      "other": { "name": "Other", "hint": "Everything else" },
-      "income": { "name": "Additional Income", "hint": "Money coming in" },
-      "utilities": { "name": "Utilities", "hint": "Fixed each month" },
-      "rent": { "name": "Rent", "hint": "Fixed each month" }
+      "groceries": { "name": "किराना", "hint": "हर खरीद जोड़ते चलें" },
+      "transport": { "name": "परिवहन", "hint": "चुनें कि आपने कैसे यात्रा की" },
+      "entertainment": { "name": "मनोरंजन", "hint": "बाहर घूमना, फ़िल्में, कार्यक्रम" },
+      "other": { "name": "अन्य", "hint": "बाकी सब कुछ" },
+      "income": { "name": "अतिरिक्त आय", "hint": "आने वाला पैसा" },
+      "utilities": { "name": "उपयोगिताएँ", "hint": "हर महीने तय" },
+      "rent": { "name": "किराया", "hint": "हर महीने तय" }
     },
     "relativeDay": {
-      "today": "Today",
-      "yesterday": "Yesterday",
-      "daysAgo": "{n} days ago"
+      "today": "आज",
+      "yesterday": "कल",
+      "daysAgo": "{n} दिन पहले"
     },
     "entryCount": {
-      "one": "entry",
-      "other": "entries"
+      "one": "प्रविष्टि",
+      "other": "प्रविष्टियाँ"
     }
   },
   "account": {
     "rows": {
-      "personalInformation": { "name": "Personal Information", "sub": "Username, salary, phone" },
-      "language": { "name": "Language", "sub": "How the app is written" },
-      "currency": { "name": "Currency", "sub": "How your money is shown" },
-      "password": { "name": "Password" }
+      "personalInformation": { "name": "व्यक्तिगत जानकारी", "sub": "उपयोगकर्ता नाम, वेतन, फ़ोन" },
+      "language": { "name": "भाषा", "sub": "ऐप किस भाषा में लिखा है" },
+      "currency": { "name": "मुद्रा", "sub": "आपका पैसा कैसे दिखाया जाता है" },
+      "password": { "name": "पासवर्ड" }
     },
     "passwordChanged": {
-      "set": "Set when you created your account",
-      "justNow": "Changed just now",
-      "yesterday": "Changed yesterday",
-      "daysAgo": "Changed {n} days ago",
-      "monthsAgoOne": "Changed 1 month ago",
-      "monthsAgoOther": "Changed {n} months ago",
-      "yearsAgoOne": "Changed 1 year ago",
-      "yearsAgoOther": "Changed {n} years ago"
+      "set": "आपका खाता बनाते समय सेट किया गया",
+      "justNow": "अभी-अभी बदला गया",
+      "yesterday": "कल बदला गया",
+      "daysAgo": "{n} दिन पहले बदला गया",
+      "monthsAgoOne": "1 महीने पहले बदला गया",
+      "monthsAgoOther": "{n} महीने पहले बदला गया",
+      "yearsAgoOne": "1 साल पहले बदला गया",
+      "yearsAgoOther": "{n} साल पहले बदला गया"
     }
   }
 }
