@@ -1,4 +1,11 @@
-import { computeBudget } from '../domain/budget';
+import { getContent, type Language, type Ui } from '../content';
+import {
+  computeBudget,
+  DEFAULT_WANTS_SHARE,
+  effectiveWantsShare,
+  feasibleWantsShares,
+  wantsAllowanceForShare,
+} from '../domain/budget';
 import { convert, currencyToken, present, sum, type DisplayMoney, type RateSet } from '../domain/money';
 import { dayKey, relativeDayLabel } from '../domain/time';
 import type { ExpenseEntry, LogCategory } from '../repositories/expenseEntries';
@@ -259,6 +266,18 @@ export interface ExpensesPayload {
     readonly percentageLabel: string;
     readonly fill: number;
     readonly isOver: boolean;
+    /**
+     * The share of income the wants allowance is taken from, whole percent, or `null` when the reader has
+     * not chosen one (the client's `WantsShare` sheet ticks the matching row). Emitted so the sheet reflects
+     * what is in force rather than guessing.
+     */
+    readonly sharePercent: number | null;
+    /**
+     * Each share the sheet offers, with the wants allowance it would produce **in the reader's own money** —
+     * so a row can read "30% · AED 1,855" and the reader chooses against real figures rather than bare
+     * percentages. Computed by the engine (`wantsAllowanceForShare`), never by the client (invariant 3).
+     */
+    readonly options: { readonly percent: number; readonly allowance: DisplayMoney }[];
   };
   readonly entry: {
     readonly code: string;
@@ -287,11 +306,17 @@ export interface ExpensesInput {
   readonly monthLabel: string;
   readonly totals: MonthTotals;
   readonly rates: RateSet | undefined;
+  readonly language: Language;
 }
 
-/** `"2 entries"`, `"1 entry"`, `"0 entries"` — pluralised here because the client prints it verbatim. */
-export const entryCountLabel = (count: number): string =>
-  `${String(count)} ${count === 1 ? 'entry' : 'entries'}`;
+/**
+ * `"2 entries"`, `"1 entry"`, `"0 entries"` — pluralised here because the client prints it verbatim.
+ *
+ * The singular/plural words are passed in from the localised `ui` content rather than hardcoded, so the
+ * builder stays the single source of language.
+ */
+export const entryCountLabel = (count: number, words: Ui['expenses']['entryCount']): string =>
+  `${String(count)} ${count === 1 ? words.one : words.other}`;
 
 /**
  * Build the Expenses payload.
@@ -302,17 +327,28 @@ export const entryCountLabel = (count: number): string =>
  * which is the fixture confirming it.
  */
 export function buildExpenses(input: ExpensesInput): ExpensesPayload {
-  const { user, now, monthLabel, totals, rates } = input;
+  const { user, now, monthLabel, totals, rates, language } = input;
   const currency = user.displayCurrency;
   const today = dayKey(now, user.timezone);
+  const ui = getContent(language).ui.value.expenses;
 
   const salary = convert(user.salary, currency, rates);
+  const income = { ...salary, minor: salary.minor + totals.additionalIncome.minor };
+  const goal = convert(user.savingsGoal, currency, rates);
   const budget = computeBudget({
-    income: { ...salary, minor: salary.minor + totals.additionalIncome.minor },
+    income,
     needs: totals.needs,
     wantsSpent: totals.wantsSpent,
-    goal: convert(user.savingsGoal, currency, rates),
+    goal,
+    wantsSharePercent: user.wantsSharePercent,
   });
+
+  // The shares the sheet may offer — only those that still leave the reader's goal reachable — and the one
+  // the engine is actually applying (their request, clamped down to what keeps the goal reachable). Both are
+  // the engine's, so the sheet cannot show a row the write would refuse.
+  const requestedShare = user.wantsSharePercent ?? DEFAULT_WANTS_SHARE;
+  const effectiveShare = effectiveWantsShare(income, totals.needs, goal, requestedShare);
+  const offeredShares = feasibleWantsShares(income, totals.needs, goal);
 
   const token = currencyToken(currency);
 
@@ -334,6 +370,15 @@ export function buildExpenses(input: ExpensesInput): ExpensesPayload {
       // uncapped fill would draw outside its track.
       fill: fillOf(totals.wantsSpent, budget.wantsAllowance),
       isOver: totals.wantsSpent.minor > budget.wantsAllowance.minor,
+      // The share in force — the reader's choice clamped to what is feasible, so the sheet's tick matches the
+      // allowance above rather than a percentage the goal would not allow.
+      sharePercent: effectiveShare,
+      // Only the feasible shares, each with the wants allowance it produces in the reader's money — so a row
+      // reads "30% · AED 1,855" and an option that would break the savings goal is not offered at all.
+      options: offeredShares.map((percent) => ({
+        percent,
+        allowance: present(wantsAllowanceForShare(income, totals.needs, percent)),
+      })),
     },
 
     /**
@@ -350,10 +395,11 @@ export function buildExpenses(input: ExpensesInput): ExpensesPayload {
 
     categories: CATEGORIES.map((category) => {
       const total = totals.byCategory[category.id];
+      const labels = ui.categories[category.id];
       const base = {
         id: category.id,
-        name: category.name,
-        hint: category.hint,
+        name: labels.name,
+        hint: labels.hint,
         // Additional income reads `+₹900`: it is the only inbound category, and without the sign a
         // reader has no way to tell it from an expense of the same size.
         total: category.flow === 'in' ? withPlus(present(total)) : present(total),
@@ -371,12 +417,12 @@ export function buildExpenses(input: ExpensesInput): ExpensesPayload {
           ...base,
           // Only `log` categories carry a count. A fixed cost has no entries to count, and the client's
           // field is optional for exactly that reason.
-          entryCountLabel: entryCountLabel(rows.length),
+          entryCountLabel: entryCountLabel(rows.length, ui.entryCount),
           entries: rows.map((row) => ({
             id: row.entry._id,
             label: row.entry.label,
             amount: present(row.amount),
-            dateLabel: relativeDayLabel(dayKey(row.entry.entryDate, user.timezone), today),
+            dateLabel: relativeDayLabel(dayKey(row.entry.entryDate, user.timezone), today, ui.relativeDay),
           })),
         };
       }

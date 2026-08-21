@@ -24,7 +24,33 @@ export interface BudgetInput {
   readonly wantsSpent: Money;
   /** The user's absolute savings goal. It does not auto-adjust when salary changes. */
   readonly goal: Money;
+  /**
+   * The share of income the reader has chosen for wants, whole percent (`PUT /v1/me/budget/wants`), or
+   * `null`/absent when they have not chosen one.
+   *
+   * **`null` reproduces the plain 50/30/20 exactly** — 30% wants, 20% savings, and an equal halving in the
+   * adaptive branch — so a caller that passes nothing gets the behaviour this engine always had. A chosen
+   * share `X` moves the middle figure at the expense of savings (Product Spec §4.2): needs stays the 50%
+   * baseline, wants takes `X%`, savings takes `(50 − X)%`. In the adaptive branch, where needs have already
+   * outgrown half of income, the same ratio splits what is left — so the reader's preference is honoured
+   * rather than silently ignored when it matters most.
+   */
+  readonly wantsSharePercent?: number | null;
 }
+
+/**
+ * The shares the wants sheet offers — **10% to 40% in fives** (Product Spec §4.2, mirrored by iOS
+ * `WantsShare`). The floor is low enough for a reader remitting most of their pay home; the ceiling is what
+ * leaves a savings share standing at all (40% wants against a 50% needs baseline still leaves a tenth).
+ */
+export const WANTS_SHARE_OPTIONS = [10, 15, 20, 25, 30, 35, 40] as const;
+
+/** The default share when the reader has not chosen one — the 30 of 50/30/20. */
+export const DEFAULT_WANTS_SHARE = 30;
+
+/** Whether a percent is one the sheet offers, so the API refuses anything outside §4.2's bounds. */
+export const isWantsShare = (percent: number): boolean =>
+  (WANTS_SHARE_OPTIONS as readonly number[]).includes(percent);
 
 /** `hit` ≥ 100% of goal, `near` ≥ 70%, `miss` otherwise. **One table, server-side.** */
 export type Verdict = 'hit' | 'near' | 'miss';
@@ -58,40 +84,40 @@ export interface BudgetOutput {
 /**
  * Run the engine.
  *
- * The two branches are Product Spec §4.2 verbatim:
+ * **The split is needs, then wants, then whatever is left is savings** (Product Spec §4.2, reworked so the
+ * reader's chosen share drives it):
  *
  * ```
- * if needs ≤ 50% of income:   wantsAllowance = 30% of income;  savingsAllowance = 20% of income
- * else:                        remainder = max(0, income − needs)
- *                              wantsAllowance = savingsAllowance = remainder / 2;  adapted = true
+ * available       = max(0, income − needs)          // what is left once essentials are paid
+ * effective share = the reader's chosen %, clamped so savings still clears their goal (see effectiveWantsShare)
+ * wantsAllowance  = min(share% of income, available) // never budget for wants you do not have
+ * savingsAllowance = available − wantsAllowance      // the rest — the residual, not a flat 20%
  * ```
  *
- * **Why `saved` is a residual and not a measurement.** There is no bank link and no savings-transfer
- * ledger, so the app cannot know what was truly set aside. Since all spending is either needs or wants,
- * the residual is the only quantity the server can honestly derive. It clamps at zero; `net` carries the
- * truth for someone who overspent.
+ * So a reader with **no essential costs** and the 40% ceiling is shown **40% wants, 60% savings**; one whose
+ * needs already take half their pay and who wants 40% is shown 40% wants and 10% savings — offered only while
+ * that 10% still meets their goal. This is why `savingsAllowance` is a residual rather than a fixed fifth: the
+ * old flat-20% (and the equal-halving degradation branch) ignored both the reader's preference and their goal.
  *
- * The comparison is `needs × 2 ≤ income` rather than `needs ≤ income × 0.5`, so the 50% boundary is
- * decided in integers. At exactly 50% — `budget-aed.json`'s case — the plain branch is taken, which is
- * what "needs ≤ 50%" says and what the fixture's `adapted: false` confirms.
+ * **Why `saved` is a residual too, and a *measurement* of the month rather than a plan.** There is no bank
+ * link, so the app cannot know what was truly set aside; since all spending is either needs or wants, the
+ * residual `income − needs − wantsSpent` is the only figure the server can honestly derive. It clamps at zero;
+ * `net` carries the truth for someone who overspent. Note it uses wants **spent**, where `savingsAllowance`
+ * uses the wants **allowance** — one is what happened, the other is the plan.
+ *
+ * `adapted` stays as an informational flag — needs have outgrown half of income — read by `/v1/budget` and the
+ * fixtures; it no longer selects a different arithmetic.
  */
 export function computeBudget(input: BudgetInput): BudgetOutput {
   const { income, needs, wantsSpent, goal } = input;
 
   const adapted = needs.minor * 2 > income.minor;
 
-  let wantsAllowance: Money;
-  let savingsAllowance: Money;
-  if (adapted) {
-    const remainder = clampToZero(subtract(income, needs));
-    // Equal halves, as specified. Both rounded the same way rather than one taking the remainder, so
-    // the two allowances a user is shown are the same number — an asymmetric split would read as a bug.
-    wantsAllowance = fraction(remainder, 1, 2);
-    savingsAllowance = fraction(remainder, 1, 2);
-  } else {
-    wantsAllowance = fraction(income, 30, 100);
-    savingsAllowance = fraction(income, 20, 100);
-  }
+  const effective = effectiveWantsShare(income, needs, goal, input.wantsSharePercent ?? DEFAULT_WANTS_SHARE);
+  const wantsAllowance = wantsAllowanceForShare(income, needs, effective);
+  // The residual: everything left after essentials and the wants budget. `wantsAllowance` is already capped
+  // at `available`, so this is never negative, but clamp defensively.
+  const savingsAllowance = clampToZero(subtract(subtract(income, needs), wantsAllowance));
 
   const net = subtract(subtract(income, needs), wantsSpent);
   const saved = clampToZero(net);
@@ -136,6 +162,60 @@ export function computeBudget(input: BudgetInput): BudgetOutput {
  * Callers offer the figure and let them take it.
  */
 export const suggestedSavingsGoal = (salary: Money): Money => fraction(salary, 20, 100);
+
+/** What is left of income once essential needs are paid — the pool wants and savings share. */
+export const availableAfterNeeds = (income: Money, needs: Money): Money => clampToZero(subtract(income, needs));
+
+/**
+ * The wants allowance a given share would produce — the figure the Expenses sheet shows beside each
+ * percentage, so the reader sees what "30%" actually means in their own money before choosing.
+ *
+ * `share%` of income, **capped at what is actually left after needs**: a reader whose rent already eats most
+ * of their pay is never shown a wants budget larger than the money that exists. The same figure
+ * `computeBudget` uses, so a previewed amount and the amount a write returns are the one number.
+ */
+export function wantsAllowanceForShare(income: Money, needs: Money, share: number): Money {
+  const available = availableAfterNeeds(income, needs);
+  const uncapped = fraction(income, share, 100);
+  return uncapped.minor <= available.minor ? uncapped : available;
+}
+
+/** The savings a given share leaves once needs and that wants allowance are taken — the residual. */
+export const savingsForShare = (income: Money, needs: Money, share: number): Money =>
+  clampToZero(subtract(availableAfterNeeds(income, needs), wantsAllowanceForShare(income, needs, share)));
+
+/**
+ * Which of the offered shares the reader may actually pick — the ones that still leave enough to clear their
+ * savings goal.
+ *
+ * A share is feasible when the savings it leaves (`income − needs − wants`) is at least the goal. Savings falls
+ * as the wants share rises, so the feasible shares are always the run from the floor up to some ceiling — which
+ * is why offering "up to 30%, not 40%" is a truthful thing to show rather than a scattered list.
+ *
+ * **Never empty.** When needs and the goal together already claim everything — so even the smallest wants share
+ * would break the goal — the floor is offered anyway: the reader still needs *a* wants budget, and the one that
+ * saves the most is the least-bad choice the app can give them.
+ */
+export function feasibleWantsShares(income: Money, needs: Money, goal: Money): number[] {
+  const feasible = WANTS_SHARE_OPTIONS.filter(
+    (share) => savingsForShare(income, needs, share).minor >= goal.minor,
+  );
+  return feasible.length > 0 ? feasible : [WANTS_SHARE_OPTIONS[0]];
+}
+
+/**
+ * The share the engine actually applies — the reader's request, **clamped down to what keeps their goal
+ * reachable**.
+ *
+ * The reader chooses from the feasible shares, but their essential spending grows through the month, so a share
+ * that cleared the goal when they picked it can stop clearing it later. Rather than silently spend their savings
+ * goal, the engine reduces the wants budget to the largest feasible share at or below what they asked for. A
+ * request below the whole feasible run falls back to the floor — the app never hands out *more* wants than asked.
+ */
+export function effectiveWantsShare(income: Money, needs: Money, goal: Money, requested: number): number {
+  const maxFeasible = Math.max(...feasibleWantsShares(income, needs, goal));
+  return Math.min(requested, maxFeasible);
+}
 
 export function verdictFor(saved: Money, goal: Money): Verdict {
   if (isZero(goal)) return 'hit';

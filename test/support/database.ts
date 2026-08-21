@@ -1,5 +1,7 @@
 import { randomBytes } from 'node:crypto';
 
+import { nodeArgon2 } from '../../src/auth/argon2Native';
+import { setArgon2Backend } from '../../src/auth/hashing';
 import { closeDatabase, connectDatabase, getDb } from '../../src/db';
 import { loadConfig, type Config } from '../../src/config';
 import { loadContent } from '../../src/content';
@@ -138,6 +140,9 @@ export async function setupDatabase(): Promise<TestDatabase> {
   await connectDatabase(config);
   await ensureIndexes(logger);
   loadContent();
+  // The HTTP entrypoints install an argon2 backend before serving (`src/server.ts`); the harness must
+  // too, or the first `POST /v1/auth/register` in a suite 500s with "No argon2 backend is installed".
+  setArgon2Backend(nodeArgon2);
 
   return {
     config,

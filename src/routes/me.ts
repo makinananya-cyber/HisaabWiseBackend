@@ -1,12 +1,14 @@
 import { Hono } from 'hono';
 import { z } from 'zod';
 
+import { isWantsShare } from '../domain/budget';
 import { isValidTimezone } from '../domain/time';
 import { ApiError } from '../errors';
 import { requireSession } from '../middleware/auth';
 import * as users from '../repositories/users';
 import type { AppEnv } from '../types/hono';
-import { PREFERENCE_LANGUAGES } from '../content';
+import { PREFERENCE_LANGUAGES, resolveLanguage } from '../content';
+import { currentExpenses } from './expenses';
 
 /**
  * The identity routes — who the user is, and the preferences that are not any one screen's business.
@@ -99,4 +101,37 @@ meRoutes.put('/v1/me/timezone', requireSession(), async (c) => {
   c.header('Cache-Control', 'no-store');
   await users.setTimezone(c.var.user._id, parsed.data.timeZone);
   return c.json({ timeZone: parsed.data.timeZone });
+});
+
+/**
+ * `PUT /v1/me/budget/wants` — the share of income the wants allowance is taken from (domain `budget.ts`).
+ *
+ * **One number, and it is a *setting* rather than an amount.** The 50/30/20 split ships as the default and
+ * the reader moves the middle figure here: what crosses the wire is the percentage they chose, never an
+ * allowance — the engine takes its share of income server-side, so §4.2 still has exactly one owner
+ * (invariant 3). A client that sent a figure would be computing the budget, which is defect D11's shape.
+ *
+ * It is `/v1/me/…` rather than `/v1/expenses/…` because it belongs to the *user*, not the month: it
+ * survives the rollover, and Home and Reports read allowances derived from it too. It **answers with the
+ * Expenses screen payload** all the same (ADR-0020), because Expenses is the screen the reader set it from —
+ * so the wants bar, its `sharePercent`, and the per-share amounts all come back recomputed in one response.
+ *
+ * The updated user is assembled in place rather than re-read: the only field that changed is the one just
+ * written, so a round trip to the collection would buy nothing.
+ */
+meRoutes.put('/v1/me/budget/wants', requireSession(), async (c) => {
+  const raw: unknown = await c.req.json().catch(() => undefined);
+  const parsed = z.object({ percent: z.number().int() }).safeParse(raw);
+  if (!parsed.success || !isWantsShare(parsed.data.percent)) {
+    throw new ApiError('VALIDATION_FAILED', 'the wants share must be one of 10, 15, 20, 25, 30, 35 or 40', {
+      percent: 'must be a whole percent between 10 and 40 in steps of five',
+    });
+  }
+
+  await users.setWantsShare(c.var.user._id, parsed.data.percent);
+
+  c.header('Cache-Control', 'no-store');
+  const user = { ...c.var.user, wantsSharePercent: parsed.data.percent };
+  const language = resolveLanguage(c.req.header('accept-language'));
+  return c.json(await currentExpenses(user, new Date(), language));
 });

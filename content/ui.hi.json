@@ -1,0 +1,63 @@
+{
+  "home": {
+    "greeting": {
+      "morning": "सुप्रभात",
+      "afternoon": "शुभ दोपहर",
+      "evening": "शुभ संध्या"
+    },
+    "ofPay": "आय का",
+    "ofGoal": "लक्ष्य का",
+    "categories": {
+      "rent": "किराया",
+      "groceries": "किराना",
+      "transport": "परिवहन",
+      "utilities": "उपयोगिताएँ",
+      "entertainment": "मनोरंजन",
+      "other": "अन्य"
+    },
+    "learning": {
+      "noXp": "अभी कोई XP नहीं",
+      "xpComplete": "{xp} XP · हर पाठ पूरा",
+      "noXpStart": "अभी कोई XP नहीं · {lesson} से शुरू करें",
+      "xpNext": "{xp} XP · अगला, {lesson}"
+    }
+  },
+  "expenses": {
+    "categories": {
+      "groceries": { "name": "किराना", "hint": "हर खरीद जोड़ते चलें" },
+      "transport": { "name": "परिवहन", "hint": "चुनें कि आपने कैसे यात्रा की" },
+      "entertainment": { "name": "मनोरंजन", "hint": "बाहर घूमना, फ़िल्में, कार्यक्रम" },
+      "other": { "name": "अन्य", "hint": "बाकी सब कुछ" },
+      "income": { "name": "अतिरिक्त आय", "hint": "आने वाला पैसा" },
+      "utilities": { "name": "उपयोगिताएँ", "hint": "हर महीने तय" },
+      "rent": { "name": "किराया", "hint": "हर महीने तय" }
+    },
+    "relativeDay": {
+      "today": "आज",
+      "yesterday": "कल",
+      "daysAgo": "{n} दिन पहले"
+    },
+    "entryCount": {
+      "one": "प्रविष्टि",
+      "other": "प्रविष्टियाँ"
+    }
+  },
+  "account": {
+    "rows": {
+      "personalInformation": { "name": "व्यक्तिगत जानकारी", "sub": "उपयोगकर्ता नाम, वेतन, फ़ोन" },
+      "language": { "name": "भाषा", "sub": "ऐप किस भाषा में लिखा है" },
+      "currency": { "name": "मुद्रा", "sub": "आपका पैसा कैसे दिखाया जाता है" },
+      "password": { "name": "पासवर्ड" }
+    },
+    "passwordChanged": {
+      "set": "आपका खाता बनाते समय सेट किया गया",
+      "justNow": "अभी-अभी बदला गया",
+      "yesterday": "कल बदला गया",
+      "daysAgo": "{n} दिन पहले बदला गया",
+      "monthsAgoOne": "1 महीने पहले बदला गया",
+      "monthsAgoOther": "{n} महीने पहले बदला गया",
+      "yearsAgoOne": "1 साल पहले बदला गया",
+      "yearsAgoOther": "{n} साल पहले बदला गया"
+    }
+  }
+}

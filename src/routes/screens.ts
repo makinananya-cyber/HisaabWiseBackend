@@ -130,6 +130,7 @@ screenRoutes.get('/v1/budget', requireSession(), async (c) => {
       minor: amountOf('transport').minor + amountOf('entertainment').minor + amountOf('other').minor,
     },
     goal,
+    wantsSharePercent: user.wantsSharePercent,
   });
 
   return c.json({

@@ -3,12 +3,15 @@ import { describe, expect, it } from 'vitest';
 import { loadContent } from '../../src/content';
 import {
   computeBudget,
+  effectiveWantsShare,
+  feasibleWantsShares,
   meterPosition,
   meterVerdictFor,
   remainingToGoal,
   splitSegments,
   totalSpent,
   verdictFor,
+  wantsAllowanceForShare,
   type BudgetInput,
 } from '../../src/domain/budget';
 import { money } from '../../src/types/money';
@@ -33,21 +36,48 @@ const inr = (overrides: Partial<BudgetInput> = {}): BudgetInput => ({
   ...overrides,
 });
 
-describe('the plain branch — needs at or under 50% of income', () => {
-  it('allows 30% for wants and 20% for savings', () => {
+describe('the split — needs, then wants, then savings as the residual', () => {
+  /**
+   * The default share (30) against `inr`'s 46%-of-income needs: 30% of income to wants, and whatever is left
+   * to savings — **not** a flat 20%. The residual is `income − needs − wants` = 6.5M − 3M − 1.95M = 1.55M.
+   */
+  it('gives wants the chosen share and savings the rest', () => {
     const budget = computeBudget(inr());
 
-    expect(budget.wantsAllowance).toEqual(money(1_950_000, 'INR'));
-    expect(budget.savingsAllowance).toEqual(money(1_300_000, 'INR'));
+    expect(budget.wantsAllowance).toEqual(money(1_950_000, 'INR')); // 30% of ₹65,000
+    expect(budget.savingsAllowance).toEqual(money(1_550_000, 'INR')); // the residual, not 20%
     expect(budget.adapted).toBe(false);
   });
 
   /**
-   * `budget-aed.json`'s case: needs are *exactly* 50% of income. "needs ≤ 50%" takes the plain branch,
-   * and the fixture's `adapted: false` confirms it. The integer comparison `needs × 2 > income` is what
-   * makes the boundary exact rather than a float away from it.
+   * The requirement stated plainly: a reader with **no essential costs** who takes the 40% ceiling is left
+   * with 60% for savings. income − needs − wants = 100% − 0% − 40% = 60%.
    */
-  it('takes the plain branch at exactly 50%', () => {
+  it('gives 40% wants and 60% savings when there are no needs', () => {
+    const budget = computeBudget({
+      income: money(1_000_000, 'AED'),
+      needs: money(0, 'AED'),
+      wantsSpent: money(0, 'AED'),
+      goal: money(0, 'AED'),
+      wantsSharePercent: 40,
+    });
+
+    expect(budget.wantsAllowance).toEqual(money(400_000, 'AED')); // 40%
+    expect(budget.savingsAllowance).toEqual(money(600_000, 'AED')); // 60%
+  });
+
+  /** `null` (unset) applies the default 30, exactly as an explicit 30 does. */
+  it('treats an unset share as the default 30', () => {
+    expect(computeBudget(inr({ wantsSharePercent: null }))).toEqual(
+      computeBudget(inr({ wantsSharePercent: 30 })),
+    );
+  });
+
+  /**
+   * `budget-aed.json`'s case: needs are *exactly* 50% of income. Here the residual and the old flat-20%
+   * happen to coincide — needs 50%, wants 30%, so savings is the remaining 20% either way.
+   */
+  it('takes the plain branch at exactly 50% of income', () => {
     const budget = computeBudget({
       income: money(800_000, 'AED'),
       needs: money(400_000, 'AED'),
@@ -56,45 +86,32 @@ describe('the plain branch — needs at or under 50% of income', () => {
     });
 
     expect(budget.adapted).toBe(false);
-    expect(budget.wantsAllowance).toEqual(money(240_000, 'AED'));
-    expect(budget.savingsAllowance).toEqual(money(160_000, 'AED'));
+    expect(budget.wantsAllowance).toEqual(money(240_000, 'AED')); // 30%
+    expect(budget.savingsAllowance).toEqual(money(160_000, 'AED')); // residual, = 20% here
     expect(budget.saved).toEqual(money(250_000, 'AED'));
     expect(budget.surplus).toEqual(money(90_000, 'AED'));
     expect(budget.verdict).toBe('hit');
   });
 });
 
-describe('the adaptive branch — needs over 50% of income', () => {
+describe('the wants budget never exceeds what is left after needs', () => {
   /**
-   * The degradation branch exists because the target user rents in a high-rent market: telling someone
-   * whose rent is 60% of their pay that they may spend 30% on wants is arithmetic that does not fit
-   * inside their income.
+   * When rent already eats most of the pay, a 40% wants share is capped at the money that actually exists —
+   * the reader is never shown a budget larger than `income − needs`, and savings simply reaches zero.
    */
-  it('splits what is left equally between wants and savings', () => {
+  it('caps the wants allowance at the available pool', () => {
     const budget = computeBudget({
       income: money(800_000, 'AED'),
       needs: money(600_000, 'AED'),
       wantsSpent: money(50_000, 'AED'),
-      goal: money(100_000, 'AED'),
-    });
-
-    expect(budget.adapted).toBe(true);
-    // remainder = 8,000 − 6,000 = 2,000, halved.
-    expect(budget.wantsAllowance).toEqual(money(100_000, 'AED'));
-    expect(budget.savingsAllowance).toEqual(money(100_000, 'AED'));
-  });
-
-  it('gives equal halves rather than letting one take the remainder', () => {
-    // An asymmetric split of an odd remainder would show a user two allowances that differ by a fil,
-    // which reads as a bug rather than as rounding.
-    const budget = computeBudget({
-      income: money(1_001, 'AED'),
-      needs: money(900, 'AED'),
-      wantsSpent: money(0, 'AED'),
       goal: money(0, 'AED'),
+      wantsSharePercent: 40,
     });
 
-    expect(budget.wantsAllowance).toEqual(budget.savingsAllowance);
+    // 40% of 8,000 is 3,200, but only 2,000 is left after needs — so the budget is 2,000, not 3,200.
+    expect(budget.wantsAllowance).toEqual(money(200_000, 'AED'));
+    expect(budget.savingsAllowance).toEqual(money(0, 'AED'));
+    expect(budget.adapted).toBe(true);
   });
 
   it('allows nothing when needs exceed income entirely', () => {
@@ -105,11 +122,67 @@ describe('the adaptive branch — needs over 50% of income', () => {
       goal: money(100_000, 'AED'),
     });
 
-    // The remainder clamps at zero rather than going negative, so an allowance is never a negative
-    // permission.
     expect(budget.wantsAllowance).toEqual(money(0, 'AED'));
     expect(budget.savingsAllowance).toEqual(money(0, 'AED'));
     expect(budget.adapted).toBe(true);
+  });
+});
+
+describe('feasible shares and the effective clamp', () => {
+  /**
+   * Only the shares that still leave the savings goal reachable are offered, and they are always the run
+   * from the floor up to a ceiling. For `inr` (needs 46%, goal ₹13,000) that ceiling is 30%: 35% would
+   * leave ₹12,250 and 40% would leave ₹9,000, both under the goal.
+   */
+  it('offers the run of shares that keep the goal reachable', () => {
+    expect(feasibleWantsShares(inr().income, inr().needs, inr().goal)).toEqual([10, 15, 20, 25, 30]);
+
+    // A lower goal opens the ceiling back up to the full range.
+    expect(feasibleWantsShares(inr().income, inr().needs, money(0, 'INR'))).toEqual([
+      10, 15, 20, 25, 30, 35, 40,
+    ]);
+  });
+
+  /** A request above the feasible ceiling is clamped down to it, so the goal is never quietly spent. */
+  it('clamps a request that would break the goal down to the ceiling', () => {
+    expect(effectiveWantsShare(inr().income, inr().needs, inr().goal, 40)).toBe(30);
+
+    const clamped = computeBudget(inr({ wantsSharePercent: 40 }));
+    // 40 was asked for but only 30 is feasible, so the allowance is 30%'s, not 40%'s.
+    expect(clamped.wantsAllowance).toEqual(money(1_950_000, 'INR'));
+
+    // With no goal to protect, 40 is honoured in full.
+    const free = computeBudget(inr({ goal: money(0, 'INR'), wantsSharePercent: 40 }));
+    expect(free.wantsAllowance).toEqual(money(2_600_000, 'INR'));
+  });
+
+  /**
+   * When needs and the goal together already claim everything, the floor is still offered — the reader
+   * needs *a* wants budget, and the smallest one saves the most.
+   */
+  it('always offers at least the floor, even when nothing meets the goal', () => {
+    const income = money(500_000, 'AED');
+    const needs = money(480_000, 'AED');
+    const goal = money(100_000, 'AED');
+
+    expect(feasibleWantsShares(income, needs, goal)).toEqual([10]);
+    expect(effectiveWantsShare(income, needs, goal, 30)).toBe(10);
+  });
+});
+
+describe('wantsAllowanceForShare — the per-option preview', () => {
+  it('matches what computeBudget produces for a feasible share', () => {
+    // 25% of ₹65,000 is feasible against the ₹13,000 goal, so preview and applied figure agree.
+    const plain = inr();
+    expect(wantsAllowanceForShare(plain.income, plain.needs, 25)).toEqual(
+      computeBudget(inr({ wantsSharePercent: 25 })).wantsAllowance,
+    );
+  });
+
+  it('caps the preview at the available pool, like the engine', () => {
+    const income = money(800_000, 'AED');
+    const needs = money(600_000, 'AED'); // only 2,000 left
+    expect(wantsAllowanceForShare(income, needs, 40)).toEqual(money(200_000, 'AED'));
   });
 });
 

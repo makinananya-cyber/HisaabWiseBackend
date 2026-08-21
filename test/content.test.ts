@@ -305,10 +305,14 @@ describe('resolveLanguage', () => {
 
   it('falls back to English for a language that is not shipped', () => {
     expect(resolveLanguage('fr-FR,fr;q=0.9')).toBe('en');
-    // Arabic is planned and not yet translated, so it resolves to English today. When the `ar`
-    // files land, this expectation changes in the same commit — and `Vary: Accept-Language` is
-    // what stops a cache serving these English bytes to that reader.
-    expect(resolveLanguage('ar')).toBe('en');
+  });
+
+  it('resolves the shipped languages to themselves', () => {
+    // Arabic and Hindi are now shipped (with English placeholder copy awaiting translation), so they
+    // resolve to their own files rather than falling back to English — and `Vary: Accept-Language` is
+    // what keeps a cache from serving those bytes to the wrong reader.
+    expect(resolveLanguage('ar')).toBe('ar');
+    expect(resolveLanguage('hi-IN,hi;q=0.9')).toBe('hi');
   });
 
   it('honours quality ordering rather than header order', () => {

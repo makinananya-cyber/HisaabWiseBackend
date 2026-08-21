@@ -3,7 +3,7 @@ import { randomUUID } from 'node:crypto';
 import { Hono, type Context } from 'hono';
 import { z } from 'zod';
 
-import { getContent } from '../content';
+import { getContent, resolveLanguage, type Language } from '../content';
 import { monthKey } from '../domain/time';
 import { ApiError } from '../errors';
 import { requireSession } from '../middleware/auth';
@@ -64,7 +64,7 @@ export async function liveMonthFor(user: User, now: Date): Promise<string> {
 }
 
 /** Read everything the Expenses screen needs and build it. One place, so every write can reuse it. */
-export async function currentExpenses(user: User, now: Date): Promise<ExpensesPayload> {
+export async function currentExpenses(user: User, now: Date, language: Language): Promise<ExpensesPayload> {
   const live = await liveMonthFor(user, now);
   const rates = await latestRateSet();
 
@@ -76,15 +76,19 @@ export async function currentExpenses(user: User, now: Date): Promise<ExpensesPa
   return buildExpenses({
     user,
     now,
-    monthLabel: monthLabelFor(now, user.timezone),
+    monthLabel: monthLabelFor(now, user.timezone, language),
     totals: monthTotals(monthEntries, fixed, user.displayCurrency, rates),
     rates,
+    language,
   });
 }
 
+/** The reader's content language, from the `Accept-Language` header. */
+const languageOf = (c: Context<AppEnv>): Language => resolveLanguage(c.req.header('accept-language'));
+
 expenseRoutes.get('/v1/screens/expenses', requireSession(), async (c) => {
   c.header('Cache-Control', 'no-store');
-  return c.json(await currentExpenses(c.var.user, new Date()));
+  return c.json(await currentExpenses(c.var.user, new Date(), languageOf(c)));
 });
 
 // ── Helpers ───────────────────────────────────────────────────────────────────────────────────
@@ -194,7 +198,7 @@ expenseRoutes.post('/v1/expenses', requireSession(), async (c) => {
   }
 
   c.header('Cache-Control', 'no-store');
-  return c.json(await currentExpenses(user, now), 201);
+  return c.json(await currentExpenses(user, now, languageOf(c)), 201);
 });
 
 /**
@@ -244,7 +248,7 @@ expenseRoutes.delete('/v1/expenses/:id', requireSession(), async (c) => {
   await entries.deleteEntry(user._id, id);
 
   c.header('Cache-Control', 'no-store');
-  return c.json(await currentExpenses(user, now));
+  return c.json(await currentExpenses(user, now, languageOf(c)));
 });
 
 // ── Fixed costs ───────────────────────────────────────────────────────────────────────────────
@@ -258,12 +262,12 @@ expenseRoutes.delete('/v1/expenses/:id', requireSession(), async (c) => {
  */
 expenseRoutes.get('/v1/expenses/fixed', requireSession(), async (c) => {
   c.header('Cache-Control', 'no-store');
-  return c.json(await currentExpenses(c.var.user, new Date()));
+  return c.json(await currentExpenses(c.var.user, new Date(), languageOf(c)));
 });
 
 expenseRoutes.get('/v1/expenses/lines', requireSession(), async (c) => {
   c.header('Cache-Control', 'no-store');
-  return c.json(await currentExpenses(c.var.user, new Date()));
+  return c.json(await currentExpenses(c.var.user, new Date(), languageOf(c)));
 });
 
 /**
@@ -286,7 +290,7 @@ expenseRoutes.put('/v1/expenses/fixed/:categoryId', requireSession(), async (c) 
   await fixedCosts.setRent(user._id, input.amount, now);
 
   c.header('Cache-Control', 'no-store');
-  return c.json(await currentExpenses(user, now));
+  return c.json(await currentExpenses(user, now, languageOf(c)));
 });
 
 /**
@@ -336,7 +340,7 @@ expenseRoutes.put('/v1/expenses/lines/:categoryId', requireSession(), async (c) 
   await fixedCosts.setUtilityLines(user._id, lines, user.displayCurrency, now);
 
   c.header('Cache-Control', 'no-store');
-  return c.json(await currentExpenses(user, now));
+  return c.json(await currentExpenses(user, now, languageOf(c)));
 });
 
 /** Re-exported so the seed script and the rollover job share one icon rule. */

@@ -144,12 +144,33 @@ export function daysBetween(earlier: string, later: string): number {
  * A future date reads as `"Today"` rather than `"in 2 days"`: entry dates are capped to the live month
  * and default to now, so a forward date means clock skew between the client's idea of now and the
  * server's — and "Today" is the least wrong thing to say about it.
+ *
+ * **Pure, so the copy is passed in, not read** (invariant: `time.ts` never touches content). The screen
+ * builder hands its localised labels; the default keeps the English behaviour for direct callers and the
+ * `{n}` token in `daysAgo` is where the day count lands.
  */
-export function relativeDayLabel(entryDayKey: string, todayDayKey: string): string {
+export interface RelativeDayLabels {
+  readonly today: string;
+  readonly yesterday: string;
+  /** `"{n} days ago"` — `{n}` is replaced by the day count. */
+  readonly daysAgo: string;
+}
+
+const ENGLISH_RELATIVE_DAY: RelativeDayLabels = {
+  today: 'Today',
+  yesterday: 'Yesterday',
+  daysAgo: '{n} days ago',
+};
+
+export function relativeDayLabel(
+  entryDayKey: string,
+  todayDayKey: string,
+  labels: RelativeDayLabels = ENGLISH_RELATIVE_DAY,
+): string {
   const days = daysBetween(entryDayKey, todayDayKey);
-  if (days <= 0) return 'Today';
-  if (days === 1) return 'Yesterday';
-  return `${String(days)} days ago`;
+  if (days <= 0) return labels.today;
+  if (days === 1) return labels.yesterday;
+  return labels.daysAgo.replace('{n}', String(days));
 }
 
 /**
