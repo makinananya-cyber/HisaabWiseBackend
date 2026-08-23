@@ -1,0 +1,2004 @@
+{
+  "units": [
+    {
+      "id": "u1",
+      "number": 1,
+      "accent": "sun",
+      "title": "Itayo ang Pundasyon",
+      "subtitle": "Kita at Mindset",
+      "blurb": "Bago mo maplano ang pera mo, kailangan mong malaman kung magkano talaga rito ang sa'yo.",
+      "lessons": [
+        {
+          "id": "u1l1",
+          "number": 1,
+          "icon": "wallet",
+          "title": "Gross vs. Net na Kita",
+          "blurb": "Alamin kung magkano talaga ang pumapasok sa bank account mo.",
+          "steps": [
+            {
+              "kind": "teach",
+              "heading": "Dalawang numero, hindi iisa",
+              "paragraphs": [
+                "Pag may trabaho ka, isang numero ang naririnig mo. Pero dalawa talaga 'yon.",
+                "Ang **gross income** ay ang buong halagang ipinangako ng trabaho mong ibabayad sa'yo. Ito ang numerong nasa kontrata mo.",
+                "Ang **net income** naman ay ang perang talagang dumarating sa bank account mo. Tinatawag din itong **take-home pay**.",
+                "Ang pangalawang numero lang ang pwedeng gamitin ng budget mo."
+              ],
+              "tip": "Gross = ang pangako. Net = ang pera. Magplano gamit ang pera."
+            },
+            {
+              "kind": "teach",
+              "heading": "Magandang balita kung nagtatrabaho ka sa UAE",
+              "paragraphs": [
+                "Sa maraming bansa, kinukuha ng gobyerno ang parte ng sweldo mo. Tinatawag itong **income tax**. Binabawas ito ng employer mo bago ka mabayaran.",
+                "**Hindi ito ginagawa sa UAE.** Walang income tax sa sweldo dito. Nasa'yo ang 100% ng kita mo.",
+                "Kaya para sa karamihan sa UAE, pareho lang ang gross at net.",
+                "Pero maganda pa ring malaman ang salita. Baka balang-araw magtrabaho ka sa kumpanya sa ibang bansa, o lumipat sa abroad."
+              ],
+              "list": [
+                {
+                  "term": "Mga UAE at GCC nationals",
+                  "detail": "May maliit na parte ng sweldo mo na napupunta sa government pension fund. Hindi ito binabayaran ng mga expat worker."
+                },
+                {
+                  "term": "Health insurance",
+                  "detail": "Kailangan ito sa Dubai at Abu Dhabi. Karamihan ng kumpanya ang nagbabayad nito. May iba na hihingi sa'yo ng maliit na parte."
+                },
+                {
+                  "term": "Mga bayad sa loan",
+                  "detail": "Kung kumuha ka ng bank loan, baka kunin ng bank ang bayad mula sa sweldo mo kada buwan."
+                }
+              ],
+              "tip": "Walang income tax sa sweldo sa UAE. Pero may 5% **VAT** — buwis na idinadagdag sa presyo ng karamihan ng binibili mo sa tindahan."
+            },
+            {
+              "kind": "teach",
+              "heading": "Ang parte ng sweldo mo na hinahati-hati",
+              "paragraphs": [
+                "Sa UAE, kadalasang nakasulat nang hati-hati ang sweldo mo sa kontrata:",
+                "Ang **basic salary** ang pangunahing parte. Ang **allowances** naman ay dagdag na halaga para sa tirahan at transportasyon.",
+                "Pagsamahin mo sila at makukuha mo ang total pay mo. Mahalaga ang paghahating ito sa isang dahilan: ang **end-of-service gratuity** mo ay kinukwenta base lang sa basic salary, hindi sa kabuuan."
+              ],
+              "example": {
+                "heading": "Parehong total, magkaibang basic",
+                "body": "May dalawang tao na parehong kumikita ng **{c}8,000** kada buwan.\n\n**Sara:** basic {c}5,000 + allowances {c}3,000\n**Omar:** basic {c}3,000 + allowances {c}5,000\n\nParehong pera kada buwan. Pero mas malaki ang magiging gratuity ni Sara pag-alis niya, kasi base ito sa basic pay niya."
+              },
+              "tip": "Pag binabasa mo ang isang job offer, tingnan mo ang basic salary — hindi lang ang total."
+            },
+            {
+              "kind": "teach",
+              "heading": "Isang simpleng halimbawa, hakbang-hakbang",
+              "paragraphs": [
+                "Isipin mo sandali na nagtrabaho ka sa lugar na *may* income tax, para makita mo kung paano nagkakaiba ang gross at net."
+              ],
+              "example": {
+                "heading": "Kwentahin natin",
+                "body": "Step 1. Gross pay: **{c}5,000**\n\nStep 2. Binawas na income tax: **{c}500**\n\nStep 3. Binawas na pension: **{c}300**\n\nStep 4. Pagsamahin ang mga bawas: 500 + 300 = **{c}800**\n\nStep 5. Ibawas sa gross: 5,000 − 800 = **{c}4,200**\n\nAng gross ay {c}5,000. Ang net ay **{c}4,200**. {c}4,200 lang ang pwede mong gastusin."
+              },
+              "tip": "Hindi nagbabago ang mga hakbang: magsimula sa gross, ibawas ang lahat, at ang matitira ay net."
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Gumagawa ka ng buwanang budget. Aling numero ang dapat mong gamitin?",
+              "explanation": "Net income lang ang gamitin. 'Yon ang perang talagang dumarating. Kung gross ang gagamitin mo, nagpaplano kang gumastos ng perang hindi mo naman natatanggap.",
+              "options": [
+                "Gross income",
+                "Net income",
+                "Pareho, pinagsama",
+                "Wala sa dalawa"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Nagtatrabaho ka sa UAE at kumikita ng {c}6,000 kada buwan. Magkano ang income tax na binabawas sa sweldo mo?",
+              "explanation": "Hindi kumukuha ng income tax sa sweldo ang UAE. Buo mong nakukuha ang {c}6,000. Isa ito sa pinakamalaking benepisyo pagdating sa pera kapag nagtatrabaho ka rito.",
+              "options": [
+                "{c}600",
+                "{c}300",
+                "Wala — walang income tax sa sweldo sa UAE",
+                "{c}1,200"
+              ],
+              "answers": [
+                2
+              ]
+            },
+            {
+              "kind": "numeric",
+              "prompt": "Ang gross pay ni Ali ay {c}4,000. Ang kabuuang bawas sa kanya ay {c}400. Magkano ang net pay niya?",
+              "explanation": "4,000 − 400 = 3,600. Ibawas ang mga deduction sa gross pay. Ang matitira ay ang net pay.",
+              "answer": 3600,
+              "showsCurrencySymbol": true
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Ang UAE gratuity mo pag-alis mo sa trabaho ay base sa aling parte ng sweldo mo?",
+              "explanation": "Basic salary lang ang ginagamit sa gratuity. Hindi kasama ang allowances para sa tirahan at transportasyon. Kaya ang dalawang taong parehong total pay ay pwedeng magkaiba nang malaki ang gratuity.",
+              "options": [
+                "Ang total pay mo",
+                "Ang basic salary mo lang",
+                "Ang housing allowance mo",
+                "Ang transport allowance mo"
+              ],
+              "answers": [
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u1l2",
+          "number": 2,
+          "icon": "clock",
+          "title": "Ang Time-Value ng Pera",
+          "blurb": "Kung bakit nawawalan ng lakas ang pera habang nakatengga.",
+          "steps": [
+            {
+              "kind": "teach",
+              "heading": "Mas malaki ang halaga ng pera ngayon kaysa pera mamaya",
+              "paragraphs": [
+                "Isipin mong may nag-aalok sa'yo ng {c}100 ngayon, o {c}100 sa loob ng tatlong taon. Alin ang kukunin mo?",
+                "Kunin mo ngayon. May pangalan ang ideyang ito: ang **time value of money**.",
+                "May dalawang dahilan. Una, ang perang nasa'yo ngayon ay pwedeng lumago. Pangalawa, tumataas ang presyo habang naghihintay ka, kaya ang parehong {c}100 ay mas kaunti ang mabibili mamaya."
+              ]
+            },
+            {
+              "kind": "teach",
+              "heading": "Ano ang ibig sabihin ng inflation",
+              "paragraphs": [
+                "Ang **inflation** ay nangangahulugang tumataas ang presyo sa paglipas ng panahon. Ipinapakita ito bilang porsyento kada taon.",
+                "Hindi kinukuha ng inflation ang pera sa account mo. May mas tahimik itong ginagawa. Binabawasan nito ang iyong **purchasing power** — kung magkano talaga ang mabibili mo sa pera mo."
+              ],
+              "example": {
+                "heading": "Ang parehong bag ng pagkain",
+                "body": "Ang isang bag ng pagkain ay nagkakahalaga ng **{c}100** ngayon.\n\nAng inflation ngayong taon ay **4%**.\n\n4% ng 100 = **{c}4**\n\nSa susunod na taon, ang parehong bag ay nagkakahalaga ng **{c}104**.\n\nAng {c}100 mo ay {c}100 pa rin. Pero hindi na nito mabili ang bag na 'yon. Hindi ka nawalan ng pera. Nawalan ka ng buying power."
+              },
+              "tip": "Mabagal at tahimik ang inflation. Kaya madali itong makalimutan."
+            },
+            {
+              "kind": "teach",
+              "heading": "Real return: ang numerong mahalaga",
+              "paragraphs": [
+                "Pag sinabi sa'yo ng bank ang isang interest rate, may dalawang paraan para tingnan ito.",
+                "Ang **nominal return** ay ang rate na ipinapakita sa'yo ng bank.",
+                "Ang **real return** naman ay ang rate na 'yon na binawasan ng inflation. Sinasabi nito kung talagang lumago ang buying power mo.",
+                "Madali ang formula: **real return = interest rate − inflation**."
+              ],
+              "example": {
+                "heading": "Kapag talo pa rin ang pag-ipon",
+                "body": "Ang savings account mo ay nagbabayad ng **2%** kada taon.\n\nAng inflation ay **4%** kada taon.\n\n2% − 4% = **−2%**\n\nTumaas ang balance mo. Pero 2% na mas kaunti ang mabibili mo kaysa dati. Hindi ka talaga natulungan ng account."
+              },
+              "tip": "Pag may nagpakita sa'yo ng return, itanong mo: bago ba 'yan o pagkatapos ng inflation?"
+            },
+            {
+              "kind": "teach",
+              "heading": "Isang mabilis na trick: ang Rule of 70",
+              "paragraphs": [
+                "Heto ang madaling trick na kaya mong gawin sa isip.",
+                "Kunin ang numerong **70**. Hatiin ito sa inflation rate. Ang sagot ay humigit-kumulang kung ilang taon bago mag-doble ang presyo.",
+                "Inflation 7% → 70 ÷ 7 = **10 taon**\nInflation 5% → 70 ÷ 5 = **14 taon**\nInflation 2% → 70 ÷ 2 = **35 taon**",
+                "Pag nag-doble ang presyo, kalahati na lang ang mabibili ng pera mo."
+              ],
+              "tip": "Tandaan mo lang: **70 na hinati sa rate**. Hindi na kailangan ng calculator."
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Ang savings account mo ay nagbabayad ng 3% kada taon. Ang inflation ay 5%. Ano ang real return mo?",
+              "explanation": "Real return = 3% − 5% = −2%. Lumalago ang balance mo, pero mas mabilis lumaki ang presyo. Kaya mas kaunti ang mabibili mo kaysa dati.",
+              "options": [
+                "8%",
+                "3%",
+                "−2%",
+                "−5%"
+              ],
+              "answers": [
+                2
+              ]
+            },
+            {
+              "kind": "numeric",
+              "prompt": "Ang inflation ay 5% kada taon. Gamit ang Rule of 70, ilang TAON bago mag-doble ang presyo? I-type lang ang numero.",
+              "explanation": "70 ÷ 5 = 14 taon. Sa loob ng 14 na taon, doble na ang halaga ng parehong pamimili. Kaya ang perang matagal na iniipon bilang cash ay hindi talaga ligtas.",
+              "answer": 14,
+              "showsCurrencySymbol": false
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Ano ang ibig sabihin ng 'purchasing power'?",
+              "explanation": "Ang purchasing power ay tungkol sa kung ano ang mabibili ng pera mo, hindi sa numerong nasa account mo. Dahil sa inflation, mas kaunti ang nabibili ng numerong 'yon kada taon.",
+              "options": [
+                "Kung magkano ang pera sa account mo",
+                "Kung magkano talaga ang mabibili mo sa pera mo",
+                "Ang interest na binabayad ng bank mo",
+                "Ang limit ng credit card mo"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "May nag-aalok sa'yo ng {c}500 ngayon o {c}500 sa loob ng dalawang taon. Alin ang mas malaki ang halaga?",
+              "explanation": "Mas malaki ang halaga ng pera ngayon. Pwede mo itong gamitin, ipunin, o palaguin. At sa loob ng dalawang taon, mas mataas na ang presyo, kaya mas kaunti ang mabibili ng {c}500.",
+              "options": [
+                "{c}500 sa loob ng dalawang taon",
+                "{c}500 ngayon",
+                "Magkapareho lang sila",
+                "Depende sa bank mo"
+              ],
+              "answers": [
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u1l3",
+          "number": 3,
+          "icon": "split",
+          "title": "Needs vs. Wants",
+          "blurb": "Ayusin ang gastos mo sa dalawang simpleng grupo.",
+          "steps": [
+            {
+              "kind": "teach",
+              "heading": "Dalawang uri ng paggastos",
+              "paragraphs": [
+                "Sa tuwing may perang lumalabas sa account mo, ginagawa nito ang isa sa dalawang trabaho.",
+                "Ang **need** ang nagpapanatili sa'yong ligtas, busog, malusog at kayang magtrabaho. Kung ititigil mo ang pagbabayad nito, may masisira sa buhay mo.",
+                "Ang **want** naman ang nagpapaganda ng buhay. Kung ititigil mo ang pagbabayad nito, malulungkot ka — pero walang masisira.",
+                "Hindi masama ang mga want. Sila ang dahilan kung bakit tayo nagtatrabaho. Pero kailangan mong malaman kung alin ang alin."
+              ]
+            },
+            {
+              "kind": "teach",
+              "heading": "Tatlong tanong para makatulong sa'yong magdesisyon",
+              "paragraphs": [
+                "Pag hindi ka sigurado, itanong mo ito sa sarili mo:"
+              ],
+              "list": [
+                {
+                  "term": "Kaya ko bang mabuhay ng isang buwan nang wala ito?",
+                  "detail": "Kung oo, malamang ito ay isang want."
+                },
+                {
+                  "term": "Pinapanatili ba nito akong malusog, may tirahan, o kayang magtrabaho?",
+                  "detail": "Kung oo, ito ay isang need. Ang upa, pagkain, gamot, at ang pagpunta sa trabaho ay pawang mga need."
+                },
+                {
+                  "term": "Nagbabayad ba ako para sa basic na bagay, o sa mas magarbong bersyon?",
+                  "detail": "Ang basic na bagay ay ang need. Ang mas magarbong bersyon sa ibabaw nito ay isang want."
+                }
+              ],
+              "tip": "Karamihan ng gastos ay need na may want sa ibabaw. Ang matutong makita ang linya sa pagitan nila ang buong skill."
+            },
+            {
+              "kind": "teach",
+              "heading": "Totoong mga halimbawa",
+              "paragraphs": [
+                "Ganito ito gumagana sa mga pang-araw-araw na bagay sa UAE."
+              ],
+              "example": {
+                "heading": "Parehong kategorya, dalawang sagot",
+                "body": "**Pagkain.** Ang grocery ay need. Ang mag-order ng pagkain sa app ay want.\n\n**Phone.** Ang basic na plan para makatawag at makapagtrabaho ka ay need. Ang pinakabagong phone kada taon ay want.\n\n**Transportasyon.** Ang pagpunta sa trabaho gamit ang Metro o bus ay need. Ang taxi dahil na-late ka ay want.\n\n**Damit.** Ang damit para sa trabaho ay need. Ang pang-limang pares ng sapatos ay want."
+              },
+              "tip": "Pwede kang bumili ng mga want. Tapatin mo lang ang pagtukoy sa kanila, para alam mo kung ano ang pwedeng bawasan kung mahigpit na ang pera."
+            },
+            {
+              "kind": "teach",
+              "heading": "Bakit mahalaga ito para sa budget mo",
+              "paragraphs": [
+                "Hindi lang ito laro. Ito ang unang hakbang sa bawat budget.",
+                "Ang pinakasikat na budget rule ay ang **50/30/20 rule**. Hinahati nito ang take-home pay mo nang ganito: 50% para sa needs, 30% para sa wants, 20% para sa savings.",
+                "Hindi mo magagamit ang rule na 'yon hangga't hindi mo maaayos ang gastos mo sa needs at wants.",
+                "Nagbibigay din ito ng babala. Kung ang needs mo ay lumagpas sa kalahati ng sweldo mo, masyadong mataas ang fixed costs mo — tulad ng upa — para sa kita mo."
+              ],
+              "tip": "Gawin ang pag-aayos minsan sa isang buwan, pag tinitingnan mo ang bank statement mo. Mas madali ito kaysa magdesisyon sa loob ng tindahan."
+            },
+            {
+              "kind": "multiSelect",
+              "prompt": "Alin sa mga ito ang mga NEED? Piliin lahat ng tama.",
+              "explanation": "Ang upa, pagkain, kuryente at gamot ang nagpapanatili sa'yong ligtas at malusog. Maganda ang Netflix at holidays, pero walang masisira kung ititigil mo sila. Kaya ang mga ito ay wants.",
+              "options": [
+                "Upa",
+                "Netflix subscription",
+                "Grocery",
+                "Bayad sa kuryente",
+                "Isang holiday trip",
+                "Gamot"
+              ],
+              "answers": [
+                0,
+                2,
+                3,
+                5
+              ]
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Nagbabayad ka ng {c}200 kada buwan para sa phone plan na may bagong phone. Ang basic na plan na may parehong calls at data ay nagkakahalaga ng {c}80. Paano mo ito iaayos?",
+              "explanation": "Kailangan mo ng phone para makapagtrabaho at makipag-ugnayan — {c}80 ang halaga ng parteng 'yon. Ang dagdag na {c}120 ang bumibili ng mas magandang phone. Ang parteng 'yon ay want.",
+              "options": [
+                "Lahat ng {c}200 ay need",
+                "Lahat ng {c}200 ay want",
+                "Ang {c}80 ay need, ang {c}120 ay want",
+                "Hindi ito pwedeng ayusin"
+              ],
+              "answers": [
+                2
+              ]
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Ang needs mo ngayon ay kumukuha ng 65% ng take-home pay mo. Ano ang sinasabi nito sa'yo?",
+              "explanation": "Impormasyon ito, hindi pambabatikos. Pag ang needs ay lumagpas sa kalahati ng sweldo mo, ang dahilan kadalasan ay isang malaking gastos tulad ng upa o bayad sa kotse — hindi ang maliliit na pang-araw-araw na gastos.",
+              "options": [
+                "Masama ka sa pera",
+                "Ang fixed costs mo, tulad ng upa, ay mataas para sa kita mo",
+                "Dapat mong itigil ang pag-iipon",
+                "Wala talaga"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Sa ilalim ng 50/30/20 rule, magkano sa take-home pay mo ang napupunta sa wants?",
+              "explanation": "30% ang napupunta sa wants. 50% sa needs at 20% sa savings. Madalas mong gagamitin ang rule na ito sa susunod na unit.",
+              "options": [
+                "50%",
+                "30%",
+                "20%",
+                "10%"
+              ],
+              "answers": [
+                1
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "number": 2,
+      "accent": "mint",
+      "title": "Kontrolin ang Cash Flow",
+      "subtitle": "Budgeting at Pag-iipon",
+      "blurb": "Tingnan kung saan napupunta ang pera mo, bigyan ng trabaho ang bawat dirham, at magtayo ng safety cushion.",
+      "lessons": [
+        {
+          "id": "u2l1",
+          "number": 1,
+          "icon": "flow",
+          "title": "Cash Flow Tracking",
+          "blurb": "Isulat kung ano ang pumapasok at kung ano ang lumalabas.",
+          "steps": [
+            {
+              "kind": "teach",
+              "heading": "Papasok na pera, palabas na pera",
+              "paragraphs": [
+                "Ang ibig sabihin lang ng **cash flow** ay ang perang papasok at palabas sa account mo.",
+                "Ang **papasok na pera** ay ang sweldo mo, freelance work, regalo, refunds.",
+                "Ang **palabas na pera** ay ang upa, pagkain, transportasyon, shopping, savings.",
+                "**Net cash flow** = papasok na pera − palabas na pera. Kung positive, may natira ka. Kung negative, mas malaki ang ginastos mo kaysa sa kinita mo."
+              ],
+              "tip": "Maganda ang positive. Ang negative kada buwan ay problema, kahit hindi pa ubos ang account mo."
+            },
+            {
+              "kind": "teach",
+              "heading": "Ang pagsusulat nito ay nagbabago sa ginagastos mo",
+              "paragraphs": [
+                "May kakaibang nangyayari pag nagsisimulang isulat ng mga tao ang ginagastos nila. Mas kaunti ang nagagastos nila — kahit hindi nga nagpipilit.",
+                "Bakit? Kasi karamihan ng dagdag na gastos ay hindi desisyon. Basta na lang nangyayari. Isang kape rito. Isang delivery fee doon. Isang subscription na nakalimutan mo.",
+                "Parang wala lang ang maliliit na halaga. Pero pagsama-samahin, malaki. Tinatawag itong **expense leakage** — perang lumalabas sa maliliit na butas na hindi mo napapansin."
+              ],
+              "example": {
+                "heading": "Ang halimbawa ng kape",
+                "body": "Isang kape ay nagkakahalaga ng **{c}15**.\n\nBumibili ka ng isa nang 4 na araw kada linggo:\n15 × 4 = **{c}60 kada linggo**\n\nSa loob ng isang buwan (4 na linggo):\n60 × 4 = **{c}240 kada buwan**\n\nSa loob ng isang taon:\n240 × 12 = **{c}2,880 kada taon**\n\nWalang nagdedesisyon na gumastos ng {c}2,880 sa kape. Nagdedesisyon sila ng {c}15, paulit-ulit."
+              },
+              "tip": "Hindi mo isinusulat ang mga bagay para lang malungkot. Ginagawa mo ito para hanapin ang maliliit na butas."
+            },
+            {
+              "kind": "teach",
+              "heading": "Tatlong madaling paraan para mag-track",
+              "paragraphs": [
+                "Ang pinakamagandang paraan ay 'yong gagamitin mo pa rin sa susunod na buwan. Pumili ng isa:"
+              ],
+              "list": [
+                {
+                  "term": "I-log agad",
+                  "detail": "Idagdag ito sa app pagbayad mo. Aabot lang ito ng 10 segundo at hindi mo na kailangang alalahanin mamaya."
+                },
+                {
+                  "term": "Tingnan minsan kada linggo",
+                  "detail": "Umupo minsan kada linggo kasama ang bank app mo at ayusin ang lahat. Mas mabagal, pero nahuhuli nito ang mga nakalimutan mo."
+                },
+                {
+                  "term": "I-set ang fixed costs nang minsanan",
+                  "detail": "Ang upa at subscriptions ay pareho lang kada buwan. Idagdag mo sila nang isang beses. Tapos i-track na lang ang pang-araw-araw mong gastos."
+                }
+              ],
+              "tip": "Bigyan mo ito ng 30 araw bago mo husgahan. Isang buwan ay nagpapakita ng larawan. Tatlong buwan ay nagpapakita ng ugali."
+            },
+            {
+              "kind": "numeric",
+              "prompt": "Ngayong buwan, kumita si Layla ng {c}5,000 mula sa trabaho niya at {c}500 mula sa freelance work. Gumastos siya ng {c}4,200. Ano ang net cash flow niya?",
+              "explanation": "Papasok na pera = 5,000 + 500 = 5,500. Palabas na pera = 4,200. Net cash flow = 5,500 − 4,200 = 1,300. Ang dagdag na 1,300 na 'yon ang pwede niyang i-save.",
+              "answer": 1300,
+              "showsCurrencySymbol": true
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "May taong mas malaki ang ginagastos kaysa kinikita kada buwan, pero hindi ubos ang account niya. Ano ang nangyayari?",
+              "explanation": "Kailangan may pinagkukunan ang dagdag na pera. Nanggagaling ito sa savings, o sa credit card. Hindi 'yon pwedeng tumagal habambuhay.",
+              "options": [
+                "Wala — okay lang sila",
+                "Gumagamit sila ng savings o nanghihiram para punan ang kulang",
+                "Tumataas ang sweldo nila",
+                "Imposible ito"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Ano ang 'expense leakage'?",
+              "explanation": "Ang leakage ay maraming maliliit na gastos, hindi isang malaking pagkakamali. Ito rin ang pinakamadaling ayusin, kasi halos hindi mo mararamdaman ang mga binawas mo.",
+              "options": [
+                "Isang pagkakamali ng bank mo",
+                "Maliliit na binili na halos hindi mo napansin na nagiging malaki kapag pinagsama",
+                "Perang ginastos sa upa",
+                "Isang uri ng savings account"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "numeric",
+              "prompt": "Gumagastos ka ng {c}20 sa tanghalian, 5 araw kada linggo. Magkano 'yon sa ISANG LINGGO?",
+              "explanation": "20 × 5 = 100 kada linggo. Sa loob ng isang buwan mga {c}400 'yon, at sa loob ng isang taon mga {c}4,800. Lumalaki ang maliliit na numero pag umuulit.",
+              "answer": 100,
+              "showsCurrencySymbol": true
+            }
+          ]
+        },
+        {
+          "id": "u2l2",
+          "number": 2,
+          "icon": "pie",
+          "title": "Mga Budgeting Framework",
+          "blurb": "Bigyan ng trabaho ang bawat dirham bago mo ito gastusin.",
+          "steps": [
+            {
+              "kind": "teach",
+              "heading": "Ang budget ay plano, hindi parusa",
+              "paragraphs": [
+                "Ang **budget** ay ang pagdedesisyon lang kung saan mapupunta ang pera mo — *bago* mo ito gastusin.",
+                "'Yon ang mahalagang parte. Nagdedesisyon ka habang kalmado ka, hindi habang nakatayo ka sa loob ng tindahan.",
+                "Ang budget rule ang nagbibigay ng hugis sa plano mo, para hindi ka magsimula sa wala kada buwan."
+              ]
+            },
+            {
+              "kind": "teach",
+              "heading": "Ang 50/30/20 rule",
+              "paragraphs": [
+                "Kunin ang take-home pay mo. Hatiin ito sa tatlong parte."
+              ],
+              "list": [
+                {
+                  "term": "50% para sa needs",
+                  "detail": "Upa, bills, grocery, transportasyon papunta sa trabaho, insurance."
+                },
+                {
+                  "term": "30% para sa wants",
+                  "detail": "Kain sa labas, shopping, mga lakad, saya. Naplano, kaya walang guilt."
+                },
+                {
+                  "term": "20% para sa savings",
+                  "detail": "Emergency fund, pag-iinvest, at dagdag na bayad sa anumang utang."
+                }
+              ],
+              "example": {
+                "heading": "Sa {c}5,000 na take-home pay",
+                "body": "Needs: 50% ng 5,000\n5,000 × 0.50 = **{c}2,500**\n\nWants: 30% ng 5,000\n5,000 × 0.30 = **{c}1,500**\n\nSavings: 20% ng 5,000\n5,000 × 0.20 = **{c}1,000**\n\nCheck: 2,500 + 1,500 + 1,000 = 5,000 ✓"
+              },
+              "tip": "Para makuha ang 10% ng kahit anong numero, ilipat lang ang tuldok nang isang lugar pakaliwa. 5,000 → 500. Tapos ang 20% ay doble n'on = 1,000."
+            },
+            {
+              "kind": "teach",
+              "heading": "Dalawa pang paraan para mag-budget",
+              "paragraphs": [
+                "Iba-ibang tao, iba-ibang system ang kailangan. Dalawa pa na epektibo:"
+              ],
+              "list": [
+                {
+                  "term": "Zero-based budgeting",
+                  "detail": "Binibigyan mo ng trabaho ang bawat dirham hangga't walang matirang walang pangalan. Napaka-eksakto. Mas maraming trabaho. Maganda kung gusto mong may kontrol ka."
+                },
+                {
+                  "term": "Pay yourself first",
+                  "detail": "Sa araw ng sweldo mo, awtomatikong lumalabas ang savings mo. Nabubuhay ka sa matitira. Halos walang effort, at napakaganda ng resulta."
+                }
+              ],
+              "tip": "Gumagana ang 'pay yourself first' kasi hindi mo kailangan ng willpower. Ang bank transfer ay hindi napapagod o natutukso."
+            },
+            {
+              "kind": "teach",
+              "heading": "Kapag hindi kasya ang needs mo sa 50%",
+              "paragraphs": [
+                "Sa mga siyudad tulad ng Dubai at Abu Dhabi, mataas ang upa. Maraming tao ang hindi maipasok ang needs nila sa 50%. Normal 'yon.",
+                "Huwag mong itapon ang rule. Baguhin mo ito:",
+                "Step 1. Bayaran ang needs mo mula sa kita mo.\nStep 2. Kunin ang matitira.\nStep 3. Hatiin ito sa dalawa — kalahati para sa wants, kalahati para sa savings."
+              ],
+              "example": {
+                "heading": "Kapag mataas ang needs",
+                "body": "Take-home pay: **{c}5,000**\nNeeds: **{c}3,200**\n\nAng matitira:\n5,000 − 3,200 = **{c}1,800**\n\nHatiin sa dalawa:\n1,800 ÷ 2 = **{c}900**\n\n{c}900 para sa wants, {c}900 para sa savings. Nag-iipon ka pa rin kada buwan."
+              },
+              "tip": "Baguhin ang mga numero, panatilihin ang ugali. Ang mag-ipon ng kahit kaunti ay mas mabuti kaysa walang ipon."
+            },
+            {
+              "kind": "numeric",
+              "prompt": "Ang take-home pay mo ay {c}4,000. Sa ilalim ng 50/30/20 rule, magkano ang napupunta sa SAVINGS?",
+              "explanation": "20% ng 4,000. Hanapin muna ang 10%: 400. Doblehin: 800. Kaya {c}800 ang napupunta sa savings, {c}2,000 sa needs at {c}1,200 sa wants.",
+              "answer": 800,
+              "showsCurrencySymbol": true
+            },
+            {
+              "kind": "numeric",
+              "prompt": "Ang take-home pay mo ay {c}3,000. Sa ilalim ng 50/30/20 rule, magkano ang napupunta sa NEEDS?",
+              "explanation": "Ang 50% ay kalahati. 3,000 ÷ 2 = 1,500. Ang needs ay {c}1,500, ang wants ay {c}900, ang savings ay {c}600.",
+              "answer": 1500,
+              "showsCurrencySymbol": true
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Aling budget method ang nagbibigay ng trabaho sa bawat isang dirham hangga't walang natitira?",
+              "explanation": "Ang zero-based budgeting ay nangangahulugang kita minus lahat ng plano mo ay katumbas ng zero. May pangalan na ang bawat dirham bago magsimula ang buwan.",
+              "options": [
+                "Ang 50/30/20 rule",
+                "Zero-based budgeting",
+                "Pay yourself first",
+                "Cash flow tracking"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Bakit mas gumagana ang 'pay yourself first' kaysa mag-ipon ng matitira sa dulo ng buwan?",
+              "explanation": "Sa dulo ng buwan, kadalasan wala nang natitira. Ang paglipat ng savings sa araw ng sweldo ang gumagawa sa pag-iipon na awtomatiko at ang paggastos naman sa matitira.",
+              "options": [
+                "Mas malaki ang interest na binabayad nito",
+                "Awtomatikong lumalabas ang pera bago mo pa ito magastos",
+                "Kailangan ito ng mga bank",
+                "Mas mabilis ito"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Ang needs mo ay kumukuha ng 64% ng sweldo mo. Ano ang dapat mong gawin?",
+              "explanation": "Baluktutin ang rule, panatilihin ang ugali. Ang paghahati ng matitira sa dalawa ay nangangahulugang nag-iipon ka pa rin kada buwan, kahit mataas ang upa.",
+              "options": [
+                "Ihinto ang pag-budget hanggang mas malaki ang kita mo",
+                "Bayaran muna ang needs, tapos hatiin nang pantay ang matitira sa wants at savings",
+                "Ilagay lahat ng matitira sa wants",
+                "Manghiram ng pera para pagkasyahin"
+              ],
+              "answers": [
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u2l3",
+          "number": 3,
+          "icon": "shield",
+          "title": "Emergency Fund",
+          "blurb": "Perang inilaan para sa masamang sorpresa.",
+          "steps": [
+            {
+              "kind": "teach",
+              "heading": "Ano ito",
+              "paragraphs": [
+                "Ang **emergency fund** ay perang inilalaan mo para sa tunay na emergency. Pagkawala ng trabaho. Bayad sa ospital. Pagpapaayos ng kotse.",
+                "Ang trabaho nito ay hindi para lumago. Ang trabaho nito ay pigilan ang isang sorpresa na maging utang.",
+                "Nagbibigay din ito sa'yo ng pagpipilian. Kung may ipon ka, pwede kang tumanggi sa masamang trabaho o masamang flat. Kung wala kang ipon, kailangan mong pumayag."
+              ],
+              "tip": "Sa UAE, kung mawalan ka ng trabaho baka kailangan mo ring umalis sa bansa sa loob ng takdang panahon. Kaya mas mahalaga na may handang cash ka."
+            },
+            {
+              "kind": "teach",
+              "heading": "Gaano ito dapat kalaki?",
+              "paragraphs": [
+                "Ang normal na payo ay **3 hanggang 6 na buwan ng iyong essential costs**.",
+                "Basahin mo ulit: **essential costs**. Hindi ang sweldo mo. Hindi lahat ng ginagastos mo.",
+                "Bilangin lang kung magkano ang kailangan para tumakbo ang buhay mo: upa, pagkain, bills, transportasyon, insurance. Hindi ang mga restaurant o holiday — huminto na 'yon sa emergency naman."
+              ],
+              "example": {
+                "heading": "Kwentahin ang target",
+                "body": "Ang essential costs ni Nadia kada buwan:\n\nUpa: {c}2,000\nPagkain: {c}700\nBills (DEWA, phone): {c}300\nTransportasyon: {c}200\n\nPagsamahin:\n2,000 + 700 + 300 + 200 = **{c}3,200 kada buwan**\n\n3 buwan: 3,200 × 3 = **{c}9,600**\n6 buwan: 3,200 × 6 = **{c}19,200**"
+              },
+              "tip": "Piliin ang 3 buwan kung stable ang trabaho mo. Piliin ang 6 na buwan kung nagbabago ang kita mo, o kung ikaw lang ang kumikita."
+            },
+            {
+              "kind": "teach",
+              "heading": "Saan ito itatago",
+              "paragraphs": [
+                "May dalawang bagay na mahalaga, sa ganitong pagkakasunod.",
+                "**1. Kaya mo itong maabot agad.** Tinatawag itong **liquidity** — kung gaano kabilis mo maipagpapalit ang isang bagay sa cash nang hindi nawawalan ng halaga.",
+                "**2. Hindi ito pwedeng mababa ang halaga.** Kaya savings account, hindi shares.",
+                "Itago ito sa isang **hiwalay na savings account**. Hiwalay nang sapat para hindi mo ito ituring na pang-gastos. Madaling maabot sa loob ng isang araw."
+              ],
+              "list": [
+                {
+                  "term": "Magandang lugar",
+                  "detail": "Isang hiwalay na savings account, mas maganda kung sa ibang bank kaysa sa pang-araw-araw mong account."
+                },
+                {
+                  "term": "Masamang lugar",
+                  "detail": "Ang stock market. Kadalasang bumababa ang presyo ng shares kasabay ng pagkawala ng trabaho ng mga tao."
+                },
+                {
+                  "term": "Masamang lugar",
+                  "detail": "Isang matagal na fixed deposit na hindi mo mahawakan sa loob ng maraming taon."
+                },
+                {
+                  "term": "Masamang lugar",
+                  "detail": "Ang pang-araw-araw mong account. Magagastos mo ito nang hindi mo namamalayan."
+                }
+              ]
+            },
+            {
+              "kind": "teach",
+              "heading": "Magsimula sa maliit",
+              "paragraphs": [
+                "Parang imposible ang {c}19,200 kung wala kang ipon. Kaya huwag kang magsimula doon.",
+                "Magsimula sa **unang goal** na {c}2,000. Sakop na n'on ang karamihan ng maliliit na emergency — sirang phone screen, pagpapaayos ng kotse, pauwing flight.",
+                "Tapos itaas mo hanggang isang buwan. Tapos tatlo. Tapos anim.",
+                "At pag ginamit mo ito, hindi 'yon kabiguan. 'Yon ang fund na ginagawa ang trabaho nito. Punuin mo ulit at ituloy lang."
+              ],
+              "tip": "Ang kalahating emergency fund ay hindi bigong emergency fund. Bawat buwan na madadagdag mo ay isa pang buwan ng kaligtasan."
+            },
+            {
+              "kind": "numeric",
+              "prompt": "Ang essential costs ni Hassan ay {c}2,500 kada buwan. Magkano ang kailangan niya para sa 3-BUWANG emergency fund?",
+              "explanation": "2,500 × 3 = 7,500. I-multiply ang buwanang essential costs mo sa bilang ng buwan na gusto mong sakupin.",
+              "answer": 7500,
+              "showsCurrencySymbol": true
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Saan mo dapat itago ang emergency fund mo?",
+              "explanation": "Kailangan mo ito nang mabilis at kailangan mo itong ligtas. Ang shares ay pwedeng bumaba. Ang fixed deposit ay naka-lock. Ang pang-araw-araw mong account ay nagagastos. Nalulutas ng hiwalay na savings account ang tatlong ito.",
+              "options": [
+                "Sa shares, para lumago",
+                "Sa isang hiwalay na savings account na kaya mong maabot agad",
+                "Sa pang-araw-araw mong spending account",
+                "Sa isang 5-taong fixed deposit"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Alin sa mga ito ang tunay na emergency?",
+              "explanation": "Ang emergency ay hindi inaasahan, kagyat at kailangan. Ang sale ay naplanong pamimili lang na nagkukunwari. Ang pagkawala ng trabaho ay eksaktong para saan ang fund.",
+              "options": [
+                "Isang malaking sale sa laptop",
+                "Pagkawala ng trabaho",
+                "Isang holiday na gusto mong i-book",
+                "Isang bagong modelo ng phone"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Dapat mong sukatin ang emergency fund mo laban sa aling numero?",
+              "explanation": "Sa tunay na emergency, huminto ka na rin naman sa paggastos sa saya. Ang paggamit ng essential costs ay ginagawang mas maliit ang target at mas madaling maabot.",
+              "options": [
+                "Ang taunang sweldo mo",
+                "Lahat ng ginagastos mo, kasama ang saya",
+                "Ang essential na buwanang costs mo lang",
+                "Ang limit ng credit card mo"
+              ],
+              "answers": [
+                2
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u2l4",
+          "number": 4,
+          "icon": "bank",
+          "title": "Banking Setup",
+          "blurb": "I-set up ang mga account mo para awtomatikong mangyari ang magagandang ugali.",
+          "steps": [
+            {
+              "kind": "teach",
+              "heading": "Dalawang uri ng account",
+              "paragraphs": [
+                "Ang **current account** ay para sa perang dumadaan lang. Dito dumarating ang sweldo mo. Dito lumalabas ang upa at bills mo. Kadalasang walang interest ito, at okay lang 'yon.",
+                "Ang **savings account** naman ay para sa perang nakatengga. Binabayaran ka nito ng interest. Minsan may maliliit itong limit sa pagkuha ng pera — na nakakatulong pala sa'yong mag-ipon."
+              ],
+              "tip": "Sa UAE ang sweldo mo ay kadalasang binabayad sa pamamagitan ng **WPS** (Wage Protection System). Diretso itong pumapasok sa current account mo kada buwan."
+            },
+            {
+              "kind": "teach",
+              "heading": "Paano ikumpara ang mga interest rate",
+              "paragraphs": [
+                "Nagpapakita ang mga bank ng rate sa savings accounts. Dalawang rate ay pwedeng magmukhang pareho pero magkaibang halaga ang binabayad.",
+                "Ang **nominal rate** ay ang simpleng taunang porsyento.",
+                "Ang **APY o AER** ay ang rate *pagkatapos* bilangin ang interest na kinita sa interest mo sa loob ng taon. Ito ang tapat na numero. Palaging ikumpara gamit ito.",
+                "Ang **compounding** ay nangangahulugang ang interest mo ay nagsisimula ring kumita ng interest. Mas maganda ang monthly kaysa yearly."
+              ],
+              "example": {
+                "heading": "Dalawang account, parehong pera",
+                "body": "May **{c}10,000** kang naipon sa loob ng isang taon.\n\nAng Account A ay nagbabayad ng **1%**:\n10,000 × 0.01 = **{c}100**\n\nAng Account B ay nagbabayad ng **4%**:\n10,000 × 0.04 = **{c}400**\n\nDifference: **{c}300 kada taon**\n\nParehong pera. Parehong risk. Kailangan mo lang sagutan ang isang form."
+              },
+              "tip": "Ikumpara ang mga account gamit ang APY o AER, hindi ang malaking numero sa advertisement."
+            },
+            {
+              "kind": "teach",
+              "heading": "Isang simpleng three-account setup",
+              "paragraphs": [
+                "Ang pinakakapaki-pakinabang na magagawa mo ay hindi ang pagpili ng perpektong bank. Ito ay ang pag-aayos ng mga account mo para kusang mangyari ang tamang bagay."
+              ],
+              "list": [
+                {
+                  "term": "1. Ang main account",
+                  "detail": "Dito dumarating ang sweldo mo. Dito lumalabas lahat ng bills mo."
+                },
+                {
+                  "term": "2. Ang savings account",
+                  "detail": "Isang hiwalay na account para sa emergency fund at goals mo. Pumapasok ang pera. Lumalabas lang ito para sa layunin nito."
+                },
+                {
+                  "term": "3. Ang pang-gastos na pera",
+                  "detail": "Ang matitira pagkatapos ng bills at savings. Ito ang pwede mong gastusin nang malaya ngayong buwan."
+                }
+              ],
+              "tip": "Mag-set up ng awtomatikong transfer sa savings sa araw ng sweldo — hindi sa dulo ng buwan. Ito ang 'pay yourself first' na ginawa ng bank mo."
+            },
+            {
+              "kind": "teach",
+              "heading": "Mag-ingat sa mga fee",
+              "paragraphs": [
+                "Madaling makita ang interest. Madaling hindi mapansin ang mga fee. Pareho silang nanggagaling sa iisang bulsa.",
+                "Mga karaniwan sa UAE:"
+              ],
+              "list": [
+                {
+                  "term": "Minimum balance fee",
+                  "detail": "Maraming UAE account ang naniningil sa'yo kung bumaba ang balance mo sa takdang halaga — kadalasang {c}3,000 o {c}5,000."
+                },
+                {
+                  "term": "ATM fee mula sa ibang bank",
+                  "detail": "Maliit na singil sa tuwing gagamitin mo ang makina ng ibang bank."
+                },
+                {
+                  "term": "Card annual fee",
+                  "detail": "Taunang singil sa ilang credit card."
+                },
+                {
+                  "term": "Foreign currency fee",
+                  "detail": "Kadalasang 2% hanggang 3% pag may binili ka sa ibang currency o nag-online shopping sa abroad."
+                }
+              ],
+              "example": {
+                "heading": "Isang maliit na fee, isang taon",
+                "body": "Isang minimum balance fee na **{c}25 kada buwan**:\n\n25 × 12 = **{c}300 kada taon**\n\nKung ang account mo ay nagbabayad lang ng {c}100 na interest, mas malaki ang gastos sa fee kaysa sa ibinibigay ng interest."
+              },
+              "tip": "Minsan sa isang taon, tingnan ang mga statement mo para sa salitang 'fee' o 'charge'. Karamihan ng tao ay nakakahanap ng isang bagay na kaya nilang ihinto."
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Aling numero ang dapat mong gamitin para ikumpara ang dalawang savings account?",
+              "explanation": "Kasama sa APY at AER ang epekto ng compounding. Dalawang account na may parehong simpleng rate ay pwedeng magkaibang halaga ang binabayad, kaya ito ang patas na paraan para ikumpara.",
+              "options": [
+                "Ang malaking numero sa advertisement",
+                "Ang APY o AER",
+                "Ang laki ng bank",
+                "Ang minimum balance"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "numeric",
+              "prompt": "May {c}5,000 kang nakatago sa savings account na nagbabayad ng 4% kada taon. Magkano ang interest na kikitain mo sa loob ng isang taon?",
+              "explanation": "5,000 × 0.04 = 200. Tip: hanapin muna ang 1% sa pamamagitan ng paglipat ng tuldok nang dalawang lugar pakaliwa (5,000 → 50), tapos i-multiply sa 4 para makuha ang 200.",
+              "answer": 200,
+              "showsCurrencySymbol": true
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Kailan dapat lumipat ang pera sa savings account mo?",
+              "explanation": "Kung maghihintay ka hanggang dulo ng buwan, kadalasan wala nang matitira. Ang awtomatikong transfer sa araw ng sweldo ang gumagawa sa pag-iipon na mauna.",
+              "options": [
+                "Sa dulo ng buwan, kung may matitira",
+                "Awtomatiko sa araw ng sweldo",
+                "Kapag naaalala mo lang",
+                "Minsan sa isang taon"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Ano ang ibig sabihin ng 'liquidity'?",
+              "explanation": "Ang liquidity ay tungkol sa bilis at kaligtasan ng pag-access. Ang savings account ay napaka-liquid. Ang property ay hindi. Kaya ang emergency fund mo ay napupunta sa savings account.",
+              "options": [
+                "Kung magkano ang interest na binabayad ng isang bagay",
+                "Kung gaano kabilis mo ito maipagpapalit sa cash nang hindi nawawalan ng halaga",
+                "Kung gaano kalaki ang balance mo",
+                "Kung gaano na katagal ang account"
+              ],
+              "answers": [
+                1
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "number": 3,
+      "accent": "coral",
+      "title": "Maging Bihasa sa Panghihiram",
+      "subtitle": "Utang at Credit",
+      "blurb": "Ang panghihiram ay pwedeng makatulong o makasama sa'yo. Matutong makita ang pagkakaiba.",
+      "lessons": [
+        {
+          "id": "u3l1",
+          "number": 1,
+          "icon": "gauge",
+          "title": "Credit Mechanics",
+          "blurb": "Kung paano talaga gumagana ang credit score mo.",
+          "steps": [
+            {
+              "kind": "teach",
+              "heading": "Ano ang credit score",
+              "paragraphs": [
+                "Ang **credit score** ay isang numerong nagpapakita kung gaano mo kahusay binabayaran ang perang hiniram mo.",
+                "Tinitingnan ito ng mga bank bago ka bigyan ng loan o credit card. Isang tanong ang itinatanong nila: babayaran ba kami ng taong ito sa tamang oras?",
+                "Sa UAE, ang score ay nanggagaling sa **Al Etihad Credit Bureau (AECB)**. Ang score ay mula **300 hanggang 900**. Mas mataas, mas maganda.",
+                "Ang score mo ay hindi lang nagdedesisyon ng oo o hindi. Nagdedesisyon din ito ng interest rate mo — kung magkano ang gastos sa'yo ng loan."
+              ],
+              "list": [
+                {
+                  "term": "300 – 619",
+                  "detail": "Mababa. Mahihirapan kang makakuha ng loan."
+                },
+                {
+                  "term": "620 – 679",
+                  "detail": "Katamtaman. May ilang opsyon, pero hindi ang pinakamagandang rates."
+                },
+                {
+                  "term": "680 – 730",
+                  "detail": "Maganda. Karamihan ng bank ay papayag."
+                },
+                {
+                  "term": "731 – 900",
+                  "detail": "Napakaganda. Makukuha mo ang pinakamagagandang alok."
+                }
+              ]
+            },
+            {
+              "kind": "teach",
+              "heading": "Ang limang bagay na bumubuo ng score mo",
+              "paragraphs": [
+                "Iba-ibang bansa ay gumagamit ng bahagyang magkakaibang system, pero pare-pareho silang tumitingin sa limang bagay na ito:"
+              ],
+              "list": [
+                {
+                  "term": "1. Payment history — ang pinakamalaki",
+                  "detail": "Nagbabayad ka ba sa tamang oras, sa bawat pagkakataon? Mas mahalaga ito kaysa lahat ng iba pa."
+                },
+                {
+                  "term": "2. Kung magkano ang credit na ginagamit mo",
+                  "detail": "Kung ang card limit mo ay {c}10,000 at may utang kang {c}3,000, gumagamit ka ng 30%. Mas mababa, mas maganda."
+                },
+                {
+                  "term": "3. Gaano na katagal kang may credit",
+                  "detail": "Nakakatulong ang mas lumang mga account. Kaya nga ang pagsara ng pinakaluma mong card ay pwedeng makasama sa'yo."
+                },
+                {
+                  "term": "4. Ang mga uri ng credit na meron ka",
+                  "detail": "Ang pagkakaroon ng card at loan ay nagpapakita na kaya mong pangasiwaan ang dalawa."
+                },
+                {
+                  "term": "5. Mga bagong aplikasyon",
+                  "detail": "Ang mag-apply ng maraming card o loan nang mabilisan ay parang senyales na nasa problema ka."
+                }
+              ],
+              "tip": "Dalawang bagay lang ang tandaan at nasasaklaw mo na ang karamihan: **magbayad sa tamang oras** at **panatilihing mababa ang card balance mo**."
+            },
+            {
+              "kind": "teach",
+              "heading": "Credit utilisation: ang pinakamabilis na paraan para gumanda",
+              "paragraphs": [
+                "Ang **credit utilisation** ay tumutukoy kung magkano sa card limit mo ang ginagamit mo.",
+                "Ang formula: **utilisation = balance ÷ limit × 100**",
+                "Ang payment history ay tumatagal ng maraming taon bago mabuo. Pero ang utilisation ay pwedeng magbago sa loob ng isang buwan. Kaya ito ang pinakamabilis mong maaayos.",
+                "Subukang panatilihin itong **mababa sa 30%**."
+              ],
+              "example": {
+                "heading": "Kwentahin natin",
+                "body": "Ang card limit mo: **{c}10,000**\nAng balance mo: **{c}2,000**\n\nStep 1. Hatiin:\n2,000 ÷ 10,000 = **0.2**\n\nStep 2. I-multiply sa 100:\n0.2 × 100 = **20%**\n\nAng 20% ay mababa sa 30%. Malusog ito."
+              },
+              "tip": "Iniuulat ng bank mo ang balance mo sa petsa ng statement, hindi sa due date. Ang pagbabayad ng kaunti *bago* ang statement ay nagbibigay ng mas mababang numero."
+            },
+            {
+              "kind": "teach",
+              "heading": "Report, score, at ang pagtsek nito",
+              "paragraphs": [
+                "Ang **credit report** mo ay ang buong file: bawat account, limit, balance at bayad. Ang **score** mo ay iisang numerong gawa mula sa file na 'yon.",
+                "May dalawang uri ng pagtsek:",
+                "Ang **soft check** ay kapag ikaw mismo ang tumitingin sa sarili mong score. **Walang epekto ito** kahit kaunti.",
+                "Ang **hard check** naman ay kapag tinitingnan ka ng bank para sa tunay na aplikasyon. Pwede nitong bahagyang mapababa ang score mo sa loob ng ilang buwan.",
+                "Mas madalas mangyari ang mga mali kaysa akala ng mga tao. Isang account na hindi sa'yo. Isang loan na bayad mo na. Pwede mong hilingin sa bureau na ayusin ito."
+              ],
+              "tip": "Ang pagtsek sa sarili mong score ay hindi kailanman nakakasama rito. Pwede mong makuha ang AECB report mo mismo sa UAE — gawin mo ito minsan sa isang taon."
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Alin ang pinakamahalaga para sa credit score mo?",
+              "explanation": "Ang payment history ang pinakamalaking parte ng bawat scoring system. Ang pinakamagandang paraan para hulaan kung magbabayad ang isang tao sa tamang oras ay tingnan kung nagbayad ba sila sa tamang oras dati.",
+              "options": [
+                "Ang mga uri ng credit na meron ka",
+                "Ang magbayad sa tamang oras",
+                "Kung ilang card ang meron ka",
+                "Kung ilang taon ka na"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "numeric",
+              "prompt": "Ang credit card limit mo ay {c}5,000 at may utang kang {c}1,000. Ano ang credit utilisation mo, bilang PORSYENTO? I-type lang ang numero.",
+              "explanation": "1,000 ÷ 5,000 = 0.2. Tapos 0.2 × 100 = 20%. Komportableng mababa 'yon sa 30% na guideline.",
+              "answer": 20,
+              "showsCurrencySymbol": false
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Nababawasan ba ang sarili mong credit score kapag tinitingnan mo ito?",
+              "explanation": "Ang pagtingin sa sarili mong score ay soft check. Hindi ito nakikita ng score. Ang tunay na aplikasyon lang para sa credit ang nag-iiwan ng marka.",
+              "options": [
+                "Oo, sa bawat pagkakataon",
+                "Hindi — soft check 'yon at walang epekto",
+                "Kung dalawang beses ka lang magtsek",
+                "Kung mababa ang score"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Ano ang saklaw ng credit score sa UAE?",
+              "explanation": "Ang Al Etihad Credit Bureau ay gumagamit ng 300 hanggang 900. Mas mataas, mas maganda. Ang mga 680 pataas ay karaniwang itinuturing na maganda.",
+              "options": [
+                "0 hanggang 100",
+                "300 hanggang 900",
+                "1 hanggang 10",
+                "500 hanggang 1000"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "May luma kang credit card na bihira mong gamitin. Ano ang mangyayari kung isasara mo ito?",
+              "explanation": "Ang pagsara nito ay nag-aalis ng limit na 'yon, kaya tataas ang porsyento ng utilisation mo. Pinapaikli rin nito ang credit history mo. Kung walang fee ang card, kadalasang mas maganda na bukas ito.",
+              "options": [
+                "Tataas ang score mo",
+                "Pwedeng bumaba ang score mo, kasi mawawalan ka ng credit history at magagamit na limit",
+                "Walang magbabago",
+                "Mabubura ang mga luma mong bayad"
+              ],
+              "answers": [
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u3l2",
+          "number": 2,
+          "icon": "scales",
+          "title": "Good vs. Bad na Utang",
+          "blurb": "May panghihiram na nakakatulong. May naman na bitag.",
+          "steps": [
+            {
+              "kind": "teach",
+              "heading": "Isang tanong ang nag-aayos sa lahat ng utang",
+              "paragraphs": [
+                "Ang utang ay hindi mabuti o masama sa sarili nito. Ang mahalaga ay kung ano ang ginagawa mo sa pera.",
+                "Ang **good debt** ay bumibili ng bagay na lumalaki ang halaga, kumikita para sa'yo, o tumutulong sa'yong kumita nang mas malaki. At mababa ang interest rate.",
+                "Ang **bad debt** naman ay bumibili ng bagay na nawawalan ng halaga o tapos na. At mataas ang interest rate."
+              ],
+              "tip": "Itanong mo sa sarili mo: pag nabayaran ko na ang huli, may matitira pa ba akong may halaga? Isang bahay, oo. Ang holiday noong isang taon, hindi."
+            },
+            {
+              "kind": "teach",
+              "heading": "Mga halimbawang makakasalubong mo",
+              "paragraphs": [
+                "Heto ang mga karaniwang uri, at kung bakit sila napupunta kung saan sila napupunta:"
+              ],
+              "list": [
+                {
+                  "term": "Home loan — kadalasang good",
+                  "detail": "Kadalasang lumalaki ang halaga ng property. Ang interest rate ay isa sa pinakamababa na pwede mong makuha."
+                },
+                {
+                  "term": "Study loan — kadalasang good",
+                  "detail": "Tumutulong ito sa'yong kumita nang mas malaki mamaya. Mag-ingat lang na huwag manghiram nang mas malaki kaysa sa idadagdag ng kurso sa sweldo mo."
+                },
+                {
+                  "term": "Business loan — pwedeng good",
+                  "detail": "Bumibili ito ng bagay na para kumita ng pera. May totoong risk."
+                },
+                {
+                  "term": "Credit card balance na dala-dala mo — bad",
+                  "detail": "Ang mga UAE card ay kadalasang naniningil ng mga 3% kada buwan. Mga 36% 'yon kada taon, sa mga bagay na nagamit mo na."
+                },
+                {
+                  "term": "Car loan — kadalasang nasa gitna",
+                  "detail": "Mabilis nawawalan ng halaga ang kotse — kadalasang 15% hanggang 20% sa unang taon. Minsan talagang kailangan mo. Alamin mo lang kung ano ang binibili mo."
+                },
+                {
+                  "term": "Buy now, pay later — mag-ingat",
+                  "detail": "Parang libre ang pakiramdam. Pero ang hindi pagbabayad ay may kasunod na fees, at madaling magkaroon ng lima nang sabay-sabay."
+                }
+              ]
+            },
+            {
+              "kind": "teach",
+              "heading": "Ang interest rate ang nagdedesisyon",
+              "paragraphs": [
+                "Kahit ang karaniwang good na loan ay nagiging bad kung sapat na kataas ang rate.",
+                "Ang numerong titingnan ay ang **APR — annual percentage rate**. Pinagsasama nito ang interest at ang kinakailangang fees sa iisang taunang numero, para makumpara mo nang patas ang mga alok.",
+                "Mag-ingat: ang mga UAE bank ay kadalasang nagpapakita ng **flat rate** sa car at personal loans. Mukhang maliit ang flat rate pero mas malaki ang gastos kaysa hitsura nito, kasi sinisingil ito sa buong orihinal na halaga sa buong panahon. Palaging humingi ng **reducing balance rate** o ng APR."
+              ],
+              "example": {
+                "heading": "Bakit mahal ang pagbabayad ng minimum lang",
+                "body": "May utang kang **{c}5,000** sa card na may **3% kada buwan**.\n\nInterest sa unang buwan:\n5,000 × 0.03 = **{c}150**\n\nKung minimum lang ang babayaran mo, karamihan n'on ay napupunta sa {c}150 na interest. Halos hindi gumagalaw ang {c}5,000.\n\nMagbayad ng {c}500 kada buwan sa halip, at mawawala ito sa loob ng mga 11 buwan."
+              },
+              "tip": "Ang minimum payment ay dinisenyo para panatilihin kang nagbabayad ng maraming taon. Hindi ito plano para makaalpas."
+            },
+            {
+              "kind": "teach",
+              "heading": "Isa pang paghahambing na dapat tandaan",
+              "paragraphs": [
+                "Kung may sobrang pera ka, dapat mo ba itong i-invest o bayaran ang utang?",
+                "Ang pag-invest sa stock market ay historically nagbibigay ng mga 7% hanggang 10% kada taon sa mahabang panahon. Walang makakapangako n'on.",
+                "Ang pagbabayad ng utang na 30% kada taon ay nagse-save sa'yo ng eksaktong 30%. Garantisado. Walang risk.",
+                "Kaya ang mahal na utang ang mauuna, halos palagi."
+              ],
+              "tip": "Ang pagbabayad ng 30% na utang ay parang kumita ng 30% nang walang risk. Walang investment na makakapangako n'on."
+            },
+            {
+              "kind": "multiSelect",
+              "prompt": "Alin sa mga ito ang kadalasang GOOD na utang? Piliin lahat ng tama.",
+              "explanation": "Ang good debt ay bumibili ng bagay na lumalaki ang halaga o tumutulong sa'yong kumita nang mas malaki, sa mababang rate. Ang card balance at ang trip ay nagastos na, at malaki ang gastos para dalhin.",
+              "options": [
+                "Isang home loan sa 4%",
+                "Isang credit card balance sa 36% kada taon",
+                "Isang study loan para sa kursong magpapataas ng sweldo mo",
+                "Panghihiram para sa isang weekend trip",
+                "Isang business loan para sa kagamitang kikita ng pera"
+              ],
+              "answers": [
+                0,
+                2,
+                4
+              ]
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Ano ang ibig sabihin ng APR?",
+              "explanation": "Annual Percentage Rate. Pinagsasama nito ang interest at kinakailangang fees sa iisang taunang numero, para makumpara mo nang patas ang dalawang loan.",
+              "options": [
+                "Approved Payment Rate",
+                "Annual Percentage Rate",
+                "Average Payment Ratio",
+                "Annual Principal Return"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "numeric",
+              "prompt": "May utang kang {c}2,000 sa credit card. Ang card ay naniningil ng 3% kada buwan. Magkano ang interest na babayaran mo sa ISANG buwan?",
+              "explanation": "2,000 × 0.03 = 60. Kaya {c}60 kada buwan para lang sa pagdala ng balance. Kung {c}80 lang ang babayaran mo, {c}20 lang ang napupunta sa mismong utang.",
+              "answer": 60,
+              "showsCurrencySymbol": true
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "May sobrang {c}3,000 ka. May credit card debt ka rin sa 30% kada taon. Ano ang kadalasang pinakamakabuluhan?",
+              "explanation": "Ang pagbabayad ng 30% na utang ay pareho sa pagkita ng 30% nang walang risk. Walang karaniwang investment na palagiang matatalo 'yon. Bayaran muna ang mahal na utang.",
+              "options": [
+                "I-invest ito at umasa ng higit sa 30%",
+                "Bayaran ang card debt — nagse-save 'yon sa'yo ng 30% nang tiyak",
+                "Hatiin sa dalawa",
+                "Iwan sa savings account sa 3%"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Bakit kadalasang hindi itinuturing na good debt ang car loan?",
+              "explanation": "Kadalasang okay lang ang rate. Ang problema ay ang kotse mismo — mabilis itong nawawalan ng halaga. Minsan talagang kailangan mo, pero kapaki-pakinabang na malaman kung ano ang fina-finance mo.",
+              "options": [
+                "Ang car loan ay laging may pinakamataas na rates",
+                "Nawawalan ng halaga ang kotse, kaya nanghihiram ka para sa bagay na umuurong",
+                "Hindi kailanman kailangan ang mga kotse",
+                "Sinisira nito ang credit score mo"
+              ],
+              "answers": [
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u3l3",
+          "number": 3,
+          "icon": "steps",
+          "title": "Pagbabayad ng Utang",
+          "blurb": "Dalawang paraan. Piliin ang tatapusin mo.",
+          "steps": [
+            {
+              "kind": "teach",
+              "heading": "Ang rule na nauuna",
+              "paragraphs": [
+                "Anumang paraan ang piliin mo, pareho lang ang setup.",
+                "**Step 1.** Bayaran ang minimum sa bawat utang, kada buwan. Huwag kailanman lumaktaw. Ang hindi pagbabayad ay may kasunod na fees at nakakasama sa credit score mo.",
+                "**Step 2.** Kunin ang anumang sobrang pera mo at ilagay lahat sa **isang** utang.",
+                "Ang paraan lang ang nagdedesisyon kung aling utang ang unang makakakuha ng dagdag na pera.",
+                "Huwag ikalat ang dagdag na pera sa lahat ng utang mo. Walang natatapos, kaya walang nailalaya."
+              ]
+            },
+            {
+              "kind": "teach",
+              "heading": "Paraan 1: pinakamataas na rate muna (avalanche)",
+              "paragraphs": [
+                "Ayusin ang mga utang mo ayon sa **interest rate**, pinakamataas muna.",
+                "Ilagay lahat ng dagdag na pera sa utang na may pinakamataas na rate. Pag ubos na ito, lumipat sa susunod.",
+                "Ang paraang ito ang pinakamababa ang gastos sa'yo sa kabuuan. Ito ang sagot ng matematika.",
+                "Ang problema: ang utang mong may pinakamataas na rate ay pwede ring ang pinakamalaki. Pwede kang magbayad ng ilang buwan at walang makitang nawawala. May sumusuko."
+              ],
+              "tip": "Avalanche = pinakamataas na rate muna. Nagsisimula ang avalanche sa pinakamataas na punto ng bundok."
+            },
+            {
+              "kind": "teach",
+              "heading": "Paraan 2: pinakamaliit na utang muna (snowball)",
+              "paragraphs": [
+                "Ayusin ang mga utang mo ayon sa **laki**, pinakamaliit muna. Balewalain ang mga interest rate.",
+                "Patayin ang pinakamaliit. Tapos ang susunod na pinakamaliit.",
+                "Kaunting mas mahal ito sa interest. Pero natatapos mo ang isang buong utang nang mabilis, at maganda ang pakiramdam n'on. Ang mga gumagamit ng paraang ito ay mas malamang na makatapos."
+              ],
+              "example": {
+                "heading": "Parehong utang, dalawang pagkakasunod",
+                "body": "Card A: **{c}1,000** sa 36%\nCard B: **{c}4,000** sa 24%\nLoan C: **{c}500** sa 12%\n\n**Pinakamataas na rate muna:** A → B → C\nPinakamura sa kabuuan.\n\n**Pinakamaliit muna:** C → A → B\nUnang panalo sa loob ng ilang linggo."
+              },
+              "tip": "Snowball = pinakamaliit muna. Nagsisimulang maliit ang snowball at lumalaki habang gumugulong."
+            },
+            {
+              "kind": "teach",
+              "heading": "Pagsasama-sama ng lahat ng utang mo sa isang lugar",
+              "paragraphs": [
+                "Ang **debt consolidation** ay ang pagsasama-sama ng ilang utang sa isang bagong loan. Sana ang bagong loan ay may mas mababang rate at isang bayad na lang na tatandaan.",
+                "Malaki itong maitutulong. Pero mag-ingat sa tatlong bagay:"
+              ],
+              "list": [
+                {
+                  "term": "Ang fee",
+                  "detail": "Kadalasang may fee para i-set up ito, karaniwang 1% hanggang 5% ng halaga. Tingnan na mas mababa ito kaysa sa naii-save mo."
+                },
+                {
+                  "term": "Nagtatapos ang mababang rate",
+                  "detail": "May mga alok na may mababang rate sa loob ng 6 o 12 buwan, tapos biglang tataas. Alamin ang petsa."
+                },
+                {
+                  "term": "Napupuno ulit ang mga card",
+                  "detail": "Ito ang pinakakaraniwang problema. Nilinis mo ang mga card mo, tapos ginamit mo ulit. Ngayon may loan ka *at* mga card."
+                }
+              ],
+              "tip": "Kung magko-consolidate ka, i-freeze o isara ang mga card sa parehong araw. Inaayos ng consolidation ang interest rate. Hindi nito maaayos ang ugali sa paggastos."
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Aling paraan ang nag-aayos ng mga utang ayon sa interest rate, pinakamataas muna?",
+              "explanation": "Tinatarget ng avalanche ang pinakamataas na rate muna. Pinakamababa ang gastos nito sa kabuuan, kasi pinapatay mo muna ang pinakamahal na utang.",
+              "options": [
+                "Ang snowball method",
+                "Ang avalanche method",
+                "Consolidation",
+                "Minimum payments"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "May tatlo kang utang: {c}800 sa 12%, {c}3,000 sa 36%, at {c}1,500 sa 20%. Gamit ang AVALANCHE, alin ang unang makakakuha ng dagdag mong pera?",
+              "explanation": "Binabalewala ng avalanche ang laki at tinitingnan lang ang rate. Ang 36% ang pinakamataas, kaya 'yon ang unang makakakuha ng dagdag na pera.",
+              "options": [
+                "Ang {c}800 na utang",
+                "Ang {c}3,000 na utang sa 36%",
+                "Ang {c}1,500 na utang sa 20%",
+                "Lahat ng tatlo nang pantay"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "May parehong tatlo kang utang. Gamit ang SNOWBALL, alin ang unang makakakuha ng dagdag mong pera?",
+              "explanation": "Binabalewala ng snowball ang rate at tinitingnan lang ang laki. Ang {c}800 ang pinakamaliit, kaya 'yon ang mauuna — at makakakuha ka ng panalo nang mabilis.",
+              "options": [
+                "Ang {c}800 na utang",
+                "Ang {c}3,000 na utang",
+                "Ang {c}1,500 na utang",
+                "Lahat ng tatlo nang pantay"
+              ],
+              "answers": [
+                0
+              ]
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Bakit gumagana ang snowball method para sa maraming tao, kahit medyo mas mahal ito?",
+              "explanation": "Ang planong natatapos mo ay mas mabuti kaysa perpektong planong iniiwan mo. Ang pera ay mga kalahating matematika at kalahating ugali, at tumutulong ang snowball sa parte ng ugali.",
+              "options": [
+                "Mas maliit ang mga bayad",
+                "Ang pagtapos ng utang nang mabilis ay pinapanatili kang motivated na magpatuloy",
+                "Mas gusto ito ng mga bank",
+                "Mas mabilis ito sa kabuuan"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Ano ang pinakakaraniwang problema pagkatapos mag-consolidate ng utang?",
+              "explanation": "Inililipat ng consolidation ang utang, hindi nito binabago ang ugali. Kung magpapatuloy ang paggastos, mababayaran mo ang bagong loan at bagong card debt nang sabay.",
+              "options": [
+                "Tinatanggihan ang loan",
+                "Nagagamit ulit ang mga lumang card, kaya ngayon may dalawa ka na",
+                "Laging tumataas ang rates",
+                "Hindi ito pinapayagan"
+              ],
+              "answers": [
+                1
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "number": 4,
+      "accent": "sky",
+      "title": "Protektahan ang Yaman",
+      "subtitle": "Risk Management",
+      "blurb": "Mahalaga ang pagpapalago ng pera. Kasinghalaga rin ang hindi ito mawala sa isang aksidente o isang matalinong mensahe.",
+      "lessons": [
+        {
+          "id": "u4l1",
+          "number": 1,
+          "icon": "umbrella",
+          "title": "Mga Batayan ng Insurance",
+          "blurb": "Bilhin ang cover na kailangan mo. Laktawan ang iba.",
+          "steps": [
+            {
+              "kind": "teach",
+              "heading": "Ano talaga ang binibili mo",
+              "paragraphs": [
+                "Ang insurance ay hindi pag-iipon at hindi pag-iinvest.",
+                "Nagbabayad ka ng maliit at alam na halaga para may kumpanyang mag-ako ng malaki at hindi alam na risk para sa'yo.",
+                "Kung walang masamang nangyari, hindi ka nag-aksaya ng pera. Bumili ka ng isang taong walang sakuna. 'Yon ang binabayaran mo."
+              ]
+            },
+            {
+              "kind": "teach",
+              "heading": "Limang salita sa bawat polisiya",
+              "paragraphs": [
+                "Bawat insurance policy sa mundo ay gumagamit ng mga salitang ito. Matutunan mo minsan at kaya mo nang basahin ang kahit anong polisiya."
+              ],
+              "list": [
+                {
+                  "term": "Premium",
+                  "detail": "Ang binabayaran mo para magkaroon ng insurance. Buwanan o taunan."
+                },
+                {
+                  "term": "Deductible (o excess)",
+                  "detail": "Ang parteng ikaw ang magbabayad bago magbayad ang kumpanya. Kung ang excess mo ay {c}500 at ang repair ay nagkakahalaga ng {c}3,000, magbabayad ka ng {c}500 at sila ng {c}2,500."
+                },
+                {
+                  "term": "Coverage limit",
+                  "detail": "Ang pinakamalaking babayaran ng kumpanya kailanman. Lampas doon, ikaw ang magbabayad."
+                },
+                {
+                  "term": "Exclusion",
+                  "detail": "Isang bagay na hindi sakop ng polisiya. Palaging basahin ang parteng ito."
+                },
+                {
+                  "term": "Claim",
+                  "detail": "Ang paghingi sa kumpanya na magbayad pagkatapos may nangyari."
+                }
+              ],
+              "tip": "Ang mas malaking excess ay nangangahulugang mas maliit na premium. Piliin lang 'yon kung talagang kaya mong bayaran ang excess bukas."
+            },
+            {
+              "kind": "teach",
+              "heading": "Ano ang kailangan mo sa UAE",
+              "paragraphs": [
+                "Apat na uri ang sumasaklaw sa halos lahat. Dalawa rito ay kinakailangan ng batas dito."
+              ],
+              "list": [
+                {
+                  "term": "Health insurance — kinakailangan",
+                  "detail": "Batas ito sa Dubai at Abu Dhabi. Karamihan ng employer ang nagbibigay nito. Tingnan kung ano ang sakop ng plan mo, at kung kasama ang pamilya mo."
+                },
+                {
+                  "term": "Car insurance — kinakailangan",
+                  "detail": "Hindi ka pwedeng magmaneho nang wala nito. Sinasaklaw ng **third party** ang pinsalang idinulot mo sa iba. Sinasaklaw din ng **comprehensive** ang sarili mong kotse."
+                },
+                {
+                  "term": "Home contents insurance",
+                  "detail": "Napakamura at madalas nakakalimutan. Sinasaklaw nito ang mga gamit mo — laptop, phone, muwebles — laban sa sunog, water damage at pagnanakaw."
+                },
+                {
+                  "term": "Life insurance",
+                  "detail": "Nagbabayad ng pera sa pamilya mo kung mamatay ka. Kailangan mo lang ito kung may umaasa sa kita mo."
+                }
+              ],
+              "tip": "I-insure ang mga bagay na hindi mo kayang palitan mag-isa. Huwag i-insure ang maliliit na bagay na kaya mo namang bayaran."
+            },
+            {
+              "kind": "teach",
+              "heading": "Dalawang uri ng life insurance",
+              "paragraphs": [
+                "Ang **term life** ay sumasaklaw sa'yo sa loob ng takdang bilang ng taon. Kung mamatay ka sa panahong 'yon, makukuha ng pamilya mo ang pera. Kung hindi, magtatapos ito. Simple at mura ito.",
+                "Ang **whole life** naman ay sumasaklaw sa'yo habambuhay at may halong parte ng savings. Ilang beses itong mas mahal para sa parehong payout, at kadalasang mabagal lumago ang parte ng savings.",
+                "Para sa karamihan, ang term life kasama ang hiwalay na pag-iipon ang mas magandang pagpipilian.",
+                "Gaano kalaki? Isang karaniwang panimulang punto ay **10 beses ng taunang kita mo**."
+              ],
+              "example": {
+                "heading": "Kailangan mo ba ito?",
+                "body": "Si **Maryam** ay 25, single, walang anak, walang umaasa sa pera niya.\n→ Malamang hindi pa niya kailangan ng life insurance.\n\nSi **Yousef** ay 35, may asawa, dalawang anak, at siya lang ang kumikita.\n→ Kailangan niya ito. Kung huminto ang kita niya, walang matitira sa pamilya niya.\n\nPinoprotektahan ng insurance ang mga taong umaasa sa'yo."
+              },
+              "tip": "Kung walang magdurusa pinansyal kung wala ang kita mo, malamang hindi mo pa kailangan ng life insurance. Tingnan mo ulit pag nagbago 'yon."
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Ano ang deductible (o excess)?",
+              "explanation": "Ang deductible ay ang parte mo sa bawat claim. Ang pagpili ng mas mataas ay nagpapababa sa buwanang gastos mo — pero gawin lang 'yon kung kaya mo itong bayaran agad.",
+              "options": [
+                "Ang buwanang gastos ng polisiya",
+                "Ang parteng ikaw ang magbabayad bago magbayad ang kumpanya",
+                "Ang pinakamalaking babayaran ng kumpanya",
+                "Ang komisyon ng agent"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "numeric",
+              "prompt": "Ang car repair mo ay nagkakahalaga ng {c}4,000. Ang polisiya mo ay may {c}500 na excess. Magkano ang babayaran ng insurance company?",
+              "explanation": "4,000 − 500 = 3,500. Babayaran mo ang unang {c}500 at babayaran ng kumpanya ang matitira.",
+              "answer": 3500,
+              "showsCurrencySymbol": true
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Aling dalawang uri ng insurance ang kinakailangan ng batas sa Dubai?",
+              "explanation": "Ang health insurance ay kinakailangan sa Dubai at Abu Dhabi, at ang car insurance ay kinakailangan kahit saan ka magmaneho. Ang iba ay kapaki-pakinabang pero opsyonal.",
+              "options": [
+                "Travel at pet insurance",
+                "Health at car insurance",
+                "Phone at laptop insurance",
+                "Life at home insurance"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Isang 24-anyos na walang anak at walang umaasa sa kita niya ay nagtatanong kung kailangan niya ng life insurance. Ang pinakamagandang sagot ay:",
+              "explanation": "Pinapalitan ng life insurance ang kita mo para sa mga taong umaasa rito. Kung walang umaasa rito, mas mabuting gamitin ang pera sa health cover at savings. Tingnan mo ulit kung magpapakasal ka o magkakaanak.",
+              "options": [
+                "Oo, kailangan ito ng lahat kaagad",
+                "Malamang hindi pa — pinoprotektahan nito ang mga taong umaasa sa kita mo",
+                "Kung naglalakbay lang sila",
+                "Kung may phone lang sila"
+              ],
+              "answers": [
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u4l2",
+          "number": 2,
+          "icon": "lock",
+          "title": "Pananatiling Ligtas sa Fraud",
+          "blurb": "I-lock ang mga account mo at makilala ang mga karaniwang panloloko.",
+          "steps": [
+            {
+              "kind": "teach",
+              "heading": "Dalawang kandado ay mas mabuti kaysa isa",
+              "paragraphs": [
+                "Ang **two-factor authentication** ay nangangahulugang pagpapatunay kung sino ka sa dalawang magkaibang paraan. Isinusulat din ito ng mga tao bilang 2FA o MFA.",
+                "Tatlong uri lang ng patunay ang meron:"
+              ],
+              "list": [
+                {
+                  "term": "Isang bagay na alam mo",
+                  "detail": "Isang password o PIN. Ang pinakamahina kung mag-isa lang — pwede itong mahulaan o manakaw."
+                },
+                {
+                  "term": "Isang bagay na hawak mo",
+                  "detail": "Ang phone mo, o isang authenticator app. Kailangan ng magnanakaw ang mismong device."
+                },
+                {
+                  "term": "Isang bagay na ikaw",
+                  "detail": "Ang fingerprint o mukha mo. Mahirap kopyahin."
+                }
+              ],
+              "afterList": [
+                "Ang password kasama ang code mula sa app ay dalawang factor. Ang password kasama ang security question ay **hindi** — pareho silang mga bagay na alam mo."
+              ],
+              "tip": "Ang authenticator app ay mas ligtas kaysa SMS code. Minsan nakukuha ng mga kriminal ang phone number mo at natatanggap ang SMS mo."
+            },
+            {
+              "kind": "teach",
+              "heading": "Paano makilala ang pekeng mensahe",
+              "paragraphs": [
+                "Ang **phishing** ay nangangahulugang pekeng mensahe na nagpapanggap na isang taong pinagkakatiwalaan mo. Sa SMS tinatawag itong **smishing**. Sa tawag sa telepono tinatawag itong **vishing**.",
+                "Dati may maling spelling ang mga pekeng mensahe. Hindi na ngayon. Kaya hanapin ang mga senyales na ito sa halip:"
+              ],
+              "list": [
+                {
+                  "term": "Ito ay kagyat",
+                  "detail": "\"Isasara ang account mo sa loob ng 24 na oras.\" Gusto nilang mag-panic ka at hindi mag-isip."
+                },
+                {
+                  "term": "May link na hindi mo inaasahan",
+                  "detail": "Huwag kailanman mag-log in sa pamamagitan ng link sa mensahe. Buksan mo mismo ang bank app mo."
+                },
+                {
+                  "term": "Hinihingi nila ang OTP, PIN o password mo",
+                  "detail": "Walang tunay na bank o kumpanyang hihingi ng mga ito. Kailanman. Kahit minsan."
+                },
+                {
+                  "term": "Sinasabi nilang ilihim mo ito",
+                  "detail": "Hindi hinihiling ng tunay na bank na itago mo ang mga bagay sa pamilya mo."
+                },
+                {
+                  "term": "Gusto nila ng kakaibang bayad",
+                  "detail": "Gift cards, crypto, o personal na account number. Halos palaging scam."
+                }
+              ]
+            },
+            {
+              "kind": "teach",
+              "heading": "Ang mga panlolokong pinakamadalas sa UAE",
+              "paragraphs": [
+                "Ito ang mga pinakamadalas pagkawalan ng pera ng mga tao:"
+              ],
+              "list": [
+                {
+                  "term": "Pekeng tawag ng bank",
+                  "detail": "May nagsasabing galing sila sa fraud team ng bank mo. Humihingi sila ng OTP para \"pigilan ang isang bayad\". Ang pagbibigay nito ay nag-a-approve ng bayad."
+                },
+                {
+                  "term": "Pekeng tawag ng pulis o visa",
+                  "detail": "May nagsasabing may problema sa visa o Emirates ID mo at hinihiling na magbayad ka ng multa ngayon."
+                },
+                {
+                  "term": "Pekeng delivery messages",
+                  "detail": "\"Naghihintay ang parcel mo, magbayad ng {c}5 na customs.\" Ang maliit na halaga ay pain para makuha ang detalye ng card mo."
+                },
+                {
+                  "term": "Mga pangako sa investment",
+                  "detail": "Garantisadong mataas na returns sa crypto o forex. Pag sinubukan mong kunin ang pera, humihingi muna sila ng fee. Walang garantisadong returns."
+                },
+                {
+                  "term": "Pekeng job offers",
+                  "detail": "Madaling work-from-home na pera, pero kailangan mo munang magbayad ng registration fee. Hindi ka sinisingil ng tunay na trabaho."
+                },
+                {
+                  "term": "Pekeng QR codes",
+                  "detail": "Isang sticker na nakapatong sa tunay na code sa car park o tindahan. Tingnan kung saan ka nito dinadala bago magbayad."
+                }
+              ],
+              "tip": "Isang rule ang sumasaklaw sa karamihan ng mga ito: **ibaba ang telepono at tawagan ang bank mo sa numerong nakalimbag sa card mo.**"
+            },
+            {
+              "kind": "teach",
+              "heading": "Ano ang gagawin kung mangyari ito",
+              "paragraphs": [
+                "Napakahalaga ng bilis. Minsan napipigilan ang pera sa loob ng ilang oras, pero bihira pagkatapos ng ilang araw. Gawin ito nang sunod-sunod:"
+              ],
+              "list": [
+                {
+                  "term": "1. Tawagan ang bank mo ngayon",
+                  "detail": "Gamitin ang numero sa card mo, hindi 'yong nasa mensahe. Hilingin na i-freeze ang account at subukang pigilan ang bayad."
+                },
+                {
+                  "term": "2. Palitan ang mga password mo",
+                  "detail": "Magsimula sa email mo. Kaya ng email mo i-reset ang lahat ng iba pa, kaya ito ang pinakamahalaga."
+                },
+                {
+                  "term": "3. I-report ito",
+                  "detail": "Sa UAE pwede mong i-report ang online fraud sa pulis sa pamamagitan ng eCrime platform, o tawagan ang lokal mong numero ng pulis."
+                },
+                {
+                  "term": "4. Tingnan ang credit report mo",
+                  "detail": "Hanapin ang mga loan o card na binuksan sa pangalan mo."
+                }
+              ],
+              "tip": "Ang maloko ay hindi nangangahulugang bobo ka. Mga propesyonal na grupo ito. I-report agad — ang mahiya ay nakakatulong lang sa kanila."
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Alin sa mga ito ang tunay na two-factor authentication?",
+              "explanation": "Ang dalawang factor ay dapat magkaibang uri. Ang password at security question ay pareho silang bagay na alam mo. Ang password kasama ang app code ay bagay na alam mo kasama ang bagay na hawak mo.",
+              "options": [
+                "Isang password kasama ang security question",
+                "Isang password kasama ang code mula sa authenticator app",
+                "Isang password kasama ang mas mahabang password",
+                "Isang PIN kasama ang kaarawan mo"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "May tumatawag na sinasabing galing sila sa bank mo. Hinihiling nilang basahin mo ang OTP na kadadala lang sa phone mo. Ano ang nangyayari?",
+              "explanation": "Ang OTP ang nag-a-approve ng bayad. Ang pagbasa nito ay nag-a-approve nito. Walang bank na hihingi nito kailanman, gaano man kadami ang mukhang alam nila tungkol sa'yo.",
+              "options": [
+                "Normal na proseso ng bank",
+                "Isang scam — walang tunay na bank na humihingi ng OTP mo",
+                "Okay lang kasi alam nila ang pangalan mo",
+                "Okay lang kasi sila ang tumawag sa'yo"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "May natanggap kang SMS na sinasabing iba-block ang account mo ngayon. May link para ayusin ito. Ano ang dapat mong gawin?",
+              "explanation": "Ang kagyat kasama ang link na hindi mo inaasahan ay ang klasikong pattern. Ang pagpunta sa sarili mong app ay ganap na nag-aalis sa scammer. Kung tunay ang mensahe, naghihintay ito roon.",
+              "options": [
+                "I-tap agad ang link dahil kagyat ito",
+                "Balewalain ang link at buksan mo mismo ang bank app mo, o tawagan ang numero sa card mo",
+                "Sagutin ang mensahe",
+                "Ipadala ito sa kaibigan"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Kakapadala mo lang ng pera sa isang scammer. Ano ang UNANG dapat gawin?",
+              "explanation": "Minsan napipigilan ang pera sa loob ng ilang oras, halos hindi na pagkatapos ng ilang araw. Tawagan muna ang bank mo. Lahat ng iba, kasama ang pagkahiya, pwedeng maghintay.",
+              "options": [
+                "Maghintay ng ilang araw",
+                "Tawagan agad ang bank mo sa numerong nasa card mo",
+                "Mag-post tungkol dito online",
+                "I-message ang scammer para sa refund"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "May investment app na nangangakong garantisadong 20% na return kada buwan. Ano ang sinasabi nito sa'yo?",
+              "explanation": "Walang tunay na investment na makakagarantiya ng returns. Ang salitang 'garantisado' na may mataas na numero ang pinakamalinaw na senyales ng scam. Ang tunay na investment ay laging may risk.",
+              "options": [
+                "Magandang pagkakataon ito",
+                "Isang scam ito — walang garantisadong mataas na returns",
+                "Okay lang kung may website sila",
+                "Okay lang kung ginagamit ito ng kaibigan"
+              ],
+              "answers": [
+                1
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "number": 5,
+      "accent": "violet",
+      "title": "Palaguin ang Yaman",
+      "subtitle": "Pag-iinvest at Retirement",
+      "blurb": "Pinananatiling ligtas ng pag-iipon ang pera mo. Tinutulungan ng pag-iinvest na lumago ito nang mas mabilis kaysa pagtaas ng presyo.",
+      "lessons": [
+        {
+          "id": "u5l1",
+          "number": 1,
+          "icon": "spark",
+          "title": "Compound Interest",
+          "blurb": "Kung bakit mas panalo ang maagang pagsisimula kaysa malaking pagsisimula.",
+          "steps": [
+            {
+              "kind": "teach",
+              "heading": "Dalawang paraan kung paano gumagana ang interest",
+              "paragraphs": [
+                "Ang **simple interest** ay binabayaran lang sa perang inilagay mo. Kada taon pareho lang ang kinikita mo.",
+                "Ang **compound interest** naman ay binabayaran sa pera mo *kasama* ang interest na kinita mo na. Kaya ang interest mo ay nagsisimula ring kumita ng interest.",
+                "Sa unang taon magkamukha sila. Pagkatapos ng sampung taon, magkaiba na sila nang husto."
+              ],
+              "example": {
+                "heading": "{c}1,000 sa 10% kada taon",
+                "body": "**Simple interest:**\nTaon 1: {c}100\nTaon 2: {c}100\nTaon 3: {c}100\nKabuuan pagkatapos ng 3 taon: **{c}1,300**\n\n**Compound interest:**\nTaon 1: 10% ng 1,000 = {c}100 → kabuuan {c}1,100\nTaon 2: 10% ng 1,100 = {c}110 → kabuuan {c}1,210\nTaon 3: 10% ng 1,210 = {c}121 → kabuuan **{c}1,331**\n\nMaliit na pagkakaiba ngayon. Napakalaking pagkakaiba sa 20 taon."
+              }
+            },
+            {
+              "kind": "teach",
+              "heading": "Ang panahon ang pinakamalakas na parte",
+              "paragraphs": [
+                "Iniisip ng karamihan na ang dami ng pera ang pinakamahalaga. Hindi. Ang **panahon** ang pinakamahalaga.",
+                "Heto kung bakit. Kada taon, ang interest mo ay kumikita ng interest. Habang mas tumatagal, mas mabilis itong lumalaki.",
+                "Ito ang pinakakapaki-pakinabang na ideya sa buong kursong ito."
+              ],
+              "example": {
+                "heading": "Dalawang nag-iipon, hakbang-hakbang",
+                "body": "Parehong kumikita ng **10% kada taon** at humihinto sa edad na 60.\n\nSi **Amina** ay nag-iipon ng {c}500 kada buwan mula edad 25 hanggang 35. Tapos huminto siya nang tuluyan.\nInilagay niya: 500 × 12 × 10 = **{c}60,000**\n\nSi **Khalid** ay nagsimula sa 35 at nag-iipon ng {c}500 kada buwan hanggang 60.\nInilagay niya: 500 × 12 × 25 = **{c}150,000**\n\nSa edad na 60:\nMas marami ang pera ni Amina kaysa kay Khalid.\n\nMas kaunti ang inilagay niya. Pero ang pera niya ay may 10 dagdag na taon para lumago."
+              },
+              "tip": "Ang pinakamagandang oras para magsimula ay noong nakaraang mga taon. Ang pangalawang pinakamaganda ay ngayong buwan. Ang maliit at maaga ay panalo sa malaki at huli."
+            },
+            {
+              "kind": "teach",
+              "heading": "Ang Rule of 72",
+              "paragraphs": [
+                "Heto ang trick na itatago mo habambuhay.",
+                "Kunin ang numerong **72**. Hatiin ito sa taunang return mo. Ang sagot ay humigit-kumulang kung ilang taon bago mag-doble ang pera mo.",
+                "Return 8% → 72 ÷ 8 = **9 taon**\nReturn 6% → 72 ÷ 6 = **12 taon**\nReturn 12% → 72 ÷ 12 = **6 taon**"
+              ],
+              "tip": "Rule of **70** para sa inflation. Rule of **72** para sa returns. Parehong trick, dalawang gamit."
+            },
+            {
+              "kind": "teach",
+              "heading": "Paano talaga magsimula",
+              "paragraphs": [
+                "Hindi mo kailangan ng maraming pera para magsimula. Kailangan mong magsimula.",
+                "Sa UAE ay **walang buwis sa investment gains para sa mga indibidwal**. Ang kinikita mo ay sa'yo.",
+                "Ang pinakasimpleng paraan para magsimula ay maliit na awtomatikong halaga kada buwan, sa isang low-cost fund. Matutunan mo kung ano ang mga 'yon sa susunod na dalawang lesson.",
+                "Ang pag-set up ng {c}200 kada buwan at pagkalimot dito ay panalo sa paghihintay ng limang taon para sa perpektong plano."
+              ],
+              "tip": "Huwag maghintay hangga't wala kang malaking halaga. Mas malaki ang halaga ng ugali kaysa sa laki."
+            },
+            {
+              "kind": "numeric",
+              "prompt": "Ang investment mo ay kumikita ng 6% kada taon. Gamit ang Rule of 72, ilang TAON bago ito mag-doble? I-type lang ang numero.",
+              "explanation": "72 ÷ 6 = 12 taon. Kaya ang perang nasa 6% ay nag-do-doble kada 12 taon. Sa loob ng 36 na taon, tatlong doble 'yon.",
+              "answer": 12,
+              "showsCurrencySymbol": false
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Ano ang pagkakaiba ng simple at compound interest?",
+              "explanation": "Sa simple interest, ang kinita mong interest ay nakatengga lang. Sa compound interest, nagsisimula rin itong kumita. Kaya lumalaki ang agwat kada taon.",
+              "options": [
+                "Ang simple interest ay para sa mga bank lang",
+                "Ang compound interest ay nagbabayad din sa'yo ng interest sa interest na kinita mo na",
+                "Ang compound interest ay laging may mas mataas na rate",
+                "Walang pagkakaiba"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "numeric",
+              "prompt": "Naglagay ka ng {c}1,000 sa 10% kada taon, may compound interest. Magkano ang meron ka pagkatapos ng ISANG taon?",
+              "explanation": "10% ng 1,000 = 100. Kaya 1,000 + 100 = 1,100. Sa pangalawang taon kikita ka ng 10% ng 1,100, na 110 — mas malaki kaysa unang taon.",
+              "answer": 1100,
+              "showsCurrencySymbol": true
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Naglagay si Amina ng {c}60,000 at si Khalid ng {c}150,000. Mas marami ang napunta kay Amina. Bakit?",
+              "explanation": "Parehong return, mas kaunting pera, mas magandang resulta. Ang panahon ang pinakamalakas na parte ng compounding. 'Yon ang pinakamagandang dahilan para magsimula ngayon sa kung ano man ang kaya mo.",
+              "options": [
+                "Mas mataas ang return niya",
+                "Ang pera niya ay may 10 dagdag na taon para lumago",
+                "Mas malaki ang binayad na buwis ni Khalid",
+                "Isa itong pagkakamali"
+              ],
+              "answers": [
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u5l2",
+          "number": 2,
+          "icon": "layers",
+          "title": "Mga Uri ng Investment",
+          "blurb": "Alamin kung ano talaga ang binibili mo.",
+          "steps": [
+            {
+              "kind": "teach",
+              "heading": "Ang apat na pangunahing uri",
+              "paragraphs": [
+                "Ang **asset class** ay grupo lang ng mga investment na kumikilos sa magkatulad na paraan. Halos lahat ay kasya sa apat na grupo."
+              ],
+              "list": [
+                {
+                  "term": "Shares (tinatawag ding stocks o equity)",
+                  "detail": "May-ari ka ng maliit na piraso ng isang kumpanya. Kung lumago ito, mas malaki ang halaga ng piraso mo. Pinakamataas na paglago sa mahabang panahon, pero malaki ang galaw ng presyo pataas at pababa."
+                },
+                {
+                  "term": "Bonds (tinatawag ding fixed income)",
+                  "detail": "Nagpapautang ka ng pera sa isang gobyerno o kumpanya. Binabayaran ka nila ng interest at ibinabalik ang pera mo sa dulo. Mas steady, pero mas mababa ang paglago."
+                },
+                {
+                  "term": "Property (real estate)",
+                  "detail": "Mga gusali at lupa. Pwedeng kumita ng upa at lumago ang halaga. Pero ang pagbebenta ay umaabot ng linggo o buwan, at may malalaking fees."
+                },
+                {
+                  "term": "Cash",
+                  "detail": "Savings accounts at fixed deposits. Pinakaligtas at pinakamabilis gamitin, pero pinakamababa ang paglago. Pagkatapos ng inflation, kadalasang maliit na talo."
+                }
+              ],
+              "tip": "Ang shares ay nangangahulugang **may-ari** ka ng parte ng isang bagay. Ang bonds ay nangangahulugang **nagpapautang** ka ng pera sa isang tao."
+            },
+            {
+              "kind": "teach",
+              "heading": "Mas malaking risk, mas malaking posibleng gantimpala",
+              "paragraphs": [
+                "May isang rule sa ilalim ng lahat ng pag-iinvest: **ang mas mataas na posibleng returns ay may kasamang mas malaking pagtaas at pagbaba**.",
+                "Ang salita para sa mga pagtaas at pagbabang 'yon ay **volatility**.",
+                "Ang shares ay pwedeng bumaba ng 30% sa masamang taon. Ang cash ay hindi kailanman bumababa — pero unti-unti itong natatalo sa inflation kada taon.",
+                "Kaya wala sa dalawa ang basta 'ligtas'. Magkaiba silang risky. Ang mahalaga ay **kailan mo kailangan ang pera**."
+              ],
+              "example": {
+                "heading": "Itugma ang pera sa panahon",
+                "body": "**Kailangan sa loob ng 6 na buwan** (rent deposit, kasal):\n→ Itago sa cash. Hindi mo pwedeng i-risk ang pagbaba.\n\n**Kailangan sa loob ng 3 hanggang 5 taon** (kotse, kurso):\n→ Kadalasang cash at bonds.\n\n**Kailangan sa loob ng 20+ taon** (retirement):\n→ Kadalasang shares. May panahon kang hintayin ang mga pagbaba, at ang inflation na ngayon ang mas malaking kaaway."
+              },
+              "tip": "Huwag itanong na 'risky ba ito?'. Itanong na 'ito ba ang tamang risk para sa kung kailan ko kailangan ang pera?'"
+            },
+            {
+              "kind": "teach",
+              "heading": "Dalawa pang maririnig mo",
+              "paragraphs": [
+                "**Ginto at commodities.** Sikat ang ginto sa UAE. Pwede itong pumrotekta laban sa inflation. Pero tandaan: walang binabayad sa'yo ang ginto habang hawak mo ito. Walang upa, walang interest. Kikita ka lang kung ibebenta mo ito nang mas mataas.",
+                "**Crypto.** Napakabago, napaka-volatile, at puno ng scam. Kung maglalagay ka man ng pera, perang kaya mong mawala nang tuluyan lang ang gamitin.",
+                "Wala sa dalawa ang kailangan para bumuo ng magandang portfolio."
+              ],
+              "tip": "May mga investment na nagbabayad sa'yo habang hawak mo (upa, interest, dividends). May iba na may presyo lang. Alamin kung anong uri ang meron ka."
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Pag bumili ka ng bond, ano ang ginagawa mo?",
+              "explanation": "Ang bond ay nangangahulugang ikaw ang nagpapautang. Ang share ay nangangahulugang ikaw ang may-ari. Ang mga nagpapautang ay binabayaran bago ang mga may-ari kung may masamang mangyari, kaya mas steady ang bonds.",
+              "options": [
+                "Bumibili ng parte ng isang kumpanya",
+                "Nagpapautang ng pera at kumikita ng interest",
+                "Bumibili ng property",
+                "Nagbubukas ng savings account"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Alin sa mga ito ang PINAKAMATAGAL gawing cash?",
+              "explanation": "Ang pagbebenta ng property ay umaabot ng linggo o buwan at may malalaking fees. Ang shares at bonds ay kadalasang nabebenta sa loob ng isang araw. Ang cash ay agad. Kaya ang property ay hindi dapat maghawak ng emergency fund mo.",
+              "options": [
+                "Isang savings account",
+                "Shares",
+                "Property",
+                "Isang government bond"
+              ],
+              "answers": [
+                2
+              ]
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Kailangan mo ng pera para sa rent deposit sa loob ng 8 buwan. Saan ito dapat?",
+              "explanation": "Ang walong buwan ay hindi sapat na matagal para makabawi kung bumaba ang presyo. Ang perang may maikling deadline ay dapat nasa cash. Maliit ang return, pero alam mong nandoon ito.",
+              "options": [
+                "Lahat sa shares",
+                "Sa cash o savings account",
+                "Sa crypto",
+                "Sa property"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Bakit talagang risky ang pagtatago ng LAHAT ng retirement money mo sa cash?",
+              "explanation": "Parang ligtas ang cash kasi hindi bumababa ang numero. Pero sa loob ng 20 o 30 taon, tahimik na kinukuha ng inflation ang malaking parte ng kaya nitong bilhin.",
+              "options": [
+                "Baka magsara ang bank",
+                "Dahil sa inflation, mas kaunti ang nabibili nito kada taon, sa maraming taon",
+                "Bawal ang cash",
+                "Mataas ang fees ng cash"
+              ],
+              "answers": [
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "id": "u5l3",
+          "number": 3,
+          "icon": "grid",
+          "title": "Pagkalat ng Iyong Risk",
+          "blurb": "Huwag ilagay lahat ng itlog mo sa isang basket.",
+          "steps": [
+            {
+              "kind": "teach",
+              "heading": "Dalawang uri ng risk",
+              "paragraphs": [
+                "Ang **company risk** ay problema sa isang kumpanya o isang industriya. Isang sunog sa pabrika. Isang masamang produkto. Isang fraud.",
+                "Kaya mong alisin ang risk na ito. Magmay-ari ng maraming magkakaibang bagay, at ang isang problema ay hindi ka masyadong masasaktan.",
+                "Ang **market risk** ay nakakaapekto sa halos lahat nang sabay — isang recession, isang global na pangyayari. Hindi mo ito kayang alisin. Ito ang risk na talagang binabayaran ka para tanggapin.",
+                "Ang **diversification** ay nangangahulugang pagkalat ng pera mo sa maraming bagay. Ang buong trabaho nito ay alisin ang unang uri ng risk nang libre."
+              ],
+              "example": {
+                "heading": "Isang basket vs marami",
+                "body": "Inilagay mo lahat ng ipon mo sa shares ng sarili mong employer.\n\nMasama ang taon ng kumpanya. Nawala ang trabaho mo **at** ang ipon mo sa iisang linggo.\n\nNgayon isipin ang parehong pera na nakakalat sa 500 kumpanya.\n\nIsang kumpanya ang nabigo. Halos hindi mo napansin."
+              }
+            },
+            {
+              "kind": "teach",
+              "heading": "Index funds at kung bakit mahalaga ang fees",
+              "paragraphs": [
+                "Ang **index fund** ay bumibili ng maliit na piraso ng bawat kumpanya sa isang listahan — halimbawa ang 500 pinakamalaking kumpanya sa isang market.",
+                "Walang sumusubok pumili ng mananalo, kaya napakamura patakbuhin. Tinatawag itong **passive** na pag-iinvest.",
+                "Ang **expense ratio** ay ang taunang fee, ipinapakita bilang porsyento ng pera mo. Ang index fund ay pwedeng maningil ng 0.1%. Ang managed fund naman ay pwedeng maningil ng 1.5%.",
+                "Mukhang maliit ang agwat na 'yon. Hindi, kasi binabayaran mo ito kada taon sa lahat ng meron ka."
+              ],
+              "example": {
+                "heading": "Kung magkano ang 1.5%",
+                "body": "May **{c}10,000** kang naka-invest.\n\nFee na 0.1%:\n10,000 × 0.001 = **{c}10 kada taon**\n\nFee na 1.6%:\n10,000 × 0.016 = **{c}160 kada taon**\n\n{c}150 na dagdag 'yon, kada taon — at lumalaki ito habang lumalaki ang pera mo. Sa loob ng 30 taon, pwede nitong makuha ang ikatlo ng panghuli mong halaga."
+              },
+              "tip": "Hindi mo kayang kontrolin ang returns mo. Palagi mong kayang kontrolin ang fees mo. Doon ka magsimula."
+            },
+            {
+              "kind": "teach",
+              "heading": "Pagpili ng iyong mix at pagpapanatili nito",
+              "paragraphs": [
+                "Ang **asset allocation** ay kung paano mo hinahati ang pera mo sa shares, bonds at cash. Mas mahalaga ang pagpiling ito kaysa kung aling eksaktong fund ang pipiliin mo.",
+                "Isang simpleng panimulang ideya: habang mas matagal bago mo kailangan ang pera, mas maraming shares ang kaya mong hawakan.",
+                "Ang **rebalancing** ay nangangahulugang pagbalik sa piniling mix mo minsan sa isang taon.",
+                "Kung lumago nang husto ang shares, nagiging mas malaking parte sila ng pera mo kaysa sa naplano mo. Kaya nagbebenta ka ng kaunti at bumibili ng mas maraming bonds. Pinipilit ka nitong magbenta nang mataas at bumili nang mababa — kabaligtaran ng sinasabi sa'yo ng takot na gawin."
+              ],
+              "example": {
+                "heading": "Rebalancing sa mga numero",
+                "body": "Ang plano mo: 70% shares, 30% bonds.\n\nPagkatapos ng magandang taon: 80% shares, 20% bonds.\n\nMas risky na ngayon ang pera mo kaysa sa naplano mo.\n\nAyusin: magbenta ng ilang shares, bumili ng ilang bonds, balik sa 70/30.\n\nMinsan sa isang taon ay sapat na."
+              },
+              "tip": "Ikalat sa *magkakaibang uri* ng investment. Ang dalawampung technology shares ay hindi pagkalat — isa itong taya, dalawampung beses."
+            },
+            {
+              "kind": "teach",
+              "heading": "Ang parteng nagdedesisyon ng resulta mo",
+              "paragraphs": [
+                "Ang pinakamalaking bagay na nakakasama sa returns ng totoong tao ay hindi ang fees, at hindi ang pagpili ng fund. Ito ay ang ugali.",
+                "Nagbebenta ang mga tao pag bumaba ang presyo at bumibili pagkatapos tumaas ang presyo. Iyon ay pagbili nang mataas at pagbenta nang mababa.",
+                "Normal ang mga pagbaba ng market. Nangyayari ito paulit-ulit, at laging nakabawi para sa mga naghintay.",
+                "Tatlong simpleng depensa: mag-set up ng awtomatikong buwanang pag-iinvest, magtago ng sapat na cash para hindi ka mapilitang magbenta, at bihirang tingnan ang account mo."
+              ],
+              "tip": "Ang panahon *sa loob* ng market ay panalo sa pagti-time ng market. Ang boring ang strategy."
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Aling uri ng risk ang kayang alisin ng diversification?",
+              "explanation": "Ang pagmamay-ari ng maraming bagay ay nangangahulugang halos hindi mahalaga ang problema ng isang kumpanya. Walang nag-aalis ng market-wide na risk — at 'yon ang risk na binabayaran ka para tanggapin.",
+              "options": [
+                "Market risk — mga recession at global na pangyayari",
+                "Company risk — problema sa isang kumpanya",
+                "Inflation",
+                "Lahat ng risk"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Ano ang expense ratio?",
+              "explanation": "Ito ang taunang singil ng fund, kinukuha mula sa pera mo tumaas man o bumaba ang fund. Sa loob ng maraming taon, pwedeng magastos sa'yo ng malaking parte ng kabuuan mo ang mataas na fee.",
+              "options": [
+                "Ang parte ng pera mo na nasa shares",
+                "Ang taunang fee na siningil ng fund, bilang porsyento",
+                "Ang gastos mo kumpara sa kita mo",
+                "Ang return noong nakaraang taon"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "numeric",
+              "prompt": "May {c}10,000 kang naka-invest sa fund na may 2% na taunang fee. Magkano ang babayaran mo sa fees sa isang taon?",
+              "explanation": "10,000 × 0.02 = 200. Ang mas murang fund na 0.2% ay magkakahalaga lang ng {c}20. Parehong investment, {c}180 na pagkakaiba kada taon.",
+              "answer": 200,
+              "showsCurrencySymbol": true
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Ang plano mo ay 70% shares at 30% bonds. Pagkatapos ng magandang taon, may 80% shares ka na. Ano ang dapat mong gawin?",
+              "explanation": "Ito ang rebalancing. Nadausdos ang pera mo sa pagiging mas risky kaysa sa naplano mo. Ang pagbebenta ng kaunti sa lumago at pagbili ng hindi lumago ay nagbabalik sa'yo sa plano mo.",
+              "options": [
+                "Bumili ng mas maraming shares",
+                "Magbenta ng ilang shares at bumili ng bonds para bumalik sa 70/30",
+                "Ibenta lahat",
+                "Wala"
+              ],
+              "answers": [
+                1
+              ]
+            },
+            {
+              "kind": "singleChoice",
+              "prompt": "Alin sa mga ito ang talagang pagkalat ng risk mo?",
+              "explanation": "Ang dalawampung tech shares ay magkakasamang bumababa — isa itong tayang ginawa nang dalawampung beses. Ang pagkalat ay nangangahulugang magkakaibang industriya, magkakaibang bansa at magkakaibang uri ng investment.",
+              "options": [
+                "Dalawampung magkakaibang technology company shares",
+                "Isang global share fund kasama ang isang bond fund",
+                "Lahat ng pera mo sa shares ng employer mo",
+                "Limang shares sa parehong bank"
+              ],
+              "answers": [
+                1
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

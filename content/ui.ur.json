@@ -1,0 +1,63 @@
+{
+  "home": {
+    "greeting": {
+      "morning": "صبح بخیر",
+      "afternoon": "دوپہر بخیر",
+      "evening": "شام بخیر"
+    },
+    "ofPay": "تنخواہ کا",
+    "ofGoal": "ہدف کا",
+    "categories": {
+      "rent": "کرایہ",
+      "groceries": "گروسری",
+      "transport": "سفر",
+      "utilities": "یوٹیلیٹیز",
+      "entertainment": "تفریح",
+      "other": "دیگر"
+    },
+    "learning": {
+      "noXp": "ابھی کوئی XP نہیں",
+      "xpComplete": "{xp} XP · ہر سبق مکمل",
+      "noXpStart": "ابھی کوئی XP نہیں · {lesson} سے شروع کریں",
+      "xpNext": "{xp} XP · اگلا سبق، {lesson}"
+    }
+  },
+  "expenses": {
+    "categories": {
+      "groceries": { "name": "گروسری", "hint": "جہاں سے خریدیں، وہیں لکھتے جائیں" },
+      "transport": { "name": "سفر", "hint": "چنیں کہ آپ نے کیسے سفر کیا" },
+      "entertainment": { "name": "تفریح", "hint": "باہر گھومنا، فلمیں، ایونٹس" },
+      "other": { "name": "دیگر", "hint": "باقی سب کچھ" },
+      "income": { "name": "اضافی آمدنی", "hint": "آنے والی رقم" },
+      "utilities": { "name": "یوٹیلیٹیز", "hint": "ہر مہینے مقرر" },
+      "rent": { "name": "کرایہ", "hint": "ہر مہینے مقرر" }
+    },
+    "relativeDay": {
+      "today": "آج",
+      "yesterday": "کل",
+      "daysAgo": "{n} دن پہلے"
+    },
+    "entryCount": {
+      "one": "اندراج",
+      "other": "اندراجات"
+    }
+  },
+  "account": {
+    "rows": {
+      "personalInformation": { "name": "ذاتی معلومات", "sub": "یوزر نیم، تنخواہ، فون" },
+      "language": { "name": "زبان", "sub": "ایپ کس زبان میں لکھی جائے" },
+      "currency": { "name": "کرنسی", "sub": "آپ کی رقم کیسے دکھائی جائے" },
+      "password": { "name": "پاس ورڈ" }
+    },
+    "passwordChanged": {
+      "set": "جب آپ نے اکاؤنٹ بنایا تب سیٹ ہوا",
+      "justNow": "ابھی ابھی تبدیل ہوا",
+      "yesterday": "کل تبدیل ہوا",
+      "daysAgo": "{n} دن پہلے تبدیل ہوا",
+      "monthsAgoOne": "1 مہینہ پہلے تبدیل ہوا",
+      "monthsAgoOther": "{n} مہینے پہلے تبدیل ہوا",
+      "yearsAgoOne": "1 سال پہلے تبدیل ہوا",
+      "yearsAgoOther": "{n} سال پہلے تبدیل ہوا"
+    }
+  }
+}

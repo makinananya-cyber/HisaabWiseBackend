@@ -284,7 +284,7 @@ export type Ui = z.infer<typeof uiSchema>;
  * Hindi gets the localised *plumbing* (the right file served, dates formatted in-locale) with English words
  * until the copy lands. That is a deliberate, temporary state — the same one the iOS `AppLanguage` doc notes.
  */
-export const SHIPPED_LANGUAGES = ['en', 'ar', 'hi'] as const;
+export const SHIPPED_LANGUAGES = ['en', 'ar', 'hi', 'fil', 'ne', 'ur'] as const;
 export type Language = (typeof SHIPPED_LANGUAGES)[number];
 
 /**
@@ -300,7 +300,7 @@ export type Language = (typeof SHIPPED_LANGUAGES)[number];
  * Keep the widening one-way. A language may appear here before it has files; a language with files must
  * never be missing from here, or a reader could not choose the copy that already exists.
  */
-export const PREFERENCE_LANGUAGES = ['en', 'ar', 'hi'] as const;
+export const PREFERENCE_LANGUAGES = ['en', 'ar', 'hi', 'fil', 'ne', 'ur'] as const;
 export type PreferenceLanguage = (typeof PREFERENCE_LANGUAGES)[number];
 
 /**

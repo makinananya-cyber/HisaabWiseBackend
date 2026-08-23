@@ -1,0 +1,63 @@
+{
+  "home": {
+    "greeting": {
+      "morning": "Magandang umaga",
+      "afternoon": "Magandang hapon",
+      "evening": "Magandang gabi"
+    },
+    "ofPay": "ng sweldo",
+    "ofGoal": "ng goal",
+    "categories": {
+      "rent": "Upa",
+      "groceries": "Groceries",
+      "transport": "Transportasyon",
+      "utilities": "Bayarin",
+      "entertainment": "Libangan",
+      "other": "Iba pa"
+    },
+    "learning": {
+      "noXp": "Wala pang XP",
+      "xpComplete": "{xp} XP · tapos na ang lahat ng lesson",
+      "noXpStart": "Wala pang XP · simulan sa {lesson}",
+      "xpNext": "{xp} XP · susunod, {lesson}"
+    }
+  },
+  "expenses": {
+    "categories": {
+      "groceries": { "name": "Groceries", "hint": "Idagdag ang bawat tindahan habang bumibili ka" },
+      "transport": { "name": "Transportasyon", "hint": "Piliin kung paano ka naglakbay" },
+      "entertainment": { "name": "Libangan", "hint": "Gimik, sine, mga event" },
+      "other": { "name": "Iba pa", "hint": "Lahat ng iba pa" },
+      "income": { "name": "Karagdagang Kita", "hint": "Perang pumapasok" },
+      "utilities": { "name": "Bayarin", "hint": "Fixed bawat buwan" },
+      "rent": { "name": "Upa", "hint": "Fixed bawat buwan" }
+    },
+    "relativeDay": {
+      "today": "Ngayon",
+      "yesterday": "Kahapon",
+      "daysAgo": "{n} araw na ang nakalipas"
+    },
+    "entryCount": {
+      "one": "entry",
+      "other": "entries"
+    }
+  },
+  "account": {
+    "rows": {
+      "personalInformation": { "name": "Personal na Impormasyon", "sub": "Username, sweldo, phone" },
+      "language": { "name": "Wika", "sub": "Kung paano nakasulat ang app" },
+      "currency": { "name": "Currency", "sub": "Kung paano ipinapakita ang pera mo" },
+      "password": { "name": "Password" }
+    },
+    "passwordChanged": {
+      "set": "Itinakda noong ginawa mo ang account mo",
+      "justNow": "Binago ngayon lang",
+      "yesterday": "Binago kahapon",
+      "daysAgo": "Binago {n} araw na ang nakalipas",
+      "monthsAgoOne": "Binago 1 buwan na ang nakalipas",
+      "monthsAgoOther": "Binago {n} buwan na ang nakalipas",
+      "yearsAgoOne": "Binago 1 taon na ang nakalipas",
+      "yearsAgoOther": "Binago {n} taon na ang nakalipas"
+    }
+  }
+}
