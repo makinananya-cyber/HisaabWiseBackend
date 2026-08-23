@@ -1,0 +1,60 @@
+{
+  "questions": [
+    {
+      "id": "sq01",
+      "text": "Ano ang pangalan ng una mong alagang hayop?"
+    },
+    {
+      "id": "sq02",
+      "text": "Saang lungsod ka ipinanganak?"
+    },
+    {
+      "id": "sq03",
+      "text": "Ano ang pangalan ng elementarya mo?"
+    },
+    {
+      "id": "sq04",
+      "text": "Ano ang maiden name ng nanay mo?"
+    },
+    {
+      "id": "sq05",
+      "text": "Saang kalye ka lumaki?"
+    },
+    {
+      "id": "sq06",
+      "text": "Ano ang palayaw mo noong bata ka?"
+    },
+    {
+      "id": "sq07",
+      "text": "Sino ang paborito mong guro sa paaralan?"
+    },
+    {
+      "id": "sq08",
+      "text": "Ano ang make ng una mong sasakyan?"
+    },
+    {
+      "id": "sq09",
+      "text": "Saan ka nagpunta sa una mong bakasyon?"
+    },
+    {
+      "id": "sq10",
+      "text": "Ano ang titulo ng paborito mong libro?"
+    },
+    {
+      "id": "sq11",
+      "text": "Ano ang pangalan ng pinakamatanda mong pinsan?"
+    },
+    {
+      "id": "sq12",
+      "text": "Ano ang unang konsiyerto na pinuntahan mo?"
+    },
+    {
+      "id": "sq13",
+      "text": "Ano ang paborito mong lutuin?"
+    },
+    {
+      "id": "sq14",
+      "text": "Ano ang pangalan ng una mong pinagtrabahuhan?"
+    }
+  ]
+}

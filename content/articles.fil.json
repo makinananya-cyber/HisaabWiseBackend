@@ -1,0 +1,255 @@
+{
+  "articles": [
+    {
+      "id": "scams",
+      "icon": "shield",
+      "accent": 3,
+      "short": "Kaalaman sa scam",
+      "title": "Pagtukoy sa mga scam sa UAE",
+      "lede": "Madalas nagbabago ang mga panloko. Ang mga babala, hindi. Matutunan mo ang mga senyales minsan at protektado ka na sa karamihan ng mga ito.",
+      "sections": [
+        {
+          "heading": "Ang limang senyales ng scam",
+          "paragraphs": [
+            "Dati, madaling matukoy ang pekeng mensahe dahil sa maling spelling. Hindi na totoo iyon. Tingnan ang **hugis** ng mensahe sa halip na ang pagkakasulat."
+          ],
+          "entries": [
+            {
+              "term": "Urgent daw ito",
+              "detail": "Magsasara na raw ang account mo ngayong araw. May problema raw ang visa mo. Ang panic ay pumipigil sa iyong mag-check, at iyon mismo ang layunin."
+            },
+            {
+              "term": "May link na hindi mo inaasahan",
+              "detail": "Huwag kailanman mag-sign in sa pamamagitan ng link sa isang mensahe. Ikaw mismo ang magbukas ng bank app mo, o i-type ang address."
+            },
+            {
+              "term": "Humihingi sila ng code, PIN o password",
+              "detail": "Walang bank, telecom company o government office na hihingi ng mga ito. Kahit minsan, gaano man karami ang alam nila tungkol sa iyo."
+            },
+            {
+              "term": "Hinihiling nilang ilihim mo ito",
+              "detail": "Ang mga totoong organisasyon ay hindi humihiling na itago mo ang anuman mula sa pamilya mo."
+            },
+            {
+              "term": "Kakaiba ang paraan ng pagbayad",
+              "detail": "Gift card, crypto, o transfer sa isang personal na account. Halos palaging pandaraya."
+            }
+          ]
+        },
+        {
+          "heading": "Ang mga panlokong pinakamadalas dito",
+          "entries": [
+            {
+              "term": "Ang pekeng tawag mula sa bank",
+              "detail": "May nagsasabing galing sila sa fraud team ng bank mo. Hinihingi nila ang code na kaka-send lang sa phone mo, para daw \"pigilan\" ang isang bayad. Ang code na iyon ang mismong *nag-a-approve* sa bayad."
+            },
+            {
+              "term": "Ang problema sa visa o Emirates ID",
+              "detail": "May tumatawag na sinasabing may problema sa mga dokumento mo at hinihiling na magbayad ka agad ng multa. Hindi kailanman kinokolekta nang ganito ang multa ng gobyerno."
+            },
+            {
+              "term": "Ang delivery fee",
+              "detail": "May text na sinasabing nakabinbin ang parsela mo at humihingi ng maliit na customs fee. Ang maliit na halaga ay pain — gusto nila ang detalye ng card mo, hindi ang fee."
+            },
+            {
+              "term": "Ang premyong hindi mo sinalihan",
+              "detail": "Isang tawag na nanalo ka raw sa raffle ng isang telecom company o mall, tapos hihingi ng detalye ng bank mo para daw ipadala ang pera."
+            },
+            {
+              "term": "Ang investment na may guaranteed returns",
+              "detail": "Magagandang dashboard na nagpapakitang tumataas ang balanse mo. Kapag sinubukan mong mag-withdraw, may fee na kailangan munang bayaran. Walang guaranteed returns."
+            },
+            {
+              "term": "Ang trabahong naniningil sa iyo",
+              "detail": "Madaling trabaho mula sa bahay, pero kailangan mo munang magbayad ng registration o visa fee. Ang mga totoong employer ay hindi naniningil para lang tanggapin ka."
+            }
+          ]
+        },
+        {
+          "heading": "Kung mangyari ito sa iyo",
+          "paragraphs": [
+            "Mas mahalaga ang bilis kaysa sa lahat. Minsan puwedeng mapigilan ang pera sa loob ng ilang oras, pero bihira na kung ilang araw na ang lumipas."
+          ],
+          "steps": [
+            "**Tawagan agad ang bank mo**, gamit ang numerong nakalimbag sa card mo — hindi ang galing sa mensahe. Hilingin na i-freeze ang account at subukang bawiin ang bayad.",
+            "**Palitan ang mga password mo**, simula sa email mo. Puwedeng i-reset ng email mo ang lahat ng iba pa, kaya ito ang pinakamahalaga.",
+            "**I-report ito nang opisyal.** Pinapatakbo ng Dubai Police ang eCrime platform at ang 901 line. Pinapatakbo ng Abu Dhabi Police ang Aman service sa 800 2626 o sa text sa 2828. May eCrimes section ang Ministry of Interior sa MoI UAE app, at may My Safe Society app ang Public Prosecution. Sa emergency, tumawag sa 999.",
+            "**I-check ang credit report mo** sa Al Etihad Credit Bureau para sa anumang account na binuksan gamit ang pangalan mo."
+          ],
+          "callout": "Ang malinlang ay hindi nangangahulugang pabaya ka. Ito ay mga propesyonal at may pondong grupo na nagsasanay ng mga script nila. Ang mabilis na pag-report ang nakakatulong — ang hiya ay nagbibigay lang sa kanila ng oras."
+        },
+        {
+          "heading": "Isang ugaling pumipigil sa karamihan nito",
+          "paragraphs": [
+            "Tuwing may mensahe o tawag tungkol sa pera na nagpapamadali sa iyo, **ibaba ang telepono at tumawag pabalik** gamit ang numerong ikaw mismo ang naghanap. Umaasa ang mga manloloko na manatili ka sa loob ng usapang sinimulan nila. Ang pag-alis dito ay lubusang nag-aalis ng kapangyarihan nila."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "UAE Government — Report cybercrimes online",
+          "url": "https://u.ae/en/information-and-services/justice-safety-and-the-law/cyber-safety-and-digital-security/report-cybercrimes-online"
+        },
+        {
+          "title": "How to report phone scams in the UAE",
+          "url": "https://www.bayut.com/mybayut/report-phone-scams-uae/"
+        }
+      ]
+    },
+    {
+      "id": "remit",
+      "icon": "globe",
+      "accent": 2,
+      "short": "Remittance sa UAE",
+      "title": "Pagpapadala ng pera pauwi, nang hindi nababawasan",
+      "lede": "Ang UAE ay isa sa pinakamalaking nagpapadala ng pera sa mundo. Ang maliliit na pagkakaiba sa rate ay mabilis na nagkakalaki kapag nagpapadala ka kada buwan.",
+      "sections": [
+        {
+          "heading": "Ang fee ay hindi ang totoong gastos",
+          "paragraphs": [
+            "Karamihan ng tao ay naghahambing ng transfer fee. Iyon ang maliit na numero.",
+            "Ang mas malaking gastos ay kadalasang ang **exchange rate margin** — ang agwat sa pagitan ng totoong market rate at ng rate na inaalok sa iyo. Nakabaon ito sa rate, kaya hindi mo ito nakikita bilang singil.",
+            "Kadalasang naglalagay ang mga bank ng margin na mga **1% hanggang 3%**. Sa malaking transfer, mas malaki iyon kaysa sa kahit anong fee."
+          ]
+        },
+        {
+          "heading": "Ang isang numerong dapat i-check",
+          "paragraphs": [
+            "Ang **mid-market rate** ay ang totoong global rate para sa isang currency — ang ipinapakita sa iyo ng search engine o ng currency site. Walang nagbibigay sa iyo ng eksaktong rate na iyon, pero ang layo mula rito ang nagsasabi sa iyo ng totoong gastos.",
+            "Ihambing ang rate na iyon sa inaalok ng isang provider, at makikita mo agad ang nakatagong gastos."
+          ],
+          "callout": "Maraming provider ang nag-aadvertise ng **zero fees** tapos babawiin ang pera nila sa pamamagitan ng mas masamang rate. Palaging ihambing ang halagang aktuwal na natatanggap ng pamilya mo, hindi ang fee na sinisingil sa iyo."
+        },
+        {
+          "heading": "Paano maghambing nang tama",
+          "steps": [
+            "Hanapin ang **mid-market rate** ngayong araw para sa currency pair mo.",
+            "Kumuha ng quote mula sa dalawa o tatlong provider para sa **parehong halaga**, sa halos parehong oras ng araw.",
+            "Huwag hiwalay na tingnan ang fee at ang rate. Isang tanong lang: **magkano ang dumarating?**",
+            "I-check kung gaano katagal. Minsan mas mahal ang instant transfer, at hindi naman palaging kailangan.",
+            "Ulitin ito tuwing ilang buwan. Nagbabago ang mga rate at alok, at bihirang ginagantimpalaan ang loyalty."
+          ]
+        },
+        {
+          "heading": "Pananatiling ligtas at legal",
+          "entries": [
+            {
+              "term": "Gumamit ng lisensyadong provider",
+              "detail": "Ang Central Bank of the UAE ang nagbibigay ng lisensya at nagsu-supervise sa mga bank, exchange house at digital transfer app. Gumamit lang ng mga provider na nasa listahang iyon."
+            },
+            {
+              "term": "Mag-ingat sa mga rate na \"mas maganda kaysa lahat\"",
+              "detail": "Ang informal na channel na nag-aalok ng rate na sobrang ganda kaysa sa buong market ay babala, hindi bargain. Wala kang proteksyon kung mawala ang pera."
+            },
+            {
+              "term": "Itago ang mga resibo mo",
+              "detail": "I-save ang transfer reference. Ito ang nagpapahintulot sa isang provider na tumunton sa perang hindi dumating."
+            },
+            {
+              "term": "Bantayan ang timing",
+              "detail": "Gumagalaw ang mga rate sa buong araw at tuwing weekend at holiday. Kung hindi ka nagmamadali, ang paghahambing sa normal na araw ng trabaho ay kadalasang nagbibigay sa iyo ng mas malaki."
+            }
+          ]
+        },
+        {
+          "heading": "Isang ugaling sulit gawin",
+          "paragraphs": [
+            "Kung nagpapadala ka ng pera pauwi kada buwan, ituring itong **fixed cost sa budget mo**, tulad ng upa. Pagpasyahan ang halaga sa simula ng buwan sa halip na kung ano man ang matira sa dulo. Ginagawa nitong tapat ang sarili mong budget, at ginagawa nitong mahulaan ng mga tumatanggap ang halagang ipinapadala mo."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Best ways to send money abroad from the UAE",
+          "url": "https://www.stashaway.ae/r/best-way-send-money-abroad-in-uae"
+        },
+        {
+          "title": "Central Bank of the UAE — Rulebook",
+          "url": "https://rulebook.centralbank.ae/"
+        }
+      ]
+    },
+    {
+      "id": "debt",
+      "icon": "steps",
+      "accent": 4,
+      "short": "Gabay sa pamamahala ng utang",
+      "title": "Pagharap sa utang sa UAE",
+      "lede": "Ang utang ay hindi kapintasan sa pagkatao. Ito ay problema sa matematika na may kasamang plano. Narito ang plano.",
+      "sections": [
+        {
+          "heading": "Alamin ang debt burden ratio mo",
+          "paragraphs": [
+            "Ang mga bank sa UAE ay sumusunod sa tuntuning tinatawag na **debt burden ratio**, o DBR. Inihahambing nito ang kabuuang buwanang bayad mo sa utang sa buwanang kita mo.",
+            "Simple ang pormula: **DBR = kabuuang buwanang bayad sa utang ÷ buwanang kita × 100**.",
+            "Nagtakda ang Central Bank ng cap na **50%**. May mga bank na gumagamit ng mas mahigpit na limitasyon. Kasama ang lahat: ang mortgage, personal loan, car loan at ang minimum payment sa mga credit card mo."
+          ],
+          "callout": "Kung kumikita ka ng {c}10,000 kada buwan, ang kabuuang bayad mo sa utang ay hindi dapat lumampas sa {c}5,000. Kung malapit ka na sa linyang iyon, mahihirapan kang makakuha ng bagong loan — at masamang ideya ang kumuha kahit kaya mo."
+        },
+        {
+          "heading": "Atakihin ang isang utang sa isang pagkakataon",
+          "paragraphs": [
+            "Anuman ang paraang piliin mo, pareho ang setup. Bayaran ang **minimum sa bawat utang**, kada buwan, nang walang palya. Tapos ibuhos ang bawat sobrang dirham sa **isa** lang na utang.",
+            "Ang paghahati ng sobrang pera sa lahat ay parang patas pero mas masama, dahil walang natatapos kailanman."
+          ],
+          "entries": [
+            {
+              "term": "Pinakamataas na rate muna (avalanche)",
+              "detail": "Ayusin ang mga utang mo ayon sa interest rate at atakihin ang pinakamahal. Palagi itong pinakamababa ang total na gastos."
+            },
+            {
+              "term": "Pinakamaliit na balanse muna (snowball)",
+              "detail": "Ayusin ayon sa laki at bayaran muna ang pinakamaliit. Bahagyang mas mahal ito, pero ang maagang panalo ang nagpapatuloy sa mga tao — at ang planong natatapos mo ay mas mabuti kaysa sa perpektong planong iiwan mo."
+            }
+          ]
+        },
+        {
+          "heading": "Alamin kung magkano talaga ang halaga ng utang mo",
+          "paragraphs": [
+            "Ang mga credit card sa UAE ay kadalasang naniningil ng mga **3% kada buwan**, na halos 36% kada taon. Ang pagbayad lang ng minimum sa isang card ay puwedeng magpanatili sa iyong nakautang nang ilang taon habang halos lahat ng bayad mo ay napupunta sa interest.",
+            "Sa personal at car loan, mag-ingat sa **flat rate**. Ang flat rate ay sinisingil sa buong orihinal na halaga sa buong termino, kaya ang \"4% flat\" na loan ay mas mahal kaysa 4%. Palaging humingi ng **reducing balance rate** o ng APR, at ihambing ang mga loan base doon."
+          ]
+        },
+        {
+          "heading": "Kausapin ang bank mo bago ka makaligtaan ng bayad",
+          "paragraphs": [
+            "Ito ang hakbang na madalas nilalaktawan ng mga tao, at ito ang pinakanakakatulong. Mas gusto pa ng mga bank na i-restructure ang isang loan kaysa habulin ang isang default."
+          ],
+          "steps": [
+            "Alamin muna ang totoo mong mga numero: kita, mga esensyal na gastos, at bawat utang kasama ang rate at minimum payment nito.",
+            "Kontakin ang bank mo **bago** ka makaligtaan ng bayad, hindi pagkatapos. Mas maraming opsyon habang malinis pa ang record mo.",
+            "Magtanong nang tiyak tungkol sa **restructuring** — mas mahabang termino na may mas mababang bayad, o pagsasama ng ilang utang sa isa.",
+            "Kunin ang anumang kasunduan **nang nakasulat** bago mo tanggapin, at i-check ang kabuuang gastos, hindi lang ang buwanang bayad.",
+            "Kung mag-consolidate ka, **i-freeze o isara ang mga nabayarang card sa parehong araw**. Ang pinakamadalas na dahilan ng pagkabigo ng consolidation ay ang muling pagpuno sa mga card."
+          ]
+        },
+        {
+          "heading": "Bantayan ang credit file mo",
+          "paragraphs": [
+            "Ang **Al Etihad Credit Bureau** ang nagtatago ng credit report at score mo sa UAE. Ang score ay mula **300 hanggang 900**, at mas mataas ay mas mabuti.",
+            "Puwede kang humingi ng sarili mong report, at ang paggawa nito ay **hindi nagpapababa ng score mo**. Mas madalas ang mali kaysa inaasahan ng mga tao — isang account na hindi sa iyo, o isang loan na nabayaran mo na. Puwede kang humiling na itama ang mga ito, at puwede nitong ilipat ang score mo."
+          ],
+          "callout": "Dalawang ugali ang bumubuhat sa karamihan ng score mo: **magbayad sa oras**, at **panatilihing mababa ang balanse ng card mo** kumpara sa mga limit mo. Ang lahat ng iba pa ay maliit lang kumpara rito."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Debt burden ratio in the UAE explained",
+          "url": "https://joinoliva.com/en/learn/glossary/debt-burden-ratio-dbr"
+        },
+        {
+          "title": "Emirates NBD — your debt burden ratio",
+          "url": "https://www.emiratesnbd.com/en/help-and-support/your-debt-burden-ratio"
+        },
+        {
+          "title": "Guide to the AECB credit score",
+          "url": "https://www.stashaway.ae/r/complete-guide-aecb-credit-score"
+        },
+        {
+          "title": "Central Bank of the UAE — mortgage and personal loan rules",
+          "url": "https://rulebook.centralbank.ae/en/entiresection/1793"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "home": {
+    "greeting": {
+      "morning": "शुभ प्रभात",
+      "afternoon": "शुभ दिन",
+      "evening": "शुभ साँझ"
+    },
+    "ofPay": "तलबको",
+    "ofGoal": "लक्ष्यको",
+    "categories": {
+      "rent": "भाडा",
+      "groceries": "किराना",
+      "transport": "यातायात",
+      "utilities": "युटिलिटी",
+      "entertainment": "मनोरञ्जन",
+      "other": "अन्य"
+    },
+    "learning": {
+      "noXp": "अहिलेसम्म कुनै XP छैन",
+      "xpComplete": "{xp} XP · सबै पाठ पूरा",
+      "noXpStart": "अहिलेसम्म कुनै XP छैन · {lesson} बाट सुरु गर्नुहोस्",
+      "xpNext": "{xp} XP · अब, {lesson}"
+    }
+  },
+  "expenses": {
+    "categories": {
+      "groceries": { "name": "किराना", "hint": "जति किन्नुहुन्छ, त्यति थप्दै जानुहोस्" },
+      "transport": { "name": "यातायात", "hint": "कसरी यात्रा गर्नुभयो छान्नुहोस्" },
+      "entertainment": { "name": "मनोरञ्जन", "hint": "बाहिर घुम्ने, फिल्म, कार्यक्रम" },
+      "other": { "name": "अन्य", "hint": "बाँकी सबै" },
+      "income": { "name": "थप आम्दानी", "hint": "भित्रिने पैसा" },
+      "utilities": { "name": "युटिलिटी", "hint": "हरेक महिना उस्तै" },
+      "rent": { "name": "भाडा", "hint": "हरेक महिना उस्तै" }
+    },
+    "relativeDay": {
+      "today": "आज",
+      "yesterday": "हिजो",
+      "daysAgo": "{n} दिन अगाडि"
+    },
+    "entryCount": {
+      "one": "इन्ट्री",
+      "other": "इन्ट्री"
+    }
+  },
+  "account": {
+    "rows": {
+      "personalInformation": { "name": "व्यक्तिगत जानकारी", "sub": "युजरनेम, तलब, फोन" },
+      "language": { "name": "भाषा", "sub": "एप कुन भाषामा छ" },
+      "currency": { "name": "मुद्रा", "sub": "पैसा कसरी देखिन्छ" },
+      "password": { "name": "पासवर्ड" }
+    },
+    "passwordChanged": {
+      "set": "खाता बनाउँदा सेट गरिएको",
+      "justNow": "भर्खरै परिवर्तन गरियो",
+      "yesterday": "हिजो परिवर्तन गरियो",
+      "daysAgo": "{n} दिन अगाडि परिवर्तन गरियो",
+      "monthsAgoOne": "1 महिना अगाडि परिवर्तन गरियो",
+      "monthsAgoOther": "{n} महिना अगाडि परिवर्तन गरियो",
+      "yearsAgoOne": "1 वर्ष अगाडि परिवर्तन गरियो",
+      "yearsAgoOther": "{n} वर्ष अगाडि परिवर्तन गरियो"
+    }
+  }
+}

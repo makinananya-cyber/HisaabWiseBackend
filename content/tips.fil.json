@@ -1,0 +1,200 @@
+{
+  "tips": [
+    {
+      "id": "tip-01",
+      "text": "Mag-ipon muna bago gumastos. Sa araw na dumating ang sweldo mo, ilipat agad ang kaunti sa ipon. Ang matitira ay sa iyo nang walang guilt."
+    },
+    {
+      "id": "tip-02",
+      "text": "**Walang tax sa sweldo mo** sa UAE. Ang nakasulat sa kontrata mo ang mismong dumarating sa iyo. Gamitin mo nang mabuti ang head start na iyon."
+    },
+    {
+      "id": "tip-03",
+      "text": "Ang end-of-service payout mo ay kinukuwenta base lang sa **basic salary mo**, hindi sa mga allowance. Puwedeng pareho ang total ng dalawang trabaho pero magkaiba pa rin ang halaga."
+    },
+    {
+      "id": "tip-04",
+      "text": "May gusto ka? **Maghintay ng dalawang araw.** Kadalasan, mawawala ang gigil. Kung gusto mo pa rin sa ikatlong araw, bilhin mo at enjoyin."
+    },
+    {
+      "id": "tip-05",
+      "text": "Subukang gamitin ang mas mababa sa **ikatlong bahagi ng card limit mo**. Isa ito sa pinakamabilis na paraan para magkaroon ng magandang credit record."
+    },
+    {
+      "id": "tip-06",
+      "text": "Simpleng hati: **kalahati** ng sweldo mo sa mga kailangan, **ikatlong bahagi** sa mga gusto, **ang natitira** sa ipon. I-adjust mo ito para bagay sa buhay mo."
+    },
+    {
+      "id": "tip-07",
+      "text": "Para malaman ang 10% ng isang numero, ilipat ang tuldok ng isang hakbang pakaliwa. Ang {c}6,400 ay nagiging {c}640. Doblehin mo at ayan na ang 20% savings target mo."
+    },
+    {
+      "id": "tip-08",
+      "text": "Mag-ipon ng katumbas ng **tatlong buwan na upa, pagkain at bayarin** para sa emergency. Hindi mo kailangang isama ang bakasyon — titigil naman ang mga iyon."
+    },
+    {
+      "id": "tip-09",
+      "text": "Itago ang emergency money sa **hiwalay na account**. Kung medyo mas mahirap kunin, mas mahirap din itong gastusin."
+    },
+    {
+      "id": "tip-10",
+      "text": "Gusto mong malaman kung kailan magdodoble ang ipon mo? Hatiin ang **72** sa interest rate. Sa 8% kada taon, mga siyam na taon."
+    },
+    {
+      "id": "tip-11",
+      "text": "Nagdodoble rin ang presyo. Hatiin ang **70** sa inflation. Sa 5%, magdodoble ang presyo sa loob ng 14 na taon — kaya ang perang nakatengga ay dahan-dahang nawawalan ng halaga."
+    },
+    {
+      "id": "tip-12",
+      "text": "Kunin ang interest na kinikita mo, tapos bawasan ng inflation. Kung kumikita ka ng 2% pero tumataas ang presyo ng 4%, **paurong ka**."
+    },
+    {
+      "id": "tip-13",
+      "text": "Walang bank, phone company o government office na **hihingi** ng OTP, PIN o password mo. Kung may humihingi, scam iyon. Palagi."
+    },
+    {
+      "id": "tip-14",
+      "text": "May urgent na mensahe na may link? Huwag mo itong pindutin. Ikaw mismo ang magbukas ng bank app mo. Kung totoo ang mensahe, naroon lang iyon naghihintay."
+    },
+    {
+      "id": "tip-15",
+      "text": "Gumamit ng **authenticator app** sa halip na text messages para sa mga login code. Puwedeng manakaw ang text kung may nakakuha ng number mo."
+    },
+    {
+      "id": "tip-16",
+      "text": "Ang mga credit card dito ay kadalasang naniningil ng mga **3% kada buwan**. Kung minimum lang ang binabayad mo, puwedeng habulin ka ng maliit na utang nang ilang taon."
+    },
+    {
+      "id": "tip-17",
+      "text": "Ang pagbayad ng utang na may 30% na singil ay parang **kumita ng 30% nang walang risk**. Wala nang ibang ganoon kalaki ang kita. Unahin ang mahal na utang."
+    },
+    {
+      "id": "tip-18",
+      "text": "Itanong kung magkano ang loan sa **reducing balance**. Mukhang maliit ang 5% flat rate, pero sinisingil iyon sa buong halaga sa buong panahon — kaya mas malaki ang babayaran mo."
+    },
+    {
+      "id": "tip-19",
+      "text": "Dalawang paraan para bayaran ang utang: unahin ang **pinakamahal** at makatipid ng pinakamalaki, o ang **pinakamaliit** para maramdaman ang panalo. Piliin ang matatapos mo talaga."
+    },
+    {
+      "id": "tip-20",
+      "text": "Huwag ikalat ang sobrang pera sa lahat ng utang. Bayaran ang minimum sa lahat, tapos ibuhos ang natitira sa **isa** hanggang matapos ito."
+    },
+    {
+      "id": "tip-21",
+      "text": "Isulat ang ginagastos mo sa loob ng **30 araw** bago husgahan ang sarili mo. Isang buwan, makikita mo ang larawan. Tatlong buwan, mabubuo ang ugali."
+    },
+    {
+      "id": "tip-22",
+      "text": "Ang kape na {c}15, apat na beses kada linggo, ay mga **{c}2,880 kada taon**. Walang pumipiling gastusin iyon. Pumipili sila ng {c}15, dalawang daang beses."
+    },
+    {
+      "id": "tip-23",
+      "text": "Mag-set up ng **automatic transfer tuwing payday**. Ang standing instruction ay hindi napapagod, nagagabi o natutukso."
+    },
+    {
+      "id": "tip-24",
+      "text": "Mag-ingat sa **low balance fee**. Maraming account ang naniningil kapag bumaba ka sa itinakdang halaga. Ang {c}25 kada buwan ay {c}300 kada taon."
+    },
+    {
+      "id": "tip-25",
+      "text": "Ang pagbayad sa ibang currency ay kadalasang nagdadagdag ng **2% hanggang 3%**. Bilang ito kahit sa mga foreign website na binibilhan mo, hindi lang kapag naglalakbay ka."
+    },
+    {
+      "id": "tip-26",
+      "text": "Naghahambing ng savings account? Gamitin ang rate na kasama na ang compounding — kadalasang naka-label na **AER** o **APY**. Iyon ang totoong numero."
+    },
+    {
+      "id": "tip-27",
+      "text": "Ang maagang pagsisimula ay mas mabuti kaysa sa mas malaking ipon. Ang kaunting itinabi mula edad 25 ay puwedeng talunin ang malaking itinabi mula edad 35. Magsimula sa kung ano ang meron ka ngayon."
+    },
+    {
+      "id": "tip-28",
+      "text": "Sa UAE, **walang tax sa kinikita ng mga investment mo**. Anuman ang kitain nito, sa iyo iyon."
+    },
+    {
+      "id": "tip-29",
+      "text": "Ang **index fund** ay bumibili ng maliit na piraso ng daan-daang kumpanya nang sabay-sabay. Kung isa ang malugi, halos hindi mahalaga — at mas mura pa ito."
+    },
+    {
+      "id": "tip-30",
+      "text": "Ang mga fee ay tahimik pero mahal. Ang pagbayad ng 1.5% kada taon sa halip na 0.1% ay puwedeng mag-alis ng ikatlong bahagi ng pera mo sa loob ng 30 taon."
+    },
+    {
+      "id": "tip-31",
+      "text": "Hindi mo makokontrol ang ginagawa ng market. **Kaya** mong kontrolin ang binabayaran mong fee. Doon ka magsimula."
+    },
+    {
+      "id": "tip-32",
+      "text": "Itugma ang pera sa panahon. Kailangan mo sa loob ng anim na buwan? Panatilihing cash. Hindi mo hihipuin sa loob ng dalawampung taon? Puwede kang mag-take ng mas malaking risk."
+    },
+    {
+      "id": "tip-33",
+      "text": "Ikalat ang pera sa **iba't ibang uri** ng investment. Ang dalawampung tech company ay hindi pagkalat — isang bet iyon, ginawa nang dalawampung beses."
+    },
+    {
+      "id": "tip-34",
+      "text": "Ang health cover ay **required ng batas** sa Dubai at Abu Dhabi, at ang car insurance saanman ka magmaneho. Basahin kung ano talaga ang saklaw ng sa iyo."
+    },
+    {
+      "id": "tip-35",
+      "text": "I-insure ang hindi mo kayang palitan. Huwag i-insure ang maliliit na bagay na kaya mo namang bayaran."
+    },
+    {
+      "id": "tip-36",
+      "text": "Ang mas mataas na **excess** ay nagpapamura ng insurance — pero piliin lang ito kung kaya mong bayaran ang halagang iyon bukas."
+    },
+    {
+      "id": "tip-37",
+      "text": "Ang life insurance ay para sa mga taong umaasa sa sweldo mo. Kung walang mahihirapan kung wala ito, ilagay na lang ang pera sa health cover at ipon."
+    },
+    {
+      "id": "tip-38",
+      "text": "Ang home contents insurance ay mura at madalas nakakalimutan. Sinasaklaw nito ang laptop, phone at gamit mo laban sa sunog, tubig at nakawan."
+    },
+    {
+      "id": "tip-39",
+      "text": "Kapag nagpapadala ka ng pera sa pamilya, bihirang ang fee ang malaking gastos. Kadalasan, ang **exchange rate**. Ihambing kung magkano talaga ang dumarating, hindi ang fee."
+    },
+    {
+      "id": "tip-40",
+      "text": "Ihambing ang rate na inaalok sa iyo sa nakikita mo kapag naghanap ka online. **Ang agwat ang totoong gastos.**"
+    },
+    {
+      "id": "tip-41",
+      "text": "Magpadala lang ng pera sa kumpanyang **lisensyado ng Central Bank of the UAE**. Ang rate na sobrang ganda kaysa sa iba ay babala, hindi bargain."
+    },
+    {
+      "id": "tip-42",
+      "text": "Sinusuma ng mga bank ang buwanang bayad mo sa utang. Panatilihin itong **mas mababa sa kalahati ng sweldo mo** o mahihirapan kang mangutang — at hindi na tama."
+    },
+    {
+      "id": "tip-43",
+      "text": "Puwede kang humingi ng sarili mong credit report sa **Al Etihad Credit Bureau**. Hindi nakakasira sa score mo ang pag-check nito, at mas madalas ang mali kaysa sa akala mo."
+    },
+    {
+      "id": "tip-44",
+      "text": "Ang pagsara ng pinakalumang credit card mo ay puwedeng **magpababa** ng score mo. Kung wala namang bayad para itago, iwan mo itong bukas."
+    },
+    {
+      "id": "tip-45",
+      "text": "**Walang guaranteed na malaking return.** Ang salitang guaranteed katabi ng malaking numero ay ang pinakamalinaw na babala sa pera."
+    },
+    {
+      "id": "tip-46",
+      "text": "Bigyan ng pangalan ang ipon mo. Ang perang naka-label na *emergency* o *pamasahe pauwi* ay mas mahirap gastusin kaysa sa perang nakatengga lang."
+    },
+    {
+      "id": "tip-47",
+      "text": "I-check ang mga subscription mo tuwing tatlong buwan. Kadalasan may makikita kang nakalimutan mong binabayaran pa pala."
+    },
+    {
+      "id": "tip-48",
+      "text": "Kung may tawag tungkol sa bank o visa mo na nagpapa-panic sa iyo, **ibaba ang telepono at tumawag ka pabalik** gamit ang numerong ikaw mismo ang naghanap. Hindi ito ikinakagalit ng mga totoong kumpanya."
+    },
+    {
+      "id": "tip-49",
+      "text": "Maliit pero tuloy-tuloy ang nananalo. Ang {c}200 kada buwan simula ngayon ay mas mabuti kaysa perpektong plano na sisimulan mo sa susunod na taon."
+    }
+  ]
+}
